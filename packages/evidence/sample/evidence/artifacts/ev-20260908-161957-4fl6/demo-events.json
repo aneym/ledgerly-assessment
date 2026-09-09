@@ -1,0 +1,236 @@
+[
+  {
+    "event_id": "evt_83b52885bcdbc449",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_474f1474dc193dee",
+    "kind": "step.started",
+    "step_id": "W10",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.442Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Suspension starts as admin (attempt 1)",
+    "payload": {
+      "requirement_ids": [
+        "BUILD-20"
+      ],
+      "scenario_id": "S09",
+      "operations": [
+        "account.read",
+        "account.suspend",
+        "account.read"
+      ]
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 77,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_dac1861f9396fc67",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_474f1474dc193dee",
+    "kind": "operation.requested",
+    "step_id": "W10",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.442Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.read requested",
+    "payload": {
+      "operation": "account.read",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 78,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_70e58713bfc355e0",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_474f1474dc193dee",
+    "kind": "operation.responded",
+    "step_id": "W10",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.442Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.read responded ok (200)",
+    "payload": {
+      "operation": "account.read",
+      "output": {
+        "id": "fx_accountread23",
+        "operation": "account.read",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountread23"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 79,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_d0d08ad5576c41b3",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_474f1474dc193dee",
+    "kind": "operation.requested",
+    "step_id": "W10",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.442Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.suspend requested",
+    "payload": {
+      "operation": "account.suspend",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 80,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_2799cd4aa4205aa0",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_474f1474dc193dee",
+    "kind": "operation.responded",
+    "step_id": "W10",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.442Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.suspend responded ok (200)",
+    "payload": {
+      "operation": "account.suspend",
+      "output": {
+        "id": "fx_accountsuspend24",
+        "operation": "account.suspend",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountsuspend24"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 81,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_0796a5489969baa4",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_474f1474dc193dee",
+    "kind": "operation.requested",
+    "step_id": "W10",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.442Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.read requested",
+    "payload": {
+      "operation": "account.read",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 82,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_306e0643e29d4e12",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_474f1474dc193dee",
+    "kind": "operation.responded",
+    "step_id": "W10",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.442Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.read responded ok (200)",
+    "payload": {
+      "operation": "account.read",
+      "output": {
+        "id": "fx_accountread25",
+        "operation": "account.read",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountread25"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 83,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_7128ea7cc4621f14",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_474f1474dc193dee",
+    "kind": "step.finished",
+    "step_id": "W10",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.442Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "passed",
+    "summary": "Suspension passed on fixture",
+    "payload": {
+      "human_gate": false
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountread25"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 84,
+    "contract_version": "1.0.0"
+  }
+]

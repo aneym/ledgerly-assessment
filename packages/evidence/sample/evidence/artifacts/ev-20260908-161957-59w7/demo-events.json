@@ -1,0 +1,177 @@
+[
+  {
+    "event_id": "evt_f648f02769ec3ad6",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_fc6e8e5337e0a491",
+    "kind": "step.started",
+    "step_id": "W08",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.440Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Fee markup starts as admin (attempt 1)",
+    "payload": {
+      "requirement_ids": [
+        "BUILD-16"
+      ],
+      "scenario_id": "S07",
+      "operations": [
+        "feeMarkup.create",
+        "feeMarkup.read"
+      ]
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 60,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_75d112c57f2e1965",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_fc6e8e5337e0a491",
+    "kind": "operation.requested",
+    "step_id": "W08",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.440Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "feeMarkup.create requested",
+    "payload": {
+      "operation": "feeMarkup.create",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 61,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_4b616db0954039e1",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_fc6e8e5337e0a491",
+    "kind": "operation.responded",
+    "step_id": "W08",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.440Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "feeMarkup.create responded ok (200)",
+    "payload": {
+      "operation": "feeMarkup.create",
+      "output": {
+        "id": "fx_feeMarkupcreate18",
+        "operation": "feeMarkup.create",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_feeMarkupcreate18"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 62,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_a623cc6353307d43",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_fc6e8e5337e0a491",
+    "kind": "operation.requested",
+    "step_id": "W08",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.440Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "feeMarkup.read requested",
+    "payload": {
+      "operation": "feeMarkup.read",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 63,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_5adee8766d75213b",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_fc6e8e5337e0a491",
+    "kind": "operation.responded",
+    "step_id": "W08",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.440Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "feeMarkup.read responded ok (200)",
+    "payload": {
+      "operation": "feeMarkup.read",
+      "output": {
+        "id": "fx_feeMarkupread19",
+        "operation": "feeMarkup.read",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_feeMarkupread19"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 64,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_7b9ad596c819f788",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_fc6e8e5337e0a491",
+    "kind": "step.finished",
+    "step_id": "W08",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.440Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "passed",
+    "summary": "Fee markup passed on fixture",
+    "payload": {
+      "human_gate": false
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_feeMarkupread19"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 65,
+    "contract_version": "1.0.0"
+  }
+]

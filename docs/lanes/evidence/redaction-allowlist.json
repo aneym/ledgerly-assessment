@@ -1,0 +1,42 @@
+{
+  "version": "ledgerly-1",
+  "description": "Nonsecret identifier prefixes that may appear in evidence records and artifacts, and the patterns that must never appear. Both lists are read by packages/evidence rules and by the recorder. Extend by adding a prefix seen in a real provider readback, with the date.",
+  "id_prefixes": {
+    "biz_": "business or connected account, seen in sandbox readback 2026-09-08",
+    "acct_": "account, documented",
+    "pay_": "payment, documented",
+    "ref_": "refund, documented",
+    "tsf_": "transfer, documented",
+    "wdrl_": "withdrawal or payout, documented",
+    "cofr_": "payout alias, documented",
+    "msg_": "webhook delivery id, documented",
+    "whk_": "webhook endpoint, documented",
+    "key_": "API key id without secret, documented",
+    "ch_": "checkout configuration, documented",
+    "plan_": "plan, documented",
+    "prod_": "product, documented",
+    "link_": "account link, documented",
+    "fm_": "fee markup, documented",
+    "lafm_": "fee markup, seen in sandbox readback run-2026-09-08c BUILD-16",
+    "hook_": "webhook endpoint, seen in sandbox readback run-2026-09-08c BUILD-18",
+    "whdel_": "webhook delivery, seen in sandbox readback run-2026-09-08c BUILD-19"
+  },
+  "secret_patterns": [
+    "\\bsk_[A-Za-z0-9_]{8,}",
+    "\\bws_[A-Za-z0-9_]{8,}",
+    "\\bapik_[A-Za-z0-9_]{8,}",
+    "\\bnpg_[A-Za-z0-9_]{8,}",
+    "whop_[A-Za-z0-9]{16,}",
+    "(?i)authorization:\\s*bearer\\s+[A-Za-z0-9._-]{12,}",
+    "(?i)\\bapi[_-]?key\\b\\s*[:=]\\s*[\"']?[A-Za-z0-9._-]{16,}",
+    "(?i)\\bsecret\\b\\s*[:=]\\s*[\"']?[A-Za-z0-9._-]{12,}",
+    "(?i)webhook-signature:\\s*v1,[A-Za-z0-9+/=]{20,}",
+    "-----BEGIN [A-Z ]*PRIVATE KEY-----",
+    "\\b4[0-9]{3}[ -]?[0-9]{4}[ -]?[0-9]{4}[ -]?[0-9]{4}\\b",
+    "\\b[A-Z]{2}[0-9]{2}[A-Z0-9]{11,30}\\b",
+    "postgres(ql)?://[^\\s\"']+",
+    "\\beyJ[A-Za-z0-9_-]{10,}\\.[A-Za-z0-9_-]{10,}",
+    "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[a-z]{2,}"
+  ],
+  "notes": "Card pattern catches sandbox test cards too; record the card as a name such as sandbox-success-card, never the number. IBAN pattern is coarse on purpose. Test placeholders must stay under eight characters after the prefix, for example sk_x or ws_x; sk_test_placeholder_not_real is caught on purpose."
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@ledgerly/core",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./money": "./src/money.ts",
+    "./fee": "./src/fee.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vitest": "4.1.11",
+    "@types/node": "^24",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,1 @@
+ALTER TABLE "orders" ADD COLUMN "buyer_user_id" text;

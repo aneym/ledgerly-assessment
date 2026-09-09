@@ -1,0 +1,62 @@
+[
+  {
+    "event_id": "evt_42a59493ba86e921",
+    "seq": 68,
+    "at": "2026-09-08T16:19:57.441Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_webhookread20"
+      ],
+      "api_version_date": null
+    },
+    "operation": "webhook.read",
+    "output": {
+      "id": "fx_webhookread20",
+      "operation": "webhook.read",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_0367261df9e9c57d",
+    "seq": 71,
+    "at": "2026-09-08T16:19:57.441Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_webhooksendTest21"
+      ],
+      "api_version_date": null
+    },
+    "operation": "webhook.sendTest",
+    "output": {
+      "id": "fx_webhooksendTest21",
+      "operation": "webhook.sendTest",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_1850c144f63831d4",
+    "seq": 74,
+    "at": "2026-09-08T16:19:57.441Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_webhookreplay22"
+      ],
+      "api_version_date": null
+    },
+    "operation": "webhook.replay",
+    "output": {
+      "id": "fx_webhookreplay22",
+      "operation": "webhook.replay",
+      "fixture": true
+    }
+  }
+]

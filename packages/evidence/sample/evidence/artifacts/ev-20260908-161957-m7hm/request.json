@@ -1,0 +1,9 @@
+[
+  {
+    "event_id": "evt_9b09d17759fd8993",
+    "seq": 4,
+    "at": "2026-09-08T16:19:57.432Z",
+    "operation": "account.read",
+    "input": {}
+  }
+]

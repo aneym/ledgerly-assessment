@@ -1,0 +1,42 @@
+[
+  {
+    "event_id": "evt_64565772cc7ae416",
+    "seq": 24,
+    "at": "2026-09-08T16:19:57.437Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountLinkcreate7"
+      ],
+      "api_version_date": null
+    },
+    "operation": "accountLink.create",
+    "output": {
+      "id": "fx_accountLinkcreate7",
+      "operation": "accountLink.create",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_d24811194abac1ae",
+    "seq": 26,
+    "at": "2026-09-08T16:19:57.437Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountread8"
+      ],
+      "api_version_date": null
+    },
+    "operation": "account.read",
+    "output": {
+      "id": "fx_accountread8",
+      "operation": "account.read",
+      "fixture": true
+    }
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "event_id": "evt_a38c08184daef77f",
+    "seq": 95,
+    "at": "2026-09-08T16:19:57.444Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_webhookdecodeVersioned28"
+      ],
+      "api_version_date": null
+    },
+    "operation": "webhook.decodeVersioned",
+    "output": {
+      "id": "fx_webhookdecodeVersioned28",
+      "operation": "webhook.decodeVersioned",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_7b8e27dec38e209a",
+    "seq": 98,
+    "at": "2026-09-08T16:19:57.444Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_payoutAliasdedupe29"
+      ],
+      "api_version_date": null
+    },
+    "operation": "payoutAlias.dedupe",
+    "output": {
+      "id": "fx_payoutAliasdedupe29",
+      "operation": "payoutAlias.dedupe",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_25f322366970a8e6",
+    "seq": 100,
+    "at": "2026-09-08T16:19:57.444Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_payoutread30"
+      ],
+      "api_version_date": null
+    },
+    "operation": "payout.read",
+    "output": {
+      "id": "fx_payoutread30",
+      "operation": "payout.read",
+      "fixture": true
+    }
+  }
+]

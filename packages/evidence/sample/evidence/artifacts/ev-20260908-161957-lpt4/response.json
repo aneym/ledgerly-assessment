@@ -1,0 +1,22 @@
+[
+  {
+    "event_id": "evt_96020089ae3692bb",
+    "seq": 91,
+    "at": "2026-09-08T16:19:57.443Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_reconcilerun27"
+      ],
+      "api_version_date": null
+    },
+    "operation": "reconcile.run",
+    "output": {
+      "id": "fx_reconcilerun27",
+      "operation": "reconcile.run",
+      "fixture": true
+    }
+  }
+]

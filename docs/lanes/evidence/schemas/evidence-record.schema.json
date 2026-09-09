@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ledgerly/evidence-record",
+  "title": "Evidence record",
+  "description": "One observation, written by the tool that ran it. Append-only. A rerun is a new record that names the old one in supersedes. Field list follows docs/wiki/evidence.md; readback, supersedes, sample_payload and notes are lane additions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidence_id",
+    "requirement_ids",
+    "scenario_id",
+    "category",
+    "status",
+    "owner",
+    "observed_at",
+    "environment",
+    "code_revision",
+    "dirty_tree",
+    "command",
+    "artifact_paths",
+    "artifact_hashes",
+    "redaction_review",
+    "limitations"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^ev-[0-9]{8}-[0-9]{6}-[a-z0-9]{4}$",
+      "description": "ev-YYYYMMDD-HHMMSS-xxxx, assigned by the recorder at write time."
+    },
+    "requirement_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^(SETUP|BUILD|CODE|DEBUG|SUBMIT|IMPROVE)-[0-9]{2}$" },
+      "description": "IDs from docs/wiki/requirements.json. Must be a subset of the scenario's requirement_ids."
+    },
+    "scenario_id": { "type": "string", "pattern": "^S[0-9]{2}$" },
+    "category": {
+      "type": "string",
+      "enum": ["fixture", "mock", "sandbox-api", "hybrid-api", "browser", "human", "source-research"],
+      "description": "fixture is an in-process test double; mock is the deterministic mock provider transport (WHOP_MODE=mock); neither satisfies a requirement whose evidence_required names sandbox or human proof. sandbox-api is real Whop sandbox on every operation. hybrid-api means real auth and database with at least one mocked provider operation; it never counts as sandbox-api proof."
+    },
+    "provider_mode": {
+      "type": "string",
+      "enum": ["sandbox", "mock", "hybrid"],
+      "description": "WHOP_MODE the run started with. Server-owned, captured at run start."
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "source"],
+        "properties": {
+          "name": { "type": "string" },
+          "source": { "type": "string", "enum": ["sandbox", "mock", "app", "neon", "pglite"], "description": "Provenance of this one operation, matching the instrumentation contract: sandbox or mock for Whop calls, neon or pglite for database commits, app for the app's own API. Never inherited from the run." },
+          "method": { "type": "string" },
+          "path": { "type": "string" },
+          "status": { "anyOf": [{ "type": "integer" }, { "type": "string", "enum": ["ok", "error"] }], "description": "HTTP status for app and Whop calls; ok or error for database commits, as in the instrumentation contract." },
+          "resource_ids": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "description": "Per-operation provenance for hybrid runs. A sandbox-api record may list only sandbox operations. Mock ids (containing _mock_ or mock.invalid) may appear only on mock operations."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["not-run", "running", "blocked", "failed", "passed", "verified"],
+      "description": "The runner may write up to passed. Only a different actor may write verified."
+    },
+    "owner": { "type": "string", "minLength": 1, "description": "Who or what ran the observation. Session or lane name, never a secret." },
+    "observed_at": { "type": "string", "format": "date-time" },
+    "environment": {
+      "type": "string",
+      "enum": ["local", "sandbox", "docs"],
+      "description": "local for fixture and browser runs against a local server, sandbox for Whop sandbox calls, docs for source-research."
+    },
+    "code_revision": {
+      "type": "string",
+      "pattern": "^([0-9a-f]{7,40}|unborn)$",
+      "description": "Git commit of the checkout that ran, or the literal unborn while the repo has no commits."
+    },
+    "dirty_tree": { "type": "boolean" },
+    "api_base": { "type": "string", "enum": ["https://sandbox-api.whop.com/api/v1"], "description": "Only the sandbox base is allowed in this repo." },
+    "rest_version": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "Api-Version-Date header used for REST calls." },
+    "webhook_version": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "api_version_date pinned on the webhook subscription." },
+    "sdk_version": { "type": "string", "description": "Exact package and version, for example @whop/sdk@1.2.3." },
+    "command": { "type": "string", "minLength": 1, "description": "The exact command that produced the observation, after redaction." },
+    "exit_code": { "type": "integer" },
+    "request_reference": { "type": "string", "description": "Path under artifact_paths holding the redacted request." },
+    "response_reference": { "type": "string", "description": "Path under artifact_paths holding the redacted response." },
+    "provider_resource_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z]{2,6}_[A-Za-z0-9]{4,}$" },
+      "description": "Nonsecret Whop identifiers returned by the provider, for example biz_, pay_, wdrl_, msg_. Never keys or tokens."
+    },
+    "sample_payload": {
+      "type": "boolean",
+      "description": "True when the observation is a Whop test-event sample rather than a business event."
+    },
+    "artifact_paths": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^evidence/artifacts/ev-[0-9]{8}-[0-9]{6}-[a-z0-9]{4}/[^\\s]+$" }
+    },
+    "artifact_hashes": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+      "description": "sha256 per artifact path. Keys must equal artifact_paths."
+    },
+    "redaction_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["removed_fields", "allowlist_version"],
+      "properties": {
+        "removed_fields": { "type": "array", "items": { "type": "string" } },
+        "allowlist_version": { "type": "string" },
+        "human_reviewed_by": { "type": "string" },
+        "human_reviewed_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "limitations": {
+      "type": "string",
+      "description": "What this record does not prove. Required even when empty of caveats; write none."
+    },
+    "readback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "reference", "read_at"],
+      "properties": {
+        "method": { "type": "string", "enum": ["provider-get", "provider-deliveries", "db-readback", "browser-recording", "human-review", "source-refetch"] },
+        "reference": { "type": "string", "description": "Artifact path or provider resource ID the reviewer read." },
+        "read_at": { "type": "string", "format": "date-time" }
+      },
+      "description": "How the reviewer checked the claim independently of the runner."
+    },
+    "reviewer": { "type": "string", "minLength": 1 },
+    "reviewed_at": { "type": "string", "format": "date-time" },
+    "supersedes": { "type": "string", "pattern": "^ev-[0-9]{8}-[0-9]{6}-[a-z0-9]{4}$" },
+    "correlation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["correlation_id"],
+      "properties": {
+        "run_id": { "type": "string", "description": "Demo run or tour run that produced this record." },
+        "correlation_id": { "type": "string", "description": "Ties the record to the initiating user action and to the instrumentation events the overlay showed." },
+        "step_id": { "type": "string" },
+        "attempt": { "type": "integer", "minimum": 1 }
+      },
+      "description": "Structured link to the demo-runtime event stream and the real-app instrumentation, so a record can be matched to what the overlay displayed."
+    },
+    "blocked_by": { "type": "string", "pattern": "^(G[0-9]{2}|local:[a-z0-9][a-z0-9-]*)$", "description": "Owner gate ID from docs/wiki/decisions.md, or local:<slug> for a lane-local gate such as local:credential or local:provider-client. Only G## gates are drawn as owner gates in the report." },
+    "notes": { "type": "string" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "verified" } } },
+      "then": { "required": ["reviewer", "reviewed_at", "readback"] }
+    },
+    {
+      "if": { "properties": { "status": { "const": "blocked" } } },
+      "then": { "required": ["blocked_by"] }
+    },
+    {
+      "if": {
+        "properties": {
+          "category": { "const": "sandbox-api" },
+          "status": { "enum": ["passed", "failed", "verified"] }
+        }
+      },
+      "then": { "required": ["api_base", "rest_version", "provider_resource_ids", "request_reference", "response_reference"] }
+    },
+    {
+      "if": { "properties": { "environment": { "const": "sandbox" } } },
+      "then": { "required": ["api_base"] }
+    },
+    {
+      "if": { "required": ["provider_mode"], "properties": { "provider_mode": { "const": "hybrid" } } },
+      "then": { "required": ["operations"] }
+    },
+    {
+      "if": { "properties": { "category": { "const": "hybrid-api" } } },
+      "then": { "required": ["provider_mode", "operations"] }
+    }
+  ],
+  "x-generator-checks": [
+    "reviewer must differ from owner when status is verified",
+    "artifact_hashes keys must equal artifact_paths and match file contents",
+    "requirement_ids must be a subset of the scenario's requirement_ids",
+    "a fixture record cannot satisfy a requirement whose evidence_required names sandbox, provider, hosted, human or actual",
+    "sample_payload true cannot satisfy SUBMIT-04 without an assessor-approved exception record",
+    "no artifact may match the secret patterns list"
+  ]
+}

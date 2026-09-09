@@ -1,0 +1,16 @@
+[
+  {
+    "event_id": "evt_695caf099ed16fc9",
+    "seq": 23,
+    "at": "2026-09-08T16:19:57.437Z",
+    "operation": "accountLink.create",
+    "input": {}
+  },
+  {
+    "event_id": "evt_6df41f63a50437f3",
+    "seq": 25,
+    "at": "2026-09-08T16:19:57.437Z",
+    "operation": "account.read",
+    "input": {}
+  }
+]

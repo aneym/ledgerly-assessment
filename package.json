@@ -1,0 +1,24 @@
+{
+  "name": "ledgerly",
+  "private": true,
+  "packageManager": "pnpm@12.3.4",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @ledgerly/web dev",
+    "build": "pnpm --filter @ledgerly/web build",
+    "typecheck": "pnpm -r --parallel typecheck",
+    "test": "pnpm -r --parallel test",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "db:generate": "pnpm --filter @ledgerly/db generate",
+    "db:migrate": "pnpm --filter @ledgerly/db migrate",
+    "dev:mock": "node scripts/local-runtime/start.mjs"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.12",
+    "typescript": "5.9.3",
+    "vitest": "4.1.11"
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "event_id": "evt_8ebaf228ab0c52d1",
+    "seq": 44,
+    "at": "2026-09-08T16:19:57.439Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_checkoutcreate13"
+      ],
+      "api_version_date": null
+    },
+    "operation": "checkout.create",
+    "output": {
+      "id": "fx_checkoutcreate13",
+      "operation": "checkout.create",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_86ca5de888c67ae8",
+    "seq": 47,
+    "at": "2026-09-08T16:19:57.439Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_balanceread14"
+      ],
+      "api_version_date": null
+    },
+    "operation": "balance.read",
+    "output": {
+      "id": "fx_balanceread14",
+      "operation": "balance.read",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_d801006fac67bc71",
+    "seq": 49,
+    "at": "2026-09-08T16:19:57.439Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_transfercreate15"
+      ],
+      "api_version_date": null
+    },
+    "operation": "transfer.create",
+    "output": {
+      "id": "fx_transfercreate15",
+      "operation": "transfer.create",
+      "fixture": true
+    }
+  }
+]

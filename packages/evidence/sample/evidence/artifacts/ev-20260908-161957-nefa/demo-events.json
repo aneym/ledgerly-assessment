@@ -1,0 +1,240 @@
+[
+  {
+    "event_id": "evt_402fc34ab6e60442",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_2a57e47a94a8579e",
+    "kind": "step.started",
+    "step_id": "W02",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.435Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Three sellers starts as admin (attempt 1)",
+    "payload": {
+      "requirement_ids": [
+        "BUILD-02",
+        "BUILD-03",
+        "BUILD-04",
+        "CODE-01",
+        "SUBMIT-01"
+      ],
+      "scenario_id": "S02",
+      "operations": [
+        "account.createOrFetch",
+        "account.createOrFetch",
+        "account.createOrFetch"
+      ]
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 7,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_2d56d9334b802cc1",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_2a57e47a94a8579e",
+    "kind": "operation.requested",
+    "step_id": "W02",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.435Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.createOrFetch requested",
+    "payload": {
+      "operation": "account.createOrFetch",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 8,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_aed7eb84fcc31c1d",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_2a57e47a94a8579e",
+    "kind": "operation.responded",
+    "step_id": "W02",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.435Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.createOrFetch responded ok (200)",
+    "payload": {
+      "operation": "account.createOrFetch",
+      "output": {
+        "id": "fx_accountcreateOrFetch2",
+        "operation": "account.createOrFetch",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountcreateOrFetch2"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 9,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_e5ad1e6acde1db7d",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_2a57e47a94a8579e",
+    "kind": "operation.requested",
+    "step_id": "W02",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.435Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.createOrFetch requested",
+    "payload": {
+      "operation": "account.createOrFetch",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 10,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_00e9abbb50f71ed0",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_2a57e47a94a8579e",
+    "kind": "operation.responded",
+    "step_id": "W02",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.435Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.createOrFetch responded ok (200)",
+    "payload": {
+      "operation": "account.createOrFetch",
+      "output": {
+        "id": "fx_accountcreateOrFetch3",
+        "operation": "account.createOrFetch",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountcreateOrFetch3"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 11,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_0985d384e05ca78e",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_2a57e47a94a8579e",
+    "kind": "operation.requested",
+    "step_id": "W02",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.435Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.createOrFetch requested",
+    "payload": {
+      "operation": "account.createOrFetch",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 12,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_6d34bfe465a45863",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_2a57e47a94a8579e",
+    "kind": "operation.responded",
+    "step_id": "W02",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.435Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.createOrFetch responded ok (200)",
+    "payload": {
+      "operation": "account.createOrFetch",
+      "output": {
+        "id": "fx_accountcreateOrFetch4",
+        "operation": "account.createOrFetch",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountcreateOrFetch4"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 13,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_ca84dfde22b0fd24",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_2a57e47a94a8579e",
+    "kind": "step.finished",
+    "step_id": "W02",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.435Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "passed",
+    "summary": "Three sellers passed on fixture",
+    "payload": {
+      "human_gate": false
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountcreateOrFetch4"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 14,
+    "contract_version": "1.0.0"
+  }
+]

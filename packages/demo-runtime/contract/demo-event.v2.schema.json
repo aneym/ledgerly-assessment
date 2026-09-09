@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ledgerly/demo-event.v2",
+  "title": "Ledgerly demo event, contract v2",
+  "description": "One sanitized event of the guided demo: an HTTP request into the app, a database write, a provider call, or a tour step transition. Produced by packages/demo-runtime instrumentation, consumed by the tour overlay, the live side panel, the static run export and the evidence bridge. Cross-field rules live in src/contract.ts validateEvent and are listed under x-rules.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "event_id",
+    "seq",
+    "run_id",
+    "correlation_id",
+    "kind",
+    "step_id",
+    "attempt",
+    "at",
+    "role",
+    "source",
+    "environment",
+    "state",
+    "summary",
+    "payload",
+    "request",
+    "db",
+    "provider",
+    "gate",
+    "evidence_id"
+  ],
+  "properties": {
+    "contract_version": {
+      "const": "2.0.0"
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique. Consumers dedupe on it."
+    },
+    "seq": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Assigned by the log at append. Order by this, never by arrival."
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "correlation_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Shared by every event of one step attempt."
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "run.started",
+        "run.reset",
+        "role.switched",
+        "step.started",
+        "step.finished",
+        "request.started",
+        "request.finished",
+        "operation.requested",
+        "operation.responded",
+        "db.written"
+      ]
+    },
+    "step_id": {
+      "type": ["string", "null"],
+      "description": "Tour step W01..W13 the client declared through x-tour-step, or null."
+    },
+    "attempt": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "role": {
+      "type": "string",
+      "enum": ["buyer", "creator", "admin"],
+      "description": "Presentation role. Never authorization."
+    },
+    "source": {
+      "type": "string",
+      "enum": ["local", "sandbox", "mock"],
+      "description": "local: this app (request, database, tour). sandbox or mock: label carried by the provider port result, never set by a caller."
+    },
+    "environment": {
+      "type": "string",
+      "enum": ["local", "sandbox", "hybrid"]
+    },
+    "state": {
+      "type": "string",
+      "enum": ["pending", "running", "passed", "failed", "blocked", "verified"],
+      "description": "verified is display-only; the runtime never emits it."
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "payload": {
+      "type": "object",
+      "description": "Redacted. No key, token or secret."
+    },
+    "provider": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "base_url",
+            "http_status",
+            "request_id",
+            "resource_ids",
+            "api_version_date",
+            "operation",
+            "duration_ms"
+          ],
+          "properties": {
+            "base_url": {
+              "type": "string"
+            },
+            "http_status": {
+              "type": ["integer", "null"]
+            },
+            "request_id": {
+              "type": ["string", "null"]
+            },
+            "resource_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "api_version_date": {
+              "type": ["string", "null"]
+            },
+            "operation": {
+              "type": ["string", "null"]
+            },
+            "duration_ms": {
+              "type": ["integer", "null"]
+            }
+          }
+        }
+      ]
+    },
+    "gate": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "reason"],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "reason": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "evidence_id": {
+      "type": ["string", "null"]
+    },
+    "request": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["request_id", "method", "route", "http_status", "duration_ms"],
+          "properties": {
+            "request_id": {
+              "type": "string"
+            },
+            "method": {
+              "type": "string"
+            },
+            "route": {
+              "type": "string"
+            },
+            "http_status": {
+              "type": ["integer", "null"]
+            },
+            "duration_ms": {
+              "type": ["integer", "null"]
+            }
+          }
+        }
+      ],
+      "description": "The HTTP request into this app that this event belongs to."
+    },
+    "db": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["table", "ids"],
+          "properties": {
+            "table": {
+              "type": "string"
+            },
+            "ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ],
+      "description": "Rows this app wrote: table and identifiers only, never row content."
+    }
+  },
+  "x-rules": [
+    "a sandbox operation.responded with state running and no payload.error, or a sandbox step.finished with state passed, requires provider.base_url == https://sandbox-api.whop.com/api/v1; http_status may be null only on operation.responded with payload.unconfirmed true, and such a step never reaches sandbox-ok",
+    "a local or mock event may not carry the sandbox base_url",
+    "sandbox source cannot occur in environment local",
+    "state blocked requires a gate",
+    "step.finished carries passed, failed or blocked only; step.started carries running; verified is never emitted by the runtime",
+    "run.started, run.reset and role.switched carry step_id null",
+    "request.started and request.finished require a request reference; request.finished requires http_status",
+    "db.written requires a db reference",
+    "operation.requested and operation.responded carry source sandbox or mock, never local",
+    "payload contains no value starting sk_, ws_, whop_ or Bearer and no secret-named key with a non-redacted value; identifiers, statuses and durations only"
+  ]
+}

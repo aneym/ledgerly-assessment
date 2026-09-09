@@ -1,0 +1,42 @@
+[
+  {
+    "event_id": "evt_4b616db0954039e1",
+    "seq": 62,
+    "at": "2026-09-08T16:19:57.440Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_feeMarkupcreate18"
+      ],
+      "api_version_date": null
+    },
+    "operation": "feeMarkup.create",
+    "output": {
+      "id": "fx_feeMarkupcreate18",
+      "operation": "feeMarkup.create",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_5adee8766d75213b",
+    "seq": 64,
+    "at": "2026-09-08T16:19:57.440Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_feeMarkupread19"
+      ],
+      "api_version_date": null
+    },
+    "operation": "feeMarkup.read",
+    "output": {
+      "id": "fx_feeMarkupread19",
+      "operation": "feeMarkup.read",
+      "fixture": true
+    }
+  }
+]

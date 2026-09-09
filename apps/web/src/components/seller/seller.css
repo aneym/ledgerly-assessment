@@ -1,0 +1,445 @@
+/* Seller area styles that read better as CSS than as utility stacks.
+   Everything uses the tokens from globals.css; nothing here defines a color. */
+
+.sl-shell {
+  display: grid;
+  /* minmax(0, 1fr) so the tab row's scroll width never widens the page;
+     auto 1fr so spare height goes to main, not the rail. */
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  min-height: 100dvh;
+  /* No sticky chrome above the content: table heads stick at the viewport top. */
+  --shell-top: 0px;
+}
+
+/* A focused row or an anchor jump lands under the stuck table head, not behind it. */
+html {
+  scroll-padding-top: calc(var(--shell-top, 0px) + var(--tbl-head, 32px) + 8px);
+}
+
+.sl-rail {
+  min-width: 0;
+  border-bottom: 1px solid var(--line);
+  background: var(--canvas);
+}
+
+.sl-rail-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+}
+
+.sl-rail-nav {
+  display: flex;
+  gap: 2px;
+  padding: 0 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.sl-rail-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.sl-rail-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-2);
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: var(--r-pill);
+  transition:
+    color var(--d-fast) var(--ease),
+    background-color var(--d-fast) var(--ease);
+}
+.sl-rail-link:hover {
+  color: var(--ink);
+}
+.sl-rail-link[aria-current="page"] {
+  color: var(--ink);
+}
+.sl-rail-link[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  height: 2px;
+  background: var(--ink);
+}
+.sl-rail-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.sl-rail-foot {
+  display: none;
+}
+
+.sl-main {
+  min-width: 0;
+  padding: 24px 16px 64px;
+}
+
+@media (min-width: 960px) {
+  .sl-shell {
+    grid-template-columns: 248px minmax(0, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .sl-rail {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0;
+    border-right: 1px solid var(--line);
+    padding: 24px 16px;
+    /* The document scrolls; the rail scrolls itself only when its links are taller than the window. */
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-strong) transparent;
+  }
+  .sl-rail-head {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 0 8px 24px;
+  }
+  .sl-rail-nav {
+    flex-direction: column;
+    gap: 2px;
+    padding: 0;
+    overflow: visible;
+  }
+  .sl-rail-link {
+    height: 40px;
+    padding: 0 12px;
+    border-radius: var(--r-ctl);
+  }
+  .sl-rail-link:hover {
+    background: rgba(38, 37, 31, 0.05);
+  }
+  .sl-rail-link[aria-current="page"] {
+    background: var(--white);
+    box-shadow: var(--sh-1), var(--ring);
+  }
+  .sl-rail-link[aria-current="page"]::after {
+    display: none;
+  }
+  .sl-rail-foot {
+    display: block;
+    margin-top: auto;
+    padding: 16px 12px 0;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .sl-main {
+    padding: 48px 48px 96px;
+  }
+}
+
+/* Paper surfaces: the bezel card without the product card's padding and lift. */
+.sl-paper {
+  background: var(--white);
+  border-radius: var(--r-card);
+  box-shadow: var(--sh-1), var(--ring);
+}
+.sl-paper.raised {
+  box-shadow: var(--sh-2), var(--ring);
+}
+
+/* Ruled balance band: one paper card divided by hairlines, never three tiles. */
+.sl-band {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.sl-band > * + * {
+  border-top: 1px solid var(--line);
+}
+@media (min-width: 720px) {
+  .sl-band {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+  .sl-band > * + * {
+    border-top: 0;
+    border-left: 1px solid var(--line);
+  }
+}
+
+/* Earnings transactions: the shared table (components/table) at compact density, with a
+   two-line item cell (product name over the buyer city). 44px is the shortest row that
+   holds two lines; the head, totals and foot keep the compact 32px. */
+.sl-earnings .tbl-table tbody > tr > * {
+  height: 44px;
+}
+.sl-earnings .tbl-rowbtn-static {
+  display: block;
+  min-width: 0;
+}
+.sl-tx-item {
+  display: block;
+  min-width: 0;
+  line-height: 1.25;
+}
+.sl-tx-item > b,
+.sl-tx-item > span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sl-tx-item > b {
+  font-weight: 500;
+  color: var(--ink);
+}
+.sl-tx-item > span {
+  font-size: 11.5px;
+  color: var(--muted);
+}
+/* The status word joins the second line only while the status column is folded (card under 560px). */
+.sl-tx-st {
+  display: none;
+  font-style: normal;
+}
+@container tbl (max-width: 559px) {
+  .sl-tx-st {
+    display: inline;
+  }
+}
+
+/* Payout history table: flat on the canvas, right-aligned tabular money. */
+.sl-tx-wrap {
+  overflow-x: auto;
+  margin: 0 -16px;
+  padding: 0 16px;
+  scrollbar-width: thin;
+}
+@media (min-width: 960px) {
+  .sl-tx-wrap {
+    margin: 0;
+    padding: 0;
+  }
+}
+.sl-tx {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.sl-tx th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 10px 12px 10px 0;
+  border-bottom: 1px solid var(--ink);
+  white-space: nowrap;
+}
+.sl-tx th.num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+.sl-tx td {
+  padding: 12px 12px 12px 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+.sl-tx th.num,
+.sl-tx td.num {
+  text-align: right;
+  padding-right: 0;
+  padding-left: 12px;
+}
+.sl-tx td.num {
+  font-weight: 500;
+}
+.sl-tx td.num.fee {
+  color: var(--ink-2);
+  font-weight: 400;
+}
+.sl-tx td.neg {
+  color: var(--ink-2);
+}
+.sl-tx tr.sum td {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  font-weight: 500;
+}
+.sl-tx tr.sum td.num {
+  font-size: 15px;
+}
+@media (hover: hover) {
+  .sl-tx tbody tr:not(.sum):hover td {
+    background: rgba(38, 37, 31, 0.025);
+  }
+}
+
+/* Form controls: paper field with a line ring; ink ring and a soft accent halo on focus. */
+.sl-field {
+  display: block;
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: var(--r-ctl);
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+  transition: box-shadow var(--d-fast) var(--ease);
+}
+.sl-field::placeholder {
+  color: var(--muted);
+}
+.sl-field:hover {
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+.sl-field:focus {
+  outline: none;
+  box-shadow:
+    inset 0 0 0 1px var(--ink),
+    0 0 0 4px rgba(156, 64, 40, 0.12);
+}
+.sl-field[aria-invalid="true"] {
+  box-shadow: inset 0 0 0 1px var(--bad);
+}
+textarea.sl-field {
+  height: auto;
+  min-height: 132px;
+  padding: 12px 14px;
+  line-height: 1.5;
+  resize: vertical;
+}
+select.sl-field {
+  appearance: none;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none' stroke='%236B675E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 5.5l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+.sl-field-prefix {
+  position: relative;
+}
+.sl-field-prefix > span {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 15px;
+  pointer-events: none;
+}
+.sl-field-prefix > .sl-field {
+  padding-left: 30px;
+}
+
+/* Drop slots for cover and files. */
+.sl-slot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 132px;
+  padding: 16px;
+  border-radius: var(--r-in);
+  background: var(--plate);
+  box-shadow: inset 0 0 0 1px rgba(38, 37, 31, 0.08);
+  color: var(--muted);
+  font-size: 13.5px;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color var(--d) var(--ease),
+    box-shadow var(--d) var(--ease);
+}
+.sl-slot:hover {
+  background: var(--plate-deep);
+}
+.sl-slot:focus-within {
+  box-shadow:
+    inset 0 0 0 1px var(--ink),
+    0 0 0 4px rgba(156, 64, 40, 0.12);
+}
+.sl-slot input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* Capability dots. */
+.sl-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+  background: currentColor;
+  box-shadow: 0 0 0 3px color-mix(in oklab, currentColor 14%, transparent);
+}
+
+/* Staggered entrance for the money band and the table; off under reduced motion. */
+@keyframes sl-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.sl-rise {
+  animation: sl-rise var(--d-slow) var(--ease) both;
+}
+.sl-rise[data-delay="1"] {
+  animation-delay: 60ms;
+}
+.sl-rise[data-delay="2"] {
+  animation-delay: 120ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sl-rise {
+    animation: none;
+  }
+}
+
+/* Embedded payouts mount. */
+.sl-mount {
+  position: relative;
+  min-height: 240px;
+  border-radius: var(--r-in);
+  background-color: var(--plate);
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0 14px,
+    rgba(38, 37, 31, 0.035) 14px 15px
+  );
+  box-shadow: inset 0 0 0 1px rgba(38, 37, 31, 0.08);
+}
+
+/* Warm wash behind the start-selling hero. */
+.sl-wash {
+  background: var(--wash);
+}
+
+/* Tailwind's `grid` utility is shadowed by the storefront's .grid (a 4-column product grid),
+   so seller screens use this class for display: grid. */
+.sl-grid {
+  display: grid;
+}

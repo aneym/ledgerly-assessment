@@ -1,0 +1,30 @@
+{
+  "name": "@ledgerly/db",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "generate": "drizzle-kit generate",
+    "migrate": "tsx scripts/migrate.ts",
+    "set-role": "tsx scripts/set-role.ts",
+    "seed:demo": "tsx scripts/seed-demo.ts"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "@ledgerly/core": "workspace:*",
+    "@neondatabase/serverless": "1.1.0",
+    "better-auth": "^1.7.3",
+    "drizzle-orm": "0.45.2"
+  },
+  "devDependencies": {
+    "vitest": "4.1.11",
+    "@types/node": "^24",
+    "typescript": "5.9.3",
+    "drizzle-kit": "0.31.10",
+    "tsx": "4.23.13"
+  }
+}

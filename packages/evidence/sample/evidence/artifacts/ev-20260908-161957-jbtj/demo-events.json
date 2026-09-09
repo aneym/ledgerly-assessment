@@ -1,0 +1,374 @@
+[
+  {
+    "event_id": "evt_e63b2595bd231b52",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2cd81c9758814a6",
+    "kind": "step.started",
+    "step_id": "W05",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.438Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Direct charge and refund starts as buyer (attempt 1)",
+    "payload": {
+      "requirement_ids": [
+        "BUILD-09",
+        "BUILD-10",
+        "BUILD-11",
+        "CODE-02",
+        "SUBMIT-02"
+      ],
+      "scenario_id": "S05",
+      "operations": [
+        "checkout.create",
+        "payment.read",
+        "ledger.read",
+        "payment.refund"
+      ]
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 29,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_ba582d2b5cee4453",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2cd81c9758814a6",
+    "kind": "operation.requested",
+    "step_id": "W05",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.438Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "checkout.create requested",
+    "payload": {
+      "operation": "checkout.create",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 30,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_c7a10e4b5d72cadb",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2cd81c9758814a6",
+    "kind": "operation.responded",
+    "step_id": "W05",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.438Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "checkout.create responded ok (200)",
+    "payload": {
+      "operation": "checkout.create",
+      "output": {
+        "id": "fx_checkoutcreate9",
+        "operation": "checkout.create",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_checkoutcreate9"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 31,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_d6c28b061f354168",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2cd81c9758814a6",
+    "kind": "ledger.written",
+    "step_id": "W05",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.438Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Ledger row written for checkout.create",
+    "payload": {
+      "row": {
+        "ref": "fx_checkoutcreate9",
+        "operation": "checkout.create"
+      }
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 32,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_cbab7b391e15492f",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2cd81c9758814a6",
+    "kind": "operation.requested",
+    "step_id": "W05",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.438Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "payment.read requested",
+    "payload": {
+      "operation": "payment.read",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 33,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_a885fdcaa9e3020a",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2cd81c9758814a6",
+    "kind": "operation.responded",
+    "step_id": "W05",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.438Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "payment.read responded ok (200)",
+    "payload": {
+      "operation": "payment.read",
+      "output": {
+        "id": "fx_paymentread10",
+        "operation": "payment.read",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_paymentread10"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 34,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_fe2d262332a2d25c",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2cd81c9758814a6",
+    "kind": "ledger.written",
+    "step_id": "W05",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.438Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Ledger row written for payment.read",
+    "payload": {
+      "row": {
+        "ref": "fx_paymentread10",
+        "operation": "payment.read"
+      }
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 35,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_121d512c230fcb92",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2cd81c9758814a6",
+    "kind": "operation.requested",
+    "step_id": "W05",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.438Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "ledger.read requested",
+    "payload": {
+      "operation": "ledger.read",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 36,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_ad72e97e8c0bec3a",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2cd81c9758814a6",
+    "kind": "operation.responded",
+    "step_id": "W05",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.438Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "ledger.read responded ok (200)",
+    "payload": {
+      "operation": "ledger.read",
+      "output": {
+        "id": "fx_ledgerread11",
+        "operation": "ledger.read",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_ledgerread11"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 37,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_b41a1a51ec77f786",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2cd81c9758814a6",
+    "kind": "operation.requested",
+    "step_id": "W05",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.438Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "payment.refund requested",
+    "payload": {
+      "operation": "payment.refund",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 38,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_78883719d504f54e",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2cd81c9758814a6",
+    "kind": "operation.responded",
+    "step_id": "W05",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.438Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "payment.refund responded ok (200)",
+    "payload": {
+      "operation": "payment.refund",
+      "output": {
+        "id": "fx_paymentrefund12",
+        "operation": "payment.refund",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_paymentrefund12"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 39,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_e977a92ea8b39a1a",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2cd81c9758814a6",
+    "kind": "ledger.written",
+    "step_id": "W05",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.438Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Ledger row written for payment.refund",
+    "payload": {
+      "row": {
+        "ref": "fx_paymentrefund12",
+        "operation": "payment.refund"
+      }
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 40,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_3bd6325d5a9f6a15",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2cd81c9758814a6",
+    "kind": "step.finished",
+    "step_id": "W05",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.438Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "passed",
+    "summary": "Direct charge and refund passed on fixture",
+    "payload": {
+      "human_gate": false
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_paymentrefund12"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 41,
+    "contract_version": "1.0.0"
+  }
+]

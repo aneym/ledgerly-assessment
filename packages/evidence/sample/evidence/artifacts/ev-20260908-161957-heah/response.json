@@ -1,0 +1,22 @@
+[
+  {
+    "event_id": "evt_04dce8140f1b8b84",
+    "seq": 87,
+    "at": "2026-09-08T16:19:57.443Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_apiKeyrecordProvisioned26"
+      ],
+      "api_version_date": null
+    },
+    "operation": "apiKey.recordProvisioned",
+    "output": {
+      "id": "fx_apiKeyrecordProvisioned26",
+      "operation": "apiKey.recordProvisioned",
+      "fixture": true
+    }
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "event_id": "evt_70e58713bfc355e0",
+    "seq": 79,
+    "at": "2026-09-08T16:19:57.442Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountread23"
+      ],
+      "api_version_date": null
+    },
+    "operation": "account.read",
+    "output": {
+      "id": "fx_accountread23",
+      "operation": "account.read",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_2799cd4aa4205aa0",
+    "seq": 81,
+    "at": "2026-09-08T16:19:57.442Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountsuspend24"
+      ],
+      "api_version_date": null
+    },
+    "operation": "account.suspend",
+    "output": {
+      "id": "fx_accountsuspend24",
+      "operation": "account.suspend",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_306e0643e29d4e12",
+    "seq": 83,
+    "at": "2026-09-08T16:19:57.442Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountread25"
+      ],
+      "api_version_date": null
+    },
+    "operation": "account.read",
+    "output": {
+      "id": "fx_accountread25",
+      "operation": "account.read",
+      "fixture": true
+    }
+  }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "event_id": "evt_5d3a16c83d1d1e6c",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_f0a930c0c3419121",
+    "kind": "step.started",
+    "step_id": "W04",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.437Z",
+    "role": "creator",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Onboarding starts as creator (attempt 1)",
+    "payload": {
+      "requirement_ids": [
+        "BUILD-07",
+        "BUILD-08"
+      ],
+      "scenario_id": "S04",
+      "operations": [
+        "accountLink.create",
+        "account.read"
+      ]
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 22,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_695caf099ed16fc9",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_f0a930c0c3419121",
+    "kind": "operation.requested",
+    "step_id": "W04",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.437Z",
+    "role": "creator",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "accountLink.create requested",
+    "payload": {
+      "operation": "accountLink.create",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 23,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_64565772cc7ae416",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_f0a930c0c3419121",
+    "kind": "operation.responded",
+    "step_id": "W04",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.437Z",
+    "role": "creator",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "accountLink.create responded ok (200)",
+    "payload": {
+      "operation": "accountLink.create",
+      "output": {
+        "id": "fx_accountLinkcreate7",
+        "operation": "accountLink.create",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountLinkcreate7"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 24,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_6df41f63a50437f3",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_f0a930c0c3419121",
+    "kind": "operation.requested",
+    "step_id": "W04",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.437Z",
+    "role": "creator",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.read requested",
+    "payload": {
+      "operation": "account.read",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 25,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_d24811194abac1ae",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_f0a930c0c3419121",
+    "kind": "operation.responded",
+    "step_id": "W04",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.437Z",
+    "role": "creator",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "account.read responded ok (200)",
+    "payload": {
+      "operation": "account.read",
+      "output": {
+        "id": "fx_accountread8",
+        "operation": "account.read",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountread8"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 26,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_53ae4a14e985617f",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_f0a930c0c3419121",
+    "kind": "step.finished",
+    "step_id": "W04",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.437Z",
+    "role": "creator",
+    "source": "fixture",
+    "environment": "local",
+    "state": "passed",
+    "summary": "Onboarding passed on fixture; hosted human step recorded as hand-off, not completed",
+    "payload": {
+      "human_gate": true
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountread8"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 27,
+    "contract_version": "1.0.0"
+  }
+]

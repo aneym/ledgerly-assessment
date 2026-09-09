@@ -1,0 +1,46 @@
+{
+  "_note": "Fictional local-only demo identities on the reserved ledgerly.test domain. The sample password is public test data, never a deployment credential.",
+  "buyer": {
+    "name": "Ada Buyer",
+    "email": "buyer.demo@ledgerly.test",
+    "password": "demo-pass-2026"
+  },
+  "seller": {
+    "name": "Onda Sounds",
+    "email": "onda@ledgerly.test",
+    "password": "demo-pass-2026",
+    "country": "BR"
+  },
+  "operator": {
+    "name": "Ledgerly Ops",
+    "email": "ops.demo@ledgerly.test",
+    "password": "demo-pass-2026"
+  },
+  "sellerForms": {
+    "_note": "One seller form per sandbox country, names from sellers.json.",
+    "US": {
+      "name": "Mara Okonkwo",
+      "email": "mara@ledgerly.test",
+      "country": "US"
+    },
+    "DE": {
+      "name": "Studio Kontur",
+      "email": "kontur@ledgerly.test",
+      "country": "DE"
+    },
+    "BR": {
+      "name": "Onda Sounds",
+      "email": "onda@ledgerly.test",
+      "country": "BR"
+    }
+  },
+  "sampleProduct": {
+    "title": "Onda Drum Library",
+    "subtitle": "600 one-shots and loops",
+    "category": "Audio",
+    "price": "25.00",
+    "description": "Drums recorded in Sao Paulo. 600 one-shots and 40 loops as 24-bit WAV, sorted by kit. For producers who want acoustic weight without samples that everyone already has.",
+    "fileName": "onda-drum-library-sample.zip",
+    "coverName": "onda-drum-library-cover.png"
+  }
+}

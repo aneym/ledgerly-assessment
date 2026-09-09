@@ -1,0 +1,23 @@
+[
+  {
+    "event_id": "evt_acec7e37d1f2b78a",
+    "seq": 43,
+    "at": "2026-09-08T16:19:57.439Z",
+    "operation": "checkout.create",
+    "input": {}
+  },
+  {
+    "event_id": "evt_9c827e1d07ec8673",
+    "seq": 46,
+    "at": "2026-09-08T16:19:57.439Z",
+    "operation": "balance.read",
+    "input": {}
+  },
+  {
+    "event_id": "evt_a657b1b90cdbd94e",
+    "seq": 48,
+    "at": "2026-09-08T16:19:57.439Z",
+    "operation": "transfer.create",
+    "input": {}
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "name": "@ledgerly/evidence",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Evidence ledger rules and static report generator. Reads requirements, scenarios and append-only records; derives state; never stores a status anyone typed. Zero runtime dependencies; runs on Node 26 type stripping.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json",
+    "build:report": "node bin/build.ts"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "typescript": "5.9.3",
+    "vitest": "4.1.11"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1788883654193,
+      "tag": "0000_tidy_war_machine",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1788886920941,
+      "tag": "0001_eminent_triathlon",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1788889444723,
+      "tag": "0002_optimal_virginia_dare",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1788891461658,
+      "tag": "0003_aromatic_zaran",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1788892700998,
+      "tag": "0004_thick_bloodscream",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1788895541574,
+      "tag": "0005_buyer_user_id",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1788899911784,
+      "tag": "0006_products_refund_requests",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1788909295810,
+      "tag": "0007_demo_seller_countries",
+      "breakpoints": true
+    }
+  ]
+}

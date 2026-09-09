@@ -1,0 +1,201 @@
+[
+  {
+    "scenario_id": "S01",
+    "title": "Platform key and parent account",
+    "requirement_ids": ["SETUP-01", "SETUP-02", "BUILD-01", "SUBMIT-01"],
+    "evidence_required": ["sandbox-api", "human"],
+    "handover_step": 1,
+    "prerequisites": [],
+    "gates": ["G01"],
+    "command": "TBD after Q02: ledgerly evidence run S01",
+    "expected_invariant": "Real Whop account, explicit sandbox base, enablement email sent and acknowledged, one parent account ID and one Account API key whose scope inventory lists only the scopes the later scenarios use.",
+    "failure_cases": [
+      { "name": "scope inventory", "category": "human", "expect": "Redacted scope list reviewed; nothing beyond the minimum for S02 to S10." },
+      { "name": "enablement acknowledged", "category": "human", "expect": "Sponsor reply on file; transfers and payouts capabilities read back as active before S06 and S07 start." }
+    ],
+    "owner": "unassigned",
+    "notes": "Key creation happens in the dashboard by Alex. The record holds the key ID and scope names, never the secret. The enablement email was reported sent before this lane opened; its acknowledgement is still pending."
+  },
+  {
+    "scenario_id": "S02",
+    "title": "Three sellers, idempotent onboarding",
+    "requirement_ids": ["BUILD-02", "BUILD-03", "BUILD-04", "CODE-01", "SUBMIT-01"],
+    "evidence_required": ["fixture", "sandbox-api"],
+    "handover_step": 2,
+    "prerequisites": ["S01"],
+    "gates": ["G01"],
+    "command": "TBD after Q02: ledgerly evidence run S02",
+    "expected_invariant": "Exactly one connected account per external ID and environment for US, DE and BR, each with parent_company_id, email and metadata.external_id readable back.",
+    "failure_cases": [
+      { "name": "restart mid-create", "category": "fixture", "expect": "Process killed after the request and before the local write; rerun resolves to the same account, no second create." },
+      { "name": "concurrent create", "category": "fixture", "expect": "Two callers with the same external ID produce one local seller row." }
+    ],
+    "owner": "unassigned"
+  },
+  {
+    "scenario_id": "S03",
+    "title": "Duplicate create and nested parent",
+    "requirement_ids": ["BUILD-05", "BUILD-06"],
+    "evidence_required": ["sandbox-api"],
+    "handover_step": 3,
+    "prerequisites": ["S02"],
+    "gates": ["G01"],
+    "command": "TBD after Q02: ledgerly evidence run S03",
+    "expected_invariant": "Second create for the same seller returns the observed provider behaviour verbatim; create under a connected account returns a provider error and no account.",
+    "failure_cases": [
+      { "name": "nested parent rejected", "category": "sandbox-api", "expect": "Error body captured; account list before and after has the same count." }
+    ],
+    "owner": "unassigned",
+    "notes": "The provider's duplicate behaviour is unknown until observed. Record what happened, do not predict it."
+  },
+  {
+    "scenario_id": "S04",
+    "title": "Onboarding link and readback",
+    "requirement_ids": ["BUILD-07", "BUILD-08"],
+    "evidence_required": ["sandbox-api", "human"],
+    "handover_step": 4,
+    "prerequisites": ["S02"],
+    "gates": ["G01"],
+    "command": "TBD after Q02: ledgerly evidence run S04",
+    "expected_invariant": "account_onboarding link created for one seller; Alex completes it; before and after reads differ in verification, required_actions and capabilities.",
+    "failure_cases": [
+      { "name": "before and after differ", "category": "sandbox-api", "expect": "Named fields changed between the two redacted reads; return URL reached is not the proof." }
+    ],
+    "owner": "unassigned",
+    "recording": "evidence/recordings/S04-onboarding.md"
+  },
+  {
+    "scenario_id": "S05",
+    "title": "Direct charge, fee in both ledgers, refund",
+    "requirement_ids": ["BUILD-09", "BUILD-10", "BUILD-11", "CODE-02", "SUBMIT-02"],
+    "evidence_required": ["fixture", "sandbox-api", "browser"],
+    "handover_step": 5,
+    "prerequisites": ["S04"],
+    "gates": ["G01"],
+    "command": "TBD after Q02: ledgerly evidence run S05",
+    "expected_invariant": "US seller checkout with inline plan and application_fee_amount equal to 8% of gross; sandbox card pays; fee and seller share appear in both ledgers; refund recorded with the fee's actual outcome.",
+    "failure_cases": [
+      { "name": "fee rounding", "category": "fixture", "expect": "Boundary amounts round the way the agreed policy says, per currency scale." },
+      { "name": "fee rejected", "category": "fixture", "expect": "A checkout with a fee not equal to 8% fails validation before any provider call." }
+    ],
+    "owner": "unassigned",
+    "recording": "evidence/recordings/S05-direct-charge.md"
+  },
+  {
+    "scenario_id": "S06",
+    "title": "Parent charge and Brazil transfer",
+    "requirement_ids": ["BUILD-12", "BUILD-13", "SUBMIT-02"],
+    "evidence_required": ["sandbox-api"],
+    "handover_step": 6,
+    "prerequisites": ["S05"],
+    "gates": ["G01"],
+    "command": "TBD after Q02: ledgerly evidence run S06",
+    "expected_invariant": "Same item sold on the Ledgerly account; transfers.create moves the BR seller share; parent debit and child credit balance in the transfer currency.",
+    "failure_cases": [
+      { "name": "empty balance", "category": "sandbox-api", "expect": "Balance read first. If empty, the record is blocked with the top-up gate or not applicable with the reason. No unauthorised funding." }
+    ],
+    "owner": "unassigned"
+  },
+  {
+    "scenario_id": "S07",
+    "title": "Embedded payouts, rail markup, hosted portal",
+    "requirement_ids": ["BUILD-14", "BUILD-15", "BUILD-16", "BUILD-17", "SUBMIT-03"],
+    "evidence_required": ["fixture", "browser", "human"],
+    "handover_step": 7,
+    "prerequisites": ["S04"],
+    "gates": ["G01"],
+    "command": "TBD after Q02: ledgerly evidence run S07",
+    "expected_invariant": "Server maps the logged-in seller to its account, mints a token with explicit nonempty scoped_actions and a short expires_at, renders the embedded components on our page in sandbox mode; one rail markup saved and read back; payouts_portal link opens for the same seller.",
+    "failure_cases": [
+      { "name": "sibling denied", "category": "fixture", "expect": "A request naming another seller's account ID is refused server-side." },
+      { "name": "empty scopes rejected", "category": "fixture", "expect": "Token route refuses an empty scoped_actions list." },
+      { "name": "expiry honoured", "category": "fixture", "expect": "Token past expires_at is not reused." }
+    ],
+    "owner": "unassigned",
+    "recording": "evidence/recordings/S07-embedded-payouts.md",
+    "notes": "Sandbox guide says payouts are unavailable, checked 2026-09-08. Mounted components are browser evidence only. What the assessment environment can show stays blocked on G01."
+  },
+  {
+    "scenario_id": "S08",
+    "title": "Webhook subscription, consumer, test and replay",
+    "requirement_ids": ["BUILD-18", "BUILD-19", "CODE-03", "SUBMIT-04"],
+    "evidence_required": ["fixture", "sandbox-api"],
+    "handover_step": 8,
+    "prerequisites": ["S05"],
+    "gates": ["G01"],
+    "command": "TBD after Q02: ledgerly evidence run S08",
+    "expected_invariant": "One platform webhook with child_resource_events true and the eight exact events; signature verified over raw bytes; one business effect per event across restart; test delivery and one replay recorded with provider delivery IDs and the deliveries-endpoint excerpt.",
+    "failure_cases": [
+      { "name": "tampered body", "category": "fixture", "expect": "Signature check fails; nothing is persisted." },
+      { "name": "stale timestamp", "category": "fixture", "expect": "webhook-timestamp older than five minutes is rejected." },
+      { "name": "same webhook-id twice", "category": "fixture", "expect": "Second delivery acknowledged, no second effect." },
+      { "name": "regenerated-id replay", "category": "sandbox-api", "expect": "Replay with regenerate_id arrives as a new message; effect dedupe still yields one ledger effect." },
+      { "name": "crash before ack", "category": "fixture", "expect": "Inbox row exists, effect applied once after restart." },
+      { "name": "unknown seller", "category": "fixture", "expect": "Event for an unmapped account is quarantined, not dropped." }
+    ],
+    "owner": "unassigned",
+    "notes": "Test-event deliveries are samples. Records from them carry sample_payload true. Whether samples satisfy SUBMIT-04 is unknown; see decision.md."
+  },
+  {
+    "scenario_id": "S09",
+    "title": "Suspend one seller, per-seller API key",
+    "requirement_ids": ["BUILD-20", "BUILD-21"],
+    "evidence_required": ["sandbox-api", "human"],
+    "handover_step": 9,
+    "prerequisites": ["S02"],
+    "gates": ["G01"],
+    "command": "TBD after Q02: ledgerly evidence run S09",
+    "expected_invariant": "One connected account suspended with pre and post readbacks; one API key scoped to a single connected account, created through the authorised user session, secret never recorded.",
+    "failure_cases": [
+      { "name": "sibling access denied", "category": "sandbox-api", "expect": "The per-seller key cannot read a sibling account." }
+    ],
+    "owner": "unassigned"
+  },
+  {
+    "scenario_id": "S10",
+    "title": "Reconciliation with deliberate drift",
+    "requirement_ids": ["CODE-04"],
+    "evidence_required": ["fixture", "sandbox-api"],
+    "handover_step": 10,
+    "prerequisites": ["S06", "S08"],
+    "gates": ["G01"],
+    "command": "TBD after Q02: ledgerly evidence run S10",
+    "expected_invariant": "Job pages through one seller's payments and transfers from Whop and diffs them against the local ledger by currency; a clean run reports zero discrepancies; a seeded local drift is reported and not repaired.",
+    "failure_cases": [
+      { "name": "seeded drift", "category": "fixture", "expect": "One local entry altered; the report names it with both sides' values and takes no corrective write." },
+      { "name": "pagination", "category": "fixture", "expect": "More entries than one page; all are compared." }
+    ],
+    "owner": "unassigned"
+  },
+  {
+    "scenario_id": "S11",
+    "title": "Written answers and sequence diagrams",
+    "requirement_ids": ["DEBUG-01", "DEBUG-02", "DEBUG-03", "IMPROVE-01", "CODE-05"],
+    "evidence_required": ["source-research", "human"],
+    "handover_step": 11,
+    "prerequisites": [],
+    "gates": [],
+    "command": "TBD after Q02: ledgerly evidence run S11",
+    "expected_invariant": "Each answer claim links to a source-research record with URL, fetch time and quoted excerpt; both money-flow diagrams match the implemented adapter calls; exactly three improvement proposals.",
+    "failure_cases": [
+      { "name": "unsourced claim", "category": "human", "expect": "Reviewer finds no claim without a record link." }
+    ],
+    "owner": "unassigned"
+  },
+  {
+    "scenario_id": "S12",
+    "title": "Public handover",
+    "requirement_ids": ["SUBMIT-05"],
+    "evidence_required": ["human"],
+    "handover_step": 12,
+    "prerequisites": ["S01", "S02", "S03", "S04", "S05", "S06", "S07", "S08", "S09", "S10", "S11"],
+    "gates": [],
+    "command": "TBD after Q02: ledgerly evidence run S12",
+    "expected_invariant": "Secret scan clean over repo and evidence artifacts; a reviewer other than the author forks and runs the README steps; Loom and recording links resolve; Alex authorises publication.",
+    "failure_cases": [
+      { "name": "fork and run", "category": "human", "expect": "Reviewer's run log attached as an artifact." }
+    ],
+    "owner": "unassigned",
+    "notes": "Publication and email are separate owner approvals, not part of this scenario's pass."
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "event_id": "evt_d8e0e2bb1c75c2b8",
+    "seq": 17,
+    "at": "2026-09-08T16:19:57.436Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountcreateOrFetch5"
+      ],
+      "api_version_date": null
+    },
+    "operation": "account.createOrFetch",
+    "output": {
+      "id": "fx_accountcreateOrFetch5",
+      "operation": "account.createOrFetch",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_e0e33b63e9bc9ecb",
+    "seq": 19,
+    "at": "2026-09-08T16:19:57.436Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountcreateNested6"
+      ],
+      "api_version_date": null
+    },
+    "operation": "account.createNested",
+    "output": {
+      "id": "fx_accountcreateNested6",
+      "operation": "account.createNested",
+      "fixture": true
+    }
+  }
+]

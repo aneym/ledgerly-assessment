@@ -1,0 +1,118 @@
+[
+  {
+    "event_id": "evt_2a884059c6aba6a7",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_82f309596e68bd4d",
+    "kind": "step.started",
+    "step_id": "W11",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.443Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Per-seller key starts as admin (attempt 1)",
+    "payload": {
+      "requirement_ids": [
+        "BUILD-21"
+      ],
+      "scenario_id": "S09",
+      "operations": [
+        "apiKey.recordProvisioned"
+      ]
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 85,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_bf6cade1b66d36ca",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_82f309596e68bd4d",
+    "kind": "operation.requested",
+    "step_id": "W11",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.443Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "apiKey.recordProvisioned requested",
+    "payload": {
+      "operation": "apiKey.recordProvisioned",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 86,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_04dce8140f1b8b84",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_82f309596e68bd4d",
+    "kind": "operation.responded",
+    "step_id": "W11",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.443Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "apiKey.recordProvisioned responded ok (200)",
+    "payload": {
+      "operation": "apiKey.recordProvisioned",
+      "output": {
+        "id": "fx_apiKeyrecordProvisioned26",
+        "operation": "apiKey.recordProvisioned",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_apiKeyrecordProvisioned26"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 87,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_dee2599ca24cdb2e",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_82f309596e68bd4d",
+    "kind": "step.finished",
+    "step_id": "W11",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.443Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "passed",
+    "summary": "Per-seller key passed on fixture; hosted human step recorded as hand-off, not completed",
+    "payload": {
+      "human_gate": true
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_apiKeyrecordProvisioned26"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 88,
+    "contract_version": "1.0.0"
+  }
+]

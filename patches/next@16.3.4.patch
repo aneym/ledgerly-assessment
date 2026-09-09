@@ -1,0 +1,24 @@
+diff --git a/dist/server/dev/hot-middleware.js b/dist/server/dev/hot-middleware.js
+--- a/dist/server/dev/hot-middleware.js
++++ b/dist/server/dev/hot-middleware.js
+@@ -156,7 +156,7 @@
+                 if (_devindicatorserverstate.devIndicatorServerState.disabledUntil < Date.now()) {
+                     _devindicatorserverstate.devIndicatorServerState.disabledUntil = 0;
+                 }
+-                this.publish({
++                this.publishToClient(client, {
+                     type: _hotreloadertypes.HMR_MESSAGE_SENT_TO_BROWSER.SYNC,
+                     hash: stats.hash,
+                     errors: [
+diff --git a/dist/esm/server/dev/hot-middleware.js b/dist/esm/server/dev/hot-middleware.js
+--- a/dist/esm/server/dev/hot-middleware.js
++++ b/dist/esm/server/dev/hot-middleware.js
+@@ -146,7 +146,7 @@
+                 if (devIndicatorServerState.disabledUntil < Date.now()) {
+                     devIndicatorServerState.disabledUntil = 0;
+                 }
+-                this.publish({
++                this.publishToClient(client, {
+                     type: HMR_MESSAGE_SENT_TO_BROWSER.SYNC,
+                     hash: stats.hash,
+                     errors: [

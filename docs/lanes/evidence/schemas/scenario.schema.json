@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ledgerly/scenario",
+  "title": "Scenario",
+  "description": "One runnable proof unit. Groups requirement IDs, names the categories of evidence that must exist before the requirement counts, and lists the failure cases the run has to show as well as the happy path.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scenario_id",
+    "title",
+    "requirement_ids",
+    "evidence_required",
+    "handover_step",
+    "prerequisites",
+    "gates",
+    "command",
+    "expected_invariant",
+    "failure_cases",
+    "owner"
+  ],
+  "properties": {
+    "scenario_id": { "type": "string", "pattern": "^S[0-9]{2}$" },
+    "title": { "type": "string", "minLength": 1 },
+    "requirement_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^(SETUP|BUILD|CODE|DEBUG|SUBMIT|IMPROVE)-[0-9]{2}$" }
+    },
+    "evidence_required": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "enum": ["fixture", "sandbox-api", "browser", "human", "source-research"] },
+      "description": "Every category listed here needs at least one verified record before the scenario is done. Fixture alone is never enough for a scenario that lists sandbox-api, browser or human."
+    },
+    "handover_step": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Position in the Loom walkthrough, following docs/wiki/operations.md. 0 is not allowed; every scenario appears in the handover."
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^S[0-9]{2}$" },
+      "description": "Scenarios that must be verified first."
+    },
+    "gates": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^G[0-9]{2}$" },
+      "description": "Owner gates from docs/wiki/decisions.md that hold this scenario."
+    },
+    "command": { "type": "string", "minLength": 1, "description": "Command that runs the scenario and writes records. Placeholder until the stack is chosen." },
+    "expected_invariant": { "type": "string", "minLength": 1 },
+    "failure_cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "category", "expect"],
+        "properties": {
+          "name": { "type": "string" },
+          "category": { "type": "string", "enum": ["fixture", "sandbox-api", "browser", "human", "source-research"] },
+          "expect": { "type": "string" }
+        }
+      }
+    },
+    "owner": { "type": "string", "description": "Lane or person who runs it. Unassigned until contracts are frozen." },
+    "recording": {
+      "type": "string",
+      "description": "Path to the markdown step list under evidence/recordings/ when the scenario is shown on video."
+    },
+    "notes": { "type": "string" }
+  }
+}

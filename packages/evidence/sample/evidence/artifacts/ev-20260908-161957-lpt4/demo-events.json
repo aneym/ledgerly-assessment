@@ -1,0 +1,118 @@
+[
+  {
+    "event_id": "evt_e444d8defb6071ba",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2878c318b4be442",
+    "kind": "step.started",
+    "step_id": "W12",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.443Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Reconciliation starts as admin (attempt 1)",
+    "payload": {
+      "requirement_ids": [
+        "CODE-04"
+      ],
+      "scenario_id": "S10",
+      "operations": [
+        "reconcile.run"
+      ]
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 89,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_580ffff3ef69b59f",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2878c318b4be442",
+    "kind": "operation.requested",
+    "step_id": "W12",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.443Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "reconcile.run requested",
+    "payload": {
+      "operation": "reconcile.run",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 90,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_96020089ae3692bb",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2878c318b4be442",
+    "kind": "operation.responded",
+    "step_id": "W12",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.443Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "reconcile.run responded ok (200)",
+    "payload": {
+      "operation": "reconcile.run",
+      "output": {
+        "id": "fx_reconcilerun27",
+        "operation": "reconcile.run",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_reconcilerun27"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 91,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_27c4a9cd55d247b9",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_b2878c318b4be442",
+    "kind": "step.finished",
+    "step_id": "W12",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.443Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "passed",
+    "summary": "Reconciliation passed on fixture",
+    "payload": {
+      "human_gate": false
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_reconcilerun27"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 92,
+    "contract_version": "1.0.0"
+  }
+]

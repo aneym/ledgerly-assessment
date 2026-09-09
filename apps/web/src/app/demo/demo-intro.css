@@ -1,0 +1,62 @@
+/* Guided demo entry; form controls use the shared buyer styles. */
+.demo-intro.wrap {
+  max-width: 760px;
+  min-width: 0;
+  padding-top: var(--s8);
+  padding-bottom: var(--s8);
+}
+.demo-intro-card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  background: var(--paper);
+  border-radius: var(--r-card);
+  box-shadow: var(--sh-3), var(--ring);
+  padding: var(--s6);
+}
+.demo-intro-card .by-h1 {
+  font-size: 32px;
+  font-variation-settings: "opsz" 48;
+  letter-spacing: -0.01em;
+}
+.demo-intro-card .by-lede {
+  margin-top: var(--s5);
+  font-size: 15px;
+}
+.demo-intro-act {
+  margin-top: var(--s5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s3);
+}
+.demo-intro-details {
+  margin-top: var(--s5);
+  border-top: 1px solid var(--line);
+  padding-top: var(--s4);
+  font-size: 14px;
+}
+.demo-intro-details summary {
+  cursor: pointer;
+}
+.demo-intro-detail-body {
+  display: grid;
+  min-width: 0;
+  gap: var(--s3);
+  padding-top: var(--s4);
+}
+.demo-intro-warn {
+  margin-top: var(--s3);
+  color: var(--warn);
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  .demo-intro.wrap {
+    padding: var(--s5) var(--s4);
+  }
+  .demo-intro-card {
+    padding: var(--s4);
+  }
+  .demo-intro-card .by-h1 {
+    font-size: 28px;
+  }
+}

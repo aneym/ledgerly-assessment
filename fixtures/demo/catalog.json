@@ -1,0 +1,188 @@
+{
+  "_note": "Fictional Ledgerly demo catalog. Every product here is fixture data with provenance mock. Prices are integer minor units. Covers are drawn in code by ProductCover, keyed on slug; no image files. Sellers come from sellers.json.",
+  "products": [
+    {
+      "id": "prd_grain",
+      "slug": "grain-and-gradient",
+      "title": "Grain & Gradient",
+      "subtitle": "40 film-emulation Lightroom presets",
+      "category": "Photography",
+      "seller_id": "sel_mara",
+      "price": { "amount_minor": 2500, "currency": "USD" },
+      "description": [
+        "Forty looks built from scanned negatives, not from sliders. Each preset carries its own grain profile, so the texture scales with your ISO instead of sitting on top like a filter.",
+        "Ten warm stocks, ten cool, ten neutral, ten pushed. Made in Austin over two years of client work, and every look has a real photograph behind it."
+      ],
+      "includes": [
+        { "label": "Presets", "value": "40 .xmp files" },
+        { "label": "Works in", "value": "Lightroom Classic, Lightroom, mobile" },
+        { "label": "Guide", "value": "Install and grain notes, 12 pages" },
+        { "label": "Updates", "value": "Free, forever" },
+        { "label": "Licence", "value": "Personal and commercial" }
+      ],
+      "rating": { "avg": 4.8, "count": 212 },
+      "cover": { "motif": "warm amber to teal gradient with film grain", "tone": "dark" },
+      "released_at": "2026-09-01",
+      "provenance": "mock"
+    },
+    {
+      "id": "prd_kontur",
+      "slug": "kontur-type-specimen-kit",
+      "title": "Kontur Type Specimen Kit",
+      "subtitle": "12 display fonts with specimen posters",
+      "category": "Typography",
+      "seller_id": "sel_kontur",
+      "price": { "amount_minor": 8900, "currency": "USD" },
+      "description": [
+        "Twelve display faces from the Kontur library, each with a printed specimen poster at A2. The faces share one skeleton and vary in weight, contrast and width, so they mix without fighting.",
+        "Every font ships as a variable file plus static instances. The posters are layered PDFs you can reprint with your own text."
+      ],
+      "includes": [
+        { "label": "Fonts", "value": "12 families, OTF and variable" },
+        { "label": "Posters", "value": "12 A2 specimen PDFs" },
+        { "label": "Licence", "value": "Desktop and web, one studio" },
+        { "label": "Languages", "value": "Latin extended" }
+      ],
+      "rating": { "avg": 4.9, "count": 68 },
+      "cover": { "motif": "giant black letterform on paper white", "tone": "light" },
+      "released_at": "2026-08-30",
+      "provenance": "mock"
+    },
+    {
+      "id": "prd_onda_drums",
+      "slug": "onda-drum-library",
+      "title": "Onda Drum Library",
+      "subtitle": "600 one-shots and loops",
+      "category": "Audio",
+      "seller_id": "sel_onda",
+      "price": { "amount_minor": 6000, "currency": "USD" },
+      "description": [
+        "Six hundred drum sounds recorded in a concrete room in São Paulo and cut to the transient. Kicks, snares, hats, toms and percussion, each in three mic positions.",
+        "The loops are tempo-labelled and dry. Nothing is layered or pre-mixed, so the sounds sit where you put them."
+      ],
+      "includes": [
+        { "label": "One-shots", "value": "420 WAV, 24-bit, 48 kHz" },
+        { "label": "Loops", "value": "180 WAV, 80 to 140 BPM" },
+        { "label": "Kits", "value": "Ableton, Logic, Kontakt" },
+        { "label": "Licence", "value": "Royalty free" }
+      ],
+      "rating": { "avg": 4.7, "count": 341 },
+      "cover": { "motif": "concentric waveform rings, ink on cream", "tone": "light" },
+      "released_at": "2026-08-27",
+      "provenance": "mock"
+    },
+    {
+      "id": "prd_ledger_layouts",
+      "slug": "ledger-layouts-for-framer",
+      "title": "Ledger Layouts for Framer",
+      "subtitle": "18 SaaS marketing templates",
+      "category": "Templates",
+      "seller_id": "sel_form",
+      "price": { "amount_minor": 14900, "currency": "USD" },
+      "description": [
+        "Eighteen marketing page templates for Framer, built on one grid and one type scale. Landing, pricing, changelog, docs, careers and the rest of a software site.",
+        "Every page uses the same component set, so a change to a button or a card runs through the whole site."
+      ],
+      "includes": [
+        { "label": "Pages", "value": "18 Framer templates" },
+        { "label": "Components", "value": "64 shared components" },
+        { "label": "Breakpoints", "value": "Desktop, tablet, phone" },
+        { "label": "Licence", "value": "Unlimited sites, one team" }
+      ],
+      "rating": { "avg": 4.6, "count": 57 },
+      "cover": { "motif": "isometric page stack in cobalt", "tone": "dark" },
+      "released_at": "2026-08-25",
+      "provenance": "mock"
+    },
+    {
+      "id": "prd_quiet_workbook",
+      "slug": "the-quiet-workbook",
+      "title": "The Quiet Workbook",
+      "subtitle": "120-page PDF for freelancers pricing their work",
+      "category": "Writing",
+      "seller_id": "sel_form",
+      "price": { "amount_minor": 4000, "currency": "USD" },
+      "description": [
+        "A workbook for freelancers who undercharge. It walks from costs to a day rate to a project price, with a worksheet at each step and a worked example from a real studio.",
+        "Written after a decade of quoting design work. The maths is simple; the hard part is writing the number down."
+      ],
+      "includes": [
+        { "label": "Workbook", "value": "120-page PDF" },
+        { "label": "Worksheets", "value": "14 fillable pages" },
+        { "label": "Spreadsheet", "value": "Rate calculator, Sheets and Excel" }
+      ],
+      "rating": { "avg": 4.9, "count": 124 },
+      "cover": { "motif": "single serif title on matte olive", "tone": "dark" },
+      "released_at": "2026-08-22",
+      "provenance": "mock"
+    },
+    {
+      "id": "prd_lowpoly_botanicals",
+      "slug": "lowpoly-botanicals",
+      "title": "Lowpoly Botanicals",
+      "subtitle": "80 game-ready plant models",
+      "category": "3D",
+      "seller_id": "sel_pixelfern",
+      "price": { "amount_minor": 3500, "currency": "USD" },
+      "description": [
+        "Eighty low-poly plants for games and real-time scenes. Ferns, grasses, shrubs, succulents and six trees, each under 900 triangles with a single shared atlas.",
+        "Modelled by hand, not decimated. The silhouettes read at distance and the palette is flat-shaded, so they light cleanly in any engine."
+      ],
+      "includes": [
+        { "label": "Models", "value": "80 FBX and GLB" },
+        { "label": "Textures", "value": "One 2K atlas, PNG" },
+        { "label": "Engines", "value": "Unity and Unreal sample scenes" },
+        { "label": "Licence", "value": "Commercial, no attribution" }
+      ],
+      "rating": { "avg": 4.8, "count": 189 },
+      "cover": { "motif": "faceted leaf cluster on deep green", "tone": "dark" },
+      "released_at": "2026-08-20",
+      "provenance": "mock"
+    },
+    {
+      "id": "prd_notion_os",
+      "slug": "notion-os-for-studios",
+      "title": "Notion OS for Studios",
+      "subtitle": "Client, invoice and project system",
+      "category": "Productivity",
+      "seller_id": "sel_acme",
+      "price": { "amount_minor": 2900, "currency": "USD" },
+      "description": [
+        "One Notion workspace that runs a small studio. Clients, proposals, projects, tasks, invoices and a weekly review, linked so a project always knows its client and its invoice.",
+        "Built for teams of two to ten. Duplicate it, rename the studio, and the dashboards fill in as you work."
+      ],
+      "includes": [
+        { "label": "Workspace", "value": "Notion template, 9 databases" },
+        { "label": "Views", "value": "Pipeline, calendar, invoice ageing" },
+        { "label": "Guide", "value": "Setup video, 22 minutes" },
+        { "label": "Updates", "value": "Free for one year" }
+      ],
+      "rating": { "avg": 4.5, "count": 96 },
+      "cover": { "motif": "grid of soft tiles, graphite", "tone": "dark" },
+      "released_at": "2026-08-18",
+      "provenance": "mock"
+    },
+    {
+      "id": "prd_streetlight",
+      "slug": "streetlight-sessions",
+      "title": "Streetlight Sessions",
+      "subtitle": "10-track ambient EP, WAV + stems",
+      "category": "Music",
+      "seller_id": "sel_onda",
+      "price": { "amount_minor": 1200, "currency": "USD" },
+      "description": [
+        "Ten ambient pieces recorded at night under one sodium lamp, on tape, with a single synth and a room mic. The hum of the lamp is in every track.",
+        "The stems are included so you can score with the parts, not just the mix."
+      ],
+      "includes": [
+        { "label": "Tracks", "value": "10 WAV, 24-bit" },
+        { "label": "Stems", "value": "4 per track" },
+        { "label": "Artwork", "value": "Cover and liner PDF" }
+      ],
+      "rating": { "avg": 4.7, "count": 78 },
+      "cover": { "motif": "sodium-orange halo on black", "tone": "dark" },
+      "released_at": "2026-08-15",
+      "provenance": "mock"
+    }
+  ]
+}

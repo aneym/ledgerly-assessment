@@ -1,0 +1,288 @@
+[
+  {
+    "event_id": "evt_84b68f53dfb9d4ec",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_876d4c7f1d81dda1",
+    "kind": "step.started",
+    "step_id": "W06",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Platform charge and Brazil transfer starts as buyer (attempt 1)",
+    "payload": {
+      "requirement_ids": [
+        "BUILD-12",
+        "BUILD-13",
+        "SUBMIT-02"
+      ],
+      "scenario_id": "S06",
+      "operations": [
+        "checkout.create",
+        "balance.read",
+        "transfer.create"
+      ]
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 42,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_acec7e37d1f2b78a",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_876d4c7f1d81dda1",
+    "kind": "operation.requested",
+    "step_id": "W06",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "checkout.create requested",
+    "payload": {
+      "operation": "checkout.create",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 43,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_8ebaf228ab0c52d1",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_876d4c7f1d81dda1",
+    "kind": "operation.responded",
+    "step_id": "W06",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "checkout.create responded ok (200)",
+    "payload": {
+      "operation": "checkout.create",
+      "output": {
+        "id": "fx_checkoutcreate13",
+        "operation": "checkout.create",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_checkoutcreate13"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 44,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_523985e48402ca61",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_876d4c7f1d81dda1",
+    "kind": "ledger.written",
+    "step_id": "W06",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Ledger row written for checkout.create",
+    "payload": {
+      "row": {
+        "ref": "fx_checkoutcreate13",
+        "operation": "checkout.create"
+      }
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 45,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_9c827e1d07ec8673",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_876d4c7f1d81dda1",
+    "kind": "operation.requested",
+    "step_id": "W06",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "balance.read requested",
+    "payload": {
+      "operation": "balance.read",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 46,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_86ca5de888c67ae8",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_876d4c7f1d81dda1",
+    "kind": "operation.responded",
+    "step_id": "W06",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "balance.read responded ok (200)",
+    "payload": {
+      "operation": "balance.read",
+      "output": {
+        "id": "fx_balanceread14",
+        "operation": "balance.read",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_balanceread14"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 47,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_a657b1b90cdbd94e",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_876d4c7f1d81dda1",
+    "kind": "operation.requested",
+    "step_id": "W06",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "transfer.create requested",
+    "payload": {
+      "operation": "transfer.create",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 48,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_d801006fac67bc71",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_876d4c7f1d81dda1",
+    "kind": "operation.responded",
+    "step_id": "W06",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "transfer.create responded ok (200)",
+    "payload": {
+      "operation": "transfer.create",
+      "output": {
+        "id": "fx_transfercreate15",
+        "operation": "transfer.create",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_transfercreate15"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 49,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_611f517e33006fb8",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_876d4c7f1d81dda1",
+    "kind": "ledger.written",
+    "step_id": "W06",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Ledger row written for transfer.create",
+    "payload": {
+      "row": {
+        "ref": "fx_transfercreate15",
+        "operation": "transfer.create"
+      }
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 50,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_0ea693f3c5fed63e",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_876d4c7f1d81dda1",
+    "kind": "step.finished",
+    "step_id": "W06",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "buyer",
+    "source": "fixture",
+    "environment": "local",
+    "state": "passed",
+    "summary": "Platform charge and Brazil transfer passed on fixture",
+    "payload": {
+      "human_gate": false
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_transfercreate15"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 51,
+    "contract_version": "1.0.0"
+  }
+]

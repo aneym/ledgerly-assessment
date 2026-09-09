@@ -1,0 +1,263 @@
+[
+  {
+    "event_id": "evt_a8f9151ece3d4fa8",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_d6cb9e263975fae9",
+    "kind": "step.started",
+    "step_id": "W13",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.444Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "The German incident starts as admin (attempt 1)",
+    "payload": {
+      "requirement_ids": [
+        "DEBUG-01",
+        "DEBUG-02",
+        "DEBUG-03"
+      ],
+      "scenario_id": "S11",
+      "operations": [
+        "webhook.decodeVersioned",
+        "payoutAlias.dedupe",
+        "payout.read"
+      ]
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 93,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_72cb06b409e338db",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_d6cb9e263975fae9",
+    "kind": "operation.requested",
+    "step_id": "W13",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.444Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "webhook.decodeVersioned requested",
+    "payload": {
+      "operation": "webhook.decodeVersioned",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 94,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_a38c08184daef77f",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_d6cb9e263975fae9",
+    "kind": "operation.responded",
+    "step_id": "W13",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.444Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "webhook.decodeVersioned responded ok (200)",
+    "payload": {
+      "operation": "webhook.decodeVersioned",
+      "output": {
+        "id": "fx_webhookdecodeVersioned28",
+        "operation": "webhook.decodeVersioned",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_webhookdecodeVersioned28"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 95,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_1554e7ef009e59b1",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_d6cb9e263975fae9",
+    "kind": "inbox.written",
+    "step_id": "W13",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.444Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Inbox row written for webhook.decodeVersioned",
+    "payload": {
+      "row": {
+        "ref": "fx_webhookdecodeVersioned28",
+        "operation": "webhook.decodeVersioned"
+      }
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 96,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_b913cfed0ad8fff4",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_d6cb9e263975fae9",
+    "kind": "operation.requested",
+    "step_id": "W13",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.444Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "payoutAlias.dedupe requested",
+    "payload": {
+      "operation": "payoutAlias.dedupe",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 97,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_7b8e27dec38e209a",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_d6cb9e263975fae9",
+    "kind": "operation.responded",
+    "step_id": "W13",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.444Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "payoutAlias.dedupe responded ok (200)",
+    "payload": {
+      "operation": "payoutAlias.dedupe",
+      "output": {
+        "id": "fx_payoutAliasdedupe29",
+        "operation": "payoutAlias.dedupe",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_payoutAliasdedupe29"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 98,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_c28be6d901041817",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_d6cb9e263975fae9",
+    "kind": "operation.requested",
+    "step_id": "W13",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.444Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "payout.read requested",
+    "payload": {
+      "operation": "payout.read",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 99,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_25f322366970a8e6",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_d6cb9e263975fae9",
+    "kind": "operation.responded",
+    "step_id": "W13",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.444Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "payout.read responded ok (200)",
+    "payload": {
+      "operation": "payout.read",
+      "output": {
+        "id": "fx_payoutread30",
+        "operation": "payout.read",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_payoutread30"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 100,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_1509c34eb6eaa562",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_d6cb9e263975fae9",
+    "kind": "step.finished",
+    "step_id": "W13",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.444Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "passed",
+    "summary": "The German incident passed on fixture",
+    "payload": {
+      "human_gate": false
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_payoutread30"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 101,
+    "contract_version": "1.0.0"
+  }
+]

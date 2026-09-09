@@ -1,0 +1,9 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/sweep",
+      "schedule": "* * * * *"
+    }
+  ],
+  "ignoreCommand": "git diff --quiet ${VERCEL_GIT_PREVIOUS_SHA:-HEAD^} HEAD -- . ../../packages ../../package.json ../../pnpm-lock.yaml ../../pnpm-workspace.yaml ../../docs/presentation ../../fixtures/demo ../../tsconfig.base.json ../../.node-version"
+}

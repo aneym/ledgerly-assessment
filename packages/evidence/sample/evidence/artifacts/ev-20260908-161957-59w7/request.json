@@ -1,0 +1,16 @@
+[
+  {
+    "event_id": "evt_75d112c57f2e1965",
+    "seq": 61,
+    "at": "2026-09-08T16:19:57.440Z",
+    "operation": "feeMarkup.create",
+    "input": {}
+  },
+  {
+    "event_id": "evt_a623cc6353307d43",
+    "seq": 63,
+    "at": "2026-09-08T16:19:57.440Z",
+    "operation": "feeMarkup.read",
+    "input": {}
+  }
+]

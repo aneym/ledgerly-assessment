@@ -1,0 +1,23 @@
+{
+  "name": "@ledgerly/whop",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@ledgerly/core": "workspace:*",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "vitest": "4.1.11",
+    "@types/node": "^24",
+    "typescript": "5.9.3",
+    "@electric-sql/pglite": "0.5.8",
+    "drizzle-orm": "0.45.2"
+  }
+}

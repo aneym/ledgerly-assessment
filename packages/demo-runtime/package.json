@@ -1,0 +1,43 @@
+{
+  "name": "@ledgerly/demo-runtime",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared demo event/state contract v1 and the runtime that emits it. Zero dependencies; runs on Node 26 type stripping.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./react": "./src/react/index.ts",
+    "./contract/demo-event.v2.schema.json": "./contract/demo-event.v2.schema.json"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json",
+    "demo": "tsx bin/demo.ts"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@types/node": "^24",
+    "@types/react": "19.2.18",
+    "react": "19.2.8",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3",
+    "vitest": "4.1.11"
+  },
+  "peerDependencies": {
+    "motion": ">=13",
+    "react": ">=19"
+  },
+  "peerDependenciesMeta": {
+    "motion": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "motion": "13.2.0"
+  }
+}

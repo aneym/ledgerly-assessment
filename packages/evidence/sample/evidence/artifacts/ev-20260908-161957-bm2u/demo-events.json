@@ -1,0 +1,314 @@
+[
+  {
+    "event_id": "evt_86e8d1540dcfd74e",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_27ff1ac03069de2c",
+    "kind": "step.started",
+    "step_id": "W09",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.441Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Webhook test and replay starts as admin (attempt 1)",
+    "payload": {
+      "requirement_ids": [
+        "BUILD-18",
+        "BUILD-19",
+        "CODE-03",
+        "SUBMIT-04"
+      ],
+      "scenario_id": "S08",
+      "operations": [
+        "webhook.read",
+        "webhook.sendTest",
+        "webhook.replay"
+      ]
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 66,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_4031101e941d7dcf",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_27ff1ac03069de2c",
+    "kind": "operation.requested",
+    "step_id": "W09",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.441Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "webhook.read requested",
+    "payload": {
+      "operation": "webhook.read",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 67,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_42a59493ba86e921",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_27ff1ac03069de2c",
+    "kind": "operation.responded",
+    "step_id": "W09",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.441Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "webhook.read responded ok (200)",
+    "payload": {
+      "operation": "webhook.read",
+      "output": {
+        "id": "fx_webhookread20",
+        "operation": "webhook.read",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_webhookread20"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 68,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_e210441b4c94c928",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_27ff1ac03069de2c",
+    "kind": "inbox.written",
+    "step_id": "W09",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.441Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Inbox row written for webhook.read",
+    "payload": {
+      "row": {
+        "ref": "fx_webhookread20",
+        "operation": "webhook.read"
+      }
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 69,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_4514b1cf4623cbbe",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_27ff1ac03069de2c",
+    "kind": "operation.requested",
+    "step_id": "W09",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.441Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "webhook.sendTest requested",
+    "payload": {
+      "operation": "webhook.sendTest",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 70,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_0367261df9e9c57d",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_27ff1ac03069de2c",
+    "kind": "operation.responded",
+    "step_id": "W09",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.441Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "webhook.sendTest responded ok (200)",
+    "payload": {
+      "operation": "webhook.sendTest",
+      "output": {
+        "id": "fx_webhooksendTest21",
+        "operation": "webhook.sendTest",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_webhooksendTest21"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 71,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_ef44e04346f61aec",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_27ff1ac03069de2c",
+    "kind": "inbox.written",
+    "step_id": "W09",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.441Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Inbox row written for webhook.sendTest",
+    "payload": {
+      "row": {
+        "ref": "fx_webhooksendTest21",
+        "operation": "webhook.sendTest"
+      }
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 72,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_4954ce8535a42e4f",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_27ff1ac03069de2c",
+    "kind": "operation.requested",
+    "step_id": "W09",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.441Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "webhook.replay requested",
+    "payload": {
+      "operation": "webhook.replay",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 73,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_1850c144f63831d4",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_27ff1ac03069de2c",
+    "kind": "operation.responded",
+    "step_id": "W09",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.441Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "webhook.replay responded ok (200)",
+    "payload": {
+      "operation": "webhook.replay",
+      "output": {
+        "id": "fx_webhookreplay22",
+        "operation": "webhook.replay",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_webhookreplay22"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 74,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_fbdc89f61d587544",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_27ff1ac03069de2c",
+    "kind": "inbox.written",
+    "step_id": "W09",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.441Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Inbox row written for webhook.replay",
+    "payload": {
+      "row": {
+        "ref": "fx_webhookreplay22",
+        "operation": "webhook.replay"
+      }
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 75,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_1d842cfe4af49f6c",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_27ff1ac03069de2c",
+    "kind": "step.finished",
+    "step_id": "W09",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.441Z",
+    "role": "admin",
+    "source": "fixture",
+    "environment": "local",
+    "state": "passed",
+    "summary": "Webhook test and replay passed on fixture",
+    "payload": {
+      "human_gate": false
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_webhookreplay22"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 76,
+    "contract_version": "1.0.0"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": { "incremental": false, "types": ["node", "react", "react-dom"] },
+  "include": [
+    "../../src/lib/assessment-scenarios.ts",
+    "../../src/app/api/demo/scenarios/**/*.ts",
+    "../../src/app/(storefront)/handoff/scenarios/**/*.tsx",
+    "./*.ts"
+  ],
+  "exclude": []
+}

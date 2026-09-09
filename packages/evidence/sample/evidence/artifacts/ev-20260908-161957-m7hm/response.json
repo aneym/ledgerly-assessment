@@ -1,0 +1,22 @@
+[
+  {
+    "event_id": "evt_00e9f91528e467ba",
+    "seq": 5,
+    "at": "2026-09-08T16:19:57.432Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountread1"
+      ],
+      "api_version_date": null
+    },
+    "operation": "account.read",
+    "output": {
+      "id": "fx_accountread1",
+      "operation": "account.read",
+      "fixture": true
+    }
+  }
+]

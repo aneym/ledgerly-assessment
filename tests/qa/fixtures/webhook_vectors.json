@@ -1,0 +1,369 @@
+{
+  "title": "Webhook consumer vectors (signature and inbox semantics)",
+  "owner": "integration-qa",
+  "generator": "tests/qa/gen_webhook_vectors.py",
+  "payload_shape": "synthetic; not a decoder fixture",
+  "secret": "ws_qafixture0000000000000000000000000000000000000000000000000000",
+  "secret_is_fake": true,
+  "wrong_secret": "ws_qafixture1111111111111111111111111111111111111111111111111111",
+  "key_derivation": "HMAC key = UTF-8 bytes of the ws_ string exactly as given (Whop docs: pass it as given, do not strip or base64). Unverified against a live delivery.",
+  "signed_string": "{webhook-id}.{webhook-timestamp}.{raw_body}",
+  "signature_header_format": "v1,<base64 HMAC-SHA256>; several space-separated values allowed",
+  "verify_at_unix": 1786381404,
+  "tolerance_seconds": 300,
+  "required_event_types": [
+    "payment.succeeded",
+    "payment.failed",
+    "refund.created",
+    "dispute.created",
+    "transfer.completed",
+    "payout.created",
+    "payout.updated",
+    "account.updated"
+  ],
+  "signature_vectors": [
+    {
+      "id": "valid",
+      "expect": "valid",
+      "delivery": {
+        "headers": {
+          "webhook-id": "msg_qa_valid0001",
+          "webhook-timestamp": "1786381404",
+          "webhook-signature": "v1,J1cfjMe6FyVBlbLqK1Ujgd10N2HGDUR1ACwRd0o8lPo=",
+          "content-type": "application/json"
+        },
+        "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_valid0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+      }
+    },
+    {
+      "id": "two-signatures-second-good",
+      "expect": "valid",
+      "note": "Standard Webhooks allows space-separated signatures; any match passes",
+      "delivery": {
+        "headers": {
+          "webhook-id": "msg_qa_valid0001",
+          "webhook-timestamp": "1786381404",
+          "webhook-signature": "v1,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA= v1,J1cfjMe6FyVBlbLqK1Ujgd10N2HGDUR1ACwRd0o8lPo=",
+          "content-type": "application/json"
+        },
+        "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_valid0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+      }
+    },
+    {
+      "id": "borderline-299s-old",
+      "expect": "valid",
+      "delivery": {
+        "headers": {
+          "webhook-id": "msg_qa_border001",
+          "webhook-timestamp": "1786381105",
+          "webhook-signature": "v1,B8AtkKtkpjOffvyETfhYog+SoQPZFs94BAJxF/X71b0=",
+          "content-type": "application/json"
+        },
+        "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_border001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+      }
+    },
+    {
+      "id": "tampered-body",
+      "expect": "invalid",
+      "reason": "body changed after signing; nothing may be persisted",
+      "delivery": {
+        "headers": {
+          "webhook-id": "msg_qa_valid0001",
+          "webhook-timestamp": "1786381404",
+          "webhook-signature": "v1,J1cfjMe6FyVBlbLqK1Ujgd10N2HGDUR1ACwRd0o8lPo=",
+          "content-type": "application/json"
+        },
+        "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"2500.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_valid0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+      }
+    },
+    {
+      "id": "tampered-webhook-id",
+      "expect": "invalid",
+      "reason": "id header changed; signature covers id",
+      "delivery": {
+        "headers": {
+          "webhook-id": "msg_qa_other0001",
+          "webhook-timestamp": "1786381404",
+          "webhook-signature": "v1,J1cfjMe6FyVBlbLqK1Ujgd10N2HGDUR1ACwRd0o8lPo=",
+          "content-type": "application/json"
+        },
+        "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_valid0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+      }
+    },
+    {
+      "id": "stale-timestamp-301s",
+      "expect": "invalid",
+      "reason": "older than five minutes",
+      "delivery": {
+        "headers": {
+          "webhook-id": "msg_qa_stale0001",
+          "webhook-timestamp": "1786381103",
+          "webhook-signature": "v1,1RP213cJZvkc3SvevglQi8ibXMSXI06kjfSawQ9UjMc=",
+          "content-type": "application/json"
+        },
+        "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_stale0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+      }
+    },
+    {
+      "id": "future-timestamp-301s",
+      "expect": "invalid",
+      "reason": "more than five minutes ahead",
+      "delivery": {
+        "headers": {
+          "webhook-id": "msg_qa_future001",
+          "webhook-timestamp": "1786381705",
+          "webhook-signature": "v1,ZqpUMqbxgm0rE0EGBGpihvk7IT8WSyY+LBWh9SF/1P4=",
+          "content-type": "application/json"
+        },
+        "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_future001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+      }
+    },
+    {
+      "id": "wrong-secret",
+      "expect": "invalid",
+      "reason": "signed with another secret",
+      "delivery": {
+        "headers": {
+          "webhook-id": "msg_qa_wrong0001",
+          "webhook-timestamp": "1786381404",
+          "webhook-signature": "v1,b1dqo97nBMBWfINXdDavK+FZF5xVulyKWa7PPXL90g4=",
+          "content-type": "application/json"
+        },
+        "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_wrong0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+      }
+    },
+    {
+      "id": "unknown-scheme-v0",
+      "expect": "invalid",
+      "reason": "only v1 is defined",
+      "delivery": {
+        "headers": {
+          "webhook-id": "msg_qa_valid0001",
+          "webhook-timestamp": "1786381404",
+          "webhook-signature": "v0,J1cfjMe6FyVBlbLqK1Ujgd10N2HGDUR1ACwRd0o8lPo=",
+          "content-type": "application/json"
+        },
+        "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_valid0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+      }
+    },
+    {
+      "id": "missing-signature-header",
+      "expect": "invalid",
+      "reason": "no webhook-signature header",
+      "delivery": {
+        "headers": {
+          "webhook-id": "msg_qa_valid0001",
+          "webhook-timestamp": "1786381404",
+          "content-type": "application/json"
+        },
+        "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_valid0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+      }
+    }
+  ],
+  "sequences": [
+    {
+      "id": "duplicate-same-webhook-id",
+      "scenario": "S08 same webhook-id twice",
+      "deliveries": [
+        {
+          "headers": {
+            "webhook-id": "msg_qa_valid0001",
+            "webhook-timestamp": "1786381404",
+            "webhook-signature": "v1,J1cfjMe6FyVBlbLqK1Ujgd10N2HGDUR1ACwRd0o8lPo=",
+            "content-type": "application/json"
+          },
+          "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_valid0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+        },
+        {
+          "headers": {
+            "webhook-id": "msg_qa_valid0001",
+            "webhook-timestamp": "1786381404",
+            "webhook-signature": "v1,J1cfjMe6FyVBlbLqK1Ujgd10N2HGDUR1ACwRd0o8lPo=",
+            "content-type": "application/json"
+          },
+          "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_valid0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+        }
+      ],
+      "expect": {
+        "acks_2xx": 2,
+        "inbox_rows": 1,
+        "effects": 1,
+        "note": "retry of one delivery carries the same webhook-id"
+      }
+    },
+    {
+      "id": "regenerated-id-replay",
+      "scenario": "S08 regenerated-id replay (fixture stand-in; the sandbox-api case uses the real replay endpoint)",
+      "deliveries": [
+        {
+          "headers": {
+            "webhook-id": "msg_qa_valid0001",
+            "webhook-timestamp": "1786381404",
+            "webhook-signature": "v1,J1cfjMe6FyVBlbLqK1Ujgd10N2HGDUR1ACwRd0o8lPo=",
+            "content-type": "application/json"
+          },
+          "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_valid0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+        },
+        {
+          "headers": {
+            "webhook-id": "msg_qa_regen0001",
+            "webhook-timestamp": "1786381404",
+            "webhook-signature": "v1,dGnQRj9I2p3lTwc0qoxP00LHzmM9Jk/W21IkZGFV8TU=",
+            "content-type": "application/json"
+          },
+          "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_regen0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+        }
+      ],
+      "expect": {
+        "acks_2xx": 2,
+        "inbox_rows": 2,
+        "effects": 1,
+        "note": "message-level dedupe passes; effect dedupe on (type family, data.id) must hold"
+      }
+    },
+    {
+      "id": "out-of-order-payout",
+      "scenario": "financial-invariants 7: unordered delivery",
+      "deliveries": [
+        {
+          "headers": {
+            "webhook-id": "msg_qa_po_upd001",
+            "webhook-timestamp": "1786381404",
+            "webhook-signature": "v1,1/fYEaFgbrdMQeGlzA4zsylsWulppB0tis+uHVMFuHE=",
+            "content-type": "application/json"
+          },
+          "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"1240.00\",\"currency\":\"eur\",\"id\":\"wdrl_qaDE0001\",\"status\":\"paid\"},\"id\":\"msg_qa_po_upd001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payout.updated\"}"
+        },
+        {
+          "headers": {
+            "webhook-id": "msg_qa_po_cre001",
+            "webhook-timestamp": "1786381404",
+            "webhook-signature": "v1,8Iqv8yKhiQ9uxXSQG/G2y2O9wZiRSOuh/J1DVkUpyVw=",
+            "content-type": "application/json"
+          },
+          "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"1240.00\",\"currency\":\"eur\",\"id\":\"wdrl_qaDE0001\",\"status\":\"pending\"},\"id\":\"msg_qa_po_cre001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payout.created\"}"
+        }
+      ],
+      "expect": {
+        "acks_2xx": 2,
+        "inbox_rows": 2,
+        "effects": 2,
+        "final_status": "paid",
+        "note": "later-arriving created event must not regress status to pending"
+      }
+    },
+    {
+      "id": "alias-pair-withdrawal-payout",
+      "scenario": "DEBUG-02 withdrawal.updated and payout.updated for one resource",
+      "deliveries": [
+        {
+          "headers": {
+            "webhook-id": "msg_qa_alias0001",
+            "webhook-timestamp": "1786381404",
+            "webhook-signature": "v1,6yLpnYxWoxjjfYU49iKpBvlnbXuh7ebC9PaBSnbCzxw=",
+            "content-type": "application/json"
+          },
+          "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"1240.00\",\"currency\":\"eur\",\"id\":\"wdrl_qaDE0001\",\"status\":\"paid\"},\"id\":\"msg_qa_alias0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"withdrawal.updated\"}"
+        },
+        {
+          "headers": {
+            "webhook-id": "msg_qa_alias0002",
+            "webhook-timestamp": "1786381404",
+            "webhook-signature": "v1,dXlc/aMeSwbSOuFyBmQ7au+vGkOWpSrSojaPjRB+Cx8=",
+            "content-type": "application/json"
+          },
+          "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"1240.00\",\"currency\":\"eur\",\"id\":\"wdrl_qaDE0001\",\"status\":\"paid\"},\"id\":\"msg_qa_alias0002\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payout.updated\"}"
+        }
+      ],
+      "expect": {
+        "acks_2xx": 2,
+        "inbox_rows": 2,
+        "effects": 1,
+        "note": "verified alias pair produces one ledger effect; raw envelopes both kept"
+      }
+    },
+    {
+      "id": "version-drift-june-vs-august",
+      "scenario": "DEBUG-01 company_id envelope decoded by pin",
+      "deliveries": [
+        {
+          "headers": {
+            "webhook-id": "msg_qa_june0001",
+            "webhook-timestamp": "1786381404",
+            "webhook-signature": "v1,VSoR0j6UBOj3QWA/r94puLpNi3V9oJGAsABP6iZ/Ees=",
+            "content-type": "application/json"
+          },
+          "raw_body": "{\"api_version_date\":\"2026-06-01\",\"company_id\":\"biz_seller_de\",\"data\":{\"amount\":1240.0,\"currency\":\"eur\",\"status\":\"pending\"},\"id\":\"msg_qa_june0001\",\"type\":\"payout.updated\"}"
+        },
+        {
+          "headers": {
+            "webhook-id": "msg_qa_aug00001",
+            "webhook-timestamp": "1786381404",
+            "webhook-signature": "v1,d678fjbe/fNqlwgplfkg3LNwvU5gApEmj5SoeXnZ3Q8=",
+            "content-type": "application/json"
+          },
+          "raw_body": "{\"account_id\":\"biz_seller_de\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"1240.00\",\"currency\":\"eur\",\"id\":\"wdrl_qaDE0001\",\"status\":\"pending\"},\"id\":\"msg_qa_aug00001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payout.updated\"}"
+        }
+      ],
+      "expect": {
+        "acks_2xx": 2,
+        "inbox_rows": 2,
+        "account_resolved": "biz_seller_de",
+        "raw_envelope_unmodified": true,
+        "note": "June shape has company_id and numeric amount; August shape has account_id and string amount; both decode under their own version, neither is coerced in place"
+      }
+    },
+    {
+      "id": "unknown-seller-quarantine",
+      "scenario": "S08 unknown seller",
+      "deliveries": [
+        {
+          "headers": {
+            "webhook-id": "msg_qa_unmap0001",
+            "webhook-timestamp": "1786381404",
+            "webhook-signature": "v1,m5uT/q8aomyvKqSwmHSmRMJq6zfK0jS/LYbcH8OPljk=",
+            "content-type": "application/json"
+          },
+          "raw_body": "{\"account_id\":\"biz_qaUNMAPPED\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0002\",\"status\":\"succeeded\"},\"id\":\"msg_qa_unmap0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+        }
+      ],
+      "expect": {
+        "acks_2xx": 1,
+        "inbox_rows": 1,
+        "effects": 0,
+        "quarantined": 1,
+        "note": "persisted and flagged, not dropped, not applied"
+      }
+    },
+    {
+      "id": "crash-before-ack",
+      "scenario": "S08 crash before ack",
+      "deliveries": [
+        {
+          "headers": {
+            "webhook-id": "msg_qa_valid0001",
+            "webhook-timestamp": "1786381404",
+            "webhook-signature": "v1,J1cfjMe6FyVBlbLqK1Ujgd10N2HGDUR1ACwRd0o8lPo=",
+            "content-type": "application/json"
+          },
+          "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_valid0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+        },
+        {
+          "headers": {
+            "webhook-id": "msg_qa_valid0001",
+            "webhook-timestamp": "1786381404",
+            "webhook-signature": "v1,J1cfjMe6FyVBlbLqK1Ujgd10N2HGDUR1ACwRd0o8lPo=",
+            "content-type": "application/json"
+          },
+          "raw_body": "{\"account_id\":\"biz_qaUS0001\",\"api_version\":\"v1\",\"api_version_date\":\"2026-08-14\",\"data\":{\"amount\":\"25.00\",\"currency\":\"usd\",\"id\":\"pay_qa0001\",\"status\":\"succeeded\"},\"id\":\"msg_qa_valid0001\",\"timestamp\":\"2026-08-10T17:03:24.291Z\",\"type\":\"payment.succeeded\"}"
+        }
+      ],
+      "crash_after_persist_of_delivery_index": 0,
+      "expect": {
+        "inbox_rows": 1,
+        "effects": 1,
+        "note": "first delivery persisted then process dies before 2xx; provider retries with the same id; restart applies the effect once"
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "event_id": "evt_c7a10e4b5d72cadb",
+    "seq": 31,
+    "at": "2026-09-08T16:19:57.438Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_checkoutcreate9"
+      ],
+      "api_version_date": null
+    },
+    "operation": "checkout.create",
+    "output": {
+      "id": "fx_checkoutcreate9",
+      "operation": "checkout.create",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_a885fdcaa9e3020a",
+    "seq": 34,
+    "at": "2026-09-08T16:19:57.438Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_paymentread10"
+      ],
+      "api_version_date": null
+    },
+    "operation": "payment.read",
+    "output": {
+      "id": "fx_paymentread10",
+      "operation": "payment.read",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_ad72e97e8c0bec3a",
+    "seq": 37,
+    "at": "2026-09-08T16:19:57.438Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_ledgerread11"
+      ],
+      "api_version_date": null
+    },
+    "operation": "ledger.read",
+    "output": {
+      "id": "fx_ledgerread11",
+      "operation": "ledger.read",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_78883719d504f54e",
+    "seq": 39,
+    "at": "2026-09-08T16:19:57.438Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_paymentrefund12"
+      ],
+      "api_version_date": null
+    },
+    "operation": "payment.refund",
+    "output": {
+      "id": "fx_paymentrefund12",
+      "operation": "payment.refund",
+      "fixture": true
+    }
+  }
+]

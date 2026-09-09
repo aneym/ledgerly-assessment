@@ -1,0 +1,16 @@
+[
+  {
+    "event_id": "evt_2eb86f9fd45ed048",
+    "seq": 16,
+    "at": "2026-09-08T16:19:57.436Z",
+    "operation": "account.createOrFetch",
+    "input": {}
+  },
+  {
+    "event_id": "evt_7abb44c4a600af4d",
+    "seq": 18,
+    "at": "2026-09-08T16:19:57.436Z",
+    "operation": "account.createNested",
+    "input": {}
+  }
+]

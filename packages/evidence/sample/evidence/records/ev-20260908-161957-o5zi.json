@@ -1,0 +1,33 @@
+{
+  "evidence_id": "ev-20260908-161957-o5zi",
+  "requirement_ids": [
+    "BUILD-05",
+    "BUILD-06"
+  ],
+  "scenario_id": "S03",
+  "category": "fixture",
+  "status": "passed",
+  "owner": "demo-runtime",
+  "observed_at": "2026-09-08T16:19:57.436Z",
+  "environment": "local",
+  "code_revision": "ad989071d2eb4a5d1b66a37a6d5b3915ce32d2fa",
+  "dirty_tree": true,
+  "command": "demo-runtime runStep W03 attempt 1 source fixture",
+  "exit_code": 0,
+  "artifact_paths": [
+    "evidence/artifacts/ev-20260908-161957-o5zi/demo-events.json",
+    "evidence/artifacts/ev-20260908-161957-o5zi/request.json",
+    "evidence/artifacts/ev-20260908-161957-o5zi/response.json"
+  ],
+  "artifact_hashes": {
+    "evidence/artifacts/ev-20260908-161957-o5zi/demo-events.json": "baaad992153cd1713ff94458d2aaded2b1113242e43fa949c360097da2efff3c",
+    "evidence/artifacts/ev-20260908-161957-o5zi/request.json": "21058784ce7484ea4d89a2626bb6f68d5a1c764e47192122b84715587705398e",
+    "evidence/artifacts/ev-20260908-161957-o5zi/response.json": "0724b8f42ff04b2aa96704f234701e55b299e9a178136e26bf078da7a8e50380"
+  },
+  "redaction_review": {
+    "removed_fields": [],
+    "allowlist_version": "demo-runtime-1"
+  },
+  "limitations": "fixture observation; does not satisfy a sandbox, browser or human requirement",
+  "notes": "demo run_id=run_41fe6c1289c0f45d correlation_id=step_c535eec37774f1ab step_id=W03 attempt=1 seq=15..20"
+}

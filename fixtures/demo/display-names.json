@@ -1,0 +1,130 @@
+{
+  "_note": "Fictional local demo display identities; no provider accounts or production mappings.",
+  "placeholder_patterns": [
+    "^qa-",
+    "^probe",
+    "^tour",
+    "-journey-",
+    "^test",
+    "^onda-sounds-demo",
+    "^plain[0-9]",
+    "^mara-prod-",
+    "^ondasounds"
+  ],
+  "by_seller_id": {
+    "sel_mara": {
+      "name": "Mara Okonkwo",
+      "avatar": "/demo/mara.svg",
+      "kind": "person"
+    },
+    "sel_kontur": {
+      "name": "Studio Kontur",
+      "avatar": "/demo/kontur.svg",
+      "kind": "studio"
+    },
+    "sel_onda": {
+      "name": "Onda Sounds",
+      "avatar": "/demo/onda.svg",
+      "kind": "person"
+    },
+    "sel_form": {
+      "name": "Form Studio",
+      "avatar": "/demo/form.svg",
+      "kind": "studio"
+    },
+    "sel_pixelfern": {
+      "name": "Pixelfern",
+      "avatar": "/demo/pixelfern.svg",
+      "kind": "person"
+    },
+    "sel_acme": {
+      "name": "Acme Studio",
+      "avatar": "/demo/acme.svg",
+      "kind": "studio"
+    },
+    "sel_juno": {
+      "name": "Juno Hale",
+      "avatar": "/demo/juno.svg",
+      "kind": "person"
+    }
+  },
+  "by_external_id_prefix": {
+    "mara-": {
+      "name": "Northline Studio",
+      "kind": "studio"
+    },
+    "tour": {
+      "name": "Northline Studio",
+      "kind": "studio"
+    },
+    "onda-": {
+      "name": "Mar\u00e9 Audio",
+      "kind": "studio"
+    },
+    "kontur-": {
+      "name": "Linden Editions",
+      "kind": "studio"
+    }
+  },
+  "by_country": {
+    "US": [
+      "Northline Studio",
+      "Harbor & Vale",
+      "Copperleaf Press",
+      "Meridian Type Co.",
+      "Slate Harbor Sound"
+    ],
+    "DE": [
+      "Linden Editions",
+      "Werkstatt Neun",
+      "Kessler Type",
+      "Nordlicht Audio",
+      "Fabrik Elf"
+    ],
+    "BR": [
+      "Mar\u00e9 Audio",
+      "Casa Sereno",
+      "Est\u00fadio Alvorada",
+      "Coral Editions",
+      "Rio Lento Sound"
+    ],
+    "CA": [
+      "Form Studio",
+      "Boreal Press",
+      "Juno Hale"
+    ],
+    "KR": [
+      "Pixelfern",
+      "Hangang Type"
+    ],
+    "PT": [
+      "Acme Studio",
+      "Tejo Editions"
+    ],
+    "default": [
+      "Northline Studio",
+      "Linden Editions",
+      "Mar\u00e9 Audio",
+      "Harbor & Vale",
+      "Copperleaf Press"
+    ]
+  },
+  "buyers": {
+    "placeholder_patterns": [
+      "^buyer\\+",
+      "^probe",
+      "^qa-",
+      "^test"
+    ],
+    "pool": [
+      "Ada Fairweather",
+      "Tom\u00e1s Reyes",
+      "Ingrid Solberg",
+      "Kenji Arai",
+      "Luc\u00eda Ferrante",
+      "Noor Haddad",
+      "Elias Brandt",
+      "Priya Raman"
+    ]
+  }
+}

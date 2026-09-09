@@ -1,0 +1,42 @@
+[
+  {
+    "event_id": "evt_3e9589b41eaeeb4a",
+    "seq": 55,
+    "at": "2026-09-08T16:19:57.439Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accessTokencreate16"
+      ],
+      "api_version_date": null
+    },
+    "operation": "accessToken.create",
+    "output": {
+      "id": "fx_accessTokencreate16",
+      "operation": "accessToken.create",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_b409a7c884cd05d9",
+    "seq": 57,
+    "at": "2026-09-08T16:19:57.439Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_payoutsPortallink17"
+      ],
+      "api_version_date": null
+    },
+    "operation": "payoutsPortal.link",
+    "output": {
+      "id": "fx_payoutsPortallink17",
+      "operation": "payoutsPortal.link",
+      "fixture": true
+    }
+  }
+]

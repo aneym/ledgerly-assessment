@@ -1,0 +1,117 @@
+{
+  "_note": "Fictional local catalog. Account identifiers are synthetic fixture values, not provider accounts. Avatars are generated initials.",
+  "sellers": [
+    {
+      "id": "sel_mara",
+      "name": "Mara Okonkwo",
+      "handle": "mara",
+      "kind": "person",
+      "city": "Austin",
+      "country": "US",
+      "bio": "Photographer. Film emulation presets built from scanned negatives.",
+      "avatar": "fixtures/demo/avatars/mara.svg",
+      "sale_policy": "direct_charge",
+      "sandbox": {
+        "role": "synthetic local fixture",
+        "account_id": "biz_demo_mara",
+        "onboarding": "pending"
+      }
+    },
+    {
+      "id": "sel_kontur",
+      "name": "Studio Kontur",
+      "handle": "kontur",
+      "kind": "studio",
+      "city": "Berlin",
+      "country": "DE",
+      "bio": "Independent type foundry. Display faces and specimen kits.",
+      "avatar": "fixtures/demo/avatars/kontur.svg",
+      "sale_policy": "direct_charge",
+      "sandbox": {
+        "role": "synthetic local fixture",
+        "account_id": "biz_demo_kontur",
+        "onboarding": "pending"
+      }
+    },
+    {
+      "id": "sel_onda",
+      "name": "Onda Sounds",
+      "handle": "onda",
+      "kind": "person",
+      "city": "S\u00e3o Paulo",
+      "country": "BR",
+      "bio": "Producer. Drum libraries and ambient records, WAV and stems.",
+      "avatar": "fixtures/demo/avatars/onda.svg",
+      "sale_policy": "platform_charge_transfer",
+      "sandbox": {
+        "role": "synthetic local fixture",
+        "account_id": "biz_demo_onda",
+        "onboarding": "pending"
+      }
+    },
+    {
+      "id": "sel_form",
+      "name": "Form Studio",
+      "handle": "form",
+      "kind": "studio",
+      "city": "Toronto",
+      "country": "CA",
+      "bio": "Design studio. Framer templates and a workbook for freelancers.",
+      "avatar": "fixtures/demo/avatars/form.svg",
+      "sale_policy": "blocked_onboarding_incomplete",
+      "sandbox": {
+        "role": "synthetic local fixture",
+        "account_id": "biz_demo_form",
+        "onboarding": "not_started"
+      }
+    },
+    {
+      "id": "sel_pixelfern",
+      "name": "Pixelfern",
+      "handle": "pixelfern",
+      "kind": "person",
+      "city": "Seoul",
+      "country": "KR",
+      "bio": "3D artist. Game-ready low-poly nature kits.",
+      "avatar": "fixtures/demo/avatars/pixelfern.svg",
+      "sale_policy": "direct_charge",
+      "sandbox": {
+        "role": "synthetic local fixture",
+        "account_id": "biz_demo_pixelfern",
+        "onboarding": "not_started"
+      }
+    },
+    {
+      "id": "sel_acme",
+      "name": "Acme Studio",
+      "handle": "acme",
+      "kind": "studio",
+      "city": "Lisbon",
+      "country": "PT",
+      "bio": "Operations templates for small studios. Notion systems.",
+      "avatar": "fixtures/demo/avatars/acme.svg",
+      "sale_policy": "platform_charge_transfer",
+      "sandbox": {
+        "role": "synthetic local fixture",
+        "account_id": "biz_demo_acme",
+        "onboarding": "not_started"
+      }
+    },
+    {
+      "id": "sel_juno",
+      "name": "Juno Hale",
+      "handle": "juno",
+      "kind": "person",
+      "city": "Toronto",
+      "country": "CA",
+      "bio": "Illustrator. Brush packs and comic lettering kits.",
+      "avatar": "fixtures/demo/avatars/juno.svg",
+      "sale_policy": "direct_charge",
+      "sandbox": {
+        "role": "synthetic local fixture",
+        "account_id": "biz_demo_juno",
+        "onboarding": "not_started"
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "event_id": "evt_aed7eb84fcc31c1d",
+    "seq": 9,
+    "at": "2026-09-08T16:19:57.435Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountcreateOrFetch2"
+      ],
+      "api_version_date": null
+    },
+    "operation": "account.createOrFetch",
+    "output": {
+      "id": "fx_accountcreateOrFetch2",
+      "operation": "account.createOrFetch",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_00e9abbb50f71ed0",
+    "seq": 11,
+    "at": "2026-09-08T16:19:57.435Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountcreateOrFetch3"
+      ],
+      "api_version_date": null
+    },
+    "operation": "account.createOrFetch",
+    "output": {
+      "id": "fx_accountcreateOrFetch3",
+      "operation": "account.createOrFetch",
+      "fixture": true
+    }
+  },
+  {
+    "event_id": "evt_6d34bfe465a45863",
+    "seq": 13,
+    "at": "2026-09-08T16:19:57.435Z",
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accountcreateOrFetch4"
+      ],
+      "api_version_date": null
+    },
+    "operation": "account.createOrFetch",
+    "output": {
+      "id": "fx_accountcreateOrFetch4",
+      "operation": "account.createOrFetch",
+      "fixture": true
+    }
+  }
+]

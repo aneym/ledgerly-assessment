@@ -1,0 +1,180 @@
+[
+  {
+    "event_id": "evt_9afd84c9aaf4aa37",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_6218faff338b1e43",
+    "kind": "step.started",
+    "step_id": "W07",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "creator",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "Embedded and hosted payouts starts as creator (attempt 1)",
+    "payload": {
+      "requirement_ids": [
+        "BUILD-14",
+        "BUILD-15",
+        "BUILD-17",
+        "SUBMIT-03"
+      ],
+      "scenario_id": "S07",
+      "operations": [
+        "accessToken.create",
+        "payoutsPortal.link"
+      ]
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 53,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_146f95f8b4f7fa01",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_6218faff338b1e43",
+    "kind": "operation.requested",
+    "step_id": "W07",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "creator",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "accessToken.create requested",
+    "payload": {
+      "operation": "accessToken.create",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 54,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_3e9589b41eaeeb4a",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_6218faff338b1e43",
+    "kind": "operation.responded",
+    "step_id": "W07",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "creator",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "accessToken.create responded ok (200)",
+    "payload": {
+      "operation": "accessToken.create",
+      "output": {
+        "id": "fx_accessTokencreate16",
+        "operation": "accessToken.create",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_accessTokencreate16"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 55,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_72e0f8956ad6841f",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_6218faff338b1e43",
+    "kind": "operation.requested",
+    "step_id": "W07",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "creator",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "payoutsPortal.link requested",
+    "payload": {
+      "operation": "payoutsPortal.link",
+      "input": {}
+    },
+    "provider": null,
+    "gate": null,
+    "evidence_id": null,
+    "seq": 56,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_b409a7c884cd05d9",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_6218faff338b1e43",
+    "kind": "operation.responded",
+    "step_id": "W07",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.439Z",
+    "role": "creator",
+    "source": "fixture",
+    "environment": "local",
+    "state": "running",
+    "summary": "payoutsPortal.link responded ok (200)",
+    "payload": {
+      "operation": "payoutsPortal.link",
+      "output": {
+        "id": "fx_payoutsPortallink17",
+        "operation": "payoutsPortal.link",
+        "fixture": true
+      }
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_payoutsPortallink17"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 57,
+    "contract_version": "1.0.0"
+  },
+  {
+    "event_id": "evt_78760635d2889c76",
+    "run_id": "run_41fe6c1289c0f45d",
+    "correlation_id": "step_6218faff338b1e43",
+    "kind": "step.finished",
+    "step_id": "W07",
+    "attempt": 1,
+    "at": "2026-09-08T16:19:57.440Z",
+    "role": "creator",
+    "source": "fixture",
+    "environment": "local",
+    "state": "passed",
+    "summary": "Embedded and hosted payouts passed on fixture; hosted human step recorded as hand-off, not completed",
+    "payload": {
+      "human_gate": true
+    },
+    "provider": {
+      "base_url": "fixture://local",
+      "http_status": 200,
+      "request_id": null,
+      "resource_ids": [
+        "fx_payoutsPortallink17"
+      ],
+      "api_version_date": null
+    },
+    "gate": null,
+    "evidence_id": null,
+    "seq": 58,
+    "contract_version": "1.0.0"
+  }
+]

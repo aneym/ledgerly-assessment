@@ -1,0 +1,30 @@
+[
+  {
+    "event_id": "evt_ba582d2b5cee4453",
+    "seq": 30,
+    "at": "2026-09-08T16:19:57.438Z",
+    "operation": "checkout.create",
+    "input": {}
+  },
+  {
+    "event_id": "evt_cbab7b391e15492f",
+    "seq": 33,
+    "at": "2026-09-08T16:19:57.438Z",
+    "operation": "payment.read",
+    "input": {}
+  },
+  {
+    "event_id": "evt_121d512c230fcb92",
+    "seq": 36,
+    "at": "2026-09-08T16:19:57.438Z",
+    "operation": "ledger.read",
+    "input": {}
+  },
+  {
+    "event_id": "evt_b41a1a51ec77f786",
+    "seq": 38,
+    "at": "2026-09-08T16:19:57.438Z",
+    "operation": "payment.refund",
+    "input": {}
+  }
+]
