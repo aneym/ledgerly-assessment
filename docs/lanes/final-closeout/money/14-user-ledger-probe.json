@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/ledger_accounts/user_Q0IiqCqFWa8vo",
+    "query": null,
+    "api_version_date": "2026-09-06",
+    "idempotency_key": null,
+    "body": null
+  },
+  "status": 403,
+  "started_at": "2026-09-09T23:31:59.137Z",
+  "finished_at": "2026-09-09T23:31:59.315Z",
+  "response_headers": {
+    "date": "Wed, 09 Sep 2026 23:31:59 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "13365090-839f-4e7b-8768-15d998023d94",
+    "cf-ray": "a389fd573a68d73b-EWR"
+  },
+  "response": {
+    "error": {
+      "type": "forbidden",
+      "message": "You do not have access to this ledger account."
+    }
+  }
+}

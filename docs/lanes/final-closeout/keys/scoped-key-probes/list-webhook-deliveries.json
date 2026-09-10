@@ -1,0 +1,771 @@
+{
+  "name": "list-webhook-deliveries",
+  "method": "GET",
+  "path": "/webhooks/hook_gO3nsBQBCSyzF/deliveries?first=5",
+  "request_body": null,
+  "status": 200,
+  "response": {
+    "data": [
+      {
+        "id": "whdel_MTc4ODk5NjQ2OTAwMHwwMWEwODg3Zi1jNGRhLTc5OGYtOTZjNC0wNWZjY2QzYzUyY2M",
+        "event": "refund.created",
+        "replayed_from": null,
+        "request_body": {
+          "id": "msg_l4qMpnWV6dZRlBuEv3NhB1Fz",
+          "api_version": "v1",
+          "timestamp": "2026-09-09T23:27:49.849Z",
+          "type": "refund.created",
+          "account_id": "biz_pt7b2NAryKwRGh",
+          "data": {
+            "reference_value": null,
+            "id": "rf_AtBJ9mtmOMtikt6",
+            "status": "succeeded",
+            "reference_type": null,
+            "provider_created_at": "2026-09-09T23:27:48.013Z",
+            "payment": {
+              "card_last4": "4242",
+              "metadata": {},
+              "tax_amount": "0.0",
+              "usd_total": "25.0",
+              "product": {
+                "id": "prod_W1xlml34ygYMR",
+                "metadata": {}
+              },
+              "paid_at": "2026-09-09T23:02:39.081Z",
+              "currency": "usd",
+              "membership": {
+                "status": "completed",
+                "id": "mem_04dw0KnyLralfK"
+              },
+              "user": {
+                "id": "user_Q0IiqCqFWa8vo",
+                "name": "Alex Neyman",
+                "email": "[email redacted]",
+                "username": "aneyman"
+              },
+              "member": {
+                "id": "mber_dPMkttjxIxuCn",
+                "phone": null
+              },
+              "total": "25.0",
+              "tax_refunded_amount": "0.0",
+              "subtotal": "25.0",
+              "created_at": "2026-09-09T23:02:38.242Z",
+              "plan": {
+                "metadata": {},
+                "id": "plan_mIdPunMHNV6TL"
+              },
+              "id": "pay_ELe6ONlgjrYv5Z",
+              "dispute_alerted_at": null,
+              "card_brand": "visa",
+              "tax_behavior": null,
+              "payment_method_type": "card",
+              "billing_reason": "one_time"
+            },
+            "currency": "usd",
+            "created_at": "2026-09-09T23:27:49.601Z",
+            "provider": "multi_psp",
+            "amount": "25.0",
+            "reference_status": null
+          },
+          "api_version_date": "2026-09-06"
+        },
+        "resource_id": "rf_AtBJ9mtmOMtikt6",
+        "response_body": {
+          "duplicate": false,
+          "received": true
+        },
+        "response_code": 200,
+        "sent_at": "2026-09-09T23:27:49.000Z",
+        "success": true,
+        "total_time": 0.124087
+      },
+      {
+        "id": "whdel_MTc4ODk5NTA5NzAwMHwwMWEwODg2YS1kNGIzLTdjM2YtYjY1OS03NGJhNjRkMzc0ZmQ",
+        "event": "payment.succeeded",
+        "replayed_from": null,
+        "request_body": {
+          "account_id": "biz_RlL9WP9TIBVXmr",
+          "api_version": "v1",
+          "api_version_date": "2026-09-06",
+          "id": "msg_hlBT9qCN73L71XR5MSXlQoLc",
+          "data": {
+            "retryable": false,
+            "substatus": "succeeded",
+            "billing_reason": "one_time",
+            "promo_code_id": null,
+            "tax_behavior": null,
+            "billing_address": {
+              "city": "Brooklyn",
+              "state": "NY",
+              "name": "Alex Neyman",
+              "line1": "496 11th St",
+              "line2": null,
+              "postal_code": "11215",
+              "country": "US"
+            },
+            "payment_instrument": {
+              "icons": {
+                "square": {
+                  "dark": {
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_dark_64.png",
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_dark_32.png",
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/square_dark.svg",
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_dark_128.png"
+                  },
+                  "light": {
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_light_64.png",
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/square_light.svg",
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_light_32.png",
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_light_128.png"
+                  }
+                },
+                "card": {
+                  "light": {
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/card_light.svg",
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_light_60.png",
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_light_120.png",
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_light_30.png"
+                  },
+                  "dark": {
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/card_dark.svg",
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_dark_60.png",
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_dark_30.png",
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_dark_120.png"
+                  }
+                }
+              },
+              "display_name": "Visa •••• 4242",
+              "card": {
+                "brand": "visa",
+                "issuer_identification_number": "42424242",
+                "last4": "4242"
+              },
+              "installment_count": null,
+              "payment_method_type": "card"
+            },
+            "refunded_amount": {
+              "amount": "0.00",
+              "currency": "usd",
+              "decimals": "2.0",
+              "display_decimals": "2.0"
+            },
+            "needs_tracking": false,
+            "total": {
+              "currency": "usd",
+              "amount": "60.00",
+              "decimals": "2.0",
+              "display_decimals": "2.0"
+            },
+            "failure_message": null,
+            "decline_code": null,
+            "account_id": "biz_RlL9WP9TIBVXmr",
+            "metadata": {},
+            "created_at": "2026-09-09T23:04:53.809Z",
+            "member_id": "mber_4TPdtS1BYVigK",
+            "updated_at": "2026-09-09T23:04:57.390Z",
+            "verification_checks": {
+              "address_line1": "PASS",
+              "zip_code": "PASS",
+              "card_holder_name": "UNCHECKED",
+              "card_security_code": "UNCHECKED"
+            },
+            "tax_refunded_amount": {
+              "display_decimals": "2.0",
+              "decimals": "2.0",
+              "currency": "usd",
+              "amount": "0.00"
+            },
+            "settlement_time_at": "2026-09-11T00:00:00.000Z",
+            "shipment_id": null,
+            "risk_signals": null,
+            "financing_installments_count": null,
+            "client_secret": null,
+            "last_payment_attempt_at": "2026-09-09T23:04:54.449Z",
+            "product_id": "prod_zHpnCGqNKnthJ",
+            "shipping_address": null,
+            "plan_id": "plan_rydmDsTzbco36",
+            "status": "paid",
+            "tax_amount": {
+              "display_decimals": "2.0",
+              "decimals": "2.0",
+              "amount": "0.00",
+              "currency": "usd"
+            },
+            "subtotal": {
+              "decimals": "2.0",
+              "display_decimals": "2.0",
+              "currency": "usd",
+              "amount": "60.00"
+            },
+            "voidable": false,
+            "id": "pay_cxvGcm7NvjoCkV",
+            "payment_method_id": "payt_FZ17WahujTHTR",
+            "customer_phone": null,
+            "auto_refunded": false,
+            "recovery_url": null,
+            "risk_score": null,
+            "payments_failed": "0.0",
+            "refunded_at": null,
+            "refundable": true,
+            "user": {
+              "username": "aneyman",
+              "id": "user_Q0IiqCqFWa8vo",
+              "name": "Alex Neyman",
+              "profile_picture": {
+                "url": "https://ui-avatars.com/api/?name=Alex%20Neyman&background=535961&color=fff&format=png"
+              }
+            },
+            "membership_id": "mem_Rt1dlGRDSoLF0F",
+            "checkout_configuration_id": "ch_kT3ZyYS6Jc8ehfz",
+            "currency": "usd",
+            "amount_after_fees": {
+              "decimals": "2.0",
+              "display_decimals": "2.0",
+              "currency": "usd",
+              "amount": "56.63"
+            },
+            "usd_total": {
+              "decimals": "2.0",
+              "display_decimals": "2.0",
+              "amount": "60.00",
+              "currency": "usd"
+            },
+            "payment_method_type": "card",
+            "three_ds_verified": false,
+            "paid_at": "2026-09-09T23:04:54.449Z",
+            "next_payment_attempt_at": null,
+            "dispute_alerted_at": null
+          },
+          "timestamp": "2026-09-09T23:04:57.635Z",
+          "type": "payment.succeeded"
+        },
+        "resource_id": "pay_cxvGcm7NvjoCkV",
+        "response_body": {
+          "received": true,
+          "duplicate": false
+        },
+        "response_code": 200,
+        "sent_at": "2026-09-09T23:04:57.000Z",
+        "success": true,
+        "total_time": 0.140183
+      },
+      {
+        "id": "whdel_MTc4ODk5NTAwNDAwOXwwMWEwODg2OS02NzQ1LTdhNzItYmJkYS1lNTZmNzRkMjhlNGQ",
+        "event": "payment.succeeded",
+        "replayed_from": "whdel_MTc4ODkxNjc0MTAwMHwwMWEwODNiZi0zNzdjLTcyMGQtODk0Yy03ZDE2ODExYTFiYjM",
+        "request_body": {
+          "api_version": "v1",
+          "data": {
+            "product_id": "prod_OGxbpxywMPXDm",
+            "tax_behavior": null,
+            "next_payment_attempt_at": null,
+            "settlement_time_at": "2026-09-10T00:00:00.000Z",
+            "shipping_address": null,
+            "recovery_url": null,
+            "total": {
+              "currency": "usd",
+              "amount": "29.00",
+              "display_decimals": "2.0",
+              "decimals": "2.0"
+            },
+            "user": {
+              "username": "aneyman",
+              "id": "user_Q0IiqCqFWa8vo",
+              "profile_picture": {
+                "url": "https://ui-avatars.com/api/?name=Alex%20Neyman&background=535961&color=fff&format=png"
+              },
+              "name": "Alex Neyman"
+            },
+            "verification_checks": {
+              "card_holder_name": "UNCHECKED",
+              "address_line1": "PASS",
+              "zip_code": "PASS",
+              "card_security_code": "UNCHECKED"
+            },
+            "refundable": true,
+            "created_at": "2026-09-09T01:18:57.948Z",
+            "three_ds_verified": false,
+            "substatus": "succeeded",
+            "failure_message": null,
+            "billing_address": {
+              "state": "NY",
+              "name": "Alex Neyman",
+              "line1": "496 11th St",
+              "line2": null,
+              "city": "Brooklyn",
+              "country": "US",
+              "postal_code": "11215"
+            },
+            "updated_at": "2026-09-09T01:19:01.427Z",
+            "shipment_id": null,
+            "promo_code_id": null,
+            "metadata": {},
+            "payment_method_id": "payt_FZ17WahujTHTR",
+            "tax_refunded_amount": {
+              "amount": "0.00",
+              "currency": "usd",
+              "display_decimals": "2.0",
+              "decimals": "2.0"
+            },
+            "payments_failed": "0.0",
+            "plan_id": "plan_3Z09mLZ6Mjt9S",
+            "voidable": false,
+            "decline_code": null,
+            "payment_instrument": {
+              "icons": {
+                "square": {
+                  "light": {
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_light_128.png",
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/square_light.svg",
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_light_64.png",
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_light_32.png"
+                  },
+                  "dark": {
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_dark_32.png",
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_dark_64.png",
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/square_dark.svg",
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_dark_128.png"
+                  }
+                },
+                "card": {
+                  "dark": {
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_dark_30.png",
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/card_dark.svg",
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_dark_120.png",
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_dark_60.png"
+                  },
+                  "light": {
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_light_30.png",
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/card_light.svg",
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_light_60.png",
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_light_120.png"
+                  }
+                }
+              },
+              "display_name": "Visa •••• 4242",
+              "installment_count": null,
+              "card": {
+                "last4": "4242",
+                "brand": "visa"
+              },
+              "payment_method_type": "card"
+            },
+            "billing_reason": "one_time",
+            "tax_amount": {
+              "amount": "0.00",
+              "display_decimals": "2.0",
+              "decimals": "2.0",
+              "currency": "usd"
+            },
+            "customer_phone": null,
+            "retryable": false,
+            "financing_installments_count": null,
+            "refunded_amount": {
+              "display_decimals": "2.0",
+              "amount": "0.00",
+              "currency": "usd",
+              "decimals": "2.0"
+            },
+            "amount_after_fees": {
+              "amount": "27.18",
+              "currency": "usd",
+              "display_decimals": "2.0",
+              "decimals": "2.0"
+            },
+            "last_payment_attempt_at": "2026-09-09T01:18:58.610Z",
+            "status": "paid",
+            "refunded_at": null,
+            "currency": "usd",
+            "subtotal": {
+              "currency": "usd",
+              "display_decimals": "2.0",
+              "decimals": "2.0",
+              "amount": "29.00"
+            },
+            "account_id": "biz_RlL9WP9TIBVXmr",
+            "auto_refunded": false,
+            "usd_total": {
+              "amount": "29.00",
+              "currency": "usd",
+              "display_decimals": "2.0",
+              "decimals": "2.0"
+            },
+            "needs_tracking": false,
+            "risk_score": null,
+            "id": "pay_OM3X8c0ycF5ytM",
+            "payment_method_type": "card",
+            "risk_signals": null,
+            "dispute_alerted_at": null,
+            "paid_at": "2026-09-09T01:18:58.610Z",
+            "member_id": "mber_4TPdtS1BYVigK",
+            "membership_id": "mem_Ksekr92rt3WwhS",
+            "checkout_configuration_id": "ch_V4FgEj2ulZZCJAg",
+            "client_secret": null
+          },
+          "account_id": "biz_RlL9WP9TIBVXmr",
+          "api_version_date": "2026-09-06",
+          "id": "msg_4aSWcAouYIxCsoKDTgEic9uo",
+          "timestamp": "2026-09-09T01:19:01.854Z",
+          "type": "payment.succeeded"
+        },
+        "resource_id": "pay_OM3X8c0ycF5ytM",
+        "response_body": {
+          "duplicate": false,
+          "received": true
+        },
+        "response_code": 200,
+        "sent_at": "2026-09-09T23:03:24.009Z",
+        "success": true,
+        "total_time": 0.218384
+      },
+      {
+        "id": "whdel_MTc4ODk5NTAwMDQ3NXwwMWEwODg2OS01OTM1LTc1MzktOTcxYi02YjQ4ZWU4YmQ2OGI",
+        "event": "payment.succeeded",
+        "replayed_from": "whdel_MTc4ODkxNjc0MTAwMHwwMWEwODNiZi0zNzdjLTcyMGQtODk0Yy03ZDE2ODExYTFiYjM",
+        "request_body": {
+          "type": "payment.succeeded",
+          "api_version": "v1",
+          "timestamp": "2026-09-09T01:19:01.854Z",
+          "account_id": "biz_RlL9WP9TIBVXmr",
+          "api_version_date": "2026-09-06",
+          "id": "msg_I4sXXdsA4Pgqohb57xWuRdBH",
+          "data": {
+            "usd_total": {
+              "amount": "29.00",
+              "decimals": "2.0",
+              "display_decimals": "2.0",
+              "currency": "usd"
+            },
+            "subtotal": {
+              "display_decimals": "2.0",
+              "currency": "usd",
+              "decimals": "2.0",
+              "amount": "29.00"
+            },
+            "failure_message": null,
+            "total": {
+              "currency": "usd",
+              "display_decimals": "2.0",
+              "decimals": "2.0",
+              "amount": "29.00"
+            },
+            "needs_tracking": false,
+            "paid_at": "2026-09-09T01:18:58.610Z",
+            "auto_refunded": false,
+            "billing_reason": "one_time",
+            "client_secret": null,
+            "plan_id": "plan_3Z09mLZ6Mjt9S",
+            "user": {
+              "id": "user_Q0IiqCqFWa8vo",
+              "profile_picture": {
+                "url": "https://ui-avatars.com/api/?name=Alex%20Neyman&background=535961&color=fff&format=png"
+              },
+              "username": "aneyman",
+              "name": "Alex Neyman"
+            },
+            "metadata": {},
+            "updated_at": "2026-09-09T01:19:01.427Z",
+            "shipment_id": null,
+            "id": "pay_OM3X8c0ycF5ytM",
+            "recovery_url": null,
+            "refundable": true,
+            "checkout_configuration_id": "ch_V4FgEj2ulZZCJAg",
+            "membership_id": "mem_Ksekr92rt3WwhS",
+            "last_payment_attempt_at": "2026-09-09T01:18:58.610Z",
+            "voidable": false,
+            "payment_method_id": "payt_FZ17WahujTHTR",
+            "tax_refunded_amount": {
+              "display_decimals": "2.0",
+              "decimals": "2.0",
+              "amount": "0.00",
+              "currency": "usd"
+            },
+            "status": "paid",
+            "retryable": false,
+            "refunded_at": null,
+            "settlement_time_at": "2026-09-10T00:00:00.000Z",
+            "shipping_address": null,
+            "risk_signals": null,
+            "product_id": "prod_OGxbpxywMPXDm",
+            "tax_behavior": null,
+            "payment_instrument": {
+              "icons": {
+                "card": {
+                  "light": {
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_light_60.png",
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_light_120.png",
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_light_30.png",
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/card_light.svg"
+                  },
+                  "dark": {
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/card_dark.svg",
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_dark_120.png",
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_dark_30.png",
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_dark_60.png"
+                  }
+                },
+                "square": {
+                  "dark": {
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_dark_32.png",
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_dark_128.png",
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/square_dark.svg",
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_dark_64.png"
+                  },
+                  "light": {
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_light_32.png",
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_light_128.png",
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/square_light.svg",
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_light_64.png"
+                  }
+                }
+              },
+              "card": {
+                "last4": "4242",
+                "brand": "visa"
+              },
+              "payment_method_type": "card",
+              "display_name": "Visa •••• 4242",
+              "installment_count": null
+            },
+            "next_payment_attempt_at": null,
+            "currency": "usd",
+            "account_id": "biz_RlL9WP9TIBVXmr",
+            "promo_code_id": null,
+            "refunded_amount": {
+              "amount": "0.00",
+              "currency": "usd",
+              "display_decimals": "2.0",
+              "decimals": "2.0"
+            },
+            "financing_installments_count": null,
+            "three_ds_verified": false,
+            "created_at": "2026-09-09T01:18:57.948Z",
+            "member_id": "mber_4TPdtS1BYVigK",
+            "tax_amount": {
+              "amount": "0.00",
+              "currency": "usd",
+              "decimals": "2.0",
+              "display_decimals": "2.0"
+            },
+            "amount_after_fees": {
+              "currency": "usd",
+              "amount": "27.18",
+              "decimals": "2.0",
+              "display_decimals": "2.0"
+            },
+            "payment_method_type": "card",
+            "payments_failed": "0.0",
+            "verification_checks": {
+              "address_line1": "PASS",
+              "zip_code": "PASS",
+              "card_security_code": "UNCHECKED",
+              "card_holder_name": "UNCHECKED"
+            },
+            "risk_score": null,
+            "decline_code": null,
+            "substatus": "succeeded",
+            "billing_address": {
+              "line2": null,
+              "name": "Alex Neyman",
+              "city": "Brooklyn",
+              "state": "NY",
+              "postal_code": "11215",
+              "country": "US",
+              "line1": "496 11th St"
+            },
+            "dispute_alerted_at": null,
+            "customer_phone": null
+          }
+        },
+        "resource_id": "pay_OM3X8c0ycF5ytM",
+        "response_body": {
+          "duplicate": true,
+          "received": true
+        },
+        "response_code": 200,
+        "sent_at": "2026-09-09T23:03:20.474Z",
+        "success": true,
+        "total_time": 0.149892
+      },
+      {
+        "id": "whdel_MTc4ODk5NDk3NDAwMHwwMWEwODg2OC1mNTMxLTdkMDItYmY4Ni02MDVmMWQ5NWJhZjk",
+        "event": "payment.succeeded",
+        "replayed_from": null,
+        "request_body": {
+          "id": "msg_RlCl0CHy4t8QTywqKLx43qOZ",
+          "timestamp": "2026-09-09T23:02:54.482Z",
+          "data": {
+            "next_payment_attempt_at": null,
+            "client_secret": null,
+            "customer_phone": null,
+            "shipment_id": null,
+            "tax_behavior": null,
+            "payment_method_type": "card",
+            "verification_checks": {
+              "address_line1": "PASS",
+              "card_holder_name": "UNCHECKED",
+              "card_security_code": "UNCHECKED",
+              "zip_code": "PASS"
+            },
+            "tax_refunded_amount": {
+              "currency": "usd",
+              "display_decimals": "2.0",
+              "decimals": "2.0",
+              "amount": "0.00"
+            },
+            "payment_method_id": "payt_FZ17WahujTHTR",
+            "billing_address": {
+              "postal_code": "11215",
+              "state": "NY",
+              "line1": "496 11th St",
+              "country": "US",
+              "city": "Brooklyn",
+              "line2": null,
+              "name": "Alex Neyman"
+            },
+            "id": "pay_ELe6ONlgjrYv5Z",
+            "needs_tracking": false,
+            "risk_signals": null,
+            "refunded_at": null,
+            "last_payment_attempt_at": "2026-09-09T23:02:39.081Z",
+            "settlement_time_at": "2026-09-11T00:00:00.000Z",
+            "refunded_amount": {
+              "amount": "0.00",
+              "display_decimals": "2.0",
+              "currency": "usd",
+              "decimals": "2.0"
+            },
+            "user": {
+              "id": "user_Q0IiqCqFWa8vo",
+              "name": "Alex Neyman",
+              "profile_picture": {
+                "url": "https://ui-avatars.com/api/?name=Alex%20Neyman&background=535961&color=fff&format=png"
+              },
+              "username": "aneyman"
+            },
+            "shipping_address": null,
+            "subtotal": {
+              "currency": "usd",
+              "display_decimals": "2.0",
+              "decimals": "2.0",
+              "amount": "25.00"
+            },
+            "failure_message": null,
+            "amount_after_fees": {
+              "amount": "21.37",
+              "decimals": "2.0",
+              "display_decimals": "2.0",
+              "currency": "usd"
+            },
+            "substatus": "succeeded",
+            "checkout_configuration_id": "ch_pD0KKu5fXqlnS6X",
+            "recovery_url": null,
+            "metadata": {},
+            "updated_at": "2026-09-09T23:02:42.531Z",
+            "account_id": "biz_pt7b2NAryKwRGh",
+            "plan_id": "plan_mIdPunMHNV6TL",
+            "product_id": "prod_W1xlml34ygYMR",
+            "financing_installments_count": null,
+            "tax_amount": {
+              "amount": "0.00",
+              "currency": "usd",
+              "display_decimals": "2.0",
+              "decimals": "2.0"
+            },
+            "status": "paid",
+            "currency": "usd",
+            "payments_failed": "0.0",
+            "created_at": "2026-09-09T23:02:38.242Z",
+            "paid_at": "2026-09-09T23:02:39.081Z",
+            "auto_refunded": false,
+            "risk_score": null,
+            "voidable": false,
+            "usd_total": {
+              "display_decimals": "2.0",
+              "currency": "usd",
+              "decimals": "2.0",
+              "amount": "25.00"
+            },
+            "retryable": false,
+            "decline_code": null,
+            "member_id": "mber_dPMkttjxIxuCn",
+            "total": {
+              "amount": "25.00",
+              "decimals": "2.0",
+              "currency": "usd",
+              "display_decimals": "2.0"
+            },
+            "payment_instrument": {
+              "display_name": "Visa •••• 4242",
+              "icons": {
+                "square": {
+                  "dark": {
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/square_dark.svg",
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_dark_128.png",
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_dark_32.png",
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_dark_64.png"
+                  },
+                  "light": {
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_light_128.png",
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_light_64.png",
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_light_32.png",
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/square_light.svg"
+                  }
+                },
+                "card": {
+                  "light": {
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_light_120.png",
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_light_30.png",
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_light_60.png",
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/card_light.svg"
+                  },
+                  "dark": {
+                    "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_dark_30.png",
+                    "svg": "https://content.whop.com/payment_methods/visa/icons/card_dark.svg",
+                    "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_dark_120.png",
+                    "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_dark_60.png"
+                  }
+                }
+              },
+              "payment_method_type": "card",
+              "installment_count": null,
+              "card": {
+                "last4": "4242",
+                "issuer_identification_number": "42424242",
+                "brand": "visa"
+              }
+            },
+            "dispute_alerted_at": null,
+            "membership_id": "mem_04dw0KnyLralfK",
+            "promo_code_id": null,
+            "three_ds_verified": false,
+            "billing_reason": "one_time",
+            "refundable": true
+          },
+          "type": "payment.succeeded",
+          "account_id": "biz_pt7b2NAryKwRGh",
+          "api_version": "v1",
+          "api_version_date": "2026-09-06"
+        },
+        "resource_id": "pay_ELe6ONlgjrYv5Z",
+        "response_body": {
+          "duplicate": false,
+          "received": true
+        },
+        "response_code": 200,
+        "sent_at": "2026-09-09T23:02:54.000Z",
+        "success": true,
+        "total_time": 0.537251
+      }
+    ],
+    "page_info": {
+      "end_cursor": "eyJ3ZWJob29rX2lkIjoiNDQxNy4wIiwic2VudF9hdF9yYW5kIjoiMTc4ODk5NDk3NDAwMHwwMWEwODg2OC1mNTMxLTdkMDItYmY4Ni02MDVmMWQ5NWJhZjkifQ",
+      "start_cursor": null,
+      "has_next_page": true,
+      "has_previous_page": false
+    }
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:04.687Z"
+}

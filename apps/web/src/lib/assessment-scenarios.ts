@@ -318,7 +318,7 @@ async function directRefund(definition: AssessmentScenarioDefinition) {
     "Allocate a fixture payment in the illustrative book",
     { gross },
     () => {
-      const payment = value(adapter.seedPayment(gross, sellerId, "direct:payment"));
+      const payment = value(adapter.seedPayment(gross, sellerId));
       seller = allocation.sellerShare;
       platform = allocation.fee;
       order = "paid";
@@ -436,7 +436,7 @@ async function platformTransfer(definition: AssessmentScenarioDefinition) {
     "Place a fixture payment in an illustrative settlement hold",
     { gross },
     () => {
-      const payment = value(adapter.seedPayment(gross, platformId, "platform:payment"));
+      const payment = value(adapter.seedPayment(gross, platformId));
       held = gross;
       settlement = "held";
       return { payment, illustrative: true, availableCredit: usd(0) };

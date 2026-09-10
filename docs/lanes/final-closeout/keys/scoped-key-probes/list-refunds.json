@@ -1,0 +1,18 @@
+{
+  "name": "list-refunds",
+  "method": "GET",
+  "path": "/refunds?payment_id=pay_LhomHFUGcxqYZ1",
+  "request_body": null,
+  "status": 200,
+  "response": {
+    "data": [],
+    "page_info": {
+      "start_cursor": null,
+      "end_cursor": null,
+      "has_next_page": false,
+      "has_previous_page": false
+    }
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:06.807Z"
+}

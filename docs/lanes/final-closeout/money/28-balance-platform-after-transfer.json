@@ -1,0 +1,70 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/ledger_accounts/biz_RlL9WP9TIBVXmr",
+    "query": null,
+    "api_version_date": "2026-09-06",
+    "idempotency_key": null,
+    "body": null
+  },
+  "status": 200,
+  "started_at": "2026-09-10T00:10:34.967Z",
+  "finished_at": "2026-09-10T00:10:35.329Z",
+  "response_headers": {
+    "date": "Thu, 10 Sep 2026 00:10:35 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "22d407a8-3379-4234-abe0-797677f948b0",
+    "cf-ray": "a38a35e1ddc90f39-EWR"
+  },
+  "response": {
+    "id": "ldgr_AZlILZx7NXGpQ",
+    "settlement_time_at": "2026-09-10T00:00:00.000Z",
+    "balances": [
+      {
+        "balance": 92.74,
+        "currency": "usd",
+        "pending_balance": 58.63,
+        "reserve_balance": 0.0
+      }
+    ],
+    "treasury_balance": null,
+    "transfer_fee": 3.0,
+    "payout_account_details": {
+      "id": "poact_qoaFKG3f6r3Q",
+      "status": "connected",
+      "business_name": null,
+      "phone": "[redacted]",
+      "email": "[email redacted]",
+      "business_representative": {
+        "date_of_birth": "[redacted]",
+        "first_name": "[redacted]",
+        "middle_name": null,
+        "last_name": "[redacted]"
+      },
+      "address": {
+        "line1": "[redacted]",
+        "line2": "",
+        "city": "[redacted]",
+        "postal_code": "[redacted]",
+        "state": "[redacted]",
+        "country": "USA"
+      },
+      "latest_verification": {
+        "id": "verf_2LQwvhGm0GnfI",
+        "status": "approved",
+        "last_error_code": null,
+        "last_error_reason": null
+      }
+    },
+    "payments_approval_status": "approved",
+    "ledger_type": "primary",
+    "payout_quote_required": false,
+    "owner": {
+      "typename": "Company",
+      "id": "biz_RlL9WP9TIBVXmr",
+      "route": "ledgerly",
+      "title": "ledgerly"
+    }
+  }
+}

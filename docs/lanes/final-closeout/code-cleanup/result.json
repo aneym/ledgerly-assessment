@@ -1,0 +1,48 @@
+{
+  "item": "code-cleanup",
+  "run_started": "2026-09-09T22:54:05Z",
+  "worktree": "/Volumes/StudioExt/repos/ledgerly-worktrees/final-code-cleanup",
+  "branch": "work/final-code-cleanup",
+  "base": "3c569de",
+  "commit": "6bc47ab94c941569552ee006311574ec187e7feb",
+  "files_changed": [
+    "apps/web/src/app/(storefront)/handoff/SandboxBalance.tsx",
+    "apps/web/src/app/(storefront)/handoff/SandboxPortal.tsx",
+    "apps/web/src/app/(storefront)/handoff/engineering/page.tsx",
+    "apps/web/src/app/(storefront)/handoff/evidence/page.tsx",
+    "apps/web/src/app/(storefront)/handoff/lab/page.tsx",
+    "apps/web/src/app/(storefront)/handoff/page.tsx",
+    "apps/web/src/app/(storefront)/handoff/scenarios/page.tsx",
+    "apps/web/test/handoff-lab.test.ts",
+    "apps/web/test/handoff-sandbox-balance.test.ts",
+    "docs/presentation/final/final.js",
+    "docs/presentation/final/index.html"
+  ],
+  "checks": {
+    "pnpm_install": { "exit": 0, "log": "pnpm-install.log" },
+    "typecheck": { "exit": 0, "log": "typecheck.log" },
+    "vitest_apps_web": { "exit": 0, "files": 98, "tests": 1029, "log": "vitest.log" },
+    "biome_apps_web": { "exit": 0, "warnings": 17, "warnings_scope": "pre-existing CSS in handoff.css and globals.css", "log": "biome.log" },
+    "build_mock": { "exit": 0, "env": "DEMO_MODE=1 WHOP_MODE=mock", "log": "build.log" }
+  },
+  "link_check": {
+    "page": "/handoff",
+    "server": "next start -p 4471 on the built app, no DATABASE_URL",
+    "anchors_ok": 12,
+    "internal_200": [
+      "/handoff/evidence", "/handoff/evidence#latest", "/handoff/engineering", "/handoff/lab",
+      "/handoff/scenarios", "/present/final/", "/brand/ledgerly-mark.svg",
+      "/handoff/published-477a6a0/storefront.jpg", "/handoff/published-477a6a0/product-detail.jpg",
+      "/handoff/sandbox-balance/actual-sandbox-balance.png", "/handoff/sandbox-balance/provider-proof.json",
+      "/handoff/sandbox-portal/portal-final-rendered.png", "/handoff/sandbox-portal/portal-proof.json"
+    ],
+    "internal_500_missing_database_url": ["/", "/admin"],
+    "routes_present_in_build": ["/", "/admin", "/handoff", "/handoff/engineering", "/handoff/evidence", "/handoff/lab", "/handoff/scenarios", "/present/[[...path]]"],
+    "media_200_video_mp4": [
+      "/demo-clips/final/T01-tour.mp4", "/demo-clips/final/OP01-operator-recovery.mp4",
+      "/demo-clips/final/LAB01-integration-lab.mp4", "/handoff/sandbox-balance/actual-sandbox-balance.mp4",
+      "/demo-clips/assessment-scenarios/assessment-scenarios.mp4"
+    ],
+    "external_not_fetched": { "public_export": 7, "private_repo": 24 }
+  }
+}

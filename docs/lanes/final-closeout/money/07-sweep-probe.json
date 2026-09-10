@@ -1,0 +1,33 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://ledgerly-afneymans-projects.vercel.app/api/cron/sweep",
+    "auth": "Bearer CRON_SECRET from .env.local [redacted]"
+  },
+  "status": 200,
+  "started_at": "2026-09-09T23:26:54Z",
+  "finished_at": "2026-09-09T23:26:58Z",
+  "response": {
+    "inbox": {
+      "processed": 0,
+      "effects": 0,
+      "quarantined": 0,
+      "skipped": 11,
+      "deferred": 0
+    },
+    "transfers": {
+      "released": 0,
+      "retried": 0,
+      "failed": 5
+    },
+    "reconciliation": {
+      "status": "completed",
+      "sellers": 10,
+      "failed": 0,
+      "missingLocally": 0,
+      "missingAtProvider": 0,
+      "amountMismatch": 0,
+      "pendingOrReserve": 0
+    }
+  }
+}

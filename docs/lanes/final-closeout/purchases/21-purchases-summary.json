@@ -1,0 +1,167 @@
+{
+  "item": "purchases",
+  "run_started_utc": "2026-09-09T22:54:05Z",
+  "revised_utc": "2026-09-09T23:20:00Z",
+  "revision_reason": "review: redact a real person's PII, state both buyer identities, cite production proof instead of screenshots, align card wording",
+  "storefront": "https://ledgerly-afneymans-projects.vercel.app",
+  "production_release": "60aa620",
+  "buyer": {
+    "ledgerly_side": {
+      "how": "site sign-up at /signup (Better Auth email+password); /demo/profile/buyer answered 404 on release 60aa620",
+      "email": "sample-buyer-20260909230135@example.com",
+      "name": "Sample Buyer",
+      "note": "fictional example.com address; password not recorded; this session owns the orders, receipts and library"
+    },
+    "whop_side": {
+      "user_id": "user_Q0IiqCqFWa8vo",
+      "username": "aneyman",
+      "who": "Alex's own sandbox Whop user",
+      "why": "the hosted checkout on sandbox.whop.com ran inside the logged-in ego-browser session, so Whop attached both payments to that user",
+      "payment_method_id": "payt_FZ17WahujTHTR",
+      "evidence": "payment_method_id and payment_instrument in 11-direct-payment.json and 13-platform-payment.json; user.id in both"
+    }
+  },
+  "card": {
+    "docs_source": "docs/sources/whop/developer__guides__sandbox.md, Test cards table, lists 4242 4242 4242 4242",
+    "used": "saved payment method payt_FZ17WahujTHTR on the Whop user: Visa, last4 4242",
+    "how_used": "the hosted sandbox checkout offered the saved Visa 4242 as the default payment method and the run accepted it for both payments (payment_instrument.card.last4 = 4242 in both readbacks)",
+    "test_card_number_typed": false
+  },
+  "checkout_surface": "release 60aa620 StartCheckout redirects the buyer to the order's hosted purchase_url on sandbox.whop.com; the in-app embed exists only on main. Whop then returned the buyer to /receipt/<orderId>?payment_id=...&checkout_status=success",
+  "production_proof": {
+    "do_not_cite": "screenshots 00, 02-09, 20: no URL bar, DEV pill in the footer",
+    "cite": [
+      "15-direct-checkout-config.json redirect_url = https://ledgerly-afneymans-projects.vercel.app/receipt/e3dd80b7-f01a-4501-b318-04cbfab646e7",
+      "16-platform-checkout-config.json redirect_url = https://ledgerly-afneymans-projects.vercel.app/receipt/00b8451a-9f1c-402a-8ee0-e3824e81943f",
+      "01-webhook-get.json hook_gO3nsBQBCSyzF url = https://ledgerly-afneymans-projects.vercel.app/api/whop/webhook; 19-*.json shows both payment.succeeded deliveries answered 200 from it",
+      "22-production-home-headers.txt: GET / at 2026-09-09T23:13:49Z, HTTP 200, server: Vercel, x-vercel-id present; 22-production-home.html carries the same DEV pill markup as the screenshots"
+    ]
+  },
+  "dev_pill": {
+    "what": "DEV pill bottom-left in every Ledgerly screenshot",
+    "source": "apps/web/src/components/shell.tsx at 60aa620 mounts DevPanelMount on storefront and buyer pages; apps/web/src/components/dev/dev-panel-mount.tsx renders it when process.env.DEMO_MODE === \"1\" or NODE_ENV === \"development\"",
+    "why_on_production": "Vercel builds with NODE_ENV=production; the Vercel project sets DEMO_MODE=1 for Production, Preview and Development (vercel env ls production, names only, value not shown, 2026-09-09). The value 1 is an inference from the gate code plus the pill rendering where NODE_ENV is production. The pill marks demo mode, not a dev server.",
+    "main": "3c569de keeps the same gate"
+  },
+  "screenshots": [
+    {"file": "00-storefront.png", "shows": "storefront home"},
+    {"file": "02-signup-filled.png", "shows": "/signup filled with the fictional buyer"},
+    {"file": "03a-signup-overlay.png", "shows": "Dashlane prompt over the sign-up button"},
+    {"file": "03-after-signup.png", "shows": "hosted Whop checkout for Grain & Gradient, 25.00 USD; same capture as 04; Email field masked"},
+    {"file": "04-direct-checkout-embed.png", "shows": "hosted Whop checkout for Grain & Gradient, 25.00 USD; Email field masked"},
+    {"file": "05-direct-after-join.png", "shows": "receipt e3dd80b7 after the hosted page returned"},
+    {"file": "06-direct-receipt.png", "shows": "receipt e3dd80b7, paid, 2.00 fee, 23.00 seller share"},
+    {"file": "08-platform-checkout.png", "shows": "hosted Whop checkout for Onda Drum Library, 60.00 USD; Email field masked"},
+    {"file": "09-platform-receipt.png", "shows": "receipt 00b8451a, paid, 4.80 fee, 55.20 seller share"},
+    {"file": "20-library.png", "shows": "buyer library with both purchases"}
+  ],
+  "payments": [
+    {
+      "flow": "direct",
+      "seller_catalog_id": "sel_mara",
+      "seller_name": "Mara Okonkwo (Ledgerly Seller US on the Whop checkout)",
+      "seller_account_id": "biz_pt7b2NAryKwRGh",
+      "sale_policy": "direct",
+      "product": "Grain & Gradient (grain-and-gradient)",
+      "order_id": "e3dd80b7-f01a-4501-b318-04cbfab646e7",
+      "checkout_configuration_id": "ch_pD0KKu5fXqlnS6X",
+      "payment_id": "pay_ELe6ONlgjrYv5Z",
+      "plan_id": "plan_mIdPunMHNV6TL",
+      "product_id_whop": "prod_W1xlml34ygYMR",
+      "membership_id": "mem_04dw0KnyLralfK",
+      "gross": "25.00 USD",
+      "ledgerly_fee_on_receipt": "2.00 USD",
+      "seller_share_on_receipt": "23.00 USD",
+      "whop_payment_status": "paid",
+      "whop_paid_at": "2026-09-09T23:02:39.081Z",
+      "whop_fees": {
+        "source": "GET /payments/pay_ELe6ONlgjrYv5Z/fees (12-direct-payment-fees.json); the checkout configuration shows application_fee_amount null",
+        "application_fee": "2.00",
+        "payment_processing_percentage_fee": "0.68",
+        "cross_border_percentage_fee": "0.38",
+        "payment_processing_fixed_fee": "0.30",
+        "orchestration_percentage_fee": "0.20",
+        "stripe_radar_fee": "0.07",
+        "amount_after_fees": "21.37"
+      },
+      "ledgerly_order_status": "paid",
+      "webhook_delivery": {
+        "id": "whdel_MTc4ODk5NDk3NDAwMHwwMWEwODg2OC1mNTMxLTdkMDItYmY4Ni02MDVmMWQ5NWJhZjk",
+        "event": "payment.succeeded",
+        "message_id": "msg_RlCl0CHy4t8QTywqKLx43qOZ",
+        "sent_at": "2026-09-09T23:02:54.000Z",
+        "response_code": 200,
+        "response_body": {"received": true, "duplicate": false},
+        "total_time_s": 0.537
+      }
+    },
+    {
+      "flow": "platform_transfer",
+      "seller_catalog_id": "sel_onda",
+      "seller_name": "Onda Sounds (BR)",
+      "seller_account_id": "not exposed by the buyer-facing API; the charge sits on the platform account by design",
+      "charged_account_id": "biz_RlL9WP9TIBVXmr",
+      "sale_policy": "platform_only",
+      "product": "Onda Drum Library (onda-drum-library)",
+      "order_id": "00b8451a-9f1c-402a-8ee0-e3824e81943f",
+      "checkout_configuration_id": "ch_kT3ZyYS6Jc8ehfz",
+      "payment_id": "pay_cxvGcm7NvjoCkV",
+      "plan_id": "plan_rydmDsTzbco36",
+      "product_id_whop": "prod_zHpnCGqNKnthJ",
+      "membership_id": "mem_Rt1dlGRDSoLF0F",
+      "gross": "60.00 USD",
+      "ledgerly_fee_on_receipt": "4.80 USD",
+      "seller_share_on_receipt": "55.20 USD",
+      "whop_payment_status": "paid",
+      "whop_paid_at": "2026-09-09T23:04:54.449Z",
+      "whop_fees": {
+        "source": "GET /payments/pay_cxvGcm7NvjoCkV/fees (14-platform-payment-fees.json)",
+        "application_fee": "none (platform charge; fee is recorded on the order for the later transfer)",
+        "payment_processing_percentage_fee": "1.62",
+        "cross_border_percentage_fee": "0.90",
+        "orchestration_percentage_fee": "0.48",
+        "payment_processing_fixed_fee": "0.30",
+        "stripe_radar_fee": "0.07",
+        "amount_after_fees": "56.63"
+      },
+      "ledgerly_order_status": "paid",
+      "webhook_delivery": {
+        "id": "whdel_MTc4ODk5NTA5NzAwMHwwMWEwODg2YS1kNGIzLTdjM2YtYjY1OS03NGJhNjRkMzc0ZmQ",
+        "event": "payment.succeeded",
+        "message_id": "msg_hlBT9qCN73L71XR5MSXlQoLc",
+        "sent_at": "2026-09-09T23:04:57.000Z",
+        "response_code": 200,
+        "response_body": {"received": true, "duplicate": false},
+        "total_time_s": 0.140
+      }
+    }
+  ],
+  "webhook": {
+    "id": "hook_gO3nsBQBCSyzF",
+    "url": "https://ledgerly-afneymans-projects.vercel.app/api/whop/webhook",
+    "deliveries_listed": 48,
+    "histogram": {
+      "payment.succeeded 200": 17,
+      "account.updated 200": 19,
+      "account.updated 500": 12
+    },
+    "note": "the 12 account.updated 500s predate this run's purchases and are not from this item; pay_OM3X8c0ycF5ytM deliveries at 23:03:20 and 23:03:24 UTC belong to another lane's replay, not to these purchases"
+  },
+  "redaction": {
+    "files": ["11-direct-payment.json", "13-platform-payment.json", "17-webhook-deliveries-raw.json", "19-webhook-deliveries-for-purchases.json"],
+    "billing_address_fields_except_country": {"replaced_with": "[redacted]", "addresses": 21, "note": "every payment payload in the raw delivery list, not only this run's two"},
+    "user_name_and_owner_name": {"replaced_with": "[name redacted]", "values": 15},
+    "profile_picture_url": {"replaced_with": "[avatar url redacted]", "values": 52},
+    "real_person_email": {"json": "[email redacted]", "png": "grey box over the Email field in 03, 04, 08"},
+    "kept": ["user.id user_Q0IiqCqFWa8vo", "username aneyman", "non-secret ids biz_ pay_ payt_ ch_ plan_ prod_ mem_ whdel_ msg_", "fictional example.com buyer address"],
+    "script": "scratchpad/redact_pii.py",
+    "rescan": "name, street, city, postal code, avatar host and the real email: no hits in any evidence file after the pass"
+  },
+  "not_done": [
+    "No transfer to the BR seller was created here; the platform_transfer order is paid and waits for the transfer job.",
+    "No refund was issued on either payment.",
+    "The BR seller's own biz id for sel_onda was not read back (buyer session cannot read /api/sellers); the charge is on the platform account, as the flow requires.",
+    "The in-app embedded checkout was not exercised because release 60aa620 redirects to the hosted page.",
+    "No purchase was made from a Whop user other than Alex's sandbox user; a separate Whop buyer would need its own sandbox login in a fresh browser session."
+  ]
+}

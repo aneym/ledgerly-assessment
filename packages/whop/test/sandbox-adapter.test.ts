@@ -146,8 +146,11 @@ it("sends the onboarding and hosted payout use cases", async () => {
   });
 });
 it("sends transfers and partial refunds in decimal units", async () => {
-  const transfer = setup({ id: "tsf_test" });
-  await transfer.adapter.createTransfer(
+  const transfer = setup({ id: "ctt_test" });
+  transfer.fetch.mockImplementationOnce(
+    async () => new Response(JSON.stringify({ id: "ldgr_origin", owner: { id: parentAccountId } })),
+  );
+  const result = await transfer.adapter.createTransfer(
     {
       originId: parentAccountId,
       destinationId: accountId,
@@ -156,8 +159,16 @@ it("sends transfers and partial refunds in decimal units", async () => {
     },
     "transfer",
   );
-  expect(transfer.body()).toEqual({
-    origin_id: parentAccountId,
+  expect(value(result).id).toBe("ctt_test");
+  expect(new Headers(transfer.fetch.mock.calls[1]?.[1]?.headers).get("Idempotency-Key")).toBe(
+    "transfer",
+  );
+  expect(String(transfer.fetch.mock.calls[0]?.[0])).toBe(
+    "https://sandbox.invalid/api/v1/ledger_accounts/biz_platform",
+  );
+  expect(JSON.parse(String(transfer.fetch.mock.calls[1]?.[1]?.body))).toEqual({
+    origin_id: "ldgr_origin",
+    type: "ledger",
     destination_id: accountId,
     amount: "23.00",
     currency: "usd",
@@ -386,4 +397,74 @@ it("rejects malformed or cross-account payment pages", async () => {
       }).adapter.listPayments({ accountId })
     ).ok,
   ).toBe(false);
+});
+
+it("caches each origin ledger lookup for the adapter instance", async () => {
+  const { adapter, fetch } = setup({ id: "ctt_test" });
+  fetch.mockImplementation(async (url) => {
+    const path = new URL(String(url)).pathname;
+    return new Response(
+      JSON.stringify(
+        path.includes("ledger_accounts")
+          ? { id: path.endsWith("biz_platform") ? "ldgr_platform" : "ldgr_other" }
+          : { id: "ctt_test" },
+      ),
+    );
+  });
+  for (const originId of [parentAccountId, parentAccountId, value(whopAccountId("biz_other"))]) {
+    expect(
+      (
+        await adapter.createTransfer(
+          {
+            originId,
+            destinationId: accountId,
+            amount: { amountMinor: 2300, currency: "USD" },
+            metadata: {},
+          },
+          "transfer-fixture",
+        )
+      ).ok,
+    ).toBe(true);
+  }
+  expect(fetch.mock.calls.filter(([, init]) => init?.method === "GET")).toHaveLength(2);
+  expect(
+    fetch.mock.calls
+      .filter(([, init]) => init?.method === "POST")
+      .map(([, init]) => JSON.parse(String(init?.body)).origin_id),
+  ).toEqual(["ldgr_platform", "ldgr_platform", "ldgr_other"]);
+});
+
+it.each([{}, { id: "biz_wrong" }])(
+  "rejects an invalid origin ledger response %j without a transfer",
+  async (response) => {
+    const { adapter, fetch } = setup(response);
+    const result = await adapter.createTransfer(
+      {
+        originId: parentAccountId,
+        destinationId: accountId,
+        amount: { amountMinor: 2300, currency: "USD" },
+        metadata: {},
+      },
+      "transfer-fixture",
+    );
+    expect(result.ok).toBe(false);
+    expect(fetch).toHaveBeenCalledTimes(1);
+  },
+);
+
+it("retries a failed ledger lookup without posting the unresolved transfer", async () => {
+  const { adapter, fetch } = setup({ id: "ctt_test" });
+  fetch
+    .mockImplementationOnce(async () => new Response("unavailable", { status: 503 }))
+    .mockImplementationOnce(async () => new Response(JSON.stringify({ id: "ldgr_origin" })));
+  const input = {
+    originId: parentAccountId,
+    destinationId: accountId,
+    amount: { amountMinor: 2300, currency: "USD" as const },
+    metadata: {},
+  };
+  expect((await adapter.createTransfer(input, "transfer-retry")).ok).toBe(false);
+  expect(fetch).toHaveBeenCalledTimes(1);
+  expect(value(await adapter.createTransfer(input, "transfer-retry")).id).toBe("ctt_test");
+  expect(fetch.mock.calls.map(([, init]) => init?.method)).toEqual(["GET", "GET", "POST"]);
 });

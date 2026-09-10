@@ -1,0 +1,68 @@
+$ pnpm -r --parallel test
+Scope: 7 of 8 workspace projects
+packages/demo-runtime test$ vitest run
+apps/web test$ vitest run
+packages/whop test$ vitest run
+packages/core test$ vitest run
+packages/db test$ vitest run
+packages/evidence test$ vitest run
+apps/web test: 
+apps/web test:  RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/app-ui-fixes/apps/web
+apps/web test: 
+packages/demo-runtime test: 
+packages/demo-runtime test:  RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/app-ui-fixes/packages/demo-runtime
+packages/demo-runtime test: 
+packages/core test: 
+packages/core test:  RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/app-ui-fixes/packages/core
+packages/core test: 
+packages/db test: 
+packages/db test:  RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/app-ui-fixes/packages/db
+packages/db test: 
+packages/whop test: 
+packages/whop test:  RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/app-ui-fixes/packages/whop
+packages/whop test: 
+packages/demo-runtime test: 
+packages/demo-runtime test:  Test Files  16 passed (16)
+packages/demo-runtime test:       Tests  108 passed (108)
+packages/demo-runtime test:    Start at  20:29:07
+packages/demo-runtime test:    Duration  1.03s (transform 2.97s, setup 0ms, import 4.63s, tests 718ms, environment 1ms)
+packages/demo-runtime test: 
+packages/demo-runtime test: Done
+packages/evidence test: 
+packages/evidence test:  RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/app-ui-fixes/packages/evidence
+packages/evidence test: 
+packages/core test: 
+packages/core test:  Test Files  14 passed (14)
+packages/core test:       Tests  194 passed (194)
+packages/core test:    Start at  20:29:08
+packages/core test:    Duration  1.56s (transform 7.56s, setup 0ms, import 11.13s, tests 97ms, environment 1ms)
+packages/core test: 
+packages/core test: Done
+packages/evidence test: 
+packages/evidence test:  Test Files  4 passed (4)
+packages/evidence test:       Tests  23 passed (23)
+packages/evidence test:    Start at  20:29:09
+packages/evidence test:    Duration  567ms (transform 317ms, setup 0ms, import 628ms, tests 53ms, environment 0ms)
+packages/evidence test: 
+packages/evidence test: Done
+packages/whop test: 
+packages/whop test:  Test Files  17 passed (17)
+packages/whop test:       Tests  295 passed | 10 skipped (305)
+packages/whop test:    Start at  20:29:08
+packages/whop test:    Duration  10.52s (transform 18.76s, setup 0ms, import 32.89s, tests 14.25s, environment 64ms)
+packages/whop test: 
+packages/whop test: Done
+packages/db test: 
+packages/db test:  Test Files  15 passed (15)
+packages/db test:       Tests  237 passed (237)
+packages/db test:    Start at  20:29:08
+packages/db test:    Duration  16.19s (transform 3.77s, setup 0ms, import 25.31s, tests 114.28s, environment 1ms)
+packages/db test: 
+packages/db test: Done
+apps/web test: 
+apps/web test:  Test Files  99 passed (99)
+apps/web test:       Tests  1040 passed (1040)
+apps/web test:    Start at  20:29:07
+apps/web test:    Duration  17.55s (transform 30.59s, setup 0ms, import 142.89s, tests 78.92s, environment 2.18s)
+apps/web test: 
+apps/web test: Done

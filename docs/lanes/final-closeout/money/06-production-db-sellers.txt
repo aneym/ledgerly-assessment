@@ -1,0 +1,4 @@
+SET
+sellers|sel_acme|PT|platform_only|biz_4gsmseksjNEF9H|active
+sellers|sel_mara|US|direct|biz_pt7b2NAryKwRGh|active
+sellers|sel_onda|BR|platform_only|biz_6FQIBpQldcgR33|active

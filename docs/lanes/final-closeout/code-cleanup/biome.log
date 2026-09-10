@@ -1,0 +1,384 @@
+src/app/(storefront)/handoff/handoff.css:858:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 1, 0)
+  
+    856 │   overflow-wrap: anywhere;
+    857 │ }
+  > 858 │ .hf-details {
+        │ ^^^^^^^^^^^
+    859 │   background: transparent;
+    860 │   border-radius: 10px;
+  
+  i This selector specificity is (0, 2, 0)
+  
+    238 │ }
+    239 │ 
+  > 240 │ .hf-details + .hf-details {
+        │ ^^^^^^^^^^^^^^^^^^^^^^^^^
+    241 │   margin-top: 12px;
+    242 │ }
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/(storefront)/handoff/handoff.css:862:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 1, 0)
+  
+    860 │   border-radius: 10px;
+    861 │ }
+  > 862 │ .hf-summary {
+        │ ^^^^^^^^^^^
+    863 │   font-family: var(--hf-sans);
+    864 │   font-size: 14px;
+  
+  i This selector specificity is (0, 3, 0)
+  
+    269 │ }
+    270 │ 
+  > 271 │ .hf-details[open] .hf-summary {
+        │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    272 │   border-bottom: 1px solid var(--hf-line);
+    273 │ }
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/(storefront)/handoff/handoff.css:933:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 1, 1)
+  
+    931 │   margin: 28px 0;
+    932 │ }
+  > 933 │ .hf-product-grid article {
+        │ ^^^^^^^^^^^^^^^^^^^^^^^^
+    934 │   border-top: 1px solid #444;
+    935 │   padding-top: 22px;
+  
+  i This selector specificity is (0, 1, 2)
+  
+    812 │   gap: 32px;
+    813 │ }
+  > 814 │ .hf-money-models article + article {
+        │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    815 │   border-left: 1px solid var(--hf-line);
+    816 │   padding-left: 32px;
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/(storefront)/handoff/handoff.css:942:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 1, 1)
+  
+    940 │   gap: 12px;
+    941 │ }
+  > 942 │ .hf-resource-grid a,
+        │ ^^^^^^^^^^^^^^^^^^^
+    943 │ .hf-resource-pending {
+    944 │   display: flex;
+  
+  i This selector specificity is (0, 1, 2)
+  
+    561 │   min-width: 0;
+    562 │ }
+  > 563 │ .hf-nav > div > a {
+        │ ^^^^^^^^^^^^^^^^^
+    564 │   white-space: nowrap;
+    565 │ }
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/(storefront)/handoff/handoff.css:1015:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 1, 1)
+  
+    1013 │ }
+    1014 │ .hf-foot span,
+  > 1015 │ .hf-foot a {
+         │ ^^^^^^^^^^
+    1016 │   font: 12px var(--hf-sans);
+    1017 │   color: #888;
+  
+  i This selector specificity is (0, 1, 2)
+  
+    561 │   min-width: 0;
+    562 │ }
+  > 563 │ .hf-nav > div > a {
+        │ ^^^^^^^^^^^^^^^^^
+    564 │   white-space: nowrap;
+    565 │ }
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/(storefront)/handoff/handoff.css:1132:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 1, 1)
+  
+    1130 │   border-bottom: 1px solid var(--hf-line);
+    1131 │ }
+  > 1132 │ .hf-toc > div {
+         │ ^^^^^^^^^^^^^
+    1133 │   display: flex;
+    1134 │   flex-direction: column;
+  
+  i This selector specificity is (0, 1, 2)
+  
+    752 │   color: #b6b5b0;
+    753 │ }
+  > 754 │ .hf-seller dl div {
+        │ ^^^^^^^^^^^^^^^^^
+    755 │   padding: 8px 0;
+    756 │   border-top: 1px solid #2c2c2c;
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/(storefront)/handoff/handoff.css:1229:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 1, 1)
+  
+    1227 │   background: #111;
+    1228 │ }
+  > 1229 │ .hf-shot a {
+         │ ^^^^^^^^^^
+    1230 │   display: block;
+    1231 │ }
+  
+  i This selector specificity is (0, 2, 1)
+  
+    1142 │   color: #fa9c7c;
+    1143 │ }
+  > 1144 │ .hf .hf-toc a {
+         │ ^^^^^^^^^^^^^
+    1145 │   font-size: 13px;
+    1146 │   color: #c3c2bd;
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/globals.css:2049:30 lint/complexity/noImportantStyles  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Avoid the use of the !important style.
+  
+    2047 │   *::before,
+    2048 │   *::after {
+  > 2049 │     transition-duration: 0ms !important;
+         │                              ^^^^^^^^^^
+    2050 │     animation: none !important;
+    2051 │   }
+  
+  i This style reverses the cascade logic, and precedence is reversed. This could lead to having styles with higher specificity being overridden by styles with lower specificity.
+  
+  i Unsafe fix: Remove the style.
+  
+    2049 │ ····transition-duration:·0ms·!important;
+         │                             ----------- 
+
+src/app/globals.css:2050:21 lint/complexity/noImportantStyles  FIXABLE  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Avoid the use of the !important style.
+  
+    2048 │   *::after {
+    2049 │     transition-duration: 0ms !important;
+  > 2050 │     animation: none !important;
+         │                     ^^^^^^^^^^
+    2051 │   }
+    2052 │   .card:hover,
+  
+  i This style reverses the cascade logic, and precedence is reversed. This could lead to having styles with higher specificity being overridden by styles with lower specificity.
+  
+  i Unsafe fix: Remove the style.
+  
+    2050 │ ····animation:·none·!important;
+         │                    ----------- 
+
+src/app/globals.css:745:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 2, 0)
+  
+    743 │   color: #171512;
+    744 │ }
+  > 745 │ .cv-kontur .k {
+        │ ^^^^^^^^^^^^^
+    746 │   position: absolute;
+    747 │   right: -0.05em;
+  
+  i This selector specificity is (0, 3, 0)
+  
+    216 │   border-bottom: 1px solid var(--ink);
+    217 │ }
+  > 218 │ :is(.ll, .ledger-line).total .k {
+        │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    219 │   color: var(--ink);
+    220 │   font-weight: 500;
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/globals.css:1062:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 1, 1)
+  
+    1060 │   color: var(--muted);
+    1061 │ }
+  > 1062 │ .search svg {
+         │ ^^^^^^^^^^^
+    1063 │   width: 16px;
+    1064 │   height: 16px;
+  
+  i This selector specificity is (0, 3, 1)
+  
+    796 │   color: #dce3fa;
+    797 │ }
+  > 798 │ .cover.wide.cv-ledger > svg {
+        │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    799 │   transform: scale(0.8);
+    800 │   transform-origin: 50% 62%;
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/globals.css:1403:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 2, 1)
+  
+    1401 │   font-weight: 500;
+    1402 │ }
+  > 1403 │ .rail a .lead {
+         │ ^^^^^^^^^^^^^
+    1404 │   flex: 1;
+    1405 │   border-bottom: 1px dotted var(--line-strong);
+  
+  i This selector specificity is (0, 3, 0)
+  
+    1333 │   font-size: 12px;
+    1334 │ }
+  > 1335 │ .cc .ll .lead {
+         │ ^^^^^^^^^^^^^
+    1336 │   min-width: 8px;
+    1337 │ }
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/globals.css:1553:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 1, 1)
+  
+    1551 │   color: var(--muted);
+    1552 │ }
+  > 1553 │ .crumbs a {
+         │ ^^^^^^^^^
+    1554 │   color: var(--muted);
+    1555 │   text-decoration: none;
+  
+  i This selector specificity is (0, 2, 2)
+  
+    1391 │   transition: color var(--d-fast) var(--ease);
+    1392 │ }
+  > 1393 │ .rail li:first-child a {
+         │ ^^^^^^^^^^^^^^^^^^^^^^
+    1394 │   border-top: 1px solid var(--line);
+    1395 │ }
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/globals.css:1602:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 1, 0)
+  
+    1600 │   margin-top: var(--s3);
+    1601 │ }
+  > 1602 │ .pd-side {
+         │ ^^^^^^^^
+    1603 │   display: flex;
+    1604 │   flex-direction: column;
+  
+  i This selector specificity is (0, 2, 0)
+  
+    1581 │   grid-area: about;
+    1582 │ }
+  > 1583 │ .pd .pd-side {
+         │ ^^^^^^^^^^^^
+    1584 │   grid-area: side;
+    1585 │ }
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/globals.css:1631:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 2, 1)
+  
+    1629 │   color: var(--muted);
+    1630 │ }
+  > 1631 │ .pd-side .rate svg {
+         │ ^^^^^^^^^^^^^^^^^^
+    1632 │   width: 12px;
+    1633 │   height: 12px;
+  
+  i This selector specificity is (0, 3, 1)
+  
+    796 │   color: #dce3fa;
+    797 │ }
+  > 798 │ .cover.wide.cv-ledger > svg {
+        │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    799 │   transform: scale(0.8);
+    800 │   transform-origin: 50% 62%;
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/globals.css:1733:1 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 3, 0)
+  
+    1731 │   border-color: rgba(38, 37, 31, 0.12);
+    1732 │ }
+  > 1733 │ .split .ll .lead {
+         │ ^^^^^^^^^^^^^^^^
+    1734 │   border-color: var(--line-strong);
+    1735 │ }
+  
+  i This selector specificity is (0, 3, 1)
+  
+    1407 │   min-width: 8px;
+    1408 │ }
+  > 1409 │ .rail a[aria-current="true"] .lead {
+         │ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    1410 │   border-bottom-style: solid;
+    1411 │   border-color: var(--ink);
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+src/app/globals.css:1899:3 lint/style/noDescendingSpecificity ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ! Descending specificity selector found. This selector specificity is (0, 1, 0)
+  
+    1897 │     border-radius: 20px;
+    1898 │   }
+  > 1899 │   .plate {
+         │   ^^^^^^
+    1900 │     padding: 8px;
+    1901 │     border-radius: 14px;
+  
+  i This selector specificity is (0, 2, 0)
+  
+    1854 │     border-radius: 20px;
+    1855 │   }
+  > 1856 │   .feat .plate {
+         │   ^^^^^^^^^^^^
+    1857 │     padding: 8px;
+    1858 │     border-radius: 14px;
+  
+  i Descending specificity selector may not be applied. Consider rearranging the order of the selectors. See MDN web docs for more details.
+  
+
+Checked 395 files in 79ms. No fixes applied.
+Found 17 warnings.
+biome exit=0

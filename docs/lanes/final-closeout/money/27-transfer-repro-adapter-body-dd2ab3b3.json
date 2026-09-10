@@ -1,0 +1,34 @@
+{
+  "request": {
+    "method": "POST",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/transfers",
+    "query": null,
+    "api_version_date": "2026-09-06",
+    "idempotency_key": "transfer:dd2ab3b3-1332-471e-9b31-82936f2db774",
+    "body": {
+      "amount": "55.20",
+      "currency": "usd",
+      "origin_id": "biz_RlL9WP9TIBVXmr",
+      "destination_id": "biz_6FQIBpQldcgR33",
+      "metadata": {
+        "order_id": "dd2ab3b3-1332-471e-9b31-82936f2db774"
+      }
+    }
+  },
+  "status": 400,
+  "started_at": "2026-09-10T00:08:12.000Z",
+  "finished_at": "2026-09-10T00:08:12.330Z",
+  "response_headers": {
+    "date": "Thu, 10 Sep 2026 00:08:12 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "8de1c7cc-9500-40cd-922d-d7c38e525ee7",
+    "cf-ray": "a38a32641d29f799-EWR"
+  },
+  "response": {
+    "error": {
+      "type": "bad_request",
+      "message": "You cannot transfer funds out of your pending balance. Please wait for your funds to settle and try again."
+    }
+  }
+}

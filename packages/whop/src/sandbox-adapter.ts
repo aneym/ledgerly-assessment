@@ -466,6 +466,12 @@ export function createSandboxAdapter(options: {
 }): WhopPort {
   const { client } = options;
   const knownIds = new Set<string>();
+  const originLedgerIds = new Map<WhopAccountId, ReturnType<typeof resolveOriginLedger>>();
+  function resolveOriginLedger(accountId: WhopAccountId) {
+    return client.request("GET", `/ledger_accounts/${encodeURIComponent(accountId)}`, {
+      schema: z.object({ id: z.string().regex(/^ldgr_.+$/) }),
+    });
+  }
   const adapter: WhopPort = {
     async suspendAccount(accountId, idempotencyKey) {
       return client.request("POST", `/accounts/${encodeURIComponent(accountId)}/suspend`, {
@@ -898,9 +904,66 @@ export function createSandboxAdapter(options: {
           : null,
       });
     },
-    async listTransfers(_input) {
-      // The local snapshot names this endpoint but does not include its list contract.
-      return err({ kind: "invalid_request" });
+    async listTransfers(input) {
+      // Run-d captures establish the filters and empty envelope. The documented
+      // list omits parties, so retrieve each detail instead of inventing owners
+      // from the filter. Documentation-shaped populated tests are not live proof.
+      const direction = input.direction ?? "origin";
+      const summarySchema = z
+        .looseObject({
+          id: nonempty,
+          object: z.literal("transfer"),
+          amount: z.number().nonnegative(),
+          currency: currencySchema,
+          status: z.enum(["processing", "succeeded", "failed"]),
+          created_at: timestamp,
+          origin_ledger_account_id: nonempty,
+          destination_ledger_account_id: nonempty,
+        })
+        .superRefine((row, ctx) => {
+          decodedMoney(row.amount, row.currency, ctx);
+        });
+      const response = await client.request(
+        "GET",
+        queryPath("/transfers", {
+          [direction === "origin" ? "origin_id" : "destination_id"]: input.accountId,
+          after: input.cursor,
+        }),
+        {
+          // The documented maximum is 50. Bound detail reads even on a bad response.
+          schema: z.object({ data: z.array(summarySchema).max(50), page_info: pageInfoSchema }),
+        },
+      );
+      if (!response.ok) return response;
+      const items = [];
+      for (const summary of response.value.data) {
+        const detail = await client.request("GET", `/transfers/${encodeURIComponent(summary.id)}`, {
+          schema: transferDetailSchema,
+        });
+        if (!detail.ok) return detail;
+        const row = detail.value;
+        const party = row[direction];
+        if (
+          party.type !== "Company" ||
+          party.id !== input.accountId ||
+          row.id !== summary.id ||
+          row.status !== summary.status ||
+          row.raw.amount !== summary.amount ||
+          row.raw.currency !== summary.currency ||
+          row.createdAt !== summary.created_at ||
+          row.raw.origin_ledger_account_id !== summary.origin_ledger_account_id ||
+          row.raw.destination_ledger_account_id !== summary.destination_ledger_account_id
+        )
+          return err({ kind: "decode" });
+        const { raw: _raw, ...record } = row;
+        items.push(record);
+      }
+      return ok({
+        items,
+        nextCursor: response.value.page_info.has_next_page
+          ? response.value.page_info.end_cursor
+          : null,
+      });
     },
     async getPayment(paymentId, idempotencyKey) {
       const response = await client.request("GET", `/payments/${encodeURIComponent(paymentId)}`, {
@@ -954,11 +1017,23 @@ export function createSandboxAdapter(options: {
         input.destinationId.startsWith("sim_")
       )
         return err({ kind: "invalid_request" });
+      // Cache the lookup, including concurrent calls, but let failed reads retry.
+      let lookup = originLedgerIds.get(input.originId);
+      if (!lookup) {
+        lookup = resolveOriginLedger(input.originId);
+        originLedgerIds.set(input.originId, lookup);
+      }
+      const origin = await lookup;
+      if (!origin.ok) {
+        originLedgerIds.delete(input.originId);
+        return origin;
+      }
       const response = await client.request("POST", "/transfers", {
         body: {
           amount: toDecimalString(input.amount),
           currency: input.amount.currency.toLowerCase(),
-          origin_id: input.originId,
+          origin_id: origin.value.id,
+          type: "ledger",
           destination_id: input.destinationId,
           metadata: input.metadata,
         },

@@ -1,0 +1,65 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/setup_intents/sint_kcKFbxX2YT7kd",
+    "query": null,
+    "api_version_date": "2026-09-06",
+    "idempotency_key": null,
+    "body": null
+  },
+  "status": 200,
+  "started_at": "2026-09-09T23:38:19.559Z",
+  "finished_at": "2026-09-09T23:38:19.783Z",
+  "response_headers": {
+    "date": "Wed, 09 Sep 2026 23:38:19 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "c4267fcb-ef64-437b-9664-3d246cead3cc",
+    "cf-ray": "a38a06a0ae9a5541-EWR"
+  },
+  "response": {
+    "id": "sint_kcKFbxX2YT7kd",
+    "status": "succeeded",
+    "created_at": "2026-09-09T23:37:46.406Z",
+    "error_message": null,
+    "company": {
+      "id": "biz_RlL9WP9TIBVXmr"
+    },
+    "checkout_configuration": {
+      "id": "ch_CmfuDoysUUP6LkH"
+    },
+    "member": {
+      "id": "mber_4TPdtS1BYVigK",
+      "user": {
+        "id": "user_Q0IiqCqFWa8vo",
+        "email": "[email redacted]",
+        "name": "[name redacted]",
+        "username": "aneyman"
+      }
+    },
+    "payment_method": {
+      "id": "payt_FZ17WahujTHTR",
+      "created_at": "2026-09-08T23:37:17.824Z",
+      "payment_method_type": "card",
+      "card": {
+        "brand": "visa",
+        "last4": "4242",
+        "exp_month": 12,
+        "exp_year": 2030
+      },
+      "mailing_address": {
+        "name": "[name redacted]",
+        "line1": "[redacted]",
+        "line2": "",
+        "city": "[redacted]",
+        "state": "[redacted]",
+        "postal_code": "[redacted]",
+        "country": "US"
+      }
+    },
+    "metadata": {
+      "purpose": "money-evidence platform top-up card"
+    },
+    "three_ds_verified": false
+  }
+}

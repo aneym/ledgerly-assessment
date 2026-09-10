@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "clips": {
+    "tour": {
+      "id": "T01",
+      "status": "verified",
+      "title": "Buyer and seller tour",
+      "provenance": "local_simulation",
+      "targetRevision": "e8e9bdc2c3754f67334c313b9cfdf45826864db8",
+      "runnerRevision": "a94084861e5a9ed36ecec66dc80eddc65b420a02",
+      "duration_s": 88,
+      "audio": false,
+      "sha256": "f1b744d09e6b80900be2e482952b028ae8be23ffe44dbc40bd3727d9399903a6",
+      "posterSha256": "a8e1c19a6b52069e652cb65bf7577a59e4b202f34d662c66a58053ac2a9d9f44",
+      "checks": {
+        "ffprobe": {
+          "status": "passed",
+          "checked_at": "2026-09-09T17:28:26.682834+00:00",
+          "evidence": {
+            "sha256": "f1b744d09e6b80900be2e482952b028ae8be23ffe44dbc40bd3727d9399903a6",
+            "result": "H2641600x1000,88seconds,30fps,silent"
+          }
+        },
+        "decode": {
+          "status": "passed",
+          "checked_at": "2026-09-09T17:28:26.682834+00:00",
+          "evidence": {
+            "sha256": "f1b744d09e6b80900be2e482952b028ae8be23ffe44dbc40bd3727d9399903a6",
+            "result": "Full MP4 decode exit0"
+          }
+        },
+        "content": {
+          "status": "passed",
+          "checked_at": "2026-09-09T17:28:26.682834+00:00",
+          "evidence": {
+            "sha256": "f1b744d09e6b80900be2e482952b028ae8be23ffe44dbc40bd3727d9399903a6",
+            "result": "Actual seven chapters, local mock25purchase/2fee/23share, separate requested sample payout, fresh recovery resolved25/25/0; actual closing8/8 holds through final3seconds; earnings inspected loading frames show no fixture balance"
+          }
+        },
+        "playback": {
+          "status": "passed",
+          "checked_at": "2026-09-09T17:42:36.718968+00:00",
+          "evidence": {
+            "sha256": "f1b744d09e6b80900be2e482952b028ae8be23ffe44dbc40bd3727d9399903a6",
+            "result": "Root played from 0 to ended at 88 seconds, then replayed uninterrupted from 0 to 88. Two ended events; replay timestamps 1788975621128 to 1788975709137."
+          }
+        },
+        "seek": {
+          "status": "passed",
+          "checked_at": "2026-09-09T17:42:36.718968+00:00",
+          "evidence": {
+            "sha256": "f1b744d09e6b80900be2e482952b028ae8be23ffe44dbc40bd3727d9399903a6",
+            "result": "Root midpoint seek landed at 44 seconds and emitted seeked; two cumulative seeked events after replay."
+          }
+        }
+      },
+      "src": "/demo-clips/final/T01-tour.mp4",
+      "poster": "/demo-clips/final/T01-tour.png",
+      "operations": [],
+      "screenshots": [],
+      "notes": "Local simulation. One continuous 88-second excerpt from raw interval 36..124 seconds, with no internal cut, speed change or padded frames. Existing Hide backend log improves width. The actual earnings poster at video 49 seconds shows $25 gross, $2 fee and $23 seller share. Recording source was committed before capture; TTY and stdin ping were verified before app actions, and normal close exited 0. The separate mock payout requested $25 and left $75 in sample funds; it is not bank settlement. Root accepted content, playback, midpoint seek and replay on matching served bytes. Earlier failed and held takes remain private.",
+      "captured_at": "2026-09-09T17:23:46.105Z",
+      "capture_closed_at": "2026-09-09T17:26:05.202Z"
+    },
+    "operator": {
+      "status": "verified",
+      "targetRevision": "c33448b24cca9dea2ed5d7e6f1c9c3d8ad836bc9",
+      "runnerRevision": "48d0750927aded5cd62a867061f53d28f747be6f",
+      "duration_s": 45,
+      "audio": false,
+      "sha256": "765567c4985402b6e64437e46da06586e77be29a0e31f1cb12e04b01fa16fabf",
+      "posterSha256": "a8b1888eb4a4de9231ae8d30f68102e4b2390fa4c4394c9e6047aaab0fcb7f26",
+      "id": "OP01",
+      "title": "Operator recovery",
+      "src": "/demo-clips/final/OP01-operator-recovery.mp4",
+      "poster": "/demo-clips/final/OP01-operator-recovery.png",
+      "provenance": "local_simulation",
+      "checks": {
+        "ffprobe": {
+          "status": "passed",
+          "checked_at": "2026-09-09T16:49:23.955488+00:00",
+          "evidence": {
+            "sha256": "765567c4985402b6e64437e46da06586e77be29a0e31f1cb12e04b01fa16fabf",
+            "result": "{\"sha256\": \"765567c4985402b6e64437e46da06586e77be29a0e31f1cb12e04b01fa16fabf\", \"codec\": \"h264\", \"width\": 1600, \"height\": 1000, \"duration_s\": 45, \"audioStreams\": 0}"
+          }
+        },
+        "decode": {
+          "status": "passed",
+          "checked_at": "2026-09-09T16:49:23.955488+00:00",
+          "evidence": {
+            "sha256": "765567c4985402b6e64437e46da06586e77be29a0e31f1cb12e04b01fa16fabf",
+            "result": "{\"sha256\": \"765567c4985402b6e64437e46da06586e77be29a0e31f1cb12e04b01fa16fabf\", \"command\": \"ffmpeg -v error -i <exact video> -f null -\", \"exit\": 0}"
+          }
+        },
+        "content": {
+          "status": "passed",
+          "checked_at": "2026-09-09T16:49:23.955488+00:00",
+          "evidence": {
+            "sha256": "765567c4985402b6e64437e46da06586e77be29a0e31f1cb12e04b01fa16fabf",
+            "result": "{\"sha256\": \"765567c4985402b6e64437e46da06586e77be29a0e31f1cb12e04b01fa16fabf\", \"outcome\": \"fresh case resolved after refetch, import_confirmed and recheck\", \"amounts\": {\"local\": {\"amountMinor\": 2500, \"currency\": \"USD\"}, \"provider\": {\"amountMinor\": 2500, \"currency\": \"USD\"}, \"difference\": {\"amountMinor\": 0, \"currency\": \"USD\"}}, \"source\": \"actual UI screenshots/action log and recorded local API responses\"}"
+          }
+        },
+        "playback": {
+          "status": "passed",
+          "checked_at": "2026-09-09T16:58:10.364717+00:00",
+          "evidence": {
+            "sha256": "765567c4985402b6e64437e46da06586e77be29a0e31f1cb12e04b01fa16fabf",
+            "result": "Root actual IAB played0..45 and replayed0..45 uninterrupted, endedEvents2. Replay1788972809432..1788972854437."
+          }
+        },
+        "seek": {
+          "status": "passed",
+          "checked_at": "2026-09-09T16:58:10.364717+00:00",
+          "evidence": {
+            "sha256": "765567c4985402b6e64437e46da06586e77be29a0e31f1cb12e04b01fa16fabf",
+            "result": "Root seek50% reached22.5seconds and emittedseeked, cumulativeseekedEvents2."
+          }
+        }
+      },
+      "operations": [
+        {
+          "action": "prepare simulated fault",
+          "outcome": "succeeded",
+          "provenance": "local_simulation"
+        },
+        {
+          "action": "refetch",
+          "outcome": "succeeded",
+          "provenance": "local_simulation"
+        },
+        {
+          "action": "import confirmed payment",
+          "outcome": "succeeded",
+          "provenance": "local_simulation"
+        },
+        {
+          "action": "recheck and resolve",
+          "outcome": "succeeded",
+          "provenance": "local_simulation"
+        }
+      ],
+      "screenshots": [],
+      "notes": "Local simulation. One continuous 45-second excerpt from raw interval 75..120 seconds. Existing Hide backend log and normal scrolling expose the case title, Resolved badge, and $25 local / $25 provider / $0 difference. The drawer remains narrow. Recording source 48d0750927aded5cd62a867061f53d28f747be6f preceded every app Next action and the selected excerpt, but the raw launcher began before a read-only selector quoting fix. Root accepted matching served bytes after playback, midpoint seek and uninterrupted replay.",
+      "captured_at": "2026-09-09T16:42:24.579Z",
+      "capture_closed_at": "2026-09-09T16:46:32.312Z"
+    },
+    "lab": {
+      "status": "verified",
+      "targetRevision": "571a08241169d01cac19f347c275110171ee0928",
+      "runnerRevision": "b307a28215ed47eab7591d0cefbc0aa9cea80f9f",
+      "duration_s": 34,
+      "audio": false,
+      "sha256": "93c538a7beaa91a0093feea0f509a58d83dcb4f1134d64a447a016f4d2a41606",
+      "posterSha256": "2f3970271eecac7cbea17920b22a98ecccc1805747c3b3d2521cd555c6ae7e4e",
+      "id": "LAB01",
+      "title": "Integration Lab customer check",
+      "src": "/demo-clips/final/LAB01-integration-lab.mp4",
+      "poster": "/demo-clips/final/LAB01-integration-lab.png",
+      "provenance": "local_simulation",
+      "checks": {
+        "ffprobe": {
+          "status": "passed",
+          "evidence": {
+            "sha256": "93c538a7beaa91a0093feea0f509a58d83dcb4f1134d64a447a016f4d2a41606",
+            "result": "H.264, 1600\u00d71000, 30 fps, no audio; positive actual duration"
+          },
+          "checked_at": "2026-09-09T16:14:24.736433+00:00"
+        },
+        "decode": {
+          "status": "passed",
+          "evidence": {
+            "sha256": "93c538a7beaa91a0093feea0f509a58d83dcb4f1134d64a447a016f4d2a41606",
+            "result": "Full ffmpeg decode exited 0"
+          },
+          "checked_at": "2026-09-09T16:14:24.736433+00:00"
+        },
+        "content": {
+          "status": "passed",
+          "evidence": {
+            "sha256": "93c538a7beaa91a0093feea0f509a58d83dcb4f1134d64a447a016f4d2a41606",
+            "result": "Actual encoded scenes and correlated local records reviewed"
+          },
+          "checked_at": "2026-09-09T16:14:24.736433+00:00"
+        },
+        "playback": {
+          "status": "passed",
+          "checked_at": "2026-09-09T16:18:06.197189+00:00",
+          "evidence": {
+            "sha256": "93c538a7beaa91a0093feea0f509a58d83dcb4f1134d64a447a016f4d2a41606",
+            "observedBy": "Root in actual browser on matching HTTP/local bytes",
+            "result": "Replay from 0 reached ended at 34 seconds"
+          }
+        },
+        "seek": {
+          "status": "passed",
+          "checked_at": "2026-09-09T16:18:06.197189+00:00",
+          "evidence": {
+            "sha256": "93c538a7beaa91a0093feea0f509a58d83dcb4f1134d64a447a016f4d2a41606",
+            "observedBy": "Root in actual browser on matching HTTP/local bytes",
+            "result": "Seek 50% reached 17.000351 seconds with seeked event"
+          }
+        }
+      },
+      "operations": [
+        {
+          "action": "customer-purchase-and-recovery suite",
+          "runId": "run-20260909-161051-ggp4",
+          "outcome": "2 passed, 0 failed, 0 skipped",
+          "provenance": "local_simulation"
+        }
+      ],
+      "screenshots": [],
+      "notes": "Edited 34-second overview of one real local test run lasting 35.875 seconds, with 2 passed, 0 failed and 0 skipped. Five chronological scenes at unchanged speed. Test runner and target 571a08241169d01cac19f347c275110171ee0928 differ from the recording-tool runnerRevision. Mock routes are not sandbox proof.",
+      "captured_at": "2026-09-09T16:10:19.829Z",
+      "capture_closed_at": "2026-09-09T16:13:06.605Z"
+    }
+  }
+}

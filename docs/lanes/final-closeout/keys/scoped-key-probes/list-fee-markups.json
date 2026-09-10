@@ -1,0 +1,15 @@
+{
+  "name": "list-fee-markups",
+  "method": "GET",
+  "path": "/fee_markups?account_id=biz_RlL9WP9TIBVXmr",
+  "request_body": null,
+  "status": 403,
+  "response": {
+    "error": {
+      "type": "forbidden",
+      "message": "You are not authorized"
+    }
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:07.246Z"
+}

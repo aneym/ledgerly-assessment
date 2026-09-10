@@ -1,0 +1,29 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/financial-activity",
+    "query": "account_id=biz_RlL9WP9TIBVXmr&currency=usd&posted_after=2026-09-09T23:20:00Z",
+    "api_version_date": "2026-09-06",
+    "idempotency_key": null,
+    "body": null
+  },
+  "status": 200,
+  "started_at": "2026-09-09T23:28:10.055Z",
+  "finished_at": "2026-09-09T23:28:10.362Z",
+  "response_headers": {
+    "date": "Wed, 09 Sep 2026 23:28:10 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "cf992f33-241f-4fbe-a886-07742204bb38",
+    "cf-ray": "a389f7bf9b860f7b-EWR"
+  },
+  "response": {
+    "data": [],
+    "page_info": {
+      "has_next_page": false,
+      "end_cursor": null,
+      "has_previous_page": false,
+      "start_cursor": null
+    }
+  }
+}

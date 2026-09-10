@@ -1,0 +1,20 @@
+{
+  "name": "create-account-link-onboarding-de",
+  "method": "POST",
+  "path": "/account_links",
+  "request_body": {
+    "account_id": "biz_fuyI21F4iaNTDu",
+    "use_case": "account_onboarding",
+    "return_url": "https://ledgerly-afneymans-projects.vercel.app/onboarding/complete",
+    "refresh_url": "https://ledgerly-afneymans-projects.vercel.app/onboarding/refresh"
+  },
+  "status": 400,
+  "response": {
+    "error": {
+      "type": "bad_request",
+      "message": "This API key is not authorized to scope to the following action: payout:transfer:export. Update your API key permissions to include this action."
+    }
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:07.604Z"
+}

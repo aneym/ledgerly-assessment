@@ -1,0 +1,97 @@
+SET
+events|ab2af25e-16f5-4802-b211-c269fb342ff0|f36063ed-1613-46f9-ba30-9b2ca0fde686|GET|/api/cron/sweep||app|app_api started|{}|2026-09-10 00:00:33.236+00
+events|0838cfd2-5e54-44aa-850b-b1087c259153|f36063ed-1613-46f9-ba30-9b2ca0fde686|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:00:33.768+00
+events|8cc93680-c546-4d35-bf53-138fc205901e|f36063ed-1613-46f9-ba30-9b2ca0fde686|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:00:33.852+00
+events|7f046fa0-4f1e-41c5-af8d-7e6cb480f75f|f36063ed-1613-46f9-ba30-9b2ca0fde686|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:00:33.887+00
+events|42e0117f-2796-4f39-9cc3-6f3b9410a593|f36063ed-1613-46f9-ba30-9b2ca0fde686|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:00:33.98+00
+events|fcb21bee-13b2-46d3-8d01-7e7437762fdd|f36063ed-1613-46f9-ba30-9b2ca0fde686|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:00:34.015+00
+events|91e449ec-a802-4a8c-938c-3fbfbcaff265|f36063ed-1613-46f9-ba30-9b2ca0fde686|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:00:34.067+00
+events|cf924a16-ce21-49e7-8f6b-57ae94682549|f36063ed-1613-46f9-ba30-9b2ca0fde686|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:00:34.1+00
+events|bb4c4b14-8f84-4a89-960f-708b501fc933|f36063ed-1613-46f9-ba30-9b2ca0fde686|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:00:34.17+00
+events|fb5e5ea0-6dd0-4154-8bd2-b8cd7ae22e95|f36063ed-1613-46f9-ba30-9b2ca0fde686|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:00:34.204+00
+events|5d1f6ca2-fba6-432c-874b-8edb50684a15|f36063ed-1613-46f9-ba30-9b2ca0fde686|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:00:34.259+00
+events|1ff8dc1f-f9c9-459a-9f23-247df889219b|f36063ed-1613-46f9-ba30-9b2ca0fde686|GET|/api/cron/sweep|200|app|app_api GET /api/cron/sweep -> 200|{}|2026-09-10 00:00:37.338+00
+events|1f9f19ad-494c-4d36-848a-d55ec0d60331|a1ebba06-40b7-4992-8532-1fdb6cca7ef8|GET|/api/cron/sweep||app|app_api started|{}|2026-09-10 00:01:33.306+00
+events|20421618-99fe-46bd-bda5-1e9da5b75b76|a1ebba06-40b7-4992-8532-1fdb6cca7ef8|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:01:33.875+00
+events|ec4be33a-5b99-470d-be90-98a494f22593|a1ebba06-40b7-4992-8532-1fdb6cca7ef8|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:01:33.96+00
+events|6fa9a161-fa6e-4ea0-b5f6-d00807427148|a1ebba06-40b7-4992-8532-1fdb6cca7ef8|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:01:33.996+00
+events|383114e5-4f46-4036-9cc6-9fd8a8e844c7|a1ebba06-40b7-4992-8532-1fdb6cca7ef8|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:01:34.079+00
+events|2aec02ef-c25d-4c6a-b2da-3b33d351e427|a1ebba06-40b7-4992-8532-1fdb6cca7ef8|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:01:34.114+00
+events|f8b31545-eda2-4e74-99cc-a381b25fe0ac|a1ebba06-40b7-4992-8532-1fdb6cca7ef8|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:01:34.175+00
+events|8b48964d-bf12-4229-91bf-50867d863aba|a1ebba06-40b7-4992-8532-1fdb6cca7ef8|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:01:34.214+00
+events|0692dd95-2639-4b3a-9b0c-82002dbc12cf|a1ebba06-40b7-4992-8532-1fdb6cca7ef8|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:01:34.295+00
+events|e9c4617e-460d-40f8-ac20-fe3e9086a039|a1ebba06-40b7-4992-8532-1fdb6cca7ef8|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:01:34.333+00
+events|9ffb2221-2658-4d07-b56e-0ce58d608ac8|a1ebba06-40b7-4992-8532-1fdb6cca7ef8|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:01:34.432+00
+events|fc0048e4-b1cf-4b8a-8753-c2d1e3519404|a1ebba06-40b7-4992-8532-1fdb6cca7ef8|GET|/api/cron/sweep|200|app|app_api GET /api/cron/sweep -> 200|{}|2026-09-10 00:01:37.788+00
+events|4ef8da87-0a33-44c2-a9d4-2a6731bc6825|7172a1d8-e9fe-4638-b1f7-27aa92a3ab41|GET|/api/cron/sweep||app|app_api started|{}|2026-09-10 00:02:33.157+00
+events|1683dec0-35f1-4c3b-9411-8a7e178d819b|7172a1d8-e9fe-4638-b1f7-27aa92a3ab41|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:02:33.699+00
+events|f82d981c-1e97-4584-b184-cb9741b59917|7172a1d8-e9fe-4638-b1f7-27aa92a3ab41|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:02:33.792+00
+events|d5cb8c1f-f117-4ff9-b8a1-40ff96029f2b|7172a1d8-e9fe-4638-b1f7-27aa92a3ab41|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:02:33.829+00
+events|5bfdf97a-1e38-4984-bcb9-fff8bbb88fe1|7172a1d8-e9fe-4638-b1f7-27aa92a3ab41|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:02:33.889+00
+events|ef86e157-a41a-40a3-99a4-9867518f7d20|7172a1d8-e9fe-4638-b1f7-27aa92a3ab41|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:02:33.923+00
+events|4e3b039b-8352-454c-9f9e-5d2368493c8c|7172a1d8-e9fe-4638-b1f7-27aa92a3ab41|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:02:33.991+00
+events|d85e7fc7-6485-42a9-85b5-0b63f27df57a|7172a1d8-e9fe-4638-b1f7-27aa92a3ab41|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:02:34.028+00
+events|b256cae7-4fc5-450e-9067-f0b9290cc7a4|7172a1d8-e9fe-4638-b1f7-27aa92a3ab41|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:02:34.092+00
+events|01c559ad-2ba3-4300-ad87-b90fe55b7ee9|7172a1d8-e9fe-4638-b1f7-27aa92a3ab41|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:02:34.13+00
+events|6293c26f-eddc-432b-b999-4fb50454b560|7172a1d8-e9fe-4638-b1f7-27aa92a3ab41|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:02:34.182+00
+events|a34a576f-5cbe-4356-bdfc-f9278ab18e3a|7172a1d8-e9fe-4638-b1f7-27aa92a3ab41|GET|/api/cron/sweep|200|app|app_api GET /api/cron/sweep -> 200|{}|2026-09-10 00:02:37.586+00
+events|579edfbd-1d92-436a-bc63-5f9756eae654|1f2ac931-d28a-474a-9b77-936cb68a83af|GET|/api/cron/sweep||app|app_api started|{}|2026-09-10 00:03:33.192+00
+events|6e63094d-af4b-4c2e-8c39-7550bab0b160|1f2ac931-d28a-474a-9b77-936cb68a83af|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:03:33.932+00
+events|c9e3f827-97dd-4d6a-b1d8-d6d5bf0b356c|1f2ac931-d28a-474a-9b77-936cb68a83af|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:03:34.018+00
+events|54592223-f9b1-49cd-86e1-a37402b9c8ef|1f2ac931-d28a-474a-9b77-936cb68a83af|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:03:34.054+00
+events|6bf236d3-cdf6-4fbb-a9ae-750f0749198c|1f2ac931-d28a-474a-9b77-936cb68a83af|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:03:34.12+00
+events|cbea4d23-cdf1-46be-a152-fb363f1102b0|1f2ac931-d28a-474a-9b77-936cb68a83af|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:03:34.154+00
+events|48256d2a-8bb4-459e-8c59-b7ad0dbf9d72|1f2ac931-d28a-474a-9b77-936cb68a83af|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:03:34.212+00
+events|edb2e049-0bdf-4182-8ad4-5018bc403ad8|1f2ac931-d28a-474a-9b77-936cb68a83af|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:03:34.249+00
+events|b79bfb1a-b54e-46a2-b1d8-13a9964321bb|1f2ac931-d28a-474a-9b77-936cb68a83af|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:03:34.303+00
+events|0207d9a4-04be-420f-90de-2828bc9888c2|1f2ac931-d28a-474a-9b77-936cb68a83af|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:03:34.337+00
+events|626c596b-477e-4d59-8745-820aeafbe028|1f2ac931-d28a-474a-9b77-936cb68a83af|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:03:34.415+00
+events|e2354f5d-a9ee-4c8c-af72-6c18d85734a4|1f2ac931-d28a-474a-9b77-936cb68a83af|GET|/api/cron/sweep|200|app|app_api GET /api/cron/sweep -> 200|{}|2026-09-10 00:03:37.585+00
+events|31607b9e-f25b-4c78-a6d4-6dc38f985b4f|35e989be-674e-482f-918a-23a693cfd0b2|GET|/api/cron/sweep||app|app_api started|{}|2026-09-10 00:04:33.446+00
+events|7838c6d7-4e89-4f2b-82c1-4d1c99babaa7|35e989be-674e-482f-918a-23a693cfd0b2|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:04:33.983+00
+events|c5bfeaff-f6a4-4f60-89e8-fce90de2ebc5|35e989be-674e-482f-918a-23a693cfd0b2|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:04:34.1+00
+events|b70c22bd-a969-45f9-a34a-123735fafb1c|35e989be-674e-482f-918a-23a693cfd0b2|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:04:34.136+00
+events|1d74818a-c662-47cf-b8d3-4744072d986c|35e989be-674e-482f-918a-23a693cfd0b2|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:04:34.209+00
+events|e8454e06-7bee-4aab-81ac-fed67be03e45|35e989be-674e-482f-918a-23a693cfd0b2|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:04:34.248+00
+events|39640da3-2533-442f-ad2b-a5a3bd307093|35e989be-674e-482f-918a-23a693cfd0b2|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:04:34.313+00
+events|8127b290-1a9b-40a5-ad37-74d7acf35230|35e989be-674e-482f-918a-23a693cfd0b2|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:04:34.348+00
+events|eebab6c5-4be4-46af-97d6-e9c6267e9566|35e989be-674e-482f-918a-23a693cfd0b2|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:04:34.415+00
+events|5ce05987-c7a6-419f-8361-aba0a0368aeb|35e989be-674e-482f-918a-23a693cfd0b2|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:04:34.451+00
+events|d77713a5-b5ee-491f-911b-31ec32eda573|35e989be-674e-482f-918a-23a693cfd0b2|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:04:34.513+00
+events|127fbe94-0e62-447c-ac32-40b368356c3a|35e989be-674e-482f-918a-23a693cfd0b2|GET|/api/cron/sweep|200|app|app_api GET /api/cron/sweep -> 200|{}|2026-09-10 00:04:37.567+00
+events|9b8ad91a-f361-4892-8544-1b3600a89f92|64532f35-e1cd-48d8-889c-cba7754a06cc|GET|/api/cron/sweep||app|app_api started|{}|2026-09-10 00:05:33.751+00
+events|92d697c2-676e-4dfc-804b-241f1daad36c|64532f35-e1cd-48d8-889c-cba7754a06cc|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:05:34.259+00
+events|a3f6206c-b634-47cc-90f6-154e8a8ae105|64532f35-e1cd-48d8-889c-cba7754a06cc|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:05:34.35+00
+events|ba28d641-8ba6-4605-85a5-36e31764a476|64532f35-e1cd-48d8-889c-cba7754a06cc|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:05:34.388+00
+events|0b111342-9198-4c42-9c05-13eff6a41426|64532f35-e1cd-48d8-889c-cba7754a06cc|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:05:34.442+00
+events|9733daa7-a856-45d3-9b21-ccc7670038cf|64532f35-e1cd-48d8-889c-cba7754a06cc|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:05:34.475+00
+events|a81cef56-d748-4ca3-bca9-393bdda22a43|64532f35-e1cd-48d8-889c-cba7754a06cc|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:05:34.531+00
+events|af8ba13a-a0a1-4e77-badc-e37e6aa47114|64532f35-e1cd-48d8-889c-cba7754a06cc|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:05:34.563+00
+events|81c724cc-6b73-4763-a35f-8de9a12c1060|64532f35-e1cd-48d8-889c-cba7754a06cc|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:05:34.625+00
+events|e1c98366-44ba-4902-bca1-258d0f40844c|64532f35-e1cd-48d8-889c-cba7754a06cc|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:05:34.663+00
+events|3b9f807d-9396-4249-843f-8ce3433c154c|64532f35-e1cd-48d8-889c-cba7754a06cc|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:05:34.713+00
+events|21bfcdd5-c142-465d-811f-5e5ba848d833|64532f35-e1cd-48d8-889c-cba7754a06cc|GET|/api/cron/sweep|200|app|app_api GET /api/cron/sweep -> 200|{}|2026-09-10 00:05:37.756+00
+events|5e6f494e-697e-4af1-b6b5-a5ecc6594dc9|711cde1d-5060-4f64-a5d4-b10bd37243a1|GET|/api/cron/sweep||app|app_api started|{}|2026-09-10 00:05:56.001+00
+events|4fd99385-4797-4874-8be8-f424fde460f3|711cde1d-5060-4f64-a5d4-b10bd37243a1|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:05:57.53+00
+events|98cddcbc-4d71-4b51-8911-a2be7b37475c|711cde1d-5060-4f64-a5d4-b10bd37243a1|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:05:57.588+00
+events|735ae260-c610-45b6-81e5-8bbd6f096d6f|711cde1d-5060-4f64-a5d4-b10bd37243a1|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:05:57.625+00
+events|a3dcffde-38a2-4251-846a-5ca4234304d3|711cde1d-5060-4f64-a5d4-b10bd37243a1|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:05:57.687+00
+events|01fd8b6e-a630-4944-a988-57007f691c12|711cde1d-5060-4f64-a5d4-b10bd37243a1|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:05:57.723+00
+events|603c83d0-2182-4080-8331-11a513b90336|711cde1d-5060-4f64-a5d4-b10bd37243a1|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:05:57.804+00
+events|334a81fa-b5c1-4b81-8aaa-ee413b009b45|711cde1d-5060-4f64-a5d4-b10bd37243a1|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:05:57.835+00
+events|c40ac9b1-353b-438e-915d-12ba2a060fe7|711cde1d-5060-4f64-a5d4-b10bd37243a1|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:05:57.883+00
+events|bdd7e099-a75e-4022-a370-2e0783eb8bf3|711cde1d-5060-4f64-a5d4-b10bd37243a1|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:05:57.916+00
+events|f7940cce-32d9-40b8-ac1a-cd199f9803be|711cde1d-5060-4f64-a5d4-b10bd37243a1|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:05:57.979+00
+events|4ae0ca78-2d27-42ac-8069-f85a1932471e|711cde1d-5060-4f64-a5d4-b10bd37243a1|GET|/api/cron/sweep|200|app|app_api GET /api/cron/sweep -> 200|{}|2026-09-10 00:06:01.188+00
+events|810ef447-19c9-42e2-90ce-fa3b31d3628c|665d7491-21a0-4081-aa70-058e355ad5eb|GET|/api/cron/sweep||app|app_api started|{}|2026-09-10 00:06:33.151+00
+events|595fa9fa-a9bb-405c-aac4-d1607511f4d2|665d7491-21a0-4081-aa70-058e355ad5eb|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:06:33.689+00
+events|ea167869-6caf-4c94-b628-6949ef76e8c8|665d7491-21a0-4081-aa70-058e355ad5eb|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:06:33.79+00
+events|224496a7-832e-4ad8-bf57-263f7586d1dd|665d7491-21a0-4081-aa70-058e355ad5eb|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:06:33.82+00
+events|949f9352-6a3a-4be5-9f6c-4308577bc3f2|665d7491-21a0-4081-aa70-058e355ad5eb|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:06:33.918+00
+events|4e310ae7-bbe2-483e-a063-fdc77ad93f81|665d7491-21a0-4081-aa70-058e355ad5eb|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:06:33.969+00
+events|4f35f7ad-44af-45f1-b310-b400f1011d45|665d7491-21a0-4081-aa70-058e355ad5eb|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:06:34.039+00
+events|7c2d8518-b482-4dd2-b0e7-dd0365e1ae45|665d7491-21a0-4081-aa70-058e355ad5eb|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:06:34.076+00
+events|343d5860-de60-4720-a7dd-12436c9298f6|665d7491-21a0-4081-aa70-058e355ad5eb|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:06:34.14+00
+events|d826672a-965e-48d2-a23f-7e2b188b686f|665d7491-21a0-4081-aa70-058e355ad5eb|POST|/transfers||sandbox|whop started|{}|2026-09-10 00:06:34.171+00
+events|dc64cb5d-bbef-4ee0-bb7f-30706b18c33a|665d7491-21a0-4081-aa70-058e355ad5eb|POST|/transfers|400|sandbox|whop POST /transfers failed (http)|{}|2026-09-10 00:06:34.238+00
+events|5ce9fdc5-0a00-40fe-912d-aa1d48c30eb1|665d7491-21a0-4081-aa70-058e355ad5eb|GET|/api/cron/sweep|200|app|app_api GET /api/cron/sweep -> 200|{}|2026-09-10 00:06:37.647+00

@@ -1,0 +1,20 @@
+{
+  "name": "create-fee-markup-de",
+  "method": "POST",
+  "path": "/fee_markups",
+  "request_body": {
+    "account_id": "biz_fuyI21F4iaNTDu",
+    "fee_type": "next_day_bank_withdrawal_markup",
+    "percentage_fee": 1.5,
+    "notes": "Scoped key probe scoped-probe-1788998161772"
+  },
+  "status": 403,
+  "response": {
+    "error": {
+      "type": "forbidden",
+      "message": "You do not have permission to perform this action. Required permission: company:update_child_fees"
+    }
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:09.841Z"
+}

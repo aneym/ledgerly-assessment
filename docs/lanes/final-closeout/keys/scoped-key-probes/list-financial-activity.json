@@ -1,0 +1,1293 @@
+{
+  "name": "list-financial-activity",
+  "method": "GET",
+  "path": "/financial-activity?account_id=biz_pt7b2NAryKwRGh&include_resource=true",
+  "request_body": null,
+  "status": 200,
+  "response": {
+    "data": [
+      {
+        "object": "ledger_activity",
+        "id": "line_eUMyNUJGQW1oYlB3Q3JoeHo1S0J4OmxpOldSWXJuMlJqSzloSjEzSUhPS2RVVTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmdlbmVyaWNfcmVmdW5kXzE4MTg",
+        "line_type": "payment_refund",
+        "amount": "-2500000000",
+        "usd_amount": "-25.0",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T23:27:49Z",
+        "available_at": null,
+        "resource": {
+          "object": "user",
+          "id": "user_Q0IiqCqFWa8vo",
+          "name": "Alex Neyman",
+          "username": "aneyman",
+          "profile_picture_url": "https://ui-avatars.com/api/?name=Alex%20Neyman&background=535961&color=fff&format=png"
+        },
+        "source": {
+          "object": "refund",
+          "id": "rf_AtBJ9mtmOMtikt6"
+        },
+        "payment_id": "pay_ELe6ONlgjrYv5Z",
+        "user_id": "user_Q0IiqCqFWa8vo",
+        "user_name": "Alex Neyman",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_Q0IiqCqFWa8vo",
+            "name": "Alex Neyman",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T23:02:38.242Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_aEdLTFdUcmJLYlJtVnFCVzVBdkJ1OmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "line_type": "fraud_prevention_fee",
+        "amount": "-7000000",
+        "usd_amount": "-0.07",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T23:02:41Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "status": "refunded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_ELe6ONlgjrYv5Z",
+        "user_id": "user_Q0IiqCqFWa8vo",
+        "user_name": "Alex Neyman",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_Q0IiqCqFWa8vo",
+            "name": "Alex Neyman",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T23:02:38.242Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_WXJWVzNzVmxUeXNqOE1Oa1VqNGVEOmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "line_type": "orchestration_percentage_fee",
+        "amount": "-20000000",
+        "usd_amount": "-0.2",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T23:02:41Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "status": "refunded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_ELe6ONlgjrYv5Z",
+        "user_id": "user_Q0IiqCqFWa8vo",
+        "user_name": "Alex Neyman",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_Q0IiqCqFWa8vo",
+            "name": "Alex Neyman",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T23:02:38.242Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_WWg5Vnh6RGtFd0ZybFpUdjlZdW5UOmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "line_type": "application_fee",
+        "amount": "-200000000",
+        "usd_amount": "-2.0",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T23:02:41Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "status": "refunded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_ELe6ONlgjrYv5Z",
+        "user_id": "user_Q0IiqCqFWa8vo",
+        "user_name": "Alex Neyman",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_Q0IiqCqFWa8vo",
+            "name": "Alex Neyman",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T23:02:38.242Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_SEQ1anhUWU5pYldENTdFb1BPUnBEOmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "line_type": "payment_processing_fixed_fee",
+        "amount": "-30000000",
+        "usd_amount": "-0.3",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T23:02:41Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "status": "refunded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_ELe6ONlgjrYv5Z",
+        "user_id": "user_Q0IiqCqFWa8vo",
+        "user_name": "Alex Neyman",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_Q0IiqCqFWa8vo",
+            "name": "Alex Neyman",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T23:02:38.242Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_Rjh5b1BaOWQ0ZTRjMVZibWh1emt4OmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "line_type": "payment_processing_percentage_fee",
+        "amount": "-68000000",
+        "usd_amount": "-0.68",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T23:02:41Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "status": "refunded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_ELe6ONlgjrYv5Z",
+        "user_id": "user_Q0IiqCqFWa8vo",
+        "user_name": "Alex Neyman",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_Q0IiqCqFWa8vo",
+            "name": "Alex Neyman",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T23:02:38.242Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_NU9ZbDRnbmI3bWZhS2JIcUcwUVJQOmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "line_type": "cross_border_percentage_fee",
+        "amount": "-38000000",
+        "usd_amount": "-0.38",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T23:02:41Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "status": "refunded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_ELe6ONlgjrYv5Z",
+        "user_id": "user_Q0IiqCqFWa8vo",
+        "user_name": "Alex Neyman",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_Q0IiqCqFWa8vo",
+            "name": "Alex Neyman",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T23:02:38.242Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_NDZlVERCU3VhMld6MWs4VEswZmd2OmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "line_type": "payment_gross",
+        "amount": "2500000000",
+        "usd_amount": "25.0",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T23:02:41Z",
+        "available_at": "2026-09-11T00:00:00Z",
+        "resource": {
+          "object": "user",
+          "id": "user_Q0IiqCqFWa8vo",
+          "name": "Alex Neyman",
+          "username": "aneyman",
+          "profile_picture_url": "https://ui-avatars.com/api/?name=Alex%20Neyman&background=535961&color=fff&format=png"
+        },
+        "source": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "status": "refunded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_ELe6ONlgjrYv5Z",
+        "user_id": "user_Q0IiqCqFWa8vo",
+        "user_name": "Alex Neyman",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_Q0IiqCqFWa8vo",
+            "name": "Alex Neyman",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T23:02:38.242Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_eHNTRmRRczdyaW82YU1PSkxSVUttOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODkx",
+        "line_type": "payment_processing_fixed_fee",
+        "amount": "-30000000",
+        "usd_amount": "-0.3",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T00:08:43Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_tJABaxIlZo6FJ9",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_tJABaxIlZo6FJ9",
+        "user_id": "user_z28ApRobHrDn6",
+        "user_name": "aneymanembed-desktop-",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_tJABaxIlZo6FJ9",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_z28ApRobHrDn6",
+            "name": "aneymanembed-desktop-",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T00:08:39.556Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_dk96YkJZRm9NUUU5SUZOellTa0J0OmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODkx",
+        "line_type": "fraud_prevention_fee",
+        "amount": "-7000000",
+        "usd_amount": "-0.07",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T00:08:43Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_tJABaxIlZo6FJ9",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_tJABaxIlZo6FJ9",
+        "user_id": "user_z28ApRobHrDn6",
+        "user_name": "aneymanembed-desktop-",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_tJABaxIlZo6FJ9",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_z28ApRobHrDn6",
+            "name": "aneymanembed-desktop-",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T00:08:39.556Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_cjFzcFJGT3JqY09DNlkwdDdKbUs0OmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODkx",
+        "line_type": "orchestration_percentage_fee",
+        "amount": "-20000000",
+        "usd_amount": "-0.2",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T00:08:43Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_tJABaxIlZo6FJ9",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_tJABaxIlZo6FJ9",
+        "user_id": "user_z28ApRobHrDn6",
+        "user_name": "aneymanembed-desktop-",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_tJABaxIlZo6FJ9",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_z28ApRobHrDn6",
+            "name": "aneymanembed-desktop-",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T00:08:39.556Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_cTRkeTZDcXRhbENwcENsOW9vb3AwOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODky",
+        "line_type": "orchestration_percentage_fee",
+        "amount": "-20000000",
+        "usd_amount": "-0.2",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T00:08:43Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_8f4MKyKfuGvUNy",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_8f4MKyKfuGvUNy",
+        "user_id": "user_B1XFlO796KnZc",
+        "user_name": "aneymanembed-mobile-",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_8f4MKyKfuGvUNy",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_B1XFlO796KnZc",
+            "name": "aneymanembed-mobile-",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T00:08:39.758Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_Z0s2TFl4VFlTT1dXWnpJZldlcjBoOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODky",
+        "line_type": "payment_processing_fixed_fee",
+        "amount": "-30000000",
+        "usd_amount": "-0.3",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T00:08:43Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_8f4MKyKfuGvUNy",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_8f4MKyKfuGvUNy",
+        "user_id": "user_B1XFlO796KnZc",
+        "user_name": "aneymanembed-mobile-",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_8f4MKyKfuGvUNy",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_B1XFlO796KnZc",
+            "name": "aneymanembed-mobile-",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T00:08:39.758Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_WGRXTWJ1em1kZDhLSndJSzEwa1FROmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODkx",
+        "line_type": "payment_processing_percentage_fee",
+        "amount": "-68000000",
+        "usd_amount": "-0.68",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T00:08:43Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_tJABaxIlZo6FJ9",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_tJABaxIlZo6FJ9",
+        "user_id": "user_z28ApRobHrDn6",
+        "user_name": "aneymanembed-desktop-",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_tJABaxIlZo6FJ9",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_z28ApRobHrDn6",
+            "name": "aneymanembed-desktop-",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T00:08:39.556Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_UWV6cFpTQzBSTUdGS21IdFdlVFl6OmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODky",
+        "line_type": "cross_border_percentage_fee",
+        "amount": "-38000000",
+        "usd_amount": "-0.38",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T00:08:43Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_8f4MKyKfuGvUNy",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_8f4MKyKfuGvUNy",
+        "user_id": "user_B1XFlO796KnZc",
+        "user_name": "aneymanembed-mobile-",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_8f4MKyKfuGvUNy",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_B1XFlO796KnZc",
+            "name": "aneymanembed-mobile-",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T00:08:39.758Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_U25Ga0Y5OHRTWW1Lc3hQd1BYbTdpOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODky",
+        "line_type": "payment_gross",
+        "amount": "2500000000",
+        "usd_amount": "25.0",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T00:08:43Z",
+        "available_at": "2026-09-10T00:00:00Z",
+        "resource": {
+          "object": "user",
+          "id": "user_B1XFlO796KnZc",
+          "name": "aneymanembed-mobile-",
+          "username": "aneymanembed-mobile-",
+          "profile_picture_url": "https://ui-avatars.com/api/?name=aneymanembed-mobile-&background=535961&color=fff&format=png"
+        },
+        "source": {
+          "object": "payment",
+          "id": "pay_8f4MKyKfuGvUNy",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_8f4MKyKfuGvUNy",
+        "user_id": "user_B1XFlO796KnZc",
+        "user_name": "aneymanembed-mobile-",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_8f4MKyKfuGvUNy",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_B1XFlO796KnZc",
+            "name": "aneymanembed-mobile-",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T00:08:39.758Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_TElQb29hdWFuZ1FHdTRUQ1VTUlZkOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODkx",
+        "line_type": "cross_border_percentage_fee",
+        "amount": "-38000000",
+        "usd_amount": "-0.38",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T00:08:43Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_tJABaxIlZo6FJ9",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_tJABaxIlZo6FJ9",
+        "user_id": "user_z28ApRobHrDn6",
+        "user_name": "aneymanembed-desktop-",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_tJABaxIlZo6FJ9",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_z28ApRobHrDn6",
+            "name": "aneymanembed-desktop-",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T00:08:39.556Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_SWd1WDNKZ2NSNGZ3c0JTTG9MN2ZqOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODky",
+        "line_type": "fraud_prevention_fee",
+        "amount": "-7000000",
+        "usd_amount": "-0.07",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T00:08:43Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_8f4MKyKfuGvUNy",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_8f4MKyKfuGvUNy",
+        "user_id": "user_B1XFlO796KnZc",
+        "user_name": "aneymanembed-mobile-",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_8f4MKyKfuGvUNy",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_B1XFlO796KnZc",
+            "name": "aneymanembed-mobile-",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T00:08:39.758Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_NUl4OE5aNmdYNjhIc0JBaVZENll3OmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODky",
+        "line_type": "payment_processing_percentage_fee",
+        "amount": "-68000000",
+        "usd_amount": "-0.68",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T00:08:43Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_8f4MKyKfuGvUNy",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_8f4MKyKfuGvUNy",
+        "user_id": "user_B1XFlO796KnZc",
+        "user_name": "aneymanembed-mobile-",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_8f4MKyKfuGvUNy",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_B1XFlO796KnZc",
+            "name": "aneymanembed-mobile-",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T00:08:39.758Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_NTFodHZzUlVyWWg5YURQbG9xWElKOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODkx",
+        "line_type": "payment_gross",
+        "amount": "2500000000",
+        "usd_amount": "25.0",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-09T00:08:43Z",
+        "available_at": "2026-09-10T00:00:00Z",
+        "resource": {
+          "object": "user",
+          "id": "user_z28ApRobHrDn6",
+          "name": "aneymanembed-desktop-",
+          "username": "aneymanembed-desktop-",
+          "profile_picture_url": "https://ui-avatars.com/api/?name=aneymanembed-desktop-&background=535961&color=fff&format=png"
+        },
+        "source": {
+          "object": "payment",
+          "id": "pay_tJABaxIlZo6FJ9",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_tJABaxIlZo6FJ9",
+        "user_id": "user_z28ApRobHrDn6",
+        "user_name": "aneymanembed-desktop-",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_tJABaxIlZo6FJ9",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_z28ApRobHrDn6",
+            "name": "aneymanembed-desktop-",
+            "email": null
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-09T00:08:39.556Z"
+        }
+      }
+    ],
+    "page_info": {
+      "has_next_page": true,
+      "end_cursor": "eyJwb3N0ZWQiOiIyMDI2LTA5LTA5VDAwOjA4OjQzWiIsImlkIjoibGluZV9OVEZvZEhaelVsVnlXV2c1WVVSUWJHOXhXRWxLT214cE9sUTVPSGxIT0hsa1Z6UjRiMEl5UjNWd05taFJNRHBoWXpwc1RFcDVkazV5UkhrMFZXZ3habHBMTTI1TGRERTZiR1U2TVRwMk9tbHJPbkpsWTJWcGNIUmZNVE00T0RreCJ9",
+      "has_previous_page": false,
+      "start_cursor": null
+    }
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:06.369Z"
+}

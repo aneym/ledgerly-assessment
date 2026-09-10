@@ -1,0 +1,125 @@
+{
+  "item": "webhooks",
+  "run_started_at": "2026-09-09T22:54:05Z",
+  "api_base": "https://sandbox-api.whop.com/api/v1",
+  "api_version_date": "2026-09-06",
+  "webhook": {
+    "id": "hook_gO3nsBQBCSyzF",
+    "resource_id": "biz_RlL9WP9TIBVXmr",
+    "url": "https://ledgerly-afneymans-projects.vercel.app/api/whop/webhook",
+    "enabled": true,
+    "api_version": "v1",
+    "api_version_date": "2026-09-06",
+    "child_resource_events": true,
+    "events": [
+      "payment.succeeded",
+      "payment.failed",
+      "refund.created",
+      "dispute.created",
+      "transfer.completed",
+      "payout.created",
+      "payout.updated",
+      "account.updated"
+    ],
+    "consecutive_failures": 0,
+    "evidence": "01-webhook-get.json"
+  },
+  "test_events": {
+    "endpoint": "POST /webhooks/hook_gO3nsBQBCSyzF/test",
+    "sent_between": ["2026-09-09T22:58:19.359Z", "2026-09-09T22:58:21.979Z"],
+    "whop_status": 200,
+    "whop_success": true,
+    "consumer_status": 200,
+    "consumer_body": { "received": true, "duplicate": false, "decoded": false },
+    "inbox_status": "failed",
+    "inbox_error": "account_id: Missing account_id for this version",
+    "envelope_ids": {
+      "payment.succeeded": "msg_BzJGsDcg5lg12dXhUqcwpnIj",
+      "payment.failed": "msg_HkFVFjI4BprpXA2V7iUDpReC",
+      "refund.created": "msg_VZksQWeai7eixvWu62NjThX4",
+      "dispute.created": "msg_MqE0UQjnUGN2OR0R8Cl5dCA8",
+      "transfer.completed": "msg_O32tOkpFQ4i6ProKmYxDbIjY",
+      "payout.created": "msg_A2U0aQeQHckSm4B7xNVhdUCU",
+      "payout.updated": "msg_SjJ5evoUFEHWKc8pBaH8vJxF",
+      "account.updated": "msg_zg9TJbDfxE4ArEsRcDxPuSDT"
+    },
+    "listed_by_get_deliveries": false,
+    "deliveries_polls_after_sends": [
+      "2026-09-09T22:58:31.437Z",
+      "2026-09-09T22:59:27.510Z",
+      "2026-09-09T23:00:39.650Z",
+      "2026-09-09T23:03:33.135Z",
+      "2026-09-09T23:14:30.000Z"
+    ],
+    "evidence": "test-events/<type>.json, 03-deliveries-polls-after-tests.json, 10-deliveries-late-poll.json"
+  },
+  "redaction": {
+    "markers": ["[REDACTED]", "[REDACTED_EMAIL]", "[REDACTED_KEY]"],
+    "rules": "api keys, webhook secrets, tokens, signed urls, emails; billing_address name, line1 and postal_code for every buyer (city, state, country kept)",
+    "retained_on_purpose": "user.name and owner.name (sandbox account owner display name); non-secret ids (biz_, pay_, hook_, whdel_, msg_)",
+    "files_with_billing_address_redaction": [
+      "02-deliveries-before.json",
+      "08-deliveries-after-replay.json",
+      "payloads/payment.succeeded.json"
+    ],
+    "applied_at": "2026-09-09T23:13:45Z"
+  },
+  "payloads": {
+    "real": {
+      "payment.succeeded": {
+        "delivery_id": "whdel_MTc4ODkxNjc0MTAwMHwwMWEwODNiZi0zNzdjLTcyMGQtODk0Yy03ZDE2ODExYTFiYjM",
+        "resource_id": "pay_OM3X8c0ycF5ytM",
+        "envelope_id": "msg_I4sXXdsA4Pgqohb57xWuRdBH",
+        "sent_at": "2026-09-09T01:19:01.000Z"
+      },
+      "account.updated": {
+        "delivery_id": "whdel_MTc4ODkwNTIxMjAwMHwwMWEwODMwZi00YjE5LTcwOGEtYmIxMC1mMmNhZTU0OWE0NDk",
+        "resource_id": "biz_8dB7THK4woBs43",
+        "envelope_id": "msg_juxgpW9zqoPeYme8bh0w2CpC",
+        "sent_at": "2026-09-08T22:06:52.000Z"
+      }
+    },
+    "test_generated": [
+      "payment.failed",
+      "refund.created",
+      "dispute.created",
+      "transfer.completed",
+      "payout.created",
+      "payout.updated"
+    ],
+    "source_for_test_generated": "production webhook_inbox.raw_body, read-only query",
+    "evidence": "payloads/<type>.json, payloads/test/<type>.json"
+  },
+  "replay": {
+    "target_delivery_id": "whdel_MTc4ODkxNjc0MTAwMHwwMWEwODNiZi0zNzdjLTcyMGQtODk0Yy03ZDE2ODExYTFiYjM",
+    "target_envelope_id": "msg_I4sXXdsA4Pgqohb57xWuRdBH",
+    "target_resource_id": "pay_OM3X8c0ycF5ytM",
+    "keep_id": {
+      "sent_at": "2026-09-09T23:03:20.187Z",
+      "whop_status": 200,
+      "consumer_body": { "received": true, "duplicate": true },
+      "whop_delivery_id": "whdel_MTc4ODk5NTAwMDQ3NXwwMWEwODg2OS01OTM1LTc1MzktOTcxYi02YjQ4ZWU4YmQ2OGI",
+      "envelope_id": "msg_I4sXXdsA4Pgqohb57xWuRdBH",
+      "evidence": "05-replay-keep-id.json"
+    },
+    "regenerate_id": {
+      "sent_at": "2026-09-09T23:03:23.770Z",
+      "whop_status": 200,
+      "consumer_body": { "received": true, "duplicate": false },
+      "whop_delivery_id": "whdel_MTc4ODk5NTAwNDAwOXwwMWEwODg2OS02NzQ1LTdhNzItYmJkYS1lNTZmNzRkMjhlNGQ",
+      "envelope_id": "msg_4aSWcAouYIxCsoKDTgEic9uo",
+      "inbox_row_processed_at": "2026-09-09T23:03:24.809Z",
+      "evidence": "06-replay-regenerate-id.json"
+    },
+    "ledger_before": { "business_effects": 1, "ledger_entries": 2 },
+    "ledger_after": { "business_effects": 1, "ledger_entries": 2 },
+    "evidence": "04-replay-before-state.txt, 07-replay-after-state.txt, 09-replay-delivery-records.json"
+  },
+  "code_read_for_decoded_false": [
+    "apps/web/src/lib/service-http.ts",
+    "packages/whop/src/envelope.ts",
+    "packages/whop/src/webhooks.ts",
+    "packages/core/src/services/inbox.ts"
+  ],
+  "code_changed": false
+}

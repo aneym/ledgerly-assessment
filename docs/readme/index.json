@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "home",
+    "route": "/",
+    "title": "Home",
+    "caption": "The marketplace landing page, with the featured catalog and the buyer entry points."
+  },
+  {
+    "slug": "browse",
+    "route": "/browse?sort=price-desc",
+    "title": "Browse",
+    "caption": "The full catalog sorted by price, showing every seller's products with category and sort filters."
+  },
+  {
+    "slug": "product",
+    "route": "/p/onda-drum-library",
+    "title": "Product",
+    "caption": "A single product page, showing the seller, price, fee breakdown, and description before checkout."
+  },
+  {
+    "slug": "checkout",
+    "route": "/checkout/f63a0304-96e8-4c16-b5b5-3a9964c81281",
+    "title": "Checkout",
+    "caption": "The checkout screen for one order, with the order summary and the fee split shown to the buyer."
+  },
+  {
+    "slug": "demo",
+    "route": "/demo",
+    "title": "Guided demo",
+    "caption": "The guided demo entry point that walks a visitor through the app end to end."
+  },
+  {
+    "slug": "seller-earnings",
+    "route": "/sell/earnings",
+    "title": "Seller earnings",
+    "caption": "A seller's earnings view, showing gross sales, fees, and their net share."
+  },
+  {
+    "slug": "seller-payouts",
+    "route": "/sell/payouts",
+    "title": "Seller payouts",
+    "caption": "The seller payouts page, showing that Whop's embedded payout widget needs a deployed HTTPS app and cannot open from local development."
+  },
+  {
+    "slug": "buyer-library",
+    "route": "/library",
+    "title": "Buyer library",
+    "caption": "A buyer's library of past purchases, each with a receipt link."
+  },
+  {
+    "slug": "admin",
+    "route": "/admin",
+    "title": "Admin sellers",
+    "caption": "The operator's admin view of every seller account and its onboarding status."
+  },
+  {
+    "slug": "admin-ledger",
+    "route": "/admin/ledger",
+    "title": "Admin ledger",
+    "caption": "The operator's ledger view of platform activity across accounts, with reconciliation totals."
+  },
+  {
+    "slug": "admin-issues",
+    "route": "/admin/issues",
+    "title": "Admin issues",
+    "caption": "The operator's queue of open issues detected across orders and accounts."
+  },
+  {
+    "slug": "handoff",
+    "route": "/handoff",
+    "title": "Handoff",
+    "caption": "The engineering handoff hub linking the evidence, scenarios, lab, and engineering notes."
+  },
+  {
+    "slug": "handoff-evidence",
+    "route": "/handoff/evidence",
+    "title": "Handoff evidence",
+    "caption": "The handoff page listing the recorded evidence for the sandbox integration."
+  },
+  {
+    "slug": "handoff-scenarios",
+    "route": "/handoff/scenarios",
+    "title": "Handoff scenarios",
+    "caption": "The handoff page describing the test scenarios exercised against the sandbox."
+  },
+  {
+    "slug": "handoff-lab",
+    "route": "/handoff/lab",
+    "title": "Handoff lab",
+    "caption": "The handoff lab page for exploring the running system's live state."
+  },
+  {
+    "slug": "handoff-engineering",
+    "route": "/handoff/engineering",
+    "title": "Handoff engineering",
+    "caption": "The handoff page with engineering notes on the system's design and tradeoffs."
+  },
+  {
+    "slug": "present-final",
+    "route": "/present/final",
+    "title": "Final presentation",
+    "caption": "The final presentation deck summarizing the assessment work."
+  },
+  {
+    "slug": "whop-store",
+    "route": "https://sandbox.whop.com/joined/ledgerly/",
+    "title": "Whop store",
+    "caption": "Ledgerly's public business page on Whop's sandbox, listing its products to members."
+  },
+  {
+    "slug": "whop-checkout",
+    "route": "https://sandbox.whop.com/joined/ledgerly/products/onda-drum-library/",
+    "title": "Whop checkout",
+    "caption": "A product page in Whop's sandbox with its buy options, ready to start a checkout."
+  },
+  {
+    "slug": "whop-payments",
+    "route": "https://sandbox.whop.com/dashboard/biz_RlL9WP9TIBVXmr/payments/",
+    "title": "Whop payments",
+    "caption": "The Whop platform dashboard's Payments page, listing succeeded charges across the business."
+  }
+]

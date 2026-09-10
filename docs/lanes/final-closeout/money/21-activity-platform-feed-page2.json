@@ -1,0 +1,1294 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/financial-activity",
+    "query": "account_id=biz_RlL9WP9TIBVXmr&currency=usd&cursor=eyJwb3N0ZWQiOiIyMDI2LTA5LTA4VDIzOjQyOjA1WiIsImlkIjoibGluZV9OWEZNV1hFek4wRnBhR1J5U0hSVGFHbEpNekJDT214cE9rZHdPVnBKYUVNM1dFdDZPVTFOVkRKemFuQnpSenBoWXpwc1RFcDVkazV5UkhrMFZXZ3habHBMTTI1TGRERTZiR1U2TVRwMk9tbHJPbkpsWTJWcGNIUmZNVE00T0RZMCJ9",
+    "api_version_date": "2026-09-06",
+    "idempotency_key": null,
+    "body": null
+  },
+  "status": 200,
+  "started_at": "2026-09-09T23:50:40.031Z",
+  "finished_at": "2026-09-09T23:50:40.775Z",
+  "response_headers": {
+    "date": "Wed, 09 Sep 2026 23:50:40 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "214a4512-2b96-49f5-b77b-2afc063e7e71",
+    "cf-ray": "a38a18b57be9dd82-EWR"
+  },
+  "response": {
+    "data": [
+      {
+        "object": "ledger_activity",
+        "id": "line_M2lOeFp4bHpEUU4wVDl5T2tLMHZEOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODY0",
+        "line_type": "payment_processing_fixed_fee",
+        "amount": "-30000000",
+        "usd_amount": "-0.3",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:42:05Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_KlLPYXITgrygTF",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "29.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_KlLPYXITgrygTF",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_OGxbpxywMPXDm",
+        "product_name": "Notion OS for Studios",
+        "plan_id": "plan_3Z09mLZ6Mjt9S",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_KlLPYXITgrygTF",
+          "amount": {
+            "currency": "usd",
+            "amount": "29.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_OGxbpxywMPXDm",
+            "name": "Notion OS for Studios"
+          },
+          "plan": {
+            "id": "plan_3Z09mLZ6Mjt9S",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:41:54.147Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_eHVLUnNmUXliSlNMbDk4ODA0dW5tOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODYx",
+        "line_type": "orchestration_percentage_fee",
+        "amount": "-10000000",
+        "usd_amount": "-0.1",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:39:46Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_dquW3UTOlLQB9x",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "12.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_dquW3UTOlLQB9x",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_EK3rpLZ2BRF6z",
+        "product_name": "Streetlight Sessions",
+        "plan_id": "plan_KPm9kXuurHoKc",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_dquW3UTOlLQB9x",
+          "amount": {
+            "currency": "usd",
+            "amount": "12.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_EK3rpLZ2BRF6z",
+            "name": "Streetlight Sessions"
+          },
+          "plan": {
+            "id": "plan_KPm9kXuurHoKc",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:39:42.942Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_bW5nRkhEOTdVNjZrNzhhbm10bnkzOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODYx",
+        "line_type": "payment_gross",
+        "amount": "1200000000",
+        "usd_amount": "12.0",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:39:46Z",
+        "available_at": "2026-09-10T00:00:00Z",
+        "resource": {
+          "object": "user",
+          "id": "user_F9nsaRbxoMM3f",
+          "name": "aneymanledgerly-buyer",
+          "username": "aneymanledgerly-buyer",
+          "profile_picture_url": "[avatar url redacted]"
+        },
+        "source": {
+          "object": "payment",
+          "id": "pay_dquW3UTOlLQB9x",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "12.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_dquW3UTOlLQB9x",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_EK3rpLZ2BRF6z",
+        "product_name": "Streetlight Sessions",
+        "plan_id": "plan_KPm9kXuurHoKc",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_dquW3UTOlLQB9x",
+          "amount": {
+            "currency": "usd",
+            "amount": "12.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_EK3rpLZ2BRF6z",
+            "name": "Streetlight Sessions"
+          },
+          "plan": {
+            "id": "plan_KPm9kXuurHoKc",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:39:42.942Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_TTg5VkVDb2RiYXI5TnFJWG5keDNsOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODYx",
+        "line_type": "payment_processing_fixed_fee",
+        "amount": "-30000000",
+        "usd_amount": "-0.3",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:39:46Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_dquW3UTOlLQB9x",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "12.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_dquW3UTOlLQB9x",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_EK3rpLZ2BRF6z",
+        "product_name": "Streetlight Sessions",
+        "plan_id": "plan_KPm9kXuurHoKc",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_dquW3UTOlLQB9x",
+          "amount": {
+            "currency": "usd",
+            "amount": "12.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_EK3rpLZ2BRF6z",
+            "name": "Streetlight Sessions"
+          },
+          "plan": {
+            "id": "plan_KPm9kXuurHoKc",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:39:42.942Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_QVBsYTFVNm0zTk5Tc3RCSzM5RUZROmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODYx",
+        "line_type": "payment_processing_percentage_fee",
+        "amount": "-32000000",
+        "usd_amount": "-0.32",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:39:46Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_dquW3UTOlLQB9x",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "12.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_dquW3UTOlLQB9x",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_EK3rpLZ2BRF6z",
+        "product_name": "Streetlight Sessions",
+        "plan_id": "plan_KPm9kXuurHoKc",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_dquW3UTOlLQB9x",
+          "amount": {
+            "currency": "usd",
+            "amount": "12.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_EK3rpLZ2BRF6z",
+            "name": "Streetlight Sessions"
+          },
+          "plan": {
+            "id": "plan_KPm9kXuurHoKc",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:39:42.942Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_NDltWnZaUURqSGhqYnpRRFVENVhvOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODYx",
+        "line_type": "fraud_prevention_fee",
+        "amount": "-7000000",
+        "usd_amount": "-0.07",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:39:46Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_dquW3UTOlLQB9x",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "12.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_dquW3UTOlLQB9x",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_EK3rpLZ2BRF6z",
+        "product_name": "Streetlight Sessions",
+        "plan_id": "plan_KPm9kXuurHoKc",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_dquW3UTOlLQB9x",
+          "amount": {
+            "currency": "usd",
+            "amount": "12.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_EK3rpLZ2BRF6z",
+            "name": "Streetlight Sessions"
+          },
+          "plan": {
+            "id": "plan_KPm9kXuurHoKc",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:39:42.942Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_MnNWRXBDVlZNWmdyVERXNjdqWW9GOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODYx",
+        "line_type": "cross_border_percentage_fee",
+        "amount": "-18000000",
+        "usd_amount": "-0.18",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:39:46Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_dquW3UTOlLQB9x",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "12.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_dquW3UTOlLQB9x",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_EK3rpLZ2BRF6z",
+        "product_name": "Streetlight Sessions",
+        "plan_id": "plan_KPm9kXuurHoKc",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_dquW3UTOlLQB9x",
+          "amount": {
+            "currency": "usd",
+            "amount": "12.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_EK3rpLZ2BRF6z",
+            "name": "Streetlight Sessions"
+          },
+          "plan": {
+            "id": "plan_KPm9kXuurHoKc",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:39:42.942Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_NktoOXdON0l1akRMNEVrME00bzFpOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc1MQ",
+        "line_type": "application_fee_payout",
+        "amount": "280000000",
+        "usd_amount": "2.8",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:38:10Z",
+        "available_at": "2026-09-10T00:00:00Z",
+        "resource": {
+          "object": "account",
+          "id": "biz_uOEIplOLcdfJUi",
+          "title": "Ledgerly Seller Pixelfern",
+          "route": "biz_uOEIplOLcdfJUi",
+          "logo_url": null
+        },
+        "source": {
+          "object": "application_fee",
+          "id": "apfee_3xrAmpgVSU6O"
+        },
+        "payment_id": "pay_EYGAd6l81eqWvH",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_1fn6JIl4caDZj",
+        "product_name": "Lowpoly Botanicals",
+        "plan_id": "plan_fVEYrErNuaA6w",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_EYGAd6l81eqWvH",
+          "amount": {
+            "currency": "usd",
+            "amount": "35.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_1fn6JIl4caDZj",
+            "name": "Lowpoly Botanicals"
+          },
+          "plan": {
+            "id": "plan_fVEYrErNuaA6w",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:38:06.224Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_RG1kb2VyQ0hOY0FnSHhlWUdZVWV0OmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc1MA",
+        "line_type": "application_fee_payout",
+        "amount": "200000000",
+        "usd_amount": "2.0",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:37:19Z",
+        "available_at": "2026-09-10T00:00:00Z",
+        "resource": {
+          "object": "account",
+          "id": "biz_pt7b2NAryKwRGh",
+          "title": "Ledgerly Seller US",
+          "route": "biz_pt7b2NAryKwRGh",
+          "logo_url": null
+        },
+        "source": {
+          "object": "application_fee",
+          "id": "apfee_KfpOoaWW0p9s"
+        },
+        "payment_id": "pay_1EBdxGtWCu54K0",
+        "user_id": "user_Q0IiqCqFWa8vo",
+        "user_name": "[name redacted]",
+        "user_email": "[email redacted]",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_1EBdxGtWCu54K0",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_Q0IiqCqFWa8vo",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:37:15.434Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_RXJWT1g2UHc4Nng2WTNJUDdRUktyOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc0OQ",
+        "line_type": "application_fee_payout",
+        "amount": "712000000",
+        "usd_amount": "7.12",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:32:33Z",
+        "available_at": "2026-09-10T00:00:00Z",
+        "resource": {
+          "object": "account",
+          "id": "biz_RduxG8ScXWC4nB",
+          "title": "Ledgerly Seller DE",
+          "route": "biz_RduxG8ScXWC4nB",
+          "logo_url": null
+        },
+        "source": {
+          "object": "application_fee",
+          "id": "apfee_Cp8GCtzAbp2J"
+        },
+        "payment_id": "pay_JNZppy9WnnhlI1",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_UGvXWSixS5s0h",
+        "product_name": "Kontur Type Specimen Kit",
+        "plan_id": "plan_WIxfyVpSsRt17",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_JNZppy9WnnhlI1",
+          "amount": {
+            "currency": "usd",
+            "amount": "89.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_UGvXWSixS5s0h",
+            "name": "Kontur Type Specimen Kit"
+          },
+          "plan": {
+            "id": "plan_WIxfyVpSsRt17",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:32:28.932Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_aUx4T1FDZmtvcUI3azFSV1pYN0NkOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODUy",
+        "line_type": "orchestration_percentage_fee",
+        "amount": "-48000000",
+        "usd_amount": "-0.48",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:32:20Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_6emFcu79TQGD6F",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "60.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_6emFcu79TQGD6F",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_zHpnCGqNKnthJ",
+        "product_name": "Onda Drum Library",
+        "plan_id": "plan_rydmDsTzbco36",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_6emFcu79TQGD6F",
+          "amount": {
+            "currency": "usd",
+            "amount": "60.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_zHpnCGqNKnthJ",
+            "name": "Onda Drum Library"
+          },
+          "plan": {
+            "id": "plan_rydmDsTzbco36",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:32:17.387Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_WjFXRFJqcVVFVDN4YTBpekt6TlRtOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODUy",
+        "line_type": "payment_processing_fixed_fee",
+        "amount": "-30000000",
+        "usd_amount": "-0.3",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:32:20Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_6emFcu79TQGD6F",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "60.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_6emFcu79TQGD6F",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_zHpnCGqNKnthJ",
+        "product_name": "Onda Drum Library",
+        "plan_id": "plan_rydmDsTzbco36",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_6emFcu79TQGD6F",
+          "amount": {
+            "currency": "usd",
+            "amount": "60.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_zHpnCGqNKnthJ",
+            "name": "Onda Drum Library"
+          },
+          "plan": {
+            "id": "plan_rydmDsTzbco36",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:32:17.387Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_V2VJV05GcGRJT2JRMnRyblJHVXdLOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODUy",
+        "line_type": "payment_processing_percentage_fee",
+        "amount": "-162000000",
+        "usd_amount": "-1.62",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:32:20Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_6emFcu79TQGD6F",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "60.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_6emFcu79TQGD6F",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_zHpnCGqNKnthJ",
+        "product_name": "Onda Drum Library",
+        "plan_id": "plan_rydmDsTzbco36",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_6emFcu79TQGD6F",
+          "amount": {
+            "currency": "usd",
+            "amount": "60.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_zHpnCGqNKnthJ",
+            "name": "Onda Drum Library"
+          },
+          "plan": {
+            "id": "plan_rydmDsTzbco36",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:32:17.387Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_TG9OSEZpa05EUjFiRUdmOUQzQnJEOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODUy",
+        "line_type": "fraud_prevention_fee",
+        "amount": "-7000000",
+        "usd_amount": "-0.07",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:32:20Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_6emFcu79TQGD6F",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "60.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_6emFcu79TQGD6F",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_zHpnCGqNKnthJ",
+        "product_name": "Onda Drum Library",
+        "plan_id": "plan_rydmDsTzbco36",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_6emFcu79TQGD6F",
+          "amount": {
+            "currency": "usd",
+            "amount": "60.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_zHpnCGqNKnthJ",
+            "name": "Onda Drum Library"
+          },
+          "plan": {
+            "id": "plan_rydmDsTzbco36",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:32:17.387Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_TDRDd2x1cUZFdFdaUkJwVm9jcHV2OmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODUy",
+        "line_type": "cross_border_percentage_fee",
+        "amount": "-90000000",
+        "usd_amount": "-0.9",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:32:20Z",
+        "available_at": null,
+        "resource": null,
+        "source": {
+          "object": "payment",
+          "id": "pay_6emFcu79TQGD6F",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "60.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_6emFcu79TQGD6F",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_zHpnCGqNKnthJ",
+        "product_name": "Onda Drum Library",
+        "plan_id": "plan_rydmDsTzbco36",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_6emFcu79TQGD6F",
+          "amount": {
+            "currency": "usd",
+            "amount": "60.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_zHpnCGqNKnthJ",
+            "name": "Onda Drum Library"
+          },
+          "plan": {
+            "id": "plan_rydmDsTzbco36",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:32:17.387Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_QWhnT1RwY3RjN3ZkUU1ieVJnVExMOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODUy",
+        "line_type": "payment_gross",
+        "amount": "6000000000",
+        "usd_amount": "60.0",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:32:20Z",
+        "available_at": "2026-09-10T00:00:00Z",
+        "resource": {
+          "object": "user",
+          "id": "user_F9nsaRbxoMM3f",
+          "name": "aneymanledgerly-buyer",
+          "username": "aneymanledgerly-buyer",
+          "profile_picture_url": "[avatar url redacted]"
+        },
+        "source": {
+          "object": "payment",
+          "id": "pay_6emFcu79TQGD6F",
+          "status": "succeeded",
+          "payment_amount": {
+            "currency": "usd",
+            "amount": "60.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa"
+        },
+        "payment_id": "pay_6emFcu79TQGD6F",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_zHpnCGqNKnthJ",
+        "product_name": "Onda Drum Library",
+        "plan_id": "plan_rydmDsTzbco36",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_6emFcu79TQGD6F",
+          "amount": {
+            "currency": "usd",
+            "amount": "60.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_zHpnCGqNKnthJ",
+            "name": "Onda Drum Library"
+          },
+          "plan": {
+            "id": "plan_rydmDsTzbco36",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:32:17.387Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_dk56aDczSUpiM29qczFDU1VYR0lTOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc0Nw",
+        "line_type": "application_fee_payout",
+        "amount": "200000000",
+        "usd_amount": "2.0",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T23:29:47Z",
+        "available_at": "2026-09-10T00:00:00Z",
+        "resource": {
+          "object": "account",
+          "id": "biz_pt7b2NAryKwRGh",
+          "title": "Ledgerly Seller US",
+          "route": "biz_pt7b2NAryKwRGh",
+          "logo_url": null
+        },
+        "source": {
+          "object": "application_fee",
+          "id": "apfee_qcYks6iP1GmM"
+        },
+        "payment_id": "pay_p2qLHIfZbpL57Z",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_W1xlml34ygYMR",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_p2qLHIfZbpL57Z",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_W1xlml34ygYMR",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_mIdPunMHNV6TL",
+            "name": null
+          },
+          "created_at": "2026-09-08T23:29:43.022Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_WElhYzg3Y2lITjFlTXhzOWpPcExEOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc0Mg",
+        "line_type": "application_fee_payout",
+        "amount": "200000000",
+        "usd_amount": "2.0",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T18:32:35Z",
+        "available_at": "2026-09-10T00:00:00Z",
+        "resource": {
+          "object": "account",
+          "id": "biz_1c6YZN67yholYH",
+          "title": "mara-prod-20260908-143155",
+          "route": "biz_1c6YZN67yholYH",
+          "logo_url": null
+        },
+        "source": {
+          "object": "application_fee",
+          "id": "apfee_om1LhtbAzwWA"
+        },
+        "payment_id": "pay_OfYo5GPfjM2zA7",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_BhEWI3dnHbXEW",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_jE9kmY5C7kocc",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_OfYo5GPfjM2zA7",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_BhEWI3dnHbXEW",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_jE9kmY5C7kocc",
+            "name": null
+          },
+          "created_at": "2026-09-08T18:32:31.122Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_NnNJd0VtYjlQRm90TzJDUFFrYk9HOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc0MQ",
+        "line_type": "application_fee_payout",
+        "amount": "200000000",
+        "usd_amount": "2.0",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T18:27:56Z",
+        "available_at": "2026-09-10T00:00:00Z",
+        "resource": {
+          "object": "account",
+          "id": "biz_HFlzAsEyCnruxm",
+          "title": "mara-okonkwo-journey-cab51f",
+          "route": "biz_HFlzAsEyCnruxm",
+          "logo_url": null
+        },
+        "source": {
+          "object": "application_fee",
+          "id": "apfee_l3gmdDyfdVIk"
+        },
+        "payment_id": "pay_O30qPOG3wEMwc0",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_nqw5pIpudV5Ht",
+        "product_name": "Grain & Gradient",
+        "plan_id": "plan_bhw58yk9fBL8i",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_O30qPOG3wEMwc0",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_nqw5pIpudV5Ht",
+            "name": "Grain & Gradient"
+          },
+          "plan": {
+            "id": "plan_bhw58yk9fBL8i",
+            "name": null
+          },
+          "created_at": "2026-09-08T18:27:52.672Z"
+        }
+      },
+      {
+        "object": "ledger_activity",
+        "id": "line_Y3ZkYWVsUm5ESzBrcXZkTE54TlphOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc0MA",
+        "line_type": "application_fee_payout",
+        "amount": "200000000",
+        "usd_amount": "2.0",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T17:58:21Z",
+        "available_at": "2026-09-10T00:00:00Z",
+        "resource": {
+          "object": "account",
+          "id": "biz_DdrnVEudDfJCCj",
+          "title": "tour-seller-1788889848",
+          "route": "biz_DdrnVEudDfJCCj",
+          "logo_url": null
+        },
+        "source": {
+          "object": "application_fee",
+          "id": "apfee_Qy5Wh6vLQ2NM"
+        },
+        "payment_id": "pay_twYKgzRSgssTG5",
+        "user_id": "user_MscGk17cwSNiy",
+        "user_name": "aneymanledgerly-buyerc0",
+        "user_email": "[email redacted]",
+        "product_id": "prod_kQQhY3wnLENEP",
+        "product_name": "Acme Preset Pack",
+        "plan_id": "plan_1qNiKH7us8KSU",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_twYKgzRSgssTG5",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_MscGk17cwSNiy",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_kQQhY3wnLENEP",
+            "name": "Acme Preset Pack"
+          },
+          "plan": {
+            "id": "plan_1qNiKH7us8KSU",
+            "name": null
+          },
+          "created_at": "2026-09-08T17:58:16.682Z"
+        }
+      }
+    ],
+    "page_info": {
+      "has_next_page": true,
+      "end_cursor": "eyJwb3N0ZWQiOiIyMDI2LTA5LTA4VDE3OjU4OjIxWiIsImlkIjoibGluZV9ZM1prWVdWc1VtNUVTekJyY1haa1RFNTRUbHBoT214cE9rZHdPVnBKYUVNM1dFdDZPVTFOVkRKemFuQnpSenBoWXpwc1RFcDVkazV5UkhrMFZXZ3habHBMTTI1TGRERTZiR1U2TVRwMk9tbHJPbUZ3Y0d4cFkyRjBhVzl1WDJabFpWOXdZWGx2ZFhSZk1UYzBNQSJ9",
+      "has_previous_page": false,
+      "start_cursor": null
+    }
+  }
+}

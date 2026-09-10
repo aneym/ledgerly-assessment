@@ -1,0 +1,7 @@
+SET
+orders|dd2ab3b3-1332-471e-9b31-82936f2db774|sel_onda|paid||2026-09-08 23:22:26.626912+00
+orders|98b49fe4-96f7-491e-9fb3-14f7a4309f41|sel_onda|paid||2026-09-08 23:34:35.569169+00
+orders|921a78f3-4b98-46eb-bc4f-eca7b3a545fd|sel_acme|paid||2026-09-08 23:38:48.275295+00
+orders|0b59642d-f8b8-4fee-8cba-d8a571672c2e|sel_acme|paid||2026-09-09 01:18:51.170581+00
+orders|6e77cd39-71c0-4880-a7ea-7bf08efd5f45|sel_onda|checkout_created||2026-09-09 03:56:01.815719+00
+orders|00b8451a-9f1c-402a-8ee0-e3824e81943f|sel_onda|paid||2026-09-09 23:04:28.869633+00

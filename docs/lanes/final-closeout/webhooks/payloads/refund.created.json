@@ -1,0 +1,69 @@
+{
+  "source": "production webhook_inbox row (test event from POST /webhooks/hook_gO3nsBQBCSyzF/test), read-only query",
+  "test_generated": true,
+  "delivery_id": "msg_VZksQWeai7eixvWu62NjThX4",
+  "event_type": "refund.created",
+  "inbox_status": "failed",
+  "inbox_error": "account_id: Missing account_id for this version",
+  "received_at": "2026-09-09T22:58:20.342+00:00",
+  "headers": {
+    "webhook-id": "msg_VZksQWeai7eixvWu62NjThX4",
+    "webhook-timestamp": "1788994700"
+  },
+  "body": {
+    "id": "msg_VZksQWeai7eixvWu62NjThX4",
+    "data": {
+      "id": "rf_xxxxxxxxxxxxxx",
+      "amount": 50,
+      "status": "succeeded",
+      "payment": {
+        "id": "pay_xxxxxxxxxxxxxx",
+        "plan": {
+          "id": "plan_xxxxxxxxxxxxxx",
+          "metadata": {}
+        },
+        "user": {
+          "id": "user_xxxxxxxxxxxxxx",
+          "name": "Marcus Webb",
+          "email": "[REDACTED]",
+          "username": "marcuswebb"
+        },
+        "total": null,
+        "member": null,
+        "paid_at": "2026-01-01T12:00:00.000Z",
+        "product": {
+          "id": "prod_xxxxxxxxxxxxxx",
+          "metadata": {}
+        },
+        "currency": "usd",
+        "metadata": {},
+        "subtotal": null,
+        "usd_total": null,
+        "card_brand": null,
+        "card_last4": null,
+        "created_at": "2026-01-01T12:00:00.000Z",
+        "membership": {
+          "id": "mem_xxxxxxxxxxxxxx",
+          "status": "active"
+        },
+        "tax_amount": null,
+        "tax_behavior": null,
+        "billing_reason": null,
+        "dispute_alerted_at": null,
+        "payment_method_type": null,
+        "tax_refunded_amount": 0
+      },
+      "currency": "usd",
+      "provider": "stripe",
+      "created_at": "2026-01-01T12:00:00.000Z",
+      "reference_type": null,
+      "reference_value": null,
+      "reference_status": null,
+      "provider_created_at": "2026-01-01T12:00:00.000Z"
+    },
+    "type": "refund.created",
+    "timestamp": "2026-09-09T22:58:20.296Z",
+    "api_version": "v1",
+    "api_version_date": "2026-09-06"
+  }
+}

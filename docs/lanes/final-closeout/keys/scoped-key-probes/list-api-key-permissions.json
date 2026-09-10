@@ -1,0 +1,3429 @@
+{
+  "name": "list-api-key-permissions",
+  "method": "GET",
+  "path": "/api_keys/permissions",
+  "request_body": null,
+  "status": 200,
+  "response": {
+    "data": [
+      {
+        "action": "ai_prompt:create",
+        "name": "ai_prompt:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "access_pass:basic:export",
+        "name": "access_pass:basic:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "access_pass:basic:read",
+        "name": "access_pass:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator",
+          "sales_manager",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "access_pass:control_center",
+        "name": "access_pass:control_center",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "access_pass:create",
+        "name": "access_pass:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "access_pass:delete",
+        "name": "access_pass:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "access_pass:stats:export",
+        "name": "access_pass:stats:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "access_pass:stats:read",
+        "name": "access_pass:stats:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "access_pass:update",
+        "name": "access_pass:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "ad_campaign:basic:export",
+        "name": "ad_campaign:basic:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "ad_campaign:basic:read",
+        "name": "ad_campaign:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "ad_campaign:conversion:create",
+        "name": "ad_campaign:conversion:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "ad_campaign:create",
+        "name": "ad_campaign:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "ad_campaign:credit:create",
+        "name": "ad_campaign:credit:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "ad_campaign:delete",
+        "name": "ad_campaign:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "ad_campaign:read",
+        "name": "ad_campaign:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "ad_campaign:stats:read",
+        "name": "ad_campaign:stats:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "ad_campaign:update",
+        "name": "ad_campaign:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "audience:basic:read",
+        "name": "audience:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "audience:update",
+        "name": "audience:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "ad_publisher:read",
+        "name": "ad_publisher:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "affiliate:basic:read",
+        "name": "affiliate:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "affiliate:create",
+        "name": "affiliate:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "affiliate:update",
+        "name": "affiliate:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "authorized_user:create",
+        "name": "authorized_user:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "authorized_user:delete",
+        "name": "authorized_user:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "authorized_user:update",
+        "name": "authorized_user:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "authorized_role:create",
+        "name": "authorized_role:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "authorized_role:update",
+        "name": "authorized_role:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "authorized_role:delete",
+        "name": "authorized_role:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "authorized_role:attach",
+        "name": "authorized_role:attach",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "authorized_role:detach",
+        "name": "authorized_role:detach",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "app_authorization:create",
+        "name": "app_authorization:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "app_authorization:read",
+        "name": "app_authorization:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "app_authorization:update",
+        "name": "app_authorization:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "app_authorization:delete",
+        "name": "app_authorization:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "bounty:basic:read",
+        "name": "bounty:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "bounty:create",
+        "name": "bounty:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "bounty:capture_clip:create",
+        "name": "bounty:capture_clip:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "bounty:capture_clip:complete",
+        "name": "bounty:capture_clip:complete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "bounty:capture_clip:discard",
+        "name": "bounty:capture_clip:discard",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "bounty:update",
+        "name": "bounty:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "bounty:submission:create",
+        "name": "bounty:submission:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "bounty:submission:delete",
+        "name": "bounty:submission:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "bounty:submission:vote",
+        "name": "bounty:submission:vote",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "chat:manage_webhook",
+        "name": "chat:manage_webhook",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "chat:moderate",
+        "name": "chat:moderate",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "chat:message:create",
+        "name": "chat:message:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "chat:read",
+        "name": "chat:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "dms:read",
+        "name": "dms:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "dms:message:manage",
+        "name": "dms:message:manage",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "dms:channel:manage",
+        "name": "dms:channel:manage",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "forum:post:create",
+        "name": "forum:post:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "forum:read",
+        "name": "forum:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "forum:moderate",
+        "name": "forum:moderate",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "company:authorized_user:read",
+        "name": "company:authorized_user:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "company:authorized_user:email:read",
+        "name": "company:authorized_user:email:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "company:balance:read",
+        "name": "company:balance:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "company:balance:export",
+        "name": "company:balance:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "company_token_transaction:read",
+        "name": "company_token_transaction:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "company_token_transaction:create",
+        "name": "company_token_transaction:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "company:log:read",
+        "name": "company:log:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "company:manage_checkout",
+        "name": "company:manage_checkout",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "company:manage_legal",
+        "name": "company:manage_legal",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "company:basic:read",
+        "name": "company:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator",
+          "sales_manager",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "company:update",
+        "name": "company:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "company:transfer_ownership",
+        "name": "company:transfer_ownership",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "company:create",
+        "name": "company:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "company:create_child",
+        "name": "company:create_child",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "company:suspend_child",
+        "name": "company:suspend_child",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "company:delete",
+        "name": "company:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "company:delete_child",
+        "name": "company:delete_child",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "company:update_child_fees",
+        "name": "company:update_child_fees",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "child_company:basic:export",
+        "name": "child_company:basic:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "social_account:create",
+        "name": "social_account:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "social_account:delete",
+        "name": "social_account:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "social_account:read",
+        "name": "social_account:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "social_link:update",
+        "name": "social_link:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "custom_emoji:update",
+        "name": "custom_emoji:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "content_rewards:basic:export",
+        "name": "content_rewards:basic:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "content_rewards:basic:read",
+        "name": "content_rewards:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "content_rewards:create",
+        "name": "content_rewards:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "content_rewards:delete",
+        "name": "content_rewards:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "content_rewards:moderate_submission",
+        "name": "content_rewards:moderate_submission",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "content_rewards:update",
+        "name": "content_rewards:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "developer:basic:read",
+        "name": "developer:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "developer:create_app",
+        "name": "developer:create_app",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "developer:manage_api_key",
+        "name": "developer:manage_api_key",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "developer:manage_oauth",
+        "name": "developer:manage_oauth",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "developer:manage_webhook",
+        "name": "developer:manage_webhook",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "developer:logs:read",
+        "name": "developer:logs:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "developer:manage_builds",
+        "name": "developer:manage_builds",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "developer:update_app",
+        "name": "developer:update_app",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "developer:update_app_authorization",
+        "name": "developer:update_app_authorization",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "event:create",
+        "name": "event:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "experience:attach",
+        "name": "experience:attach",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "experience:create",
+        "name": "experience:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "experience:delete",
+        "name": "experience:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "experience:detach",
+        "name": "experience:detach",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "experience:hidden_experience:read",
+        "name": "experience:hidden_experience:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "experience:update",
+        "name": "experience:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "iap:read",
+        "name": "iap:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "identity:read",
+        "name": "identity:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "identity:write",
+        "name": "identity:write",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "incorporation:read",
+        "name": "incorporation:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "incorporation:write",
+        "name": "incorporation:write",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "livestream:create",
+        "name": "livestream:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "livestream:delete",
+        "name": "livestream:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "livestream:manage_recording",
+        "name": "livestream:manage_recording",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "livestream:chat:read",
+        "name": "livestream:chat:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "livestream:chat:write",
+        "name": "livestream:chat:write",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "livestream:moderate",
+        "name": "livestream:moderate",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "media:generate",
+        "name": "media:generate",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "media:read",
+        "name": "media:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "member:basic:export",
+        "name": "member:basic:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "member:basic:read",
+        "name": "member:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator",
+          "sales_manager",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "member:email:read",
+        "name": "member:email:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "member:phone:read",
+        "name": "member:phone:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "member:payment_methods:read",
+        "name": "member:payment_methods:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "member:payment_methods:use",
+        "name": "member:payment_methods:use",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "member:payment_methods:manage",
+        "name": "member:payment_methods:manage",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "member:manage",
+        "name": "member:manage",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "membership:cancel",
+        "name": "membership:cancel",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "membership:resync_access",
+        "name": "membership:resync_access",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "membership:create",
+        "name": "membership:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "membership:update",
+        "name": "membership:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "membership:transfer",
+        "name": "membership:transfer",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "member:moderate",
+        "name": "member:moderate",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "member:stats:export",
+        "name": "member:stats:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "member:stats:read",
+        "name": "member:stats:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "member:journey:read",
+        "name": "member:journey:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "sales_manager",
+          "advertiser"
+        ]
+      },
+      {
+        "action": "payment:basic:export",
+        "name": "payment:basic:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payment:basic:read",
+        "name": "payment:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "payment:charge",
+        "name": "payment:charge",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "payment:dispute",
+        "name": "payment:dispute",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payment:dispute:export",
+        "name": "payment:dispute:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payment:dispute:read",
+        "name": "payment:dispute:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payment:dispute_alert:read",
+        "name": "payment:dispute_alert:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payment:setup_intent:read",
+        "name": "payment:setup_intent:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payment:setup_intent:manage",
+        "name": "payment:setup_intent:manage",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payment:manage",
+        "name": "payment:manage",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payment:resolution_center",
+        "name": "payment:resolution_center",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payment:resolution_center_case:export",
+        "name": "payment:resolution_center_case:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payment:resolution_center_case:read",
+        "name": "payment:resolution_center_case:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payment:resolution_center_case:manage",
+        "name": "payment:resolution_center_case:manage",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payout:create_destination",
+        "name": "payout:create_destination",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "payout:delete_destination",
+        "name": "payout:delete_destination",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "payout:destination:read",
+        "name": "payout:destination:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "payout:transfer_funds",
+        "name": "payout:transfer_funds",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "payout:transfer:read",
+        "name": "payout:transfer:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "payout:transfer:export",
+        "name": "payout:transfer:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "payout:update_destination",
+        "name": "payout:update_destination",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "payout:withdraw_funds",
+        "name": "payout:withdraw_funds",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "payout:withdrawal:read",
+        "name": "payout:withdrawal:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "payout:withdrawal:export",
+        "name": "payout:withdrawal:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payout:account:read",
+        "name": "payout:account:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "payout:account:update",
+        "name": "payout:account:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "plan:basic:export",
+        "name": "plan:basic:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "plan:basic:read",
+        "name": "plan:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "plan:create",
+        "name": "plan:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "plan:delete",
+        "name": "plan:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "plan:stats:export",
+        "name": "plan:stats:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "plan:stats:read",
+        "name": "plan:stats:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "plan:update",
+        "name": "plan:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "plan:waitlist:manage",
+        "name": "plan:waitlist:manage",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "plan:waitlist:export",
+        "name": "plan:waitlist:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "plan:waitlist:read",
+        "name": "plan:waitlist:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "promo_code:basic:export",
+        "name": "promo_code:basic:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "promo_code:basic:read",
+        "name": "promo_code:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "promo_code:create",
+        "name": "promo_code:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "promo_code:delete",
+        "name": "promo_code:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "promo_code:update",
+        "name": "promo_code:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "referral:basic:read",
+        "name": "referral:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "referral:partner:create",
+        "name": "referral:partner:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "partner:basic:read",
+        "name": "partner:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "partner:email:read",
+        "name": "partner:email:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "partner:invite:create",
+        "name": "partner:invite:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "partner:create",
+        "name": "partner:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "stats:read",
+        "name": "stats:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "support_chat:read",
+        "name": "support_chat:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "support_chat:create",
+        "name": "support_chat:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "support_chat:message:create",
+        "name": "support_chat:message:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "tracking_link:basic:export",
+        "name": "tracking_link:basic:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "tracking_link:basic:read",
+        "name": "tracking_link:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "tracking_link:create",
+        "name": "tracking_link:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "tracking_link:delete",
+        "name": "tracking_link:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "tracking_link:stats:export",
+        "name": "tracking_link:stats:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "tracking_link:stats:read",
+        "name": "tracking_link:stats:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "tracking_link:update",
+        "name": "tracking_link:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "courses:read",
+        "name": "courses:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "courses:update",
+        "name": "courses:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "moderator"
+        ]
+      },
+      {
+        "action": "course_lesson_interaction:read",
+        "name": "course_lesson_interaction:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "course_analytics:read",
+        "name": "course_analytics:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "lead:basic:read",
+        "name": "lead:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "lead:basic:export",
+        "name": "lead:basic:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "invoice:create",
+        "name": "invoice:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "invoice:basic:read",
+        "name": "invoice:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "invoice:basic:export",
+        "name": "invoice:basic:export",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "invoice:update",
+        "name": "invoice:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin",
+          "sales_manager"
+        ]
+      },
+      {
+        "action": "webhook_receive:invoices",
+        "name": "webhook_receive:invoices",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:setup_intents",
+        "name": "webhook_receive:setup_intents",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:withdrawals",
+        "name": "webhook_receive:withdrawals",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:swaps",
+        "name": "webhook_receive:swaps",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:ledger_accounts",
+        "name": "webhook_receive:ledger_accounts",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:accounts",
+        "name": "webhook_receive:accounts",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:deposits",
+        "name": "webhook_receive:deposits",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:transfers",
+        "name": "webhook_receive:transfers",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:card_transactions",
+        "name": "webhook_receive:card_transactions",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:cards",
+        "name": "webhook_receive:cards",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:card_applications",
+        "name": "webhook_receive:card_applications",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:payout_methods",
+        "name": "webhook_receive:payout_methods",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:verifications",
+        "name": "webhook_receive:verifications",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:identity_profiles",
+        "name": "webhook_receive:identity_profiles",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:payout_accounts",
+        "name": "webhook_receive:payout_accounts",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:chat",
+        "name": "webhook_receive:chat",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:entries",
+        "name": "webhook_receive:entries",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:ad_campaigns",
+        "name": "webhook_receive:ad_campaigns",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:ads",
+        "name": "webhook_receive:ads",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:products",
+        "name": "webhook_receive:products",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:plans",
+        "name": "webhook_receive:plans",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:shipments",
+        "name": "webhook_receive:shipments",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:members",
+        "name": "webhook_receive:members",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:exports",
+        "name": "webhook_receive:exports",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:courses",
+        "name": "webhook_receive:courses",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:memberships",
+        "name": "webhook_receive:memberships",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:payments",
+        "name": "webhook_receive:payments",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:refunds",
+        "name": "webhook_receive:refunds",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:disputes",
+        "name": "webhook_receive:disputes",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:resolutions",
+        "name": "webhook_receive:resolutions",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:app_payments",
+        "name": "webhook_receive:app_payments",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "webhook_receive:app_memberships",
+        "name": "webhook_receive:app_memberships",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "shipment:create",
+        "name": "shipment:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "shipment:basic:read",
+        "name": "shipment:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "checkout_configuration:basic:read",
+        "name": "checkout_configuration:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "checkout_configuration:create",
+        "name": "checkout_configuration:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "checkout_configuration:delete",
+        "name": "checkout_configuration:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "checkout_request:create",
+        "name": "checkout_request:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "checkout_request:basic:read",
+        "name": "checkout_request:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "crypto_wallet:manage",
+        "name": "crypto_wallet:manage",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "crypto_wallet:swap",
+        "name": "crypto_wallet:swap",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner"
+        ]
+      },
+      {
+        "action": "airdrop_link:basic:read",
+        "name": "airdrop_link:basic:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "airdrop_link:manage",
+        "name": "airdrop_link:manage",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "lead:manage",
+        "name": "lead:manage",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "notification:create",
+        "name": "notification:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "user:balance:read",
+        "name": "user:balance:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "user:email:read",
+        "name": "user:email:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "user:payment:charge",
+        "name": "user:payment:charge",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "user:staff:read",
+        "name": "user:staff:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "oauth:token_exchange",
+        "name": "oauth:token_exchange",
+        "description": "",
+        "category": null,
+        "allowed_on_user": false,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "openid",
+        "name": "openid",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "profile",
+        "name": "profile",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "email",
+        "name": "email",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "ai_chat:read",
+        "name": "ai_chat:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "ai_chat:create",
+        "name": "ai_chat:create",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "ai_chat:delete",
+        "name": "ai_chat:delete",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "ai_chat:update",
+        "name": "ai_chat:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": true,
+        "allowed_on_api_key": true,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "user:notifications:read",
+        "name": "user:notifications:read",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "user:notifications:update",
+        "name": "user:notifications:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      },
+      {
+        "action": "user:profile:update",
+        "name": "user:profile:update",
+        "description": "",
+        "category": null,
+        "allowed_on_user": true,
+        "allowed_on_app": false,
+        "allowed_on_api_key": false,
+        "granted_to_system_roles": [
+          "owner",
+          "admin"
+        ]
+      }
+    ],
+    "page_info": {
+      "end_cursor": null,
+      "start_cursor": null,
+      "has_next_page": false,
+      "has_previous_page": false
+    }
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:07.439Z"
+}

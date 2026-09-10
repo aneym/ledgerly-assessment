@@ -1,0 +1,16 @@
+$ pnpm -r --parallel typecheck
+apps/web typecheck$ next typegen && tsc --noEmit
+packages/core typecheck$ tsc --noEmit
+packages/demo-runtime typecheck$ tsc -p tsconfig.json
+packages/evidence typecheck$ tsc -p tsconfig.json
+packages/db typecheck$ tsc --noEmit
+packages/whop typecheck$ tsc --noEmit
+packages/core typecheck: Done
+packages/evidence typecheck: Done
+packages/demo-runtime typecheck: Done
+packages/whop typecheck: Done
+packages/db typecheck: Done
+apps/web typecheck: Generating route types...
+apps/web typecheck: ✓ Types generated successfully
+apps/web typecheck: Done
+typecheck exit=0

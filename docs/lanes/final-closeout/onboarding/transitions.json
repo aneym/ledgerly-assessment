@@ -1,0 +1,225 @@
+{
+  "item": "onboarding",
+  "run_started": "2026-09-09T22:54:05Z",
+  "seller_onboarded": "biz_fuyI21F4iaNTDu",
+  "seller_country": "de",
+  "control_seller": "biz_pt7b2NAryKwRGh",
+  "account_link": {
+    "request_path": "/account_links",
+    "status": 200,
+    "use_case": "account_onboarding",
+    "expires_at": "2026-09-09T23:58:42.000Z",
+    "created_at": "2026-09-09T22:58:42.608Z",
+    "url": "withheld (signed)"
+  },
+  "identity_profile": {
+    "id": "idpf_FQ3ePvAVNSXzz",
+    "kind": "individual",
+    "status": "pending",
+    "created_at": "2026-09-10T01:00:46+02:00",
+    "readback_path": "/verifications?account_id=biz_fuyI21F4iaNTDu",
+    "readback_at": "2026-09-09T23:05:04.919Z"
+  },
+  "de_transitions": [
+    {
+      "label": "before",
+      "evidence_file": "01-before-DE-biz_fuyI21F4iaNTDu.json",
+      "request_path": "/accounts/biz_fuyI21F4iaNTDu",
+      "status": 200,
+      "finished_at": "2026-09-09T22:58:01.744Z",
+      "changed_vs_previous": [],
+      "state": {
+        "verification": {
+          "individual": null,
+          "business": null
+        },
+        "required_actions": [
+          {
+            "action": "verify_identity",
+            "status": "required",
+            "title": "Complete verification to unlock cards and payouts",
+            "description": "Verify your identity to unlock a Whop card and start spending immediately.",
+            "blocked_capabilities": []
+          }
+        ],
+        "capabilities": {
+          "accept_card_payments": "active",
+          "accept_bank_payments": "active",
+          "accept_bnpl_payments": "inactive",
+          "standard_payout": "inactive",
+          "instant_payout": "inactive",
+          "crypto_payout": "inactive",
+          "transfer": "inactive",
+          "bank_deposit": "inactive",
+          "crypto_deposit": "active",
+          "card_deposit": "active",
+          "card_issuing": "inactive",
+          "run_ads": "active"
+        }
+      }
+    },
+    {
+      "label": "after_personal_details_submitted",
+      "evidence_file": "03-after-personal-details-DE.json",
+      "request_path": "/accounts/biz_fuyI21F4iaNTDu",
+      "status": 200,
+      "finished_at": "2026-09-09T23:01:06.322Z",
+      "changed_vs_previous": [
+        "verification",
+        "required_actions"
+      ],
+      "state": {
+        "verification": {
+          "individual": {
+            "status": "pending"
+          },
+          "business": null
+        },
+        "required_actions": [
+          {
+            "action": "verify_identity",
+            "status": "required",
+            "title": "Complete your identity verification",
+            "description": "Complete verification to withdraw your earnings.",
+            "blocked_capabilities": [
+              "standard_payout",
+              "instant_payout",
+              "crypto_payout",
+              "transfer",
+              "bank_deposit",
+              "card_issuing"
+            ]
+          }
+        ],
+        "capabilities": {
+          "accept_card_payments": "active",
+          "accept_bank_payments": "active",
+          "accept_bnpl_payments": "inactive",
+          "standard_payout": "inactive",
+          "instant_payout": "inactive",
+          "crypto_payout": "inactive",
+          "transfer": "inactive",
+          "bank_deposit": "inactive",
+          "crypto_deposit": "active",
+          "card_deposit": "active",
+          "card_issuing": "inactive",
+          "run_ads": "active"
+        }
+      }
+    },
+    {
+      "label": "after_placeholder_png_rejected_by_sumsub_precheck",
+      "evidence_file": "04-after-doc-rejected-DE.json",
+      "request_path": "/accounts/biz_fuyI21F4iaNTDu",
+      "status": 200,
+      "finished_at": "2026-09-09T23:03:25.806Z",
+      "changed_vs_previous": [],
+      "state": {
+        "verification": {
+          "individual": {
+            "status": "pending"
+          },
+          "business": null
+        },
+        "required_actions": [
+          {
+            "action": "verify_identity",
+            "status": "required",
+            "title": "Complete your identity verification",
+            "description": "Complete verification to withdraw your earnings.",
+            "blocked_capabilities": [
+              "standard_payout",
+              "instant_payout",
+              "crypto_payout",
+              "transfer",
+              "bank_deposit",
+              "card_issuing"
+            ]
+          }
+        ],
+        "capabilities": {
+          "accept_card_payments": "active",
+          "accept_bank_payments": "active",
+          "accept_bnpl_payments": "inactive",
+          "standard_payout": "inactive",
+          "instant_payout": "inactive",
+          "crypto_payout": "inactive",
+          "transfer": "inactive",
+          "bank_deposit": "inactive",
+          "crypto_deposit": "active",
+          "card_deposit": "active",
+          "card_issuing": "inactive",
+          "run_ads": "active"
+        }
+      }
+    },
+    {
+      "label": "after_specimen_png_accepted_at_upload_step",
+      "evidence_file": "05-after-document-uploaded-DE.json",
+      "request_path": "/accounts/biz_fuyI21F4iaNTDu",
+      "status": 200,
+      "finished_at": "2026-09-09T23:04:46.811Z",
+      "changed_vs_previous": [],
+      "state": {
+        "verification": {
+          "individual": {
+            "status": "pending"
+          },
+          "business": null
+        },
+        "required_actions": [
+          {
+            "action": "verify_identity",
+            "status": "required",
+            "title": "Complete your identity verification",
+            "description": "Complete verification to withdraw your earnings.",
+            "blocked_capabilities": [
+              "standard_payout",
+              "instant_payout",
+              "crypto_payout",
+              "transfer",
+              "bank_deposit",
+              "card_issuing"
+            ]
+          }
+        ],
+        "capabilities": {
+          "accept_card_payments": "active",
+          "accept_bank_payments": "active",
+          "accept_bnpl_payments": "inactive",
+          "standard_payout": "inactive",
+          "instant_payout": "inactive",
+          "crypto_payout": "inactive",
+          "transfer": "inactive",
+          "bank_deposit": "inactive",
+          "crypto_deposit": "active",
+          "card_deposit": "active",
+          "card_issuing": "inactive",
+          "run_ads": "active"
+        }
+      }
+    }
+  ],
+  "final_state": "partial: verification.individual pending; capabilities unchanged; last screenshot (step-08) shows Sumsub step 1/3 with the document Uploaded; operator narrative only: step 2 of 3 (liveness) reached and a browser camera permission prompt stopped the walk",
+  "sandbox_caveat": "docs/sources/whop/developer__guides__sandbox.md lists 'Payouts - Payout functionality isn't available yet'; standard_payout and transfer may stay inactive in sandbox even after Sumsub approval",
+  "us_control": {
+    "before_at": "2026-09-09T22:58:09.298Z",
+    "final_at": "2026-09-09T23:05:21.728Z",
+    "verification_changed": false,
+    "required_actions_changed": false,
+    "capabilities_changed": false,
+    "other_fields_changed": [
+      "total_earned_usd 125.0 -> 150.0",
+      "total_usd 106.85 -> 128.22",
+      "balance.balance and balance.pending 106.85 -> 128.22",
+      "balance.pending_settlements gained {amount 21.37, date 2026-09-11}"
+    ],
+    "other_fields_note": "This run made no call against the US seller other than the two GETs. A concurrent item (direct charge on the US seller) most likely caused these changes."
+  },
+  "redactions": [
+    "response.email -> [REDACTED email] in 01-before-DE, 01-before-US, 03, 04, 05, 07",
+    "owner.profile_picture.url in every account readback",
+    "response.url (signed onboarding link) in 02-create-account-link-DE.json",
+    "session_url (Sumsub session permalink) in 06-verifications-readback-DE.json"
+  ]
+}

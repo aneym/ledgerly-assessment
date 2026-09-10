@@ -1,0 +1,363 @@
+{
+  "computed_at": "2026-09-09T23:50:39.981Z",
+  "source_files": [
+    "21-activity-platform-feed-all-limit50.json (41 rows, one page, limit=50)",
+    "21-activity-platform-feed-page2.json and -page3.json (default page size, continuing 02-activity-platform-feed.json)"
+  ],
+  "method": "Sum usd amounts (amount / 100000000) of every row per available_at. Rows with available_at null are processing-fee rows; each is attributed to the settlement day of its payment's payment_gross row. Net settling on a day = dated_sum + undated_fee_sum.",
+  "feed_total_usd": "206.57",
+  "pending_balance_usd_13_file": "206.57",
+  "row_count": 41,
+  "by_available_at": {
+    "2026-09-10T00:00:00Z": {
+      "dated_row_count": 14,
+      "dated_sum_usd": "155.92",
+      "undated_fee_row_count": 20,
+      "undated_fee_sum_usd": "-7.98",
+      "net_settling_usd": "147.94",
+      "dated_rows": [
+        {
+          "id": "line_S2tRczZsTjhqaFRmZHo5em5xa2dFOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4OTI2",
+          "line_type": "payment_gross",
+          "usd": "29",
+          "posted_at": "2026-09-09T01:19:00Z",
+          "payment_id": "pay_OM3X8c0ycF5ytM",
+          "source_id": "pay_OM3X8c0ycF5ytM"
+        },
+        {
+          "id": "line_RkNrQVhsQllDR2F3MVdnSk9mZTM3OmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc1Mw",
+          "line_type": "application_fee_payout",
+          "usd": "2",
+          "posted_at": "2026-09-09T00:08:44Z",
+          "payment_id": "pay_8f4MKyKfuGvUNy",
+          "source_id": "apfee_DDtt7JTyknhf"
+        },
+        {
+          "id": "line_OWdDVk1OTHlGRXlDeHdJcWhWbnNZOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc1Mg",
+          "line_type": "application_fee_payout",
+          "usd": "2",
+          "posted_at": "2026-09-09T00:08:44Z",
+          "payment_id": "pay_tJABaxIlZo6FJ9",
+          "source_id": "apfee_Q4LxCmwLsZ3Y"
+        },
+        {
+          "id": "line_bHI0NzZFN2Q0UUxIVnJzcTU2akpjOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODY0",
+          "line_type": "payment_gross",
+          "usd": "29",
+          "posted_at": "2026-09-08T23:42:05Z",
+          "payment_id": "pay_KlLPYXITgrygTF",
+          "source_id": "pay_KlLPYXITgrygTF"
+        },
+        {
+          "id": "line_bW5nRkhEOTdVNjZrNzhhbm10bnkzOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODYx",
+          "line_type": "payment_gross",
+          "usd": "12",
+          "posted_at": "2026-09-08T23:39:46Z",
+          "payment_id": "pay_dquW3UTOlLQB9x",
+          "source_id": "pay_dquW3UTOlLQB9x"
+        },
+        {
+          "id": "line_NktoOXdON0l1akRMNEVrME00bzFpOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc1MQ",
+          "line_type": "application_fee_payout",
+          "usd": "2.8",
+          "posted_at": "2026-09-08T23:38:10Z",
+          "payment_id": "pay_EYGAd6l81eqWvH",
+          "source_id": "apfee_3xrAmpgVSU6O"
+        },
+        {
+          "id": "line_RG1kb2VyQ0hOY0FnSHhlWUdZVWV0OmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc1MA",
+          "line_type": "application_fee_payout",
+          "usd": "2",
+          "posted_at": "2026-09-08T23:37:19Z",
+          "payment_id": "pay_1EBdxGtWCu54K0",
+          "source_id": "apfee_KfpOoaWW0p9s"
+        },
+        {
+          "id": "line_RXJWT1g2UHc4Nng2WTNJUDdRUktyOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc0OQ",
+          "line_type": "application_fee_payout",
+          "usd": "7.12",
+          "posted_at": "2026-09-08T23:32:33Z",
+          "payment_id": "pay_JNZppy9WnnhlI1",
+          "source_id": "apfee_Cp8GCtzAbp2J"
+        },
+        {
+          "id": "line_QWhnT1RwY3RjN3ZkUU1ieVJnVExMOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODUy",
+          "line_type": "payment_gross",
+          "usd": "60",
+          "posted_at": "2026-09-08T23:32:20Z",
+          "payment_id": "pay_6emFcu79TQGD6F",
+          "source_id": "pay_6emFcu79TQGD6F"
+        },
+        {
+          "id": "line_dk56aDczSUpiM29qczFDU1VYR0lTOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc0Nw",
+          "line_type": "application_fee_payout",
+          "usd": "2",
+          "posted_at": "2026-09-08T23:29:47Z",
+          "payment_id": "pay_p2qLHIfZbpL57Z",
+          "source_id": "apfee_qcYks6iP1GmM"
+        },
+        {
+          "id": "line_WElhYzg3Y2lITjFlTXhzOWpPcExEOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc0Mg",
+          "line_type": "application_fee_payout",
+          "usd": "2",
+          "posted_at": "2026-09-08T18:32:35Z",
+          "payment_id": "pay_OfYo5GPfjM2zA7",
+          "source_id": "apfee_om1LhtbAzwWA"
+        },
+        {
+          "id": "line_NnNJd0VtYjlQRm90TzJDUFFrYk9HOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc0MQ",
+          "line_type": "application_fee_payout",
+          "usd": "2",
+          "posted_at": "2026-09-08T18:27:56Z",
+          "payment_id": "pay_O30qPOG3wEMwc0",
+          "source_id": "apfee_l3gmdDyfdVIk"
+        },
+        {
+          "id": "line_Y3ZkYWVsUm5ESzBrcXZkTE54TlphOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc0MA",
+          "line_type": "application_fee_payout",
+          "usd": "2",
+          "posted_at": "2026-09-08T17:58:21Z",
+          "payment_id": "pay_twYKgzRSgssTG5",
+          "source_id": "apfee_Qy5Wh6vLQ2NM"
+        },
+        {
+          "id": "line_QWxGRExRSzlJNlRDZzRVdWtoYkdiOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTczOA",
+          "line_type": "application_fee_payout",
+          "usd": "2",
+          "posted_at": "2026-09-08T16:45:26Z",
+          "payment_id": "pay_LhomHFUGcxqYZ1",
+          "source_id": "apfee_8JygL79d021j"
+        }
+      ],
+      "undated_fee_rows_of_these_payments": [
+        {
+          "id": "line_cVlCT0lNNmxtYlVWSUJ5NHhSOTh4OmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4OTI2",
+          "line_type": "payment_processing_percentage_fee",
+          "usd": "-0.78",
+          "posted_at": "2026-09-09T01:19:00Z",
+          "payment_id": "pay_OM3X8c0ycF5ytM",
+          "source_id": "pay_OM3X8c0ycF5ytM"
+        },
+        {
+          "id": "line_VDNTWXd6SVd3UzFOa1hMQVE1bGVVOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4OTI2",
+          "line_type": "payment_processing_fixed_fee",
+          "usd": "-0.3",
+          "posted_at": "2026-09-09T01:19:00Z",
+          "payment_id": "pay_OM3X8c0ycF5ytM",
+          "source_id": "pay_OM3X8c0ycF5ytM"
+        },
+        {
+          "id": "line_UEhBU0w3UzBnSkhhdkQxeWF3ZEdKOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4OTI2",
+          "line_type": "fraud_prevention_fee",
+          "usd": "-0.07",
+          "posted_at": "2026-09-09T01:19:00Z",
+          "payment_id": "pay_OM3X8c0ycF5ytM",
+          "source_id": "pay_OM3X8c0ycF5ytM"
+        },
+        {
+          "id": "line_SHJUZkM5RXhXbkNjS3pmdkhqeVd2OmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4OTI2",
+          "line_type": "cross_border_percentage_fee",
+          "usd": "-0.44",
+          "posted_at": "2026-09-09T01:19:00Z",
+          "payment_id": "pay_OM3X8c0ycF5ytM",
+          "source_id": "pay_OM3X8c0ycF5ytM"
+        },
+        {
+          "id": "line_SGw4b3J0VHpxUjJpQ0FaNWszaDgwOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4OTI2",
+          "line_type": "orchestration_percentage_fee",
+          "usd": "-0.23",
+          "posted_at": "2026-09-09T01:19:00Z",
+          "payment_id": "pay_OM3X8c0ycF5ytM",
+          "source_id": "pay_OM3X8c0ycF5ytM"
+        },
+        {
+          "id": "line_eG93djFDYzloNExLWGgxdFE4cWxWOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODY0",
+          "line_type": "cross_border_percentage_fee",
+          "usd": "-0.44",
+          "posted_at": "2026-09-08T23:42:05Z",
+          "payment_id": "pay_KlLPYXITgrygTF",
+          "source_id": "pay_KlLPYXITgrygTF"
+        },
+        {
+          "id": "line_ZkVLVWh3cVBkVEZMUmNqU25aSDF1OmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODY0",
+          "line_type": "payment_processing_percentage_fee",
+          "usd": "-0.78",
+          "posted_at": "2026-09-08T23:42:05Z",
+          "payment_id": "pay_KlLPYXITgrygTF",
+          "source_id": "pay_KlLPYXITgrygTF"
+        },
+        {
+          "id": "line_Y3cwdTh4N29OV3hLVnliYlNVVTJUOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODY0",
+          "line_type": "fraud_prevention_fee",
+          "usd": "-0.07",
+          "posted_at": "2026-09-08T23:42:05Z",
+          "payment_id": "pay_KlLPYXITgrygTF",
+          "source_id": "pay_KlLPYXITgrygTF"
+        },
+        {
+          "id": "line_NXFMWXEzN0FpaGRySHRTaGlJMzBCOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODY0",
+          "line_type": "orchestration_percentage_fee",
+          "usd": "-0.23",
+          "posted_at": "2026-09-08T23:42:05Z",
+          "payment_id": "pay_KlLPYXITgrygTF",
+          "source_id": "pay_KlLPYXITgrygTF"
+        },
+        {
+          "id": "line_M2lOeFp4bHpEUU4wVDl5T2tLMHZEOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODY0",
+          "line_type": "payment_processing_fixed_fee",
+          "usd": "-0.3",
+          "posted_at": "2026-09-08T23:42:05Z",
+          "payment_id": "pay_KlLPYXITgrygTF",
+          "source_id": "pay_KlLPYXITgrygTF"
+        },
+        {
+          "id": "line_eHVLUnNmUXliSlNMbDk4ODA0dW5tOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODYx",
+          "line_type": "orchestration_percentage_fee",
+          "usd": "-0.1",
+          "posted_at": "2026-09-08T23:39:46Z",
+          "payment_id": "pay_dquW3UTOlLQB9x",
+          "source_id": "pay_dquW3UTOlLQB9x"
+        },
+        {
+          "id": "line_TTg5VkVDb2RiYXI5TnFJWG5keDNsOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODYx",
+          "line_type": "payment_processing_fixed_fee",
+          "usd": "-0.3",
+          "posted_at": "2026-09-08T23:39:46Z",
+          "payment_id": "pay_dquW3UTOlLQB9x",
+          "source_id": "pay_dquW3UTOlLQB9x"
+        },
+        {
+          "id": "line_QVBsYTFVNm0zTk5Tc3RCSzM5RUZROmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODYx",
+          "line_type": "payment_processing_percentage_fee",
+          "usd": "-0.32",
+          "posted_at": "2026-09-08T23:39:46Z",
+          "payment_id": "pay_dquW3UTOlLQB9x",
+          "source_id": "pay_dquW3UTOlLQB9x"
+        },
+        {
+          "id": "line_NDltWnZaUURqSGhqYnpRRFVENVhvOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODYx",
+          "line_type": "fraud_prevention_fee",
+          "usd": "-0.07",
+          "posted_at": "2026-09-08T23:39:46Z",
+          "payment_id": "pay_dquW3UTOlLQB9x",
+          "source_id": "pay_dquW3UTOlLQB9x"
+        },
+        {
+          "id": "line_MnNWRXBDVlZNWmdyVERXNjdqWW9GOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODYx",
+          "line_type": "cross_border_percentage_fee",
+          "usd": "-0.18",
+          "posted_at": "2026-09-08T23:39:46Z",
+          "payment_id": "pay_dquW3UTOlLQB9x",
+          "source_id": "pay_dquW3UTOlLQB9x"
+        },
+        {
+          "id": "line_aUx4T1FDZmtvcUI3azFSV1pYN0NkOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODUy",
+          "line_type": "orchestration_percentage_fee",
+          "usd": "-0.48",
+          "posted_at": "2026-09-08T23:32:20Z",
+          "payment_id": "pay_6emFcu79TQGD6F",
+          "source_id": "pay_6emFcu79TQGD6F"
+        },
+        {
+          "id": "line_WjFXRFJqcVVFVDN4YTBpekt6TlRtOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODUy",
+          "line_type": "payment_processing_fixed_fee",
+          "usd": "-0.3",
+          "posted_at": "2026-09-08T23:32:20Z",
+          "payment_id": "pay_6emFcu79TQGD6F",
+          "source_id": "pay_6emFcu79TQGD6F"
+        },
+        {
+          "id": "line_V2VJV05GcGRJT2JRMnRyblJHVXdLOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODUy",
+          "line_type": "payment_processing_percentage_fee",
+          "usd": "-1.62",
+          "posted_at": "2026-09-08T23:32:20Z",
+          "payment_id": "pay_6emFcu79TQGD6F",
+          "source_id": "pay_6emFcu79TQGD6F"
+        },
+        {
+          "id": "line_TG9OSEZpa05EUjFiRUdmOUQzQnJEOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODUy",
+          "line_type": "fraud_prevention_fee",
+          "usd": "-0.07",
+          "posted_at": "2026-09-08T23:32:20Z",
+          "payment_id": "pay_6emFcu79TQGD6F",
+          "source_id": "pay_6emFcu79TQGD6F"
+        },
+        {
+          "id": "line_TDRDd2x1cUZFdFdaUkJwVm9jcHV2OmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODUy",
+          "line_type": "cross_border_percentage_fee",
+          "usd": "-0.9",
+          "posted_at": "2026-09-08T23:32:20Z",
+          "payment_id": "pay_6emFcu79TQGD6F",
+          "source_id": "pay_6emFcu79TQGD6F"
+        }
+      ]
+    },
+    "2026-09-11T00:00:00Z": {
+      "dated_row_count": 2,
+      "dated_sum_usd": "62",
+      "undated_fee_row_count": 5,
+      "undated_fee_sum_usd": "-3.37",
+      "net_settling_usd": "58.63",
+      "dated_rows": [
+        {
+          "id": "line_STNtVjdhbUE1RGhMbERtdWY5NTNjOmxpOjFWMU1mdzllOENreXFyYldqbWNZeTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODc0",
+          "line_type": "payment_gross",
+          "usd": "60",
+          "posted_at": "2026-09-09T23:04:56Z",
+          "payment_id": "pay_cxvGcm7NvjoCkV",
+          "source_id": "pay_cxvGcm7NvjoCkV"
+        },
+        {
+          "id": "line_Zm5VSzQ4cHBQZWZJSEh0SE92QmNqOmxpOjFWMU1mdzllOENreXFyYldqbWNZeTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTc4Mg",
+          "line_type": "application_fee_payout",
+          "usd": "2",
+          "posted_at": "2026-09-09T23:02:42Z",
+          "payment_id": "pay_ELe6ONlgjrYv5Z",
+          "source_id": "apfee_Txph4OfONEGb"
+        }
+      ],
+      "undated_fee_rows_of_these_payments": [
+        {
+          "id": "line_ejFxRGpIZmNnQUZ1dE4xVm02aXFVOmxpOjFWMU1mdzllOENreXFyYldqbWNZeTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODc0",
+          "line_type": "payment_processing_fixed_fee",
+          "usd": "-0.3",
+          "posted_at": "2026-09-09T23:04:56Z",
+          "payment_id": "pay_cxvGcm7NvjoCkV",
+          "source_id": "pay_cxvGcm7NvjoCkV"
+        },
+        {
+          "id": "line_b2NWeWpJZHE5TGFnbGhaVFVPV3lSOmxpOjFWMU1mdzllOENreXFyYldqbWNZeTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODc0",
+          "line_type": "cross_border_percentage_fee",
+          "usd": "-0.9",
+          "posted_at": "2026-09-09T23:04:56Z",
+          "payment_id": "pay_cxvGcm7NvjoCkV",
+          "source_id": "pay_cxvGcm7NvjoCkV"
+        },
+        {
+          "id": "line_WVgxTHF6N3dVbVZ4OU5ROFhibzRoOmxpOjFWMU1mdzllOENreXFyYldqbWNZeTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODc0",
+          "line_type": "payment_processing_percentage_fee",
+          "usd": "-1.62",
+          "posted_at": "2026-09-09T23:04:56Z",
+          "payment_id": "pay_cxvGcm7NvjoCkV",
+          "source_id": "pay_cxvGcm7NvjoCkV"
+        },
+        {
+          "id": "line_Rk9qeFlrMXBRaDZ5RDgzaEROUWxNOmxpOjFWMU1mdzllOENreXFyYldqbWNZeTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODc0",
+          "line_type": "orchestration_percentage_fee",
+          "usd": "-0.48",
+          "posted_at": "2026-09-09T23:04:56Z",
+          "payment_id": "pay_cxvGcm7NvjoCkV",
+          "source_id": "pay_cxvGcm7NvjoCkV"
+        },
+        {
+          "id": "line_NHpqcnhHazlkODBiUFV2aWZrdW9zOmxpOjFWMU1mdzllOENreXFyYldqbWNZeTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODc0",
+          "line_type": "fraud_prevention_fee",
+          "usd": "-0.07",
+          "posted_at": "2026-09-09T23:04:56Z",
+          "payment_id": "pay_cxvGcm7NvjoCkV",
+          "source_id": "pay_cxvGcm7NvjoCkV"
+        }
+      ]
+    }
+  }
+}

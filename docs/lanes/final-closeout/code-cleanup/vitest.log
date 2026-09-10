@@ -1,0 +1,10 @@
+
+ RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/final-code-cleanup/apps/web
+
+
+ Test Files  98 passed (98)
+      Tests  1029 passed (1029)
+   Start at  19:05:30
+   Duration  8.06s (transform 6.11s, setup 0ms, import 52.12s, tests 38.90s, environment 537ms)
+
+vitest exit=0

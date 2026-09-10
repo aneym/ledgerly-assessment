@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "file_count": 2262,
+  "json_validated": 718,
+  "current_links_checked": 159,
+  "source_hashes_verified": 49,
+  "requirements_verified": 37,
+  "exact_event_types": 8,
+  "assessment_sha256": "64c28b1d08de6a55053191d4e955cf57c90d58b8f27df8a69a44e840373e0654",
+  "errors": [],
+  "limits": "Does not execute Whop integration, claim CC readiness, validate external URLs, or follow historical report links to excluded private evidence."
+}

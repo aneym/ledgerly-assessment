@@ -1,0 +1,27 @@
+{
+  "name": "create-checkout-configuration",
+  "method": "POST",
+  "path": "/checkout_configurations",
+  "request_body": {
+    "account_id": "biz_pt7b2NAryKwRGh",
+    "plan": {
+      "product": {
+        "title": "Scoped key probe",
+        "external_identifier": "scoped-probe-1788998161772-checkout"
+      },
+      "plan_type": "one_time",
+      "initial_price": "1.00",
+      "currency": "usd"
+    },
+    "redirect_url": "https://ledgerly-afneymans-projects.vercel.app/onboarding/complete"
+  },
+  "status": 403,
+  "response": {
+    "error": {
+      "type": "forbidden",
+      "message": "You are not authorized"
+    }
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:07.799Z"
+}

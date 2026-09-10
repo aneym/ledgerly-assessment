@@ -1,0 +1,25 @@
+{
+  "note": "Late recheck of GET /webhooks/hook_gO3nsBQBCSyzF/deliveries?first=100, run after the reviewer pass. Counts only; the raw body was read into a mode-600 scratch file and deleted, because delivery bodies carry buyer details. Compare with 03-deliveries-polls-after-tests.json.",
+  "queried_at": "2026-09-09T23:14:30.000Z",
+  "status": 200,
+  "count": 48,
+  "has_next_page": false,
+  "newest_sent_at": "2026-09-09T23:04:57.000Z",
+  "newest_event": "payment.succeeded",
+  "events_by_type": {
+    "account.updated": 31,
+    "payment.succeeded": 17
+  },
+  "test_send_envelope_ids_present": {
+    "payment.succeeded": false,
+    "payment.failed": false,
+    "refund.created": false,
+    "dispute.created": false,
+    "transfer.completed": false,
+    "payout.created": false,
+    "payout.updated": false,
+    "account.updated": false
+  },
+  "test_generated_deliveries_present": false,
+  "placeholder_ids_present": false
+}

@@ -1,0 +1,257 @@
+{
+  "title": "Required executed journeys by target mode",
+  "owner": "integration-qa",
+  "rule": "Every pattern must match an executed test with expectedStatus=passed, a passed attempt and no failed/skipped/interrupted attempts or annotations. All matching projects must pass. Missing or flaky results withhold acceptance.",
+  "required": [
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > valid is valid",
+      "why": "S08: the real inbox accepts a correctly signed delivery"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > tampered-body is invalid",
+      "why": "S08: signature covers the raw body"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > stale-timestamp-301s is invalid",
+      "why": "S08: five-minute window"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > wrong-secret is invalid",
+      "why": "S08: forged delivery rejected"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > same webhook-id twice is acknowledged once as duplicate",
+      "why": "S08: one inbox row per webhook id"
+    },
+    {
+      "pattern": "direct-http.spec.ts > authorization by direct request > anonymous ledger.read on seller_us is denied (anon-ledger)",
+      "why": "seller earnings are never readable without a session"
+    },
+    {
+      "pattern": "direct-http.spec.ts > authorization by direct request > anonymous demo.events on stream is denied (anon-events)",
+      "why": "the instrumentation stream needs an operator session"
+    },
+    {
+      "pattern": "direct-http.spec.ts > authorization by direct request > anonymous webhook.post on inbox is denied (anon-webhook-unsigned)",
+      "why": "unsigned delivery is refused"
+    },
+    {
+      "pattern": "real-onboarding.spec.ts > real onboarding: user persists, seller exists at the provider, overlay is sanitized > new test user survives a fresh context and reload",
+      "why": "real Better Auth sign-up persists a user row readable from a fresh context"
+    },
+    {
+      "pattern": "real-onboarding.spec.ts > real onboarding: user persists, seller exists at the provider, overlay is sanitized > sandbox seller is created for real and read back by id",
+      "why": "S02: owner onboards a seller through the real route, reads it back by id, re-onboarding is idempotent, another user is denied"
+    },
+    {
+      "pattern": "buyer-creator-admin.spec.ts > buyer purchase becomes a creator ledger entry and an admin record > direct charge journey",
+      "why": "S05: anonymous checkout creates an order with the server-computed 8% fee; owner reads order and earnings; strangers are denied"
+    },
+    {
+      "pattern": "required-pages.spec.ts > required product pages > seller signs up and creates an account through the page",
+      "why": "S02 browser form, persisted seller, onboarding and earnings page"
+    },
+    {
+      "pattern": "required-pages.spec.ts > required product pages > buyer browses and creates a checkout then reads receipt and library",
+      "why": "S05 browser signup, browse, Buy, checkout, receipt, library"
+    },
+    {
+      "pattern": "concurrency.spec.ts > twelve concurrent operator actions",
+      "why": "S10 operator action idempotency under concurrency"
+    },
+    {
+      "pattern": "resolution.spec.ts > uncertain provider outcome remains unresolved after recheck",
+      "why": "S10 unknown financial outcome must remain unresolved"
+    },
+    {
+      "pattern": "direct-http.spec.ts > authorization by direct request > anonymous demo.reset",
+      "why": "demo reset route is mounted and must deny anonymous callers"
+    },
+    {
+      "pattern": "ledger-webhook.spec.ts > signed payment reaches the seller ledger exactly once",
+      "why": "S08 actual HTTP inbox-to-ledger effect and underlying payment idempotency, not quarantined ACK only"
+    },
+    {
+      "pattern": "required-pages.spec.ts > required product pages > platform-charge buyer requests a refund through the receipt page",
+      "why": "S06 browser refund request persists and appears in the buyer list; not settled refund evidence"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > valid signature with an undecodable body is quarantined, not dropped",
+      "why": "S08 signed undecodable deliveries must persist and acknowledge decoded:false; no expected-failure exemption"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > unknown-scheme-v0 is invalid",
+      "why": "S08 unsupported signature scheme must reject"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > missing-signature-header is invalid",
+      "why": "S08 unsigned delivery must reject"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > tampered-webhook-id is invalid",
+      "why": "S08 signature binds event delivery id"
+    },
+    {
+      "pattern": "direct-http.spec.ts > secret leakage in the browser bundle > no secret-shaped strings in HTML, scripts or console",
+      "why": "Browser artifact leakage scan must run, not silently skip"
+    }
+  ],
+  "fixture_required": [
+    {
+      "pattern": "preview-smoke.spec.ts > docs preview server > wiki index renders and links resolve",
+      "why": "Docs preview smoke, not product acceptance"
+    },
+    {
+      "pattern": "preview-smoke.spec.ts > docs preview server > paths outside docs are refused",
+      "why": "Docs preview smoke, not product acceptance"
+    },
+    {
+      "pattern": "preview-smoke.spec.ts > docs preview server > markdown is served as text, not executed",
+      "why": "Docs preview smoke, not product acceptance"
+    }
+  ],
+  "provider_and_manual_gaps": [
+    "Hosted identity verification and payment entry are not automated.",
+    "Refund settlement, transfers, hosted/embedded payout actions and independent provider readback remain distinct from local page acceptance.",
+    "The canonical20 product scenarios and37 assessment requirements include provider/manual outcomes not implied by any local required-journey pass."
+  ],
+  "local_required": [
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > valid is valid",
+      "why": "S08: the real inbox accepts a correctly signed delivery"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > tampered-body is invalid",
+      "why": "S08: signature covers the raw body"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > stale-timestamp-301s is invalid",
+      "why": "S08: five-minute window"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > wrong-secret is invalid",
+      "why": "S08: forged delivery rejected"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > same webhook-id twice is acknowledged once as duplicate",
+      "why": "S08: one inbox row per webhook id"
+    },
+    {
+      "pattern": "direct-http.spec.ts > authorization by direct request > anonymous ledger.read on seller_us is denied (anon-ledger)",
+      "why": "seller earnings are never readable without a session"
+    },
+    {
+      "pattern": "direct-http.spec.ts > authorization by direct request > anonymous demo.events on stream is denied (anon-events)",
+      "why": "the instrumentation stream needs an operator session"
+    },
+    {
+      "pattern": "direct-http.spec.ts > authorization by direct request > anonymous webhook.post on inbox is denied (anon-webhook-unsigned)",
+      "why": "unsigned delivery is refused"
+    },
+    {
+      "pattern": "required-pages.spec.ts > required product pages > seller signs up and creates an account through the page",
+      "why": "S02 browser form, persisted seller, onboarding and earnings page"
+    },
+    {
+      "pattern": "required-pages.spec.ts > required product pages > buyer browses and creates a checkout then reads receipt and library",
+      "why": "S05 browser signup, browse, Buy, checkout, receipt, library"
+    },
+    {
+      "pattern": "direct-http.spec.ts > authorization by direct request > anonymous demo.reset",
+      "why": "demo reset route is mounted and must deny anonymous callers"
+    },
+    {
+      "pattern": "ledger-webhook.spec.ts > signed payment reaches the seller ledger exactly once",
+      "why": "S08 actual HTTP inbox-to-ledger effect and underlying payment idempotency, not quarantined ACK only"
+    },
+    {
+      "pattern": "required-pages.spec.ts > required product pages > platform-charge buyer requests a refund through the receipt page",
+      "why": "S06 browser refund request persists and appears in the buyer list; not settled refund evidence"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > valid signature with an undecodable body is quarantined, not dropped",
+      "why": "S08 signed undecodable deliveries must persist and acknowledge decoded:false; no expected-failure exemption"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > unknown-scheme-v0 is invalid",
+      "why": "S08 unsupported signature scheme must reject"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > missing-signature-header is invalid",
+      "why": "S08 unsigned delivery must reject"
+    },
+    {
+      "pattern": "direct-http.spec.ts > webhook endpoint > tampered-webhook-id is invalid",
+      "why": "S08 signature binds event delivery id"
+    },
+    {
+      "pattern": "direct-http.spec.ts > secret leakage in the browser bundle > no secret-shaped strings in HTML, scripts or console",
+      "why": "Browser artifact leakage scan must run, not silently skip"
+    },
+    {
+      "pattern": "current-paid.spec.ts > P03 P08 P09 P10 P14 paid checkout persists across buyer and seller sessions",
+      "why": "Current local signed checkout, paid receipt/library, 2500/200/2300 seller allocation, resumed buyer identity and foreign access denial",
+      "scenario_ids": [
+        "P03",
+        "P08",
+        "P09",
+        "P10",
+        "P14"
+      ]
+    },
+    {
+      "pattern": "current-recovery.spec.ts > operator repairs a fresh missing payment and reconciliation converges",
+      "why": "Fresh mock missing-payment fixture, real operator page repair, exactly one effect and repeated detection convergence",
+      "scenario_ids": [
+        "P14",
+        "P17"
+      ]
+    },
+    {
+      "pattern": "current-seller.spec.ts > current local seller journeys > @current @serial P07 seller publishes a product and public storefront reads it back",
+      "why": "Publish via the seller page, reload persisted listing, anonymous public title and price readback",
+      "scenario_ids": [
+        "P07"
+      ]
+    },
+    {
+      "pattern": "current-seller.spec.ts > current local seller journeys > @current @serial P16 local suspension blocks one seller and preserves the active seller",
+      "why": "Configured real operator local suspension, denied checkout no mutation, active seller remains usable",
+      "scenario_ids": [
+        "P16"
+      ]
+    },
+    {
+      "pattern": "current-seller.spec.ts > current local seller journeys > @current @serial P15 payout routes reject foreign and anonymous access without changing seller state",
+      "why": "Payout history, session, simulation sibling route denial, owner fixture limitation and unchanged state",
+      "scenario_ids": [
+        "P15"
+      ]
+    },
+    {
+      "pattern": "current-events.spec.ts > P11 P13 duplicate and late deliveries preserve terminal refunded order state",
+      "why": "Correlated terminal inbox reads before duplicate payment/refund and late payment assertions, invalid refund quarantine, original allocation reversal",
+      "scenario_ids": [
+        "P11",
+        "P13"
+      ]
+    },
+    {
+      "pattern": "current-tour.spec.ts > @current @serial P18 guided Next-only tour completes all seven current chapters",
+      "why": "Only Next/Finish actions across all current chapters; real paid checkout, same purchase earnings, requested sample payout, terminal repair and authenticated persisted completion",
+      "scenario_ids": [
+        "P18"
+      ]
+    }
+  ],
+  "local_prerequisites": {
+    "QA_APP_URL": "Exact allocated http://127.0.0.1:port origin, currently4474",
+    "QA_TARGET_SHA": "40-character served source_revision matching local runtime health",
+    "runtime": "PGlite/mock local_test persistent health, supported profile routes, real signed checkout completion control",
+    "execution": "No replacement runtime, missing readiness must fail before mutations. Metadata and list-only selection are not application acceptance.",
+    "operator": "P16 uses runtime-owned GET /api/local-runtime/operator, requires303/admin/sellers and issued real BetterAuth session roleoperator before fixtures; no credentials or QA DB promotion.",
+    "QA_LOCAL_EVENTS_PATH": "Runtime-owner supplied bound route under /api/local-runtime/ for reviewed signed-event handlers; POST/GET require real buyer order/run ownership. Source handler existence alone is insufficient.",
+    "current_tour": "Reviewed eb2be3a product proof/finish contract plus persistent catalog and original runtime checkout.simulation.complete signed-payment binding; no client claimed completion.",
+    "signed_http": "Runtime owner launches --webhook-fixture 1 to select the repository public fake fixture secret behind local guards; QA_WEBHOOK_SECRET_KNOWN=1 alone does not change signing."
+  }
+}

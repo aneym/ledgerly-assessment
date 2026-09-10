@@ -1,0 +1,23 @@
+{
+  "name": "create-access-token",
+  "method": "POST",
+  "path": "/access_tokens",
+  "request_body": {
+    "account_id": "biz_pt7b2NAryKwRGh",
+    "scoped_actions": [
+      "company:balance:read",
+      "payout:withdrawal:read",
+      "payout:destination:read",
+      "payout:account:read",
+      "payout:withdraw_funds"
+    ],
+    "expires_at": "2026-09-10T00:11:07.440Z"
+  },
+  "status": 200,
+  "response": {
+    "token": "[REDACTED]",
+    "expires_at": "2026-09-10T00:11:07.000Z"
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:07.516Z"
+}

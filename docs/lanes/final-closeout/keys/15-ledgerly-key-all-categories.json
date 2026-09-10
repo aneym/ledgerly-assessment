@@ -1,0 +1,280 @@
+{
+  "captured_at": "2026-09-09T23:14:33.428Z",
+  "account": "biz_RlL9WP9TIBVXmr",
+  "key_name": "ledgerly",
+  "key_masked": "apik_f6to....de0b",
+  "permissions_mode": "Owner",
+  "dialog_icon_buttons": 4,
+  "source": "DOM of the API key details edit dialog after clicking 'Show 42 more categories'; Close, never Save; no icon button clicked",
+  "category_count": 53,
+  "categories_fully_granted": 53,
+  "statements_total": 231,
+  "statements_granted": 231,
+  "categories": [
+    {
+      "category": "Chat",
+      "granted": 4,
+      "total": 4
+    },
+    {
+      "category": "Checkout Configuration",
+      "granted": 3,
+      "total": 3
+    },
+    {
+      "category": "Checkout Request",
+      "granted": 2,
+      "total": 2
+    },
+    {
+      "category": "Dms",
+      "granted": 3,
+      "total": 3
+    },
+    {
+      "category": "Invoice",
+      "granted": 4,
+      "total": 4
+    },
+    {
+      "category": "Member",
+      "granted": 12,
+      "total": 12
+    },
+    {
+      "category": "Membership",
+      "granted": 5,
+      "total": 5
+    },
+    {
+      "category": "Payment",
+      "granted": 14,
+      "total": 14
+    },
+    {
+      "category": "Payout",
+      "granted": 12,
+      "total": 12
+    },
+    {
+      "category": "Plan",
+      "granted": 10,
+      "total": 10
+    },
+    {
+      "category": "Webhook Receive",
+      "granted": 32,
+      "total": 32
+    },
+    {
+      "category": "Access Pass",
+      "granted": 8,
+      "total": 8
+    },
+    {
+      "category": "Ad Campaign",
+      "granted": 9,
+      "total": 9
+    },
+    {
+      "category": "Ad Publisher",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Affiliate",
+      "granted": 3,
+      "total": 3
+    },
+    {
+      "category": "Ai Chat",
+      "granted": 4,
+      "total": 4
+    },
+    {
+      "category": "Ai Prompt",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Airdrop Link",
+      "granted": 2,
+      "total": 2
+    },
+    {
+      "category": "App Authorization",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Audience",
+      "granted": 2,
+      "total": 2
+    },
+    {
+      "category": "Authorized Role",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Authorized User",
+      "granted": 2,
+      "total": 2
+    },
+    {
+      "category": "Bounty",
+      "granted": 3,
+      "total": 3
+    },
+    {
+      "category": "Child Company",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Company",
+      "granted": 15,
+      "total": 15
+    },
+    {
+      "category": "Company Token Transaction",
+      "granted": 2,
+      "total": 2
+    },
+    {
+      "category": "Content Rewards",
+      "granted": 6,
+      "total": 6
+    },
+    {
+      "category": "Course Analytics",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Course Lesson Interaction",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Courses",
+      "granted": 2,
+      "total": 2
+    },
+    {
+      "category": "Crypto Wallet",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Custom Emoji",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Developer",
+      "granted": 7,
+      "total": 7
+    },
+    {
+      "category": "Event",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Experience",
+      "granted": 6,
+      "total": 6
+    },
+    {
+      "category": "Forum",
+      "granted": 3,
+      "total": 3
+    },
+    {
+      "category": "Iap",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Identity",
+      "granted": 2,
+      "total": 2
+    },
+    {
+      "category": "Incorporation",
+      "granted": 2,
+      "total": 2
+    },
+    {
+      "category": "Lead",
+      "granted": 3,
+      "total": 3
+    },
+    {
+      "category": "Livestream",
+      "granted": 6,
+      "total": 6
+    },
+    {
+      "category": "Media",
+      "granted": 2,
+      "total": 2
+    },
+    {
+      "category": "Notification",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Oauth",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Partner",
+      "granted": 4,
+      "total": 4
+    },
+    {
+      "category": "Promo Code",
+      "granted": 5,
+      "total": 5
+    },
+    {
+      "category": "Referral",
+      "granted": 2,
+      "total": 2
+    },
+    {
+      "category": "Shipment",
+      "granted": 2,
+      "total": 2
+    },
+    {
+      "category": "Social Account",
+      "granted": 3,
+      "total": 3
+    },
+    {
+      "category": "Social Link",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Stats",
+      "granted": 1,
+      "total": 1
+    },
+    {
+      "category": "Support Chat",
+      "granted": 3,
+      "total": 3
+    },
+    {
+      "category": "Tracking Link",
+      "granted": 7,
+      "total": 7
+    }
+  ]
+}

@@ -1,0 +1,447 @@
+{
+  "direct_payment": {
+    "id": "pay_ELe6ONlgjrYv5Z",
+    "status": "paid",
+    "subtotal": {
+      "currency": "usd",
+      "amount": "25.00",
+      "decimals": 2,
+      "display_decimals": 2
+    },
+    "currency": "usd",
+    "account_id": "biz_pt7b2NAryKwRGh",
+    "plan_id": "plan_mIdPunMHNV6TL",
+    "product_id": "prod_W1xlml34ygYMR",
+    "membership_id": "mem_04dw0KnyLralfK",
+    "member_id": "mber_dPMkttjxIxuCn",
+    "billing_reason": "one_time",
+    "paid_at": "2026-09-09T23:02:39.081Z",
+    "created_at": "2026-09-09T23:02:38.242Z",
+    "metadata": {},
+    "refunded_amount": {
+      "currency": "usd",
+      "amount": "0.00",
+      "decimals": 2,
+      "display_decimals": 2
+    },
+    "checkout_configuration_id": "ch_pD0KKu5fXqlnS6X"
+  },
+  "direct_payment_keys": [
+    "account_id",
+    "amount_after_fees",
+    "auto_refunded",
+    "billing_address",
+    "billing_reason",
+    "checkout_configuration_id",
+    "client_secret",
+    "created_at",
+    "currency",
+    "customer_phone",
+    "decline_code",
+    "dispute_alerted_at",
+    "failure_message",
+    "financing_installments_count",
+    "id",
+    "last_payment_attempt_at",
+    "member_id",
+    "membership_id",
+    "metadata",
+    "needs_tracking",
+    "next_payment_attempt_at",
+    "paid_at",
+    "payment_instrument",
+    "payment_method_id",
+    "payment_method_type",
+    "payments_failed",
+    "plan_id",
+    "product_id",
+    "promo_code_id",
+    "recovery_url",
+    "refundable",
+    "refunded_amount",
+    "refunded_at",
+    "retryable",
+    "risk_score",
+    "risk_signals",
+    "settlement_time_at",
+    "shipment_id",
+    "shipping_address",
+    "status",
+    "substatus",
+    "subtotal",
+    "tax_amount",
+    "tax_behavior",
+    "tax_refunded_amount",
+    "three_ds_verified",
+    "total",
+    "updated_at",
+    "usd_total",
+    "user",
+    "verification_checks",
+    "voidable"
+  ],
+  "platform_payment": {
+    "id": "pay_cxvGcm7NvjoCkV",
+    "status": "paid",
+    "subtotal": {
+      "currency": "usd",
+      "amount": "60.00",
+      "decimals": 2,
+      "display_decimals": 2
+    },
+    "currency": "usd",
+    "account_id": "biz_RlL9WP9TIBVXmr",
+    "plan_id": "plan_rydmDsTzbco36",
+    "product_id": "prod_zHpnCGqNKnthJ",
+    "membership_id": "mem_Rt1dlGRDSoLF0F",
+    "member_id": "mber_4TPdtS1BYVigK",
+    "billing_reason": "one_time",
+    "paid_at": "2026-09-09T23:04:54.449Z",
+    "created_at": "2026-09-09T23:04:53.809Z",
+    "metadata": {},
+    "refunded_amount": {
+      "currency": "usd",
+      "amount": "0.00",
+      "decimals": 2,
+      "display_decimals": 2
+    },
+    "checkout_configuration_id": "ch_kT3ZyYS6Jc8ehfz"
+  },
+  "platform_payment_keys": [
+    "account_id",
+    "amount_after_fees",
+    "auto_refunded",
+    "billing_address",
+    "billing_reason",
+    "checkout_configuration_id",
+    "client_secret",
+    "created_at",
+    "currency",
+    "customer_phone",
+    "decline_code",
+    "dispute_alerted_at",
+    "failure_message",
+    "financing_installments_count",
+    "id",
+    "last_payment_attempt_at",
+    "member_id",
+    "membership_id",
+    "metadata",
+    "needs_tracking",
+    "next_payment_attempt_at",
+    "paid_at",
+    "payment_instrument",
+    "payment_method_id",
+    "payment_method_type",
+    "payments_failed",
+    "plan_id",
+    "product_id",
+    "promo_code_id",
+    "recovery_url",
+    "refundable",
+    "refunded_amount",
+    "refunded_at",
+    "retryable",
+    "risk_score",
+    "risk_signals",
+    "settlement_time_at",
+    "shipment_id",
+    "shipping_address",
+    "status",
+    "substatus",
+    "subtotal",
+    "tax_amount",
+    "tax_behavior",
+    "tax_refunded_amount",
+    "three_ds_verified",
+    "total",
+    "updated_at",
+    "usd_total",
+    "user",
+    "verification_checks",
+    "voidable"
+  ],
+  "direct_fees": {
+    "data": [
+      {
+        "type": "other_fee",
+        "origin": "application_fee",
+        "label": "Application fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "2.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "2.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:02:39.081Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "payment_processing_percentage_fee",
+        "label": "Payment processing percentage fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.68",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.68",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:02:39.081Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "cross_border_percentage_fee",
+        "label": "Cross-border transaction fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.38",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.38",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:02:39.081Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "payment_processing_fixed_fee",
+        "label": "Fixed card processing fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.30",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.30",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:02:39.081Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "orchestration_percentage_fee",
+        "label": "Orchestration fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.20",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.20",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:02:39.081Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "stripe_radar_fee",
+        "label": "Radar fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.07",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.07",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:02:39.081Z"
+      }
+    ],
+    "page_info": {
+      "end_cursor": null,
+      "start_cursor": null,
+      "has_next_page": false,
+      "has_previous_page": false
+    }
+  },
+  "platform_fees": {
+    "data": [
+      {
+        "type": "processing_fee",
+        "origin": "payment_processing_percentage_fee",
+        "label": "Payment processing percentage fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "1.62",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "1.62",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:04:54.449Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "cross_border_percentage_fee",
+        "label": "Cross-border transaction fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.90",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.90",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:04:54.449Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "orchestration_percentage_fee",
+        "label": "Orchestration fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.48",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.48",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:04:54.449Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "payment_processing_fixed_fee",
+        "label": "Fixed card processing fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.30",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.30",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:04:54.449Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "stripe_radar_fee",
+        "label": "Radar fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.07",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.07",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:04:54.449Z"
+      }
+    ],
+    "page_info": {
+      "end_cursor": null,
+      "start_cursor": null,
+      "has_next_page": false,
+      "has_previous_page": false
+    }
+  },
+  "direct_checkout_config": {
+    "id": "ch_pD0KKu5fXqlnS6X",
+    "account_id": "biz_pt7b2NAryKwRGh",
+    "purchase_url": "https://sandbox.whop.com/checkout/ch_pD0KKu5fXqlnS6X/",
+    "plan_id": "plan_mIdPunMHNV6TL",
+    "initial_price": 25.0,
+    "currency": "usd",
+    "application_fee_amount": null,
+    "product": {},
+    "redirect_url": "https://ledgerly-afneymans-projects.vercel.app/receipt/e3dd80b7-f01a-4501-b318-04cbfab646e7",
+    "keys": [
+      "account_id",
+      "affiliate_code",
+      "created_at",
+      "currency",
+      "effective_payment_method_configuration",
+      "id",
+      "metadata",
+      "mode",
+      "payment_method_configuration",
+      "plan",
+      "purchase_url",
+      "redirect_url",
+      "three_ds_level",
+      "updated_at"
+    ]
+  },
+  "platform_checkout_config": {
+    "id": "ch_kT3ZyYS6Jc8ehfz",
+    "account_id": "biz_RlL9WP9TIBVXmr",
+    "purchase_url": "https://sandbox.whop.com/checkout/ch_kT3ZyYS6Jc8ehfz/",
+    "plan_id": "plan_rydmDsTzbco36",
+    "initial_price": 60.0,
+    "currency": "usd",
+    "application_fee_amount": null,
+    "product": {},
+    "redirect_url": "https://ledgerly-afneymans-projects.vercel.app/receipt/00b8451a-9f1c-402a-8ee0-e3824e81943f",
+    "keys": [
+      "account_id",
+      "affiliate_code",
+      "created_at",
+      "currency",
+      "effective_payment_method_configuration",
+      "id",
+      "metadata",
+      "mode",
+      "payment_method_configuration",
+      "plan",
+      "purchase_url",
+      "redirect_url",
+      "three_ds_level",
+      "updated_at"
+    ]
+  }
+}

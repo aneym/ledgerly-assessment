@@ -1,0 +1,23 @@
+{
+  "name": "create-transfer-br",
+  "method": "POST",
+  "path": "/transfers",
+  "request_body": {
+    "amount": "1.00",
+    "currency": "usd",
+    "origin_id": "biz_RlL9WP9TIBVXmr",
+    "destination_id": "biz_8dB7THK4woBs43",
+    "metadata": {
+      "run_id": "scoped-probe-1788998161772"
+    }
+  },
+  "status": 400,
+  "response": {
+    "error": {
+      "type": "bad_request",
+      "message": "You cannot transfer funds out of your pending balance. Please wait for your funds to settle and try again."
+    }
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:10.416Z"
+}

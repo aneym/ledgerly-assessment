@@ -36,19 +36,29 @@ export function createReconciliationProvider(
       return ok({ data, nextCursor: result.value.nextCursor });
     },
     async listTransfers(input) {
-      const result = await provider.listTransfers(input);
+      // Reconciliation compares incoming seller allocations, never the adapter's
+      // default outgoing list. The provider adapter independently checks ownership.
+      const result = await provider.listTransfers({ ...input, direction: "destination" });
       if (!result.ok) return result;
       const data: ProviderRecord[] = [];
       for (const item of result.value.items) {
         if (item.destination.type !== "Company" || item.destination.id !== input.accountId)
           return err({ kind: "decode" });
-        if (!["completed", "pending", "reserve", "failed"].includes(item.status))
+        // Whop documents succeeded/processing; local fixtures retain the earlier
+        // completed/pending vocabulary. Preserve pending without treating it as paid.
+        const status =
+          item.status === "succeeded"
+            ? "completed"
+            : item.status === "processing"
+              ? "pending"
+              : item.status;
+        if (!["completed", "pending", "reserve", "failed"].includes(status))
           return err({ kind: "decode" });
         data.push({
           id: item.id,
           accountId: input.accountId,
           amount: item.amount,
-          status: item.status as ProviderRecord["status"],
+          status: status as ProviderRecord["status"],
         });
       }
       return ok({ data, nextCursor: result.value.nextCursor });

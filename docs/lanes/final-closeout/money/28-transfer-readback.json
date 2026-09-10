@@ -1,0 +1,56 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/transfers/ctt_XOWIF7fafgGBHX",
+    "query": null,
+    "api_version_date": "2026-09-06",
+    "idempotency_key": null,
+    "body": null
+  },
+  "status": 200,
+  "started_at": "2026-09-10T00:10:34.233Z",
+  "finished_at": "2026-09-10T00:10:34.515Z",
+  "response_headers": {
+    "date": "Thu, 10 Sep 2026 00:10:34 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "59c9c3d4-889a-4c19-b433-032934920262",
+    "cf-ray": "a38a35dc79b397ed-EWR"
+  },
+  "response": {
+    "object": "transfer",
+    "id": "ctt_XOWIF7fafgGBHX",
+    "status": "succeeded",
+    "failure_code": null,
+    "failure_reason": null,
+    "failed_at": null,
+    "amount": 55.2,
+    "currency": "usd",
+    "created_at": "2026-09-10T00:09:40.061Z",
+    "fee_amount": 0.0,
+    "notes": "Ledgerly assessment part 1: platform to BR seller ",
+    "metadata": {
+      "purpose": "assessment_part1_platform_to_br",
+      "source_payment_id": "pay_cxvGcm7NvjoCkV"
+    },
+    "origin_ledger_account_id": "ldgr_AZlILZx7NXGpQ",
+    "destination_ledger_account_id": "ldgr_LS8igbZK1GRg5",
+    "created_by_user": {
+      "id": "user_Q0IiqCqFWa8vo",
+      "name": "[name redacted]",
+      "username": "aneyman"
+    },
+    "origin": {
+      "typename": "Company",
+      "id": "biz_RlL9WP9TIBVXmr",
+      "route": "biz_RlL9WP9TIBVXmr",
+      "title": "ledgerly"
+    },
+    "destination": {
+      "typename": "Company",
+      "id": "biz_8dB7THK4woBs43",
+      "route": "biz_8dB7THK4woBs43",
+      "title": "Ledgerly Seller BR"
+    }
+  }
+}

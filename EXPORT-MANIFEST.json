@@ -14,7 +14,7 @@
       "path": ".gitignore",
       "bytes": 99,
       "sha256": "957eaa39f70f2406dca5068481fe1929a052064fdb97c96404f820773e6d8b70",
-      "source_sha256": "bba6090d0b48427325a952ca7212e73444a4e271a98cc1042d44f74443ae579a",
+      "source_sha256": "29f38518a40a8d6174793d8379cf2dd0c2bb24a8dcac9fa55a7938dbc82d81f3",
       "disposition": "adapted"
     },
     {
@@ -54,9 +54,9 @@
     },
     {
       "path": "apps/web/next.config.ts",
-      "bytes": 1258,
-      "sha256": "bba12324a410580ea7076dbf13f7a1ba07998002a0c6c72a30f9e13a34b44090",
-      "source_sha256": "886308af10731d60f42bec643fb14e3022a674dd0eb6b5a63f85ec702c206ee2",
+      "bytes": 1026,
+      "sha256": "444c5af7214c893993b48119309f62b2b1b3cc058069d7ef842f3eca88bfd402",
+      "source_sha256": "4c3f01794ed3edb90c7fb533a77f3d33ba4b628abc98f7da9deec7569be5472d",
       "disposition": "adapted"
     },
     {
@@ -211,6 +211,20 @@
       "bytes": 2215,
       "sha256": "9e69532d33abcb1878768fb2e7d2a3270b576730c87cff85d5ae0a72e5b44a9d",
       "source_sha256": "9e69532d33abcb1878768fb2e7d2a3270b576730c87cff85d5ae0a72e5b44a9d",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "apps/web/scripts/reconcile-format.ts",
+      "bytes": 6069,
+      "sha256": "76932ab9fd92bb1f71968ea8ff2933d83e8b5248fc18caf18d028a3748306653",
+      "source_sha256": "76932ab9fd92bb1f71968ea8ff2933d83e8b5248fc18caf18d028a3748306653",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "apps/web/scripts/reconcile.ts",
+      "bytes": 8431,
+      "sha256": "ea81e0ceef09779c32af557047184f81733214fc1960f139458b80f66797b51f",
+      "source_sha256": "ea81e0ceef09779c32af557047184f81733214fc1960f139458b80f66797b51f",
       "disposition": "unchanged"
     },
     {
@@ -420,28 +434,28 @@
       "path": "apps/web/src/app/(storefront)/handoff/engineering/page.tsx",
       "bytes": 35,
       "sha256": "ed1e1f74060b6ecdcb1b4bd6fc8cb85bb63e3d9305d17e8523d5f7a575cb2bde",
-      "source_sha256": "c458a15314d1cf9208ef907b3017196f2513035266f8b79b77d8b4ac0cd1a6e6",
+      "source_sha256": "391cddc19ec1eb5b763394c8f6759823b89541736b6d42bb1e3244adfd99cc70",
       "disposition": "adapted"
     },
     {
       "path": "apps/web/src/app/(storefront)/handoff/evidence/page.tsx",
       "bytes": 35,
       "sha256": "ed1e1f74060b6ecdcb1b4bd6fc8cb85bb63e3d9305d17e8523d5f7a575cb2bde",
-      "source_sha256": "c81100afbed8b685543bd4b5a6e9df471218e547dc6d323bbc64328f3321c332",
+      "source_sha256": "8125b73cfa6e85fda78478b71a224e0008ca65ff4c608b45fa5271a3736d0b13",
       "disposition": "adapted"
     },
     {
       "path": "apps/web/src/app/(storefront)/handoff/page.tsx",
       "bytes": 871,
       "sha256": "43f5c8e195088582429de5be05cd68e1232c45ad51d9764264939194ead4a2c6",
-      "source_sha256": "b8b7ae320a876df8673808c9c9ca492085281b8b34b395ad0ac1579f0eba8312",
+      "source_sha256": "bff2cc0bc86611f0d745b8831373439248672fa9bf5402793a34b329061b31ba",
       "disposition": "adapted"
     },
     {
       "path": "apps/web/src/app/(storefront)/handoff/scenarios/page.tsx",
       "bytes": 1504,
       "sha256": "21758a307d991a59695028d394d8d5242bf0ac304533ffbeb7794d48a4c80fde",
-      "source_sha256": "21cb9660bf24fd0a018ad9be1ae111072bde9f139847c168f405343643d0e6cf",
+      "source_sha256": "53409ea11ca67036256f010148463a06ae0385b93365172978536888506b28af",
       "disposition": "adapted"
     },
     {
@@ -2706,6 +2720,13 @@
       "disposition": "unchanged"
     },
     {
+      "path": "apps/web/test/scripts/reconcile-format.test.ts",
+      "bytes": 6937,
+      "sha256": "b3e4aa230b03d4d28ab52afe5001e8205f84a1fe6820f1f4072f49f7c76d1127",
+      "source_sha256": "b3e4aa230b03d4d28ab52afe5001e8205f84a1fe6820f1f4072f49f7c76d1127",
+      "disposition": "unchanged"
+    },
+    {
       "path": "apps/web/test/seller-onboarding-readback.test.ts",
       "bytes": 6933,
       "sha256": "c69ca3fac7e1588f34c5ec8b0ec2432bf7ec7ca1f386025528121f8acdb0fd11",
@@ -2804,10 +2825,31 @@
       "disposition": "unchanged"
     },
     {
+      "path": "docs/answers/README.md",
+      "bytes": 788,
+      "sha256": "01b5449793cef9a5af67267b236849212a74cdf7881e716ab8233ea040d9c955",
+      "source_sha256": "01b5449793cef9a5af67267b236849212a74cdf7881e716ab8233ea040d9c955",
+      "disposition": "unchanged"
+    },
+    {
       "path": "docs/answers/debug.md",
       "bytes": 1338,
       "sha256": "28c16035264004c016061cb3da78ebf42dc999122d99b646db257d77d3f1e200",
       "source_sha256": "28c16035264004c016061cb3da78ebf42dc999122d99b646db257d77d3f1e200",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/answers/dx-findings.md",
+      "bytes": 10702,
+      "sha256": "584ecdcaf21ea174e459e435a184ff1c225f31d4838695188e95df307a7a2f50",
+      "source_sha256": "584ecdcaf21ea174e459e435a184ff1c225f31d4838695188e95df307a7a2f50",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/answers/improvements.md",
+      "bytes": 5058,
+      "sha256": "0d9de7b4f5b502f6a19528d51ceb8ffafdcf0fb8f6ec8b9e5773408b5e7253f8",
+      "source_sha256": "0d9de7b4f5b502f6a19528d51ceb8ffafdcf0fb8f6ec8b9e5773408b5e7253f8",
       "disposition": "unchanged"
     },
     {
@@ -2846,11 +2888,2069 @@
       "disposition": "unchanged"
     },
     {
+      "path": "docs/lanes/final-closeout/README.md",
+      "bytes": 21276,
+      "sha256": "8f1620f6ee411043344718c649b38c65610763365dcbe49a88e91d1237299123",
+      "source_sha256": "8f1620f6ee411043344718c649b38c65610763365dcbe49a88e91d1237299123",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-cleanup/README.md",
+      "bytes": 10446,
+      "sha256": "a3ab9ba3c3c997d57c8fbde76599c2b39538af08f9bc7e94ffc1be1fcccfc8a3",
+      "source_sha256": "a3ab9ba3c3c997d57c8fbde76599c2b39538af08f9bc7e94ffc1be1fcccfc8a3",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-cleanup/biome.log",
+      "bytes": 13540,
+      "sha256": "25e964fc476a16a304fc2769496f446b7194d71bde46f1120fda46044c03f0b1",
+      "source_sha256": "25e964fc476a16a304fc2769496f446b7194d71bde46f1120fda46044c03f0b1",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-cleanup/build.log",
+      "bytes": 2894,
+      "sha256": "78d4e3b96042e4de43732447f9eae5e6bc878d798cd05590c4807aa549c61cf6",
+      "source_sha256": "78d4e3b96042e4de43732447f9eae5e6bc878d798cd05590c4807aa549c61cf6",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-cleanup/handoff-hrefs.txt",
+      "bytes": 3939,
+      "sha256": "8351d3f639fee0dbaed40b1f3b3c29d61677fd5f2ee94faab076f195e9ce3055",
+      "source_sha256": "8351d3f639fee0dbaed40b1f3b3c29d61677fd5f2ee94faab076f195e9ce3055",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-cleanup/handoff.html",
+      "bytes": 96837,
+      "sha256": "d2efc4179bbd3c1d448c377be4760b6c21d3d89622616203fe0d88f93e1f3a94",
+      "source_sha256": "d2efc4179bbd3c1d448c377be4760b6c21d3d89622616203fe0d88f93e1f3a94",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-cleanup/link-check.txt",
+      "bytes": 4816,
+      "sha256": "4284bfe57b89b010b464040a1d5d1be0460d5cd12e1b0657ac8f6abcaba8d3d6",
+      "source_sha256": "4284bfe57b89b010b464040a1d5d1be0460d5cd12e1b0657ac8f6abcaba8d3d6",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-cleanup/next-start.log",
+      "bytes": 877,
+      "sha256": "40b6fe363b89a8f8b985923b545d21f88d95c224896176a96ba937bfae0a7bb1",
+      "source_sha256": "40b6fe363b89a8f8b985923b545d21f88d95c224896176a96ba937bfae0a7bb1",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-cleanup/pnpm-install.log",
+      "bytes": 616,
+      "sha256": "d2cbe65d317367655e9361a026f03afe61dbede89470e2af60f8a1cc9eba7b42",
+      "source_sha256": "d2cbe65d317367655e9361a026f03afe61dbede89470e2af60f8a1cc9eba7b42",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-cleanup/result.json",
+      "bytes": 2598,
+      "sha256": "d584247b1b12ddb9f77b27d99fd603d6c98259b3be669f8eaa268ab6889bf09f",
+      "source_sha256": "d584247b1b12ddb9f77b27d99fd603d6c98259b3be669f8eaa268ab6889bf09f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-cleanup/touched-files.txt",
+      "bytes": 531,
+      "sha256": "149ea20f9a0080be6ee1d8683638bbb358130dda82116d4a06df94dbc0db7a08",
+      "source_sha256": "149ea20f9a0080be6ee1d8683638bbb358130dda82116d4a06df94dbc0db7a08",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-cleanup/typecheck.log",
+      "bytes": 597,
+      "sha256": "b8d13af4d892cb3727e555825bb770864744b9fc3173a0f40aeb08910c8d6bae",
+      "source_sha256": "b8d13af4d892cb3727e555825bb770864744b9fc3173a0f40aeb08910c8d6bae",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-cleanup/vitest.log",
+      "bytes": 282,
+      "sha256": "e3f4bdeff6c701ce34e5aec0b89a16aaedb4b49e047dba18719b89604490d719",
+      "source_sha256": "e3f4bdeff6c701ce34e5aec0b89a16aaedb4b49e047dba18719b89604490d719",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/README.md",
+      "bytes": 4286,
+      "sha256": "e3b1908f22d1018e0dea98425793849c8eada7136f8ceba3f68455bf75325fdc",
+      "source_sha256": "e3b1908f22d1018e0dea98425793849c8eada7136f8ceba3f68455bf75325fdc",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/biome-repo.log",
+      "bytes": 14055,
+      "sha256": "41e634b85448eae19b4a0c6afe5aaa3f9d004b0be7dbf233b0d7fc1be92d7350",
+      "source_sha256": "41e634b85448eae19b4a0c6afe5aaa3f9d004b0be7dbf233b0d7fc1be92d7350",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/mock-run.json",
+      "bytes": 4345,
+      "sha256": "5445d3b62cd7f2e36ff214c80b4a2a954ad679da00f2e24155145d3cda48f7f4",
+      "source_sha256": "5445d3b62cd7f2e36ff214c80b4a2a954ad679da00f2e24155145d3cda48f7f4",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/mock-run.json.stderr.txt",
+      "bytes": 44,
+      "sha256": "2f4bc12decdc734d2e2790609b1fdaf69b91842c5fdb27c5a15497e89b355958",
+      "source_sha256": "2f4bc12decdc734d2e2790609b1fdaf69b91842c5fdb27c5a15497e89b355958",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/mock-run.started.txt",
+      "bytes": 42,
+      "sha256": "63acf5617ffc2a1bbc7c71d98ffa6dfafabdca95f474bafad02634c05bf5d4cb",
+      "source_sha256": "63acf5617ffc2a1bbc7c71d98ffa6dfafabdca95f474bafad02634c05bf5d4cb",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/mock-run.stderr.txt",
+      "bytes": 37,
+      "sha256": "92e896e5ee5940b72f6b0f93ebe7f7facc4c88a008864a5e9892b07277df6f22",
+      "source_sha256": "92e896e5ee5940b72f6b0f93ebe7f7facc4c88a008864a5e9892b07277df6f22",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/mock-run.txt",
+      "bytes": 4275,
+      "sha256": "05165e43b569ccc67af1c0e015a43c26832cba2c475bb66d349359ecdcb795c2",
+      "source_sha256": "05165e43b569ccc67af1c0e015a43c26832cba2c475bb66d349359ecdcb795c2",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/sandbox-run.json",
+      "bytes": 29551,
+      "sha256": "0b5680221ecdf011d32e19c79b461eb502dd3823bc1d49cee598876d9eef95bd",
+      "source_sha256": "0b5680221ecdf011d32e19c79b461eb502dd3823bc1d49cee598876d9eef95bd",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/sandbox-run.json.stderr.txt",
+      "bytes": 153,
+      "sha256": "894e84c0c89fba90f3b4e2f6d8a4449d5f4ff0b79e98027e624057b1033f32d9",
+      "source_sha256": "894e84c0c89fba90f3b4e2f6d8a4449d5f4ff0b79e98027e624057b1033f32d9",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/sandbox-run.started.txt",
+      "bytes": 42,
+      "sha256": "6970e5200f1c474dac6fc18607ca96b2e6e19e0350219d3968298d06d05230cc",
+      "source_sha256": "6970e5200f1c474dac6fc18607ca96b2e6e19e0350219d3968298d06d05230cc",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/sandbox-run.stderr.txt",
+      "bytes": 146,
+      "sha256": "3a23596ba6bd2e94d9c855768807d74685715c0851c53044a7dd8798d0d1ecd7",
+      "source_sha256": "3a23596ba6bd2e94d9c855768807d74685715c0851c53044a7dd8798d0d1ecd7",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/sandbox-run.txt",
+      "bytes": 28121,
+      "sha256": "9c7e61fcfa4472341d1246fa9cb598ca3acc511421db53223d835e6d72d19b9d",
+      "source_sha256": "9c7e61fcfa4472341d1246fa9cb598ca3acc511421db53223d835e6d72d19b9d",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/summary.json",
+      "bytes": 4181,
+      "sha256": "07a6fc8993e0be7e8b2bf51d512ef082b81a640116719309d3386bbf039ba10e",
+      "source_sha256": "07a6fc8993e0be7e8b2bf51d512ef082b81a640116719309d3386bbf039ba10e",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/typecheck-web.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/typecheck.log",
+      "bytes": 580,
+      "sha256": "56017c526cf0c621eec22c3ae7f0d80a89e6b38e7528561365d1661cfbe908af",
+      "source_sha256": "56017c526cf0c621eec22c3ae7f0d80a89e6b38e7528561365d1661cfbe908af",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/vitest-core.log",
+      "bytes": 268,
+      "sha256": "0002f7faaa9fd9008fbdab1519e3fadbbdbbce638f58bbe49f3bbc704dfc6dc5",
+      "source_sha256": "0002f7faaa9fd9008fbdab1519e3fadbbdbbce638f58bbe49f3bbc704dfc6dc5",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/vitest-db.log",
+      "bytes": 268,
+      "sha256": "84b10e5f44a34cd2a09508bd76210364354c94c1e7a9df7527bd1e71b210079b",
+      "source_sha256": "84b10e5f44a34cd2a09508bd76210364354c94c1e7a9df7527bd1e71b210079b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/vitest-web-reconcile-format.log",
+      "bytes": 255,
+      "sha256": "e8601917ff957176f83b3abcd036257524f006a0df0a687599582f7da7f1965a",
+      "source_sha256": "e8601917ff957176f83b3abcd036257524f006a0df0a687599582f7da7f1965a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/code-reconcile/vitest-whop.log",
+      "bytes": 282,
+      "sha256": "8d585065b6ceee5b794ef7ff0cf8645a31df1121162d0db8e81b4cfab40cff46",
+      "source_sha256": "8d585065b6ceee5b794ef7ff0cf8645a31df1121162d0db8e81b4cfab40cff46",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/integration/r1-build.log",
+      "bytes": 2909,
+      "sha256": "6875e93a21147effb303e6790774e334a9c4906d871cf0a2b1158a27e4321c37",
+      "source_sha256": "6875e93a21147effb303e6790774e334a9c4906d871cf0a2b1158a27e4321c37",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/integration/r1-install.log",
+      "bytes": 192,
+      "sha256": "225990662f4574311c128b44b479b4942ec4514a71da1a45485fb0140377235b",
+      "source_sha256": "225990662f4574311c128b44b479b4942ec4514a71da1a45485fb0140377235b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/integration/r1-lint.log",
+      "bytes": 13268,
+      "sha256": "683ef09270d48964c1ca8cc1b30a04ca48008cf1be319d6c2e423a5e961d22cb",
+      "source_sha256": "683ef09270d48964c1ca8cc1b30a04ca48008cf1be319d6c2e423a5e961d22cb",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/integration/r1-test.log",
+      "bytes": 3127,
+      "sha256": "4a6ca91393825fb95d72f483ebfe272008fbb4f7ac38dc8d6cdf9f22d2cd181f",
+      "source_sha256": "4a6ca91393825fb95d72f483ebfe272008fbb4f7ac38dc8d6cdf9f22d2cd181f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/integration/r1-typecheck.log",
+      "bytes": 580,
+      "sha256": "807680824f3e5b9f52e1929d0dd0e2a930161eb756fcb2b156296fd35a88a18b",
+      "source_sha256": "807680824f3e5b9f52e1929d0dd0e2a930161eb756fcb2b156296fd35a88a18b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/integration/r1-verify-docs.log",
+      "bytes": 450,
+      "sha256": "fc093d84a669b68430e717180845e6fc2167c1be5122980caa64f419d9096282",
+      "source_sha256": "fc093d84a669b68430e717180845e6fc2167c1be5122980caa64f419d9096282",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/integration/r2-build.log",
+      "bytes": 2911,
+      "sha256": "c624172f544f4e68dae009fae3854460d79d3cae59a2a1a23ab527cbee35057d",
+      "source_sha256": "c624172f544f4e68dae009fae3854460d79d3cae59a2a1a23ab527cbee35057d",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/integration/r2-install.log",
+      "bytes": 175,
+      "sha256": "0820c81edb31e2d89d30518d057747cce7bfeee8e3c6fd450445088b2241d0e7",
+      "source_sha256": "0820c81edb31e2d89d30518d057747cce7bfeee8e3c6fd450445088b2241d0e7",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/integration/r2-lint.log",
+      "bytes": 13268,
+      "sha256": "fc2e3c54fdd0913bf2b29e17ecaac4239c1c5b3c81455ea32aba8dc5d0356001",
+      "source_sha256": "fc2e3c54fdd0913bf2b29e17ecaac4239c1c5b3c81455ea32aba8dc5d0356001",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/integration/r2-test.log",
+      "bytes": 3127,
+      "sha256": "aeeefa9c09c871fdb6257b3eeb5ef730b2f6490807415c921da6006b8909ae53",
+      "source_sha256": "aeeefa9c09c871fdb6257b3eeb5ef730b2f6490807415c921da6006b8909ae53",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/integration/r2-typecheck.log",
+      "bytes": 580,
+      "sha256": "6fc4a889491359fb18db03dc3cf19ced4fd0d66d45828744d6bd2d3d4fdff3e7",
+      "source_sha256": "6fc4a889491359fb18db03dc3cf19ced4fd0d66d45828744d6bd2d3d4fdff3e7",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/integration/r2-verify-docs.log",
+      "bytes": 450,
+      "sha256": "fc093d84a669b68430e717180845e6fc2167c1be5122980caa64f419d9096282",
+      "source_sha256": "fc093d84a669b68430e717180845e6fc2167c1be5122980caa64f419d9096282",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/13-de-key-all-categories.json",
+      "bytes": 5130,
+      "sha256": "24a3d39dcc6afee8e33d68c7153a1b4a097dae2e80965f1e40d8ded447fb0da5",
+      "source_sha256": "24a3d39dcc6afee8e33d68c7153a1b4a097dae2e80965f1e40d8ded447fb0da5",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/15-ledgerly-key-all-categories.json",
+      "bytes": 4848,
+      "sha256": "93cdc6e68468a71334c50927395edead79362787ffb83c65480525a6d003868b",
+      "source_sha256": "93cdc6e68468a71334c50927395edead79362787ffb83c65480525a6d003868b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/README.md",
+      "bytes": 5234,
+      "sha256": "bfe2198cac63397cccaab057894eb9185175d6f4734faa6fd9781d304777ed2b",
+      "source_sha256": "bfe2198cac63397cccaab057894eb9185175d6f4734faa6fd9781d304777ed2b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/keys-evidence.json",
+      "bytes": 9305,
+      "sha256": "0a65bb5afcf305b82548868776a422d3da64aef35292c3071935c6b0669448ab",
+      "source_sha256": "0a65bb5afcf305b82548868776a422d3da64aef35292c3071935c6b0669448ab",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/_summary.json",
+      "bytes": 284062,
+      "sha256": "b356bf50e7be1b7bed3784a65a7e17b98f621c4ef014e9ab378edde4ccdff4f9",
+      "source_sha256": "b356bf50e7be1b7bed3784a65a7e17b98f621c4ef014e9ab378edde4ccdff4f9",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/create-access-token.json",
+      "bytes": 560,
+      "sha256": "1e49645aefab1d7f709b36344c1861426e73be3abfa97675f6fc4b0a64f85b2a",
+      "source_sha256": "1e49645aefab1d7f709b36344c1861426e73be3abfa97675f6fc4b0a64f85b2a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/create-account-link-onboarding-de.json",
+      "bytes": 699,
+      "sha256": "fb29ade47af6b10651d42d204936e09ed7f938c4c247686eebc6fcef73b32621",
+      "source_sha256": "fb29ade47af6b10651d42d204936e09ed7f938c4c247686eebc6fcef73b32621",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/create-account-link-payouts-portal-us.json",
+      "bytes": 660,
+      "sha256": "0bfc507d426a4b8cd62369d181bccf65b79cd13d6b8c0bf19138187f3ac80c41",
+      "source_sha256": "0bfc507d426a4b8cd62369d181bccf65b79cd13d6b8c0bf19138187f3ac80c41",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/create-account-probe.json",
+      "bytes": 3050,
+      "sha256": "12644fc925b7e6a7a42b9598de007847a79e17bb611b64cf36128a86f87c1832",
+      "source_sha256": "12644fc925b7e6a7a42b9598de007847a79e17bb611b64cf36128a86f87c1832",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/create-checkout-configuration.json",
+      "bytes": 698,
+      "sha256": "64400e3a73be471c1ddda124a45249c00b1d26b1979224391e87fa38ba67dcab",
+      "source_sha256": "64400e3a73be471c1ddda124a45249c00b1d26b1979224391e87fa38ba67dcab",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/create-fee-markup-de.json",
+      "bytes": 559,
+      "sha256": "67b5fbb49927e1c5a63c0f1df2d1006d6c60c9b129fcd1c8e07ba370adbc607a",
+      "source_sha256": "67b5fbb49927e1c5a63c0f1df2d1006d6c60c9b129fcd1c8e07ba370adbc607a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/create-transfer-br.json",
+      "bytes": 586,
+      "sha256": "a606e2ee9f46cf554336e294bbcb36b2ca7ef9da6e656488e0ac3e267d999a73",
+      "source_sha256": "a606e2ee9f46cf554336e294bbcb36b2ca7ef9da6e656488e0ac3e267d999a73",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/get-account-br.json",
+      "bytes": 4811,
+      "sha256": "afdbef37ad2532cff8f61251d07e3bcc688f11fabd8147fcc447c3080d6b3d58",
+      "source_sha256": "afdbef37ad2532cff8f61251d07e3bcc688f11fabd8147fcc447c3080d6b3d58",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/get-account-de.json",
+      "bytes": 4936,
+      "sha256": "3ea22c0baaaf094005ec85501400198d0cedc1b3c9bd924ed0af30ad899e16d6",
+      "source_sha256": "3ea22c0baaaf094005ec85501400198d0cedc1b3c9bd924ed0af30ad899e16d6",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/get-account-platform.json",
+      "bytes": 8901,
+      "sha256": "d0050b0321e400f2b4ccf7c0d204fd7d5d3f37147ecdeb5924273cd6ba6f9592",
+      "source_sha256": "d0050b0321e400f2b4ccf7c0d204fd7d5d3f37147ecdeb5924273cd6ba6f9592",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/get-account-us.json",
+      "bytes": 5181,
+      "sha256": "dd6e2e38578c60910d35d7701ee278aa9ce1a2857a82c04e66f524dbb0ebc567",
+      "source_sha256": "dd6e2e38578c60910d35d7701ee278aa9ce1a2857a82c04e66f524dbb0ebc567",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/get-ledger-account-platform.json",
+      "bytes": 1515,
+      "sha256": "7c848de7c91fecb74413aa550f225d9ae4e73b20984b983d55980566ab99f5bb",
+      "source_sha256": "7c848de7c91fecb74413aa550f225d9ae4e73b20984b983d55980566ab99f5bb",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/get-payment.json",
+      "bytes": 5086,
+      "sha256": "0ddc3bc19198f2fcc254052218f77bdb083b9304d468a817473322efba163580",
+      "source_sha256": "0ddc3bc19198f2fcc254052218f77bdb083b9304d468a817473322efba163580",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/get-webhook.json",
+      "bytes": 3420,
+      "sha256": "b860d3d1c5a65db4701fb8b3079d1ebae9799d7613671ed4a1e8fc175c2b9e5c",
+      "source_sha256": "b860d3d1c5a65db4701fb8b3079d1ebae9799d7613671ed4a1e8fc175c2b9e5c",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-api-key-permissions.json",
+      "bytes": 89382,
+      "sha256": "96cce87f53a5439fb70ed78d7f247129a692ccb05892183f129c5d7a34320a96",
+      "source_sha256": "96cce87f53a5439fb70ed78d7f247129a692ccb05892183f129c5d7a34320a96",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-disputes.json",
+      "bytes": 372,
+      "sha256": "9bf10b2f3dadca35f5f2afa2aaef31684a20b6dc1e3cc62a3558ab11824a4ad4",
+      "source_sha256": "9bf10b2f3dadca35f5f2afa2aaef31684a20b6dc1e3cc62a3558ab11824a4ad4",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-fee-markups.json",
+      "bytes": 331,
+      "sha256": "c96be5f53278f0b03879f27b9bc59df2b32661cb009af4e9b5e391f60e39a2b1",
+      "source_sha256": "c96be5f53278f0b03879f27b9bc59df2b32661cb009af4e9b5e391f60e39a2b1",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-financial-activity-platform.json",
+      "bytes": 21794,
+      "sha256": "394a293d7cc7899d43dbcdd5ad72354dd4deb4cda558edc7ff7453c67f12228d",
+      "source_sha256": "394a293d7cc7899d43dbcdd5ad72354dd4deb4cda558edc7ff7453c67f12228d",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-financial-activity.json",
+      "bytes": 41863,
+      "sha256": "4b3d00bae164050d2b4f066362f2146f164bd5a053af213da7192a86eb4e0618",
+      "source_sha256": "4b3d00bae164050d2b4f066362f2146f164bd5a053af213da7192a86eb4e0618",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-payment-fees.json",
+      "bytes": 3514,
+      "sha256": "486a17ef186d91e6db3b9961f7109191c553c3787e949dfa50a7bb053ba1ba4d",
+      "source_sha256": "486a17ef186d91e6db3b9961f7109191c553c3787e949dfa50a7bb053ba1ba4d",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-payments.json",
+      "bytes": 33079,
+      "sha256": "65f34388cfa85f7d8cfd076b320adef777fae0e3011cc1203d89216fda166b0a",
+      "source_sha256": "65f34388cfa85f7d8cfd076b320adef777fae0e3011cc1203d89216fda166b0a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-payout-methods.json",
+      "bytes": 405,
+      "sha256": "bb7640192aff8d47f9909adf22df363cff0fa93f6d32e1248a0516e2f2f7dc91",
+      "source_sha256": "bb7640192aff8d47f9909adf22df363cff0fa93f6d32e1248a0516e2f2f7dc91",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-payouts.json",
+      "bytes": 391,
+      "sha256": "cae684b5f7b2fcc308dcbb8f99e7ce5b6cad0dcd9b10e283e72020d5ab7775e5",
+      "source_sha256": "cae684b5f7b2fcc308dcbb8f99e7ce5b6cad0dcd9b10e283e72020d5ab7775e5",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-refunds.json",
+      "bytes": 391,
+      "sha256": "878ca7879b317e6f1f73d1615ce882bc26da8f6ffc94ea2ab4642c155a04afda",
+      "source_sha256": "878ca7879b317e6f1f73d1615ce882bc26da8f6ffc94ea2ab4642c155a04afda",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-supported-payout-methods.json",
+      "bytes": 426,
+      "sha256": "216757ee0a9e870de22d5a3e430fe45b7f641588b7138cb2d8e9f642c0e4b75e",
+      "source_sha256": "216757ee0a9e870de22d5a3e430fe45b7f641588b7138cb2d8e9f642c0e4b75e",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-transfer-recipients.json",
+      "bytes": 402,
+      "sha256": "3a81f7fddd858e30b6344d7eae73eccf778f9d471f22861f13b00facf05ba8f3",
+      "source_sha256": "3a81f7fddd858e30b6344d7eae73eccf778f9d471f22861f13b00facf05ba8f3",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-transfers-destination.json",
+      "bytes": 411,
+      "sha256": "afed698f022a4f771577e286e48e62962fee24dd2167d86affbc242b67c948f6",
+      "source_sha256": "afed698f022a4f771577e286e48e62962fee24dd2167d86affbc242b67c948f6",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-transfers-origin.json",
+      "bytes": 401,
+      "sha256": "33b2ff699d7d65086399938facdee196870a5bc0c375a954dfad13b27fd73104",
+      "source_sha256": "33b2ff699d7d65086399938facdee196870a5bc0c375a954dfad13b27fd73104",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-webhook-deliveries.json",
+      "bytes": 30650,
+      "sha256": "b2277a0b1b274b919bfaae933bc1c3f31617edadfe4cf2d893b879e150744c43",
+      "source_sha256": "b2277a0b1b274b919bfaae933bc1c3f31617edadfe4cf2d893b879e150744c43",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/list-webhooks.json",
+      "bytes": 1246,
+      "sha256": "64ffae8da8a55ec8328560a25b65383b87b4df06149c8b8b0278580ff5f7fe0d",
+      "source_sha256": "64ffae8da8a55ec8328560a25b65383b87b4df06149c8b8b0278580ff5f7fe0d",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-probes/update-account-probe.json",
+      "bytes": 2795,
+      "sha256": "40eff12208ca3a9c9d86b260e86c6541ed28e364d302325fc531c844c4756a8d",
+      "source_sha256": "40eff12208ca3a9c9d86b260e86c6541ed28e364d302325fc531c844c4756a8d",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/keys/scoped-key-scopes.md",
+      "bytes": 6850,
+      "sha256": "2a4e2db510aa7796406cd9a38fa1bd1800a98d2bd9f084f49d9b786a2162d90d",
+      "source_sha256": "2a4e2db510aa7796406cd9a38fa1bd1800a98d2bd9f084f49d9b786a2162d90d",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/01-balance-before-br.json",
+      "bytes": 1059,
+      "sha256": "4586da328b4617eb99345f49e040f6b3ecec689a331ce81a1bdffcb118842646",
+      "source_sha256": "4586da328b4617eb99345f49e040f6b3ecec689a331ce81a1bdffcb118842646",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/01-balance-before-platform.json",
+      "bytes": 1899,
+      "sha256": "f035f4b9e12ad9a20eb75b4b73dca294b2d036c30d01797046224c72b2702bf6",
+      "source_sha256": "f035f4b9e12ad9a20eb75b4b73dca294b2d036c30d01797046224c72b2702bf6",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/01-balance-before-us.json",
+      "bytes": 1202,
+      "sha256": "d33dee4d0229a151691a2ffb8a0062b283da6d99e9d72bef1e42f91f0c46ecfb",
+      "source_sha256": "d33dee4d0229a151691a2ffb8a0062b283da6d99e9d72bef1e42f91f0c46ecfb",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/02-activity-br-feed.json",
+      "bytes": 770,
+      "sha256": "fad28bfdeeb91be178d6604a62c14b9e3f4a4254b9b1d8d32c6880cc4e38cc39",
+      "source_sha256": "fad28bfdeeb91be178d6604a62c14b9e3f4a4254b9b1d8d32c6880cc4e38cc39",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/02-activity-platform-direct-payment.json",
+      "bytes": 801,
+      "sha256": "fea2f479e29a8fd0139fad902fc4ce27806fe2a10aed7f4e85e7717abf785720",
+      "source_sha256": "fea2f479e29a8fd0139fad902fc4ce27806fe2a10aed7f4e85e7717abf785720",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/02-activity-platform-feed.json",
+      "bytes": 43006,
+      "sha256": "8dd5e6ad0fb8e2e88208a03f171c81b59cae34792d626529e6ce7e3bdff0500a",
+      "source_sha256": "8dd5e6ad0fb8e2e88208a03f171c81b59cae34792d626529e6ce7e3bdff0500a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/02-activity-us-direct-payment.json",
+      "bytes": 801,
+      "sha256": "fd849b0fd20e2a28b6dd1e31bc79f588a4541532995dce7983fab288893310e8",
+      "source_sha256": "fd849b0fd20e2a28b6dd1e31bc79f588a4541532995dce7983fab288893310e8",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/02-activity-us-feed.json",
+      "bytes": 43187,
+      "sha256": "5d1a44064f1a3a7efd7cc1bc0fbc456a7fb6e758362120df4a534e6b3d181098",
+      "source_sha256": "5d1a44064f1a3a7efd7cc1bc0fbc456a7fb6e758362120df4a534e6b3d181098",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/03-platform-activity-by-apfee.json",
+      "bytes": 801,
+      "sha256": "8034dad4acd16b19d38a6f9f8832f84c66e7cad050b62c57f2e8f55f850a708c",
+      "source_sha256": "8034dad4acd16b19d38a6f9f8832f84c66e7cad050b62c57f2e8f55f850a708c",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/03-platform-application-fee-payout-rows.json",
+      "bytes": 22693,
+      "sha256": "46d65863781aca83240d3f161fd277ddfb2489156dd43d4f69e132af9db006aa",
+      "source_sha256": "46d65863781aca83240d3f161fd277ddfb2489156dd43d4f69e132af9db006aa",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/03-us-application-fee-and-gross-rows.json",
+      "bytes": 26994,
+      "sha256": "dc887cd9a666f59d788581da9c877cb81f02278695a748d37a0190a165800928",
+      "source_sha256": "dc887cd9a666f59d788581da9c877cb81f02278695a748d37a0190a165800928",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/04-payment-methods-platform-account-id.json",
+      "bytes": 767,
+      "sha256": "9078b75fc8c8cd4b750e95c13ec36d5ad1f6d80d24005c134a1933d3eb3452c7",
+      "source_sha256": "9078b75fc8c8cd4b750e95c13ec36d5ad1f6d80d24005c134a1933d3eb3452c7",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/04-payment-methods-platform.json",
+      "bytes": 767,
+      "sha256": "49146d66587d935d725f2422ff10eb365776dc3bf60a93845333fd4a3488e7aa",
+      "source_sha256": "49146d66587d935d725f2422ff10eb365776dc3bf60a93845333fd4a3488e7aa",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/05-direct-payment-before-refund.json",
+      "bytes": 5449,
+      "sha256": "ee825a8347dafbcc7a31c652aac2738c89a809cb38c4b4301061662b0b6c65d0",
+      "source_sha256": "ee825a8347dafbcc7a31c652aac2738c89a809cb38c4b4301061662b0b6c65d0",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/05-platform-payment-readback.json",
+      "bytes": 5449,
+      "sha256": "f16e9dce6b500c53e8b301b2d0aa89e8ec386ffeaf79a3d4e775e3952a574bd5",
+      "source_sha256": "f16e9dce6b500c53e8b301b2d0aa89e8ec386ffeaf79a3d4e775e3952a574bd5",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/06-production-db-eligible-orders.txt",
+      "bytes": 985,
+      "sha256": "437b1406c1deb0807ca24ac84d271722528b282d6ffa7aa22409d49177f1296f",
+      "source_sha256": "437b1406c1deb0807ca24ac84d271722528b282d6ffa7aa22409d49177f1296f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/06-production-db-sellers.txt",
+      "bytes": 177,
+      "sha256": "8cef8c0a3c78c3d264de5367a29e9ab91632c4be4f4dc7a44e1a6357f799d8d2",
+      "source_sha256": "8cef8c0a3c78c3d264de5367a29e9ab91632c4be4f4dc7a44e1a6357f799d8d2",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/07-production-db-transfer-failure-events.txt",
+      "bytes": 4,
+      "sha256": "ea9929b54aa8dfc21ceaf1351c394f058a724787c04939c844981e2e89958578",
+      "source_sha256": "ea9929b54aa8dfc21ceaf1351c394f058a724787c04939c844981e2e89958578",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/07-sweep-probe.json",
+      "bytes": 723,
+      "sha256": "8233c6aa79cae2c7ebb731516212ececaa05b0ba357a43d5745f32d79168ce4f",
+      "source_sha256": "8233c6aa79cae2c7ebb731516212ececaa05b0ba357a43d5745f32d79168ce4f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/08-topup-api-attempt-1.json",
+      "bytes": 834,
+      "sha256": "c8f8481738d3ff0cbfc1d9eec98d5b1dffef57cbb20f1fb025bf64969c0b47ad",
+      "source_sha256": "c8f8481738d3ff0cbfc1d9eec98d5b1dffef57cbb20f1fb025bf64969c0b47ad",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/09-transfer-attempt-1-zero-balance.json",
+      "bytes": 1230,
+      "sha256": "b7b72b829bc7e037dd8b0228874748be13faff7d425ac4d8bb7e6309d4c6288a",
+      "source_sha256": "b7b72b829bc7e037dd8b0228874748be13faff7d425ac4d8bb7e6309d4c6288a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/10-refund-attempt-1.json",
+      "bytes": 5509,
+      "sha256": "07bf33d0e8fe1829a33eef75ac1e3479ac5ebeaebcc73626e5bd4666377246d9",
+      "source_sha256": "07bf33d0e8fe1829a33eef75ac1e3479ac5ebeaebcc73626e5bd4666377246d9",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/11-activity-platform-after-refund.json",
+      "bytes": 817,
+      "sha256": "529d67634081a1fb865158b15e5127ae588a05fcf16a3b3d147462d709c9128f",
+      "source_sha256": "529d67634081a1fb865158b15e5127ae588a05fcf16a3b3d147462d709c9128f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/11-activity-us-after-refund.json",
+      "bytes": 2774,
+      "sha256": "7dbebb594efe99d241988cf67a89b2a0df102b57268bce26efd084e65bf15ddf",
+      "source_sha256": "7dbebb594efe99d241988cf67a89b2a0df102b57268bce26efd084e65bf15ddf",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/11-direct-payment-after-refund.json",
+      "bytes": 5472,
+      "sha256": "9b0e54a095b470cb9806267b829c6f9949f09e8e70583100cebe9b67d24e2c32",
+      "source_sha256": "9b0e54a095b470cb9806267b829c6f9949f09e8e70583100cebe9b67d24e2c32",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/11-direct-payment-fees-after-refund.json",
+      "bytes": 3880,
+      "sha256": "dd52579815c542382d9dafe9016ead2eaa04f4f79d5d3825b6f080a167020c39",
+      "source_sha256": "dd52579815c542382d9dafe9016ead2eaa04f4f79d5d3825b6f080a167020c39",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/11-refund-object.json",
+      "bytes": 1366,
+      "sha256": "73690e2882e228792f58cccbe14ce53bd246e5f8332565138f156069b857cd93",
+      "source_sha256": "73690e2882e228792f58cccbe14ce53bd246e5f8332565138f156069b857cd93",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/11-refunds-list-for-payment.json",
+      "bytes": 759,
+      "sha256": "e8ab54200c1e68a154982ebb5d2f8a8d399116bb5fe0182b3108c3a659f90c88",
+      "source_sha256": "e8ab54200c1e68a154982ebb5d2f8a8d399116bb5fe0182b3108c3a659f90c88",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/11-webhook-deliveries-after-refund.json",
+      "bytes": 196392,
+      "sha256": "f3ed1ad53c60e9682468271990f62c7cbabb31e4eededbba62707c60ec4f9695",
+      "source_sha256": "f3ed1ad53c60e9682468271990f62c7cbabb31e4eededbba62707c60ec4f9695",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/12-dashboard-deposit-dialog-500.json",
+      "bytes": 5431,
+      "sha256": "068ac52087b7dcb52d988dbbb27233f1de97b47d84bf36db3adced367738aa59",
+      "source_sha256": "068ac52087b7dcb52d988dbbb27233f1de97b47d84bf36db3adced367738aa59",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/13-activity-platform-after-refund-recheck.json",
+      "bytes": 817,
+      "sha256": "b8ea638e53c6964fbb3fdbc478ca39fd279f6e6f79795519b0a1e2a4f322077e",
+      "source_sha256": "b8ea638e53c6964fbb3fdbc478ca39fd279f6e6f79795519b0a1e2a4f322077e",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/13-balance-platform-after-refund.json",
+      "bytes": 1899,
+      "sha256": "e40366df0dc6cfd6e2eddf07554f4061b2ba5beb98ec3fb4a2f6d00d8716433e",
+      "source_sha256": "e40366df0dc6cfd6e2eddf07554f4061b2ba5beb98ec3fb4a2f6d00d8716433e",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/13-balance-us-after-refund.json",
+      "bytes": 1204,
+      "sha256": "db7d2eb2dfdadc7985df7bbdf9dafc191552493f0a9d1a12244f1057d72c6dcb",
+      "source_sha256": "db7d2eb2dfdadc7985df7bbdf9dafc191552493f0a9d1a12244f1057d72c6dcb",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/14-user-ledger-probe.json",
+      "bytes": 715,
+      "sha256": "9227ec66dce6a0b009c6743226ec1a21274063aada6e26b3353546950c5e8f54",
+      "source_sha256": "9227ec66dce6a0b009c6743226ec1a21274063aada6e26b3353546950c5e8f54",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/15-setup-checkout-config.json",
+      "bytes": 1450,
+      "sha256": "3ebf35b61f767f9f3965fd400d104bfeb3e4529d5072b46f4e5437500e475429",
+      "source_sha256": "3ebf35b61f767f9f3965fd400d104bfeb3e4529d5072b46f4e5437500e475429",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/16-payment-methods-platform-after-setup.json",
+      "bytes": 767,
+      "sha256": "acc7c76f77d6d87f32382fb0559fcfd1e80d88baeccc4b8a0adff91541d07a99",
+      "source_sha256": "acc7c76f77d6d87f32382fb0559fcfd1e80d88baeccc4b8a0adff91541d07a99",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/16-setup-intent.json",
+      "bytes": 1709,
+      "sha256": "81b16ca0c0a7967d2e83820282f9af2ee2d3027b60f0656f3578bfce88b80051",
+      "source_sha256": "81b16ca0c0a7967d2e83820282f9af2ee2d3027b60f0656f3578bfce88b80051",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/17-topup-api-attempt-2.json",
+      "bytes": 834,
+      "sha256": "31b9bcc1875a4845200560560f0f61ea3895280bbc5e2bc808532d82f9e3e766",
+      "source_sha256": "31b9bcc1875a4845200560560f0f61ea3895280bbc5e2bc808532d82f9e3e766",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/17-topup-api-attempt-3-company-id.json",
+      "bytes": 834,
+      "sha256": "880a3aef04ba38aaecd71ac649f80c8c9424c3fee68bd63bef5e24095064d979",
+      "source_sha256": "880a3aef04ba38aaecd71ac649f80c8c9424c3fee68bd63bef5e24095064d979",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/18-balance-platform-poll.json",
+      "bytes": 1899,
+      "sha256": "58b456092f9adec3825acf90e729ca39a594bb5d149b753ae7d3c6b9e20dca7e",
+      "source_sha256": "58b456092f9adec3825acf90e729ca39a594bb5d149b753ae7d3c6b9e20dca7e",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/19-webhook-get.json",
+      "bytes": 3792,
+      "sha256": "5f62352798e4bfa177f36021b01f89796f66b59db11c608d28d951a206ad4c7a",
+      "source_sha256": "5f62352798e4bfa177f36021b01f89796f66b59db11c608d28d951a206ad4c7a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/20-account-br-assessment.json",
+      "bytes": 5114,
+      "sha256": "a18ae114a1e5ad000d6e2a96480a32e809f1dd4491cb7cf8a95edeefd8283387",
+      "source_sha256": "a18ae114a1e5ad000d6e2a96480a32e809f1dd4491cb7cf8a95edeefd8283387",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/20-account-br-storefront-sel-onda.json",
+      "bytes": 5111,
+      "sha256": "708172b0a192f2a3a1fa31aeedc2b728d70e79cd5fab8420c2ac21957ad8b61e",
+      "source_sha256": "708172b0a192f2a3a1fa31aeedc2b728d70e79cd5fab8420c2ac21957ad8b61e",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/21-activity-platform-feed-all-limit50.json",
+      "bytes": 86273,
+      "sha256": "446391daded12ea33c8cdd5c938a0141f6eb3265f4d20d0a74929acbb45fe5ff",
+      "source_sha256": "446391daded12ea33c8cdd5c938a0141f6eb3265f4d20d0a74929acbb45fe5ff",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/21-activity-platform-feed-limit100-empty.json",
+      "bytes": 793,
+      "sha256": "5153856d001ea790d0dad374028d6b2b135d7f6e1d7cd99c1860f750a91c6675",
+      "source_sha256": "5153856d001ea790d0dad374028d6b2b135d7f6e1d7cd99c1860f750a91c6675",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/21-activity-platform-feed-page2.json",
+      "bytes": 42781,
+      "sha256": "c33cce7ca143d32af5ef6bd7f3f0cc86117d55631c9041c2cdf60f03efe5a3c5",
+      "source_sha256": "c33cce7ca143d32af5ef6bd7f3f0cc86117d55631c9041c2cdf60f03efe5a3c5",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/21-activity-platform-feed-page3.json",
+      "bytes": 3037,
+      "sha256": "5f3e26e769fa3b56f7fc27f0282235888d69878ac28a5823371c702b90f6a107",
+      "source_sha256": "5f3e26e769fa3b56f7fc27f0282235888d69878ac28a5823371c702b90f6a107",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/22-activity-platform-available-2026-09-10-limit100-empty.json",
+      "bytes": 848,
+      "sha256": "187e48afc1335ee2ec65b7c974d7767a77fa0ac328381c82e18cedbb63ff48a7",
+      "source_sha256": "187e48afc1335ee2ec65b7c974d7767a77fa0ac328381c82e18cedbb63ff48a7",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/22-activity-platform-available-2026-09-10.json",
+      "bytes": 847,
+      "sha256": "3d271e82e27332de6474296bbd7677d57c954a08fbcc94007728ce7e6cdf94bf",
+      "source_sha256": "3d271e82e27332de6474296bbd7677d57c954a08fbcc94007728ce7e6cdf94bf",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/22-activity-platform-available-2026-09-11-limit100-empty.json",
+      "bytes": 848,
+      "sha256": "bdf4df016b898f0449244ac55990eb95b8a3893037e25ac8e5067aa95ce9b714",
+      "source_sha256": "bdf4df016b898f0449244ac55990eb95b8a3893037e25ac8e5067aa95ce9b714",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/22-activity-platform-available-2026-09-11.json",
+      "bytes": 847,
+      "sha256": "11e1b5be5497e9bad96e50d0d460b5663f5c1d7f721e99b3f86485a095249893",
+      "source_sha256": "11e1b5be5497e9bad96e50d0d460b5663f5c1d7f721e99b3f86485a095249893",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/23-platform-settlement-summary.json",
+      "bytes": 17281,
+      "sha256": "42c18d3bf68c6d95dc612961e205d41470d24f39e685717d16dd006f38afde97",
+      "source_sha256": "42c18d3bf68c6d95dc612961e205d41470d24f39e685717d16dd006f38afde97",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/23-refunds-list-for-account.json",
+      "bytes": 1730,
+      "sha256": "eedc7ebf889a3397e131cb55d19bf2994f88b30f11988e66c42e45831b4e2fd7",
+      "source_sha256": "eedc7ebf889a3397e131cb55d19bf2994f88b30f11988e66c42e45831b4e2fd7",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/23-refunds-list-for-payment-recheck.json",
+      "bytes": 759,
+      "sha256": "0b47de6ad14e5c90090888a554c125ec4f48ed61114717c11ddcb74f5be2b01a",
+      "source_sha256": "0b47de6ad14e5c90090888a554c125ec4f48ed61114717c11ddcb74f5be2b01a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/24-activity-platform-after-settlement.json",
+      "bytes": 826,
+      "sha256": "c0886732c97938e67689f6bd544b07c5351cb15b249e01e9297a1c331421c7f3",
+      "source_sha256": "c0886732c97938e67689f6bd544b07c5351cb15b249e01e9297a1c331421c7f3",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/24-balance-br-after-settlement.json",
+      "bytes": 1059,
+      "sha256": "58bb269a11cdf956e5bd1454afa2957e324f4d3a53aeefe85c49f61879a9fe53",
+      "source_sha256": "58bb269a11cdf956e5bd1454afa2957e324f4d3a53aeefe85c49f61879a9fe53",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/24-balance-br-storefront-after-settlement.json",
+      "bytes": 1064,
+      "sha256": "ee49bd77b5aa0b68c90b5856f80f298bf5a96dd9cc8142aa7ce78e0fcb13c1e9",
+      "source_sha256": "ee49bd77b5aa0b68c90b5856f80f298bf5a96dd9cc8142aa7ce78e0fcb13c1e9",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/24-balance-platform-after-settlement.json",
+      "bytes": 1901,
+      "sha256": "34d9db9d3b850d75ee658a493501efdc28ae6714637b6228e551531d595c8bc4",
+      "source_sha256": "34d9db9d3b850d75ee658a493501efdc28ae6714637b6228e551531d595c8bc4",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/24-balance-us-after-settlement.json",
+      "bytes": 1203,
+      "sha256": "0f48e84061a4d2d0a8f2fd4ab854ab4ff3e807658c5b7225738337bd646c91bd",
+      "source_sha256": "0f48e84061a4d2d0a8f2fd4ab854ab4ff3e807658c5b7225738337bd646c91bd",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/24-production-db-orders-after-settlement.txt",
+      "bytes": 830,
+      "sha256": "a668e90f8016b99be852397b525edb11c65deb327b31b7e9b8333243ffa3147f",
+      "source_sha256": "a668e90f8016b99be852397b525edb11c65deb327b31b7e9b8333243ffa3147f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/24-webhook-deliveries-after-settlement.json",
+      "bytes": 196392,
+      "sha256": "2293863ad6059e04010ba52f38bd523c9375fde423984a2049d21a4b2bbc3148",
+      "source_sha256": "2293863ad6059e04010ba52f38bd523c9375fde423984a2049d21a4b2bbc3148",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/25-activity-platform-recheck.json",
+      "bytes": 826,
+      "sha256": "5fa987c0368a2311a11ba50014a16046af34cac6a0586c238e1e36a47a2648b5",
+      "source_sha256": "5fa987c0368a2311a11ba50014a16046af34cac6a0586c238e1e36a47a2648b5",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/25-balance-platform-recheck.json",
+      "bytes": 1901,
+      "sha256": "36f580860a436ae1cce7464592aa8d7019dff600707c05c0e5e6045313cd2473",
+      "source_sha256": "36f580860a436ae1cce7464592aa8d7019dff600707c05c0e5e6045313cd2473",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/25-production-db-orders-recheck.txt",
+      "bytes": 830,
+      "sha256": "a668e90f8016b99be852397b525edb11c65deb327b31b7e9b8333243ffa3147f",
+      "source_sha256": "a668e90f8016b99be852397b525edb11c65deb327b31b7e9b8333243ffa3147f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/25-webhook-deliveries-recheck.json",
+      "bytes": 196392,
+      "sha256": "d47a1f1aa90a29f5b3d6c26b3648499507f818c5ef27effd0e3c05f7d1aa2052",
+      "source_sha256": "d47a1f1aa90a29f5b3d6c26b3648499507f818c5ef27effd0e3c05f7d1aa2052",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/26-activity-platform-after-sweep.json",
+      "bytes": 826,
+      "sha256": "bef9ab1b44896ecb4347a466eafdfbbc6a58bfb921c023e0561f65d28133c952",
+      "source_sha256": "bef9ab1b44896ecb4347a466eafdfbbc6a58bfb921c023e0561f65d28133c952",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/26-balance-br-storefront-after-sweep.json",
+      "bytes": 1064,
+      "sha256": "4e836990d10f3507e762b99866e79cd61ce3f54e6f0d3b28c24ddc08416abe3d",
+      "source_sha256": "4e836990d10f3507e762b99866e79cd61ce3f54e6f0d3b28c24ddc08416abe3d",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/26-balance-platform-after-sweep.json",
+      "bytes": 1901,
+      "sha256": "6c8b9cbe2fe716efd437d98aa73d32dd76ea81a307880320e0b9e4e17391caca",
+      "source_sha256": "6c8b9cbe2fe716efd437d98aa73d32dd76ea81a307880320e0b9e4e17391caca",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/26-balance-pt-acme-after-sweep.json",
+      "bytes": 1079,
+      "sha256": "de0b531520fb3e313593382154013bf82a746e36587dcd4681bd1a98262a4ba9",
+      "source_sha256": "de0b531520fb3e313593382154013bf82a746e36587dcd4681bd1a98262a4ba9",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/26-production-db-orders-after-sweep.txt",
+      "bytes": 830,
+      "sha256": "a668e90f8016b99be852397b525edb11c65deb327b31b7e9b8333243ffa3147f",
+      "source_sha256": "a668e90f8016b99be852397b525edb11c65deb327b31b7e9b8333243ffa3147f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/26-production-db-transfer-events.txt",
+      "bytes": 15518,
+      "sha256": "7327e0e097fb2b8af3c8154d8da78a5b590a28b81ac44d4ae09c42430f8cfe37",
+      "source_sha256": "7327e0e097fb2b8af3c8154d8da78a5b590a28b81ac44d4ae09c42430f8cfe37",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/26-sweep-after-settlement.json",
+      "bytes": 723,
+      "sha256": "6c28621a7e0ebb29f0f71cd9487aee2169b5559d047b5a4d98824a42a4848878",
+      "source_sha256": "6c28621a7e0ebb29f0f71cd9487aee2169b5559d047b5a4d98824a42a4848878",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/26-webhook-deliveries-after-sweep.json",
+      "bytes": 196392,
+      "sha256": "52c4495912e4ca43c55d80edce8099cf1543fd297c30898c044dd8576f85e776",
+      "source_sha256": "52c4495912e4ca43c55d80edce8099cf1543fd297c30898c044dd8576f85e776",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/27-transfer-repro-adapter-body-dd2ab3b3.json",
+      "bytes": 1023,
+      "sha256": "d398b57dc2b3cd005a0dbb0778ef41b54482e74067bd03e7d70e61300d995b85",
+      "source_sha256": "d398b57dc2b3cd005a0dbb0778ef41b54482e74067bd03e7d70e61300d995b85",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/27-transfer-repro-number-body-98b49fe4.json",
+      "bytes": 1075,
+      "sha256": "ac1d73931fcfa6a1617ad48f935e9ed5bada3a13d08d41a8ce872757da353564",
+      "source_sha256": "ac1d73931fcfa6a1617ad48f935e9ed5bada3a13d08d41a8ce872757da353564",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/27-transfer-repro-number-body-dd2ab3b3.json",
+      "bytes": 1074,
+      "sha256": "17cfb0554a9bc3aed6f5aa82b3c3e0115ae10f34c38835554183ba1b8fba0bb3",
+      "source_sha256": "17cfb0554a9bc3aed6f5aa82b3c3e0115ae10f34c38835554183ba1b8fba0bb3",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/28-activity-br-after-transfer.json",
+      "bytes": 1715,
+      "sha256": "f08c649a5e500a57c43cc568c295be84fdb1ff93b560d9233715c3505bdfef8d",
+      "source_sha256": "f08c649a5e500a57c43cc568c295be84fdb1ff93b560d9233715c3505bdfef8d",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/28-activity-platform-after-transfer.json",
+      "bytes": 1743,
+      "sha256": "07bc4b98160cea91a507d8bdfb4a6cac8d43466c60a4f65564cc5fedea9d9241",
+      "source_sha256": "07bc4b98160cea91a507d8bdfb4a6cac8d43466c60a4f65564cc5fedea9d9241",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/28-balance-br-after-transfer.json",
+      "bytes": 1195,
+      "sha256": "315caf46059548baaf5a263ed29d9169e78a985775655ffae0f123a39d35a9ff",
+      "source_sha256": "315caf46059548baaf5a263ed29d9169e78a985775655ffae0f123a39d35a9ff",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/28-balance-platform-after-transfer.json",
+      "bytes": 1900,
+      "sha256": "c26b465b78affe12d28080b69ee24877cd7bb84b5e57e95def1c03e4207912e0",
+      "source_sha256": "c26b465b78affe12d28080b69ee24877cd7bb84b5e57e95def1c03e4207912e0",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/28-production-db-events-after-transfer.txt",
+      "bytes": 19041,
+      "sha256": "84d2fc6bbdd25c9121a3422725422f44452ad82191f1f573caae03eccc4db4e7",
+      "source_sha256": "84d2fc6bbdd25c9121a3422725422f44452ad82191f1f573caae03eccc4db4e7",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/28-production-db-inbox-after-transfer.txt",
+      "bytes": 254,
+      "sha256": "5235e83a188001123c25bc527b7231035575b9aa50aa938e0147c0c3ed89fe38",
+      "source_sha256": "5235e83a188001123c25bc527b7231035575b9aa50aa938e0147c0c3ed89fe38",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/28-production-db-orders-after-transfer.txt",
+      "bytes": 550,
+      "sha256": "fd1f628cfc35ec34ed510240459224fbab873ce15d2fc322a72377b041009ca1",
+      "source_sha256": "fd1f628cfc35ec34ed510240459224fbab873ce15d2fc322a72377b041009ca1",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/28-transfer-part1-br-assessment-ledger-origin.json",
+      "bytes": 2107,
+      "sha256": "9bfc73af63ec2d821f2a86e4d967243e5da956d0524218274cfdf385fe2f8ebe",
+      "source_sha256": "9bfc73af63ec2d821f2a86e4d967243e5da956d0524218274cfdf385fe2f8ebe",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/28-transfer-readback.json",
+      "bytes": 1613,
+      "sha256": "54cd8de3d5794ab9f3439f0fe2e56ce63958da07b675e7618eafd25d578aac2e",
+      "source_sha256": "54cd8de3d5794ab9f3439f0fe2e56ce63958da07b675e7618eafd25d578aac2e",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/28-webhook-deliveries-after-transfer.json",
+      "bytes": 187514,
+      "sha256": "37fedf38c6905e0f10f2ba4db9f5ee79549f7cd8f58803a2ffad94b7b0d3c1a3",
+      "source_sha256": "37fedf38c6905e0f10f2ba4db9f5ee79549f7cd8f58803a2ffad94b7b0d3c1a3",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/money/README.md",
+      "bytes": 23241,
+      "sha256": "c7395a68e77716a68f118b394bea414ccb4b8297b35c61fbcfafcee7665b4776",
+      "source_sha256": "c7395a68e77716a68f118b394bea414ccb4b8297b35c61fbcfafcee7665b4776",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/onboarding/01-before-DE-biz_fuyI21F4iaNTDu.json",
+      "bytes": 5049,
+      "sha256": "f83110741f632f90b1d1d032f7ba3274a67a7fdf534b009bdcfa8e13fc953bc6",
+      "source_sha256": "f83110741f632f90b1d1d032f7ba3274a67a7fdf534b009bdcfa8e13fc953bc6",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/onboarding/01-before-US-biz_pt7b2NAryKwRGh.json",
+      "bytes": 5360,
+      "sha256": "531206b7a7529f6ba9a928676e4cece4aad822f364fd83811697741a6600a215",
+      "source_sha256": "531206b7a7529f6ba9a928676e4cece4aad822f364fd83811697741a6600a215",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/onboarding/02-create-account-link-DE.json",
+      "bytes": 921,
+      "sha256": "09f380f9117a8b750c534cb04888a21a497719735409b6734dcdd62a9e97d8d5",
+      "source_sha256": "09f380f9117a8b750c534cb04888a21a497719735409b6734dcdd62a9e97d8d5",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/onboarding/03-after-personal-details-DE.json",
+      "bytes": 5220,
+      "sha256": "4e662f555aee413c76fd6dbc6995af75d3f39c4809af906591aade99a4310056",
+      "source_sha256": "4e662f555aee413c76fd6dbc6995af75d3f39c4809af906591aade99a4310056",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/onboarding/04-after-doc-rejected-DE.json",
+      "bytes": 5220,
+      "sha256": "053bebed511de4b1ef6f1f9dcab40c718ca0640166c0fa2db6c482e1a1e9bc8c",
+      "source_sha256": "053bebed511de4b1ef6f1f9dcab40c718ca0640166c0fa2db6c482e1a1e9bc8c",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/onboarding/05-after-document-uploaded-DE.json",
+      "bytes": 5220,
+      "sha256": "0457306f6cf0d365275cf025aaf77b11e6a00a8725fe4174fbff9837b6a716a2",
+      "source_sha256": "0457306f6cf0d365275cf025aaf77b11e6a00a8725fe4174fbff9837b6a716a2",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/onboarding/06-verifications-readback-DE.json",
+      "bytes": 1296,
+      "sha256": "f3e39c17dd860f2f290204838c8a782c8c6c73ef966fcaa343868c212da9633a",
+      "source_sha256": "f3e39c17dd860f2f290204838c8a782c8c6c73ef966fcaa343868c212da9633a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/onboarding/07-final-US-control-biz_pt7b2NAryKwRGh.json",
+      "bytes": 5457,
+      "sha256": "47bce25af0f5d92bdcf8eb716b058444aa293857f5382632a4a57e32af796304",
+      "source_sha256": "47bce25af0f5d92bdcf8eb716b058444aa293857f5382632a4a57e32af796304",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/onboarding/README.md",
+      "bytes": 8347,
+      "sha256": "f18893329d0c0a0b90f61156a762d2a30c61f4b6df635e5dbe8c0e2482083c17",
+      "source_sha256": "f18893329d0c0a0b90f61156a762d2a30c61f4b6df635e5dbe8c0e2482083c17",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/onboarding/transitions.json",
+      "bytes": 7888,
+      "sha256": "dc33c66636c68717e5c7ff37c2b1ed263f61401e840cc95e79e522dcb9504e37",
+      "source_sha256": "dc33c66636c68717e5c7ff37c2b1ed263f61401e840cc95e79e522dcb9504e37",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/01-webhook-get.json",
+      "bytes": 2989,
+      "sha256": "8c051b40df13f88a6beda3fda0b5c0123b462758fea2415b8cd0435fbee3692b",
+      "source_sha256": "8c051b40df13f88a6beda3fda0b5c0123b462758fea2415b8cd0435fbee3692b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/07-direct-order-api.json",
+      "bytes": 843,
+      "sha256": "209ceebf915acbf97c5966382ae78fcd63b321b48a3b282baf2c992918a85455",
+      "source_sha256": "209ceebf915acbf97c5966382ae78fcd63b321b48a3b282baf2c992918a85455",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/10-platform-order-api.json",
+      "bytes": 855,
+      "sha256": "1be7ea289929fbf2905bfac395344fb15c8649200ce0d2f3be92ec57fab87302",
+      "source_sha256": "1be7ea289929fbf2905bfac395344fb15c8649200ce0d2f3be92ec57fab87302",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/11-direct-payment.json",
+      "bytes": 4558,
+      "sha256": "802bc4bc6ecea9f913b3b2dc8b707e9f74bf65f4e179f67f9ba4a878f3537204",
+      "source_sha256": "802bc4bc6ecea9f913b3b2dc8b707e9f74bf65f4e179f67f9ba4a878f3537204",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/12-direct-payment-fees.json",
+      "bytes": 3040,
+      "sha256": "75cea626434e94fd93d58c58332c9e701660d6d43103cc4d3716c011f13f9a4b",
+      "source_sha256": "75cea626434e94fd93d58c58332c9e701660d6d43103cc4d3716c011f13f9a4b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/13-platform-payment.json",
+      "bytes": 4558,
+      "sha256": "3e9ee559436a5a401f8171fc3b8e237e6132bf81373b2309d47c6fec1063616a",
+      "source_sha256": "3e9ee559436a5a401f8171fc3b8e237e6132bf81373b2309d47c6fec1063616a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/14-platform-payment-fees.json",
+      "bytes": 2578,
+      "sha256": "0be3a683912bcec480665ce6ff187548748bc323613a77ab257ef420f6d8f298",
+      "source_sha256": "0be3a683912bcec480665ce6ff187548748bc323613a77ab257ef420f6d8f298",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/15-direct-checkout-config.json",
+      "bytes": 3243,
+      "sha256": "e9f27cfa0a01ce3bdde20eec9765c299051302a55a714b29fa213ef8b87b531f",
+      "source_sha256": "e9f27cfa0a01ce3bdde20eec9765c299051302a55a714b29fa213ef8b87b531f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/16-platform-checkout-config.json",
+      "bytes": 3243,
+      "sha256": "d081f6f9c67fcfc6e0ab31638637a1bf8ef3680b263573af23415e1f9bf1bc95",
+      "source_sha256": "d081f6f9c67fcfc6e0ab31638637a1bf8ef3680b263573af23415e1f9bf1bc95",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/17-webhook-deliveries-raw.json",
+      "bytes": 298569,
+      "sha256": "ad7634043f4ce82e33ab1fb7bd139d41b4c06bb14646bb5c7e7830d99c5427ff",
+      "source_sha256": "ad7634043f4ce82e33ab1fb7bd139d41b4c06bb14646bb5c7e7830d99c5427ff",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/18-sandbox-readback-summary.json",
+      "bytes": 11410,
+      "sha256": "f3754fbf895b53aad7c6ee40966565f46b055d0432ae4bdde4fbafcca97d21bb",
+      "source_sha256": "f3754fbf895b53aad7c6ee40966565f46b055d0432ae4bdde4fbafcca97d21bb",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/19-webhook-deliveries-for-purchases.json",
+      "bytes": 13290,
+      "sha256": "a0fec4b507bc1a4410395431f53188b9cf07d97db2af4559684d293ca5edd288",
+      "source_sha256": "a0fec4b507bc1a4410395431f53188b9cf07d97db2af4559684d293ca5edd288",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/21-purchases-summary.json",
+      "bytes": 10152,
+      "sha256": "76bb79c210804984cb1ffaa332fcfd390a6fda70ed2756c4a8892be8e84f1aea",
+      "source_sha256": "76bb79c210804984cb1ffaa332fcfd390a6fda70ed2756c4a8892be8e84f1aea",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/22-production-home-headers.txt",
+      "bytes": 1032,
+      "sha256": "f2037fb5b9da1df7629d2769c19df89d01a1ea868d982c99b69ee1ef182d3b73",
+      "source_sha256": "f2037fb5b9da1df7629d2769c19df89d01a1ea868d982c99b69ee1ef182d3b73",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/22-production-home.html",
+      "bytes": 136831,
+      "sha256": "2ab67e5b6fec92a435224661628d1835a8941580afd9e35163a1707a1246160e",
+      "source_sha256": "2ab67e5b6fec92a435224661628d1835a8941580afd9e35163a1707a1246160e",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/purchases/README.md",
+      "bytes": 6847,
+      "sha256": "bdf9e47d0936acaba063c31e9654821ad3addc2805ed1a2473d450d46de33170",
+      "source_sha256": "bdf9e47d0936acaba063c31e9654821ad3addc2805ed1a2473d450d46de33170",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/01-developer-page-keys-list.png",
+      "bytes": 324951,
+      "sha256": "6d89e405df136e0d813f8355fba3e3eabb491aef013e27f03089768187864578",
+      "source_sha256": "6d89e405df136e0d813f8355fba3e3eabb491aef013e27f03089768187864578",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/02-ledgerly-key-details-masked.png",
+      "bytes": 312596,
+      "sha256": "58e90a08177b449a64cf8f5fae308cd7bdd91e7107f49d5a21af81f5ff7206c6",
+      "source_sha256": "58e90a08177b449a64cf8f5fae308cd7bdd91e7107f49d5a21af81f5ff7206c6",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/03-ledgerly-key-edit-permissions-top.png",
+      "bytes": 335425,
+      "sha256": "9bda3d43c7f3783f55b1c694378acb9e70ec1ca81c02ff4358568c6d73d624cb",
+      "source_sha256": "9bda3d43c7f3783f55b1c694378acb9e70ec1ca81c02ff4358568c6d73d624cb",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/04-ledgerly-key-edit-permissions-expanded.png",
+      "bytes": 334157,
+      "sha256": "97183f323ce2d0a38d4f51fda65dafc0a019368a884adcccb5a0ab699c91c22c",
+      "source_sha256": "97183f323ce2d0a38d4f51fda65dafc0a019368a884adcccb5a0ab699c91c22c",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/05-de-seller-developer-page-key-list.png",
+      "bytes": 304179,
+      "sha256": "e769011af44e29b49789c7cce97f524be47bc25afafa86c6963b359643096e13",
+      "source_sha256": "e769011af44e29b49789c7cce97f524be47bc25afafa86c6963b359643096e13",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/06-de-key-details-masked.png",
+      "bytes": 307070,
+      "sha256": "b60a4da537078bb848665a468ca41c0cf492d7f5f4a8571b8fb6481d1d5d317b",
+      "source_sha256": "b60a4da537078bb848665a468ca41c0cf492d7f5f4a8571b8fb6481d1d5d317b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/07-de-key-edit-permissions.png",
+      "bytes": 334071,
+      "sha256": "0cdba2f2477945b38e89f99555828a663bc06a2b6167666399441b5fecf1a92c",
+      "source_sha256": "0cdba2f2477945b38e89f99555828a663bc06a2b6167666399441b5fecf1a92c",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/08-de-key-permissions-payment-expanded.png",
+      "bytes": 341861,
+      "sha256": "34e54a28f8361e4e70de08b262a10c8389758728537f2ada925f6eb5401f73e1",
+      "source_sha256": "34e54a28f8361e4e70de08b262a10c8389758728537f2ada925f6eb5401f73e1",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/09-de-key-permissions-company-expanded.png",
+      "bytes": 344470,
+      "sha256": "2810b6930d5c3df0b805d9aecdf8d35ff67d7af9739e64d6010b81a689455c31",
+      "source_sha256": "2810b6930d5c3df0b805d9aecdf8d35ff67d7af9739e64d6010b81a689455c31",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/10-platform-verifications-and-access.png",
+      "bytes": 192412,
+      "sha256": "4a48bfb7227fbcf90d273edcf6060012b43906755cca83e1484014e4724d619a",
+      "source_sha256": "4a48bfb7227fbcf90d273edcf6060012b43906755cca83e1484014e4724d619a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/11-platform-payments-settings.png",
+      "bytes": 222028,
+      "sha256": "61147d55d2b477611bf41c3bf7e8d10e6be181f1bbde5ebc221a78cf01b0b37a",
+      "source_sha256": "61147d55d2b477611bf41c3bf7e8d10e6be181f1bbde5ebc221a78cf01b0b37a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/12-full-key-edit-permissions-top.png",
+      "bytes": 336709,
+      "sha256": "b4c422278cff909397a92b868c59cd0d9c7cc1e8dfd6166d1e5f32583ab97c62",
+      "source_sha256": "b4c422278cff909397a92b868c59cd0d9c7cc1e8dfd6166d1e5f32583ab97c62",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/13-de-key-company-expanded-top.png",
+      "bytes": 349731,
+      "sha256": "d5c7069223ef5c703225e8677b93e110417008d39b22576b52659ec395132d93",
+      "source_sha256": "d5c7069223ef5c703225e8677b93e110417008d39b22576b52659ec395132d93",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/14-de-key-company-create-child.png",
+      "bytes": 351473,
+      "sha256": "16d37bcd0cb63a1ca7df39ab12df97a4d8aae37f02d8f442b6379adf8e8db784",
+      "source_sha256": "16d37bcd0cb63a1ca7df39ab12df97a4d8aae37f02d8f442b6379adf8e8db784",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/15-ledgerly-key-categories-01.png",
+      "bytes": 336355,
+      "sha256": "cd3d4aec2647dca9c7e15e5c9efdd31ef169c5744410acdb230e632085df9244",
+      "source_sha256": "cd3d4aec2647dca9c7e15e5c9efdd31ef169c5744410acdb230e632085df9244",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/15-ledgerly-key-categories-02.png",
+      "bytes": 336299,
+      "sha256": "8a5f1dc4ee53dd6a9285a1fd7580f17a39527007ced21bc0d92b4b0deb3ab8b0",
+      "source_sha256": "8a5f1dc4ee53dd6a9285a1fd7580f17a39527007ced21bc0d92b4b0deb3ab8b0",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/15-ledgerly-key-categories-03.png",
+      "bytes": 335990,
+      "sha256": "c43001622ad8790cc8cc56a716574e39a29385cee0888be9c09fd765cf689d5e",
+      "source_sha256": "c43001622ad8790cc8cc56a716574e39a29385cee0888be9c09fd765cf689d5e",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/15-ledgerly-key-categories-04.png",
+      "bytes": 339876,
+      "sha256": "d43719bdc3e1e439d9fee87c362baaa275a4fb1e061c7a636ef284e40fb5e48e",
+      "source_sha256": "d43719bdc3e1e439d9fee87c362baaa275a4fb1e061c7a636ef284e40fb5e48e",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/15-ledgerly-key-categories-05.png",
+      "bytes": 340740,
+      "sha256": "737f86b5e67dd961c5ccdd462f2bcf2f06c3581f62092658d7dee33da753669e",
+      "source_sha256": "737f86b5e67dd961c5ccdd462f2bcf2f06c3581f62092658d7dee33da753669e",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/15-ledgerly-key-categories-06.png",
+      "bytes": 332736,
+      "sha256": "f9ddfe4a09700411a7fc8a68f25fc5d5c94afd9e838fea663b6e339167708c87",
+      "source_sha256": "f9ddfe4a09700411a7fc8a68f25fc5d5c94afd9e838fea663b6e339167708c87",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/15-ledgerly-key-categories-07.png",
+      "bytes": 333918,
+      "sha256": "3716417aa6e88427ae7e047f5bad629a4d72dae1cee4a03bffc266b798b2d15e",
+      "source_sha256": "3716417aa6e88427ae7e047f5bad629a4d72dae1cee4a03bffc266b798b2d15e",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/15-ledgerly-key-categories-08.png",
+      "bytes": 335914,
+      "sha256": "6b8a66cb3423b7039d08240220b09173d318b061136afb68bcadf5dc7328198c",
+      "source_sha256": "6b8a66cb3423b7039d08240220b09173d318b061136afb68bcadf5dc7328198c",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/keys/15-ledgerly-key-categories-09.png",
+      "bytes": 335600,
+      "sha256": "ecd942fb77ba2f84485071d4b5b2f131b51a3e65fcc9d4a67fad7dfafb9bc533",
+      "source_sha256": "ecd942fb77ba2f84485071d4b5b2f131b51a3e65fcc9d4a67fad7dfafb9bc533",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/onboarding/step-01-landing.png",
+      "bytes": 80668,
+      "sha256": "c487871a4202c91f760505045117ff266bb22a1336cba9b4aa916661ce3ab126",
+      "source_sha256": "c487871a4202c91f760505045117ff266bb22a1336cba9b4aa916661ce3ab126",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/onboarding/step-02-personal-details-filled.png",
+      "bytes": 102527,
+      "sha256": "8f4e3c12a53532f64b96eb1da3e93c5a6bd726d21b094e64765606558b81f90f",
+      "source_sha256": "8f4e3c12a53532f64b96eb1da3e93c5a6bd726d21b094e64765606558b81f90f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/onboarding/step-03-after-continue.png",
+      "bytes": 19271,
+      "sha256": "b384488a3749f3c46ebf6a1d6566682cac13eed12629dd23547d51762e8b3eba",
+      "source_sha256": "b384488a3749f3c46ebf6a1d6566682cac13eed12629dd23547d51762e8b3eba",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/onboarding/step-04-sumsub-consent.png",
+      "bytes": 97920,
+      "sha256": "dcb1449c0a4e716085e1eb08b868870fdb2db42242642f770e8595ce6f979680",
+      "source_sha256": "dcb1449c0a4e716085e1eb08b868870fdb2db42242642f770e8595ce6f979680",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/onboarding/step-05-sumsub-first-step.png",
+      "bytes": 65146,
+      "sha256": "b158253ea604c9a3ff467142032728b05cbeb14ecf81a06adff1e36f9b64d32d",
+      "source_sha256": "b158253ea604c9a3ff467142032728b05cbeb14ecf81a06adff1e36f9b64d32d",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/onboarding/step-06-sumsub-document-upload.png",
+      "bytes": 76928,
+      "sha256": "1b5b4a047e0082f55714c16ede3c5234e01d70ba260078e29689b2df42832c6b",
+      "source_sha256": "1b5b4a047e0082f55714c16ede3c5234e01d70ba260078e29689b2df42832c6b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/onboarding/step-07-sumsub-file-selected.png",
+      "bytes": 73653,
+      "sha256": "3130e1f4c9e87fa41c441924aee2ab2485b28ded75bb471ba97862cd0436f966",
+      "source_sha256": "3130e1f4c9e87fa41c441924aee2ab2485b28ded75bb471ba97862cd0436f966",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/onboarding/step-08-sumsub-specimen-selected.png",
+      "bytes": 71060,
+      "sha256": "65e34371bc31e89409631cb7b85309581213dfc29c1efa106ad2de2a0043d37f",
+      "source_sha256": "65e34371bc31e89409631cb7b85309581213dfc29c1efa106ad2de2a0043d37f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/onboarding/test-doc-placeholder-fictional.png",
+      "bytes": 7743,
+      "sha256": "8933c5cc6b4a766b5d7d387f3e30b6479e711f808b192ca691f34d86463b6637",
+      "source_sha256": "8933c5cc6b4a766b5d7d387f3e30b6479e711f808b192ca691f34d86463b6637",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/onboarding/test-doc-specimen-fictional.png",
+      "bytes": 9105,
+      "sha256": "d01f0fa88c3a20933799f6180a66b88501ff78134284ec15da8b78f60fc23129",
+      "source_sha256": "d01f0fa88c3a20933799f6180a66b88501ff78134284ec15da8b78f60fc23129",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/purchases/00-storefront.png",
+      "bytes": 518928,
+      "sha256": "ed7e77b353c3e67e2b5e18ecac517bd770364eac765d0b61d2cb056348410bed",
+      "source_sha256": "ed7e77b353c3e67e2b5e18ecac517bd770364eac765d0b61d2cb056348410bed",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/purchases/02-signup-filled.png",
+      "bytes": 105348,
+      "sha256": "cc84c129181de67812063bab2c28c0a998505ff629486271523edcbce38c7f6b",
+      "source_sha256": "cc84c129181de67812063bab2c28c0a998505ff629486271523edcbce38c7f6b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/purchases/03-after-signup.png",
+      "bytes": 66766,
+      "sha256": "065164c83d4dd7d30a63796dd87def846d8e38be520f4af121667855bb6647c3",
+      "source_sha256": "065164c83d4dd7d30a63796dd87def846d8e38be520f4af121667855bb6647c3",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/purchases/03a-signup-overlay.png",
+      "bytes": 105377,
+      "sha256": "d9b389f8973a8ca9c71b78e4f37b52130c709a48b725553d73842b9e6a1b2944",
+      "source_sha256": "d9b389f8973a8ca9c71b78e4f37b52130c709a48b725553d73842b9e6a1b2944",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/purchases/04-direct-checkout-embed.png",
+      "bytes": 66766,
+      "sha256": "065164c83d4dd7d30a63796dd87def846d8e38be520f4af121667855bb6647c3",
+      "source_sha256": "065164c83d4dd7d30a63796dd87def846d8e38be520f4af121667855bb6647c3",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/purchases/05-direct-after-join.png",
+      "bytes": 196510,
+      "sha256": "b9cdd2ba727b7bbe8dd7106274bd4447a6bb1b3e01f8b7d6e59ea501db629117",
+      "source_sha256": "b9cdd2ba727b7bbe8dd7106274bd4447a6bb1b3e01f8b7d6e59ea501db629117",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/purchases/06-direct-receipt.png",
+      "bytes": 196525,
+      "sha256": "659b2fa06477d22b14c2627b46d840c6e29a5aab96ba1cbbe5461dedd05f1515",
+      "source_sha256": "659b2fa06477d22b14c2627b46d840c6e29a5aab96ba1cbbe5461dedd05f1515",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/purchases/08-platform-checkout.png",
+      "bytes": 67078,
+      "sha256": "de00a5e2a78bfaff74a87ce691b1ae81b70d63a79bf7fe450031c3cdd0e5c2c8",
+      "source_sha256": "de00a5e2a78bfaff74a87ce691b1ae81b70d63a79bf7fe450031c3cdd0e5c2c8",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/purchases/09-platform-receipt.png",
+      "bytes": 194347,
+      "sha256": "0ca9c8b4a82aea65ba8d4b3a2aa665b69faad7c7d8c355b02545c97c3968b013",
+      "source_sha256": "0ca9c8b4a82aea65ba8d4b3a2aa665b69faad7c7d8c355b02545c97c3968b013",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/runs/purchases/20-library.png",
+      "bytes": 83403,
+      "sha256": "151d8234023001fc0bde50f1033ffcb9fbeb9bbf5f580e6672c3db7ced3a3502",
+      "source_sha256": "151d8234023001fc0bde50f1033ffcb9fbeb9bbf5f580e6672c3db7ced3a3502",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/00-summary.json",
+      "bytes": 5029,
+      "sha256": "3f88705129c9a59efa7d68ddaf9c89ecd817a1d9fedcc318ede7eac1b9a02f3f",
+      "source_sha256": "3f88705129c9a59efa7d68ddaf9c89ecd817a1d9fedcc318ede7eac1b9a02f3f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/01-webhook-get.json",
+      "bytes": 3672,
+      "sha256": "c3c1a62a98a5eb7ad7ab33de446153c39800bf9c384d5d6b97903746bc563bc3",
+      "source_sha256": "c3c1a62a98a5eb7ad7ab33de446153c39800bf9c384d5d6b97903746bc563bc3",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/02-deliveries-before.json",
+      "bytes": 291126,
+      "sha256": "fea56eb041d59ae199f72d70a7a8d609a14424ae8ef32f46a37e59d4bf35bd04",
+      "source_sha256": "fea56eb041d59ae199f72d70a7a8d609a14424ae8ef32f46a37e59d4bf35bd04",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/03-deliveries-polls-after-tests.json",
+      "bytes": 1840,
+      "sha256": "4c7d9a62624039339eb6cf0f23ba636f37e7687b5e1ba614e6d16da9f041d077",
+      "source_sha256": "4c7d9a62624039339eb6cf0f23ba636f37e7687b5e1ba614e6d16da9f041d077",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/04-replay-before-state.txt",
+      "bytes": 386,
+      "sha256": "d5931be51932bf8c5a7c3086b5e6acf7af1f9679e232e2a4c6e7daac8144731a",
+      "source_sha256": "d5931be51932bf8c5a7c3086b5e6acf7af1f9679e232e2a4c6e7daac8144731a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/05-replay-keep-id.json",
+      "bytes": 792,
+      "sha256": "ec3ee762fac4a1241e58031652c59f3ddfb005a362e773b91bb6b4636a646f33",
+      "source_sha256": "ec3ee762fac4a1241e58031652c59f3ddfb005a362e773b91bb6b4636a646f33",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/06-replay-regenerate-id.json",
+      "bytes": 795,
+      "sha256": "f5b7a04f4d82de218a7a19bdd6bc5292c1221fb1b2e39411322c397b552fcd65",
+      "source_sha256": "f5b7a04f4d82de218a7a19bdd6bc5292c1221fb1b2e39411322c397b552fcd65",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/07-replay-after-state.txt",
+      "bytes": 508,
+      "sha256": "713738cc4189c2b515b89b2b4a96b86c4d9fd33f3a354ce0ee2f7d1fc631443b",
+      "source_sha256": "713738cc4189c2b515b89b2b4a96b86c4d9fd33f3a354ce0ee2f7d1fc631443b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/08-deliveries-after-replay.json",
+      "bytes": 311829,
+      "sha256": "ec71fd8bf9b4c43e27c5a837301deea8f53304d4cacb1ace3fc2641423932525",
+      "source_sha256": "ec71fd8bf9b4c43e27c5a837301deea8f53304d4cacb1ace3fc2641423932525",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/09-replay-delivery-records.json",
+      "bytes": 1269,
+      "sha256": "f10b61f6f349cf6bdb81ddb940afd4dbaae4931491b4ef3f1fd9598cafa4654e",
+      "source_sha256": "f10b61f6f349cf6bdb81ddb940afd4dbaae4931491b4ef3f1fd9598cafa4654e",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/10-deliveries-late-poll.json",
+      "bytes": 924,
+      "sha256": "f0ab52ae5ac274602307d044ec1ea480d7844f4161a43d80adc2711631a238c4",
+      "source_sha256": "f0ab52ae5ac274602307d044ec1ea480d7844f4161a43d80adc2711631a238c4",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/README.md",
+      "bytes": 13364,
+      "sha256": "0c06f708a8616c6dea4fe8fd8ef28c19f7ad04d3679dab53f920549d68b9570a",
+      "source_sha256": "0c06f708a8616c6dea4fe8fd8ef28c19f7ad04d3679dab53f920549d68b9570a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/account.updated.json",
+      "bytes": 5400,
+      "sha256": "20d413d5d4232bb32da338eab8f95d85e2dd90bf06a3799399452309e3c55e1c",
+      "source_sha256": "20d413d5d4232bb32da338eab8f95d85e2dd90bf06a3799399452309e3c55e1c",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/dispute.created.json",
+      "bytes": 2481,
+      "sha256": "cb5ad047bcb55d9a012ddd10bb7d8a8fb1b65075ba8338ea48f733d4d7eb7b76",
+      "source_sha256": "cb5ad047bcb55d9a012ddd10bb7d8a8fb1b65075ba8338ea48f733d4d7eb7b76",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/payment.failed.json",
+      "bytes": 5336,
+      "sha256": "b7fa15ed5a2c697b39dcf42ff985baec584d353b10646486a8c3df3f8ddb9bca",
+      "source_sha256": "b7fa15ed5a2c697b39dcf42ff985baec584d353b10646486a8c3df3f8ddb9bca",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/payment.succeeded.json",
+      "bytes": 5941,
+      "sha256": "e349ab765040bf199f1921eef330254e033acd78ef4c2cbada243e577167169a",
+      "source_sha256": "e349ab765040bf199f1921eef330254e033acd78ef4c2cbada243e577167169a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/payout.created.json",
+      "bytes": 1654,
+      "sha256": "aac1dbbe023487677924ae913dcf595f3d65bf0aa4a76280baef34ff6906ea30",
+      "source_sha256": "aac1dbbe023487677924ae913dcf595f3d65bf0aa4a76280baef34ff6906ea30",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/payout.updated.json",
+      "bytes": 1431,
+      "sha256": "6a679051b6e770aaef0ea6715dfc9e12d3a5f44be7e5838112e47a64fa399f31",
+      "source_sha256": "6a679051b6e770aaef0ea6715dfc9e12d3a5f44be7e5838112e47a64fa399f31",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/refund.created.json",
+      "bytes": 2057,
+      "sha256": "659da09da96a693023a8ca81e0e3cb99fa3fa9053f1050a5433f7b8847a5ef0b",
+      "source_sha256": "659da09da96a693023a8ca81e0e3cb99fa3fa9053f1050a5433f7b8847a5ef0b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/test/account.updated.json",
+      "bytes": 5864,
+      "sha256": "65eebcd627611f8ca6c9b37646b193e6008e00a94e20fd891821839f5253dc9b",
+      "source_sha256": "65eebcd627611f8ca6c9b37646b193e6008e00a94e20fd891821839f5253dc9b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/test/dispute.created.json",
+      "bytes": 2481,
+      "sha256": "cb5ad047bcb55d9a012ddd10bb7d8a8fb1b65075ba8338ea48f733d4d7eb7b76",
+      "source_sha256": "cb5ad047bcb55d9a012ddd10bb7d8a8fb1b65075ba8338ea48f733d4d7eb7b76",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/test/payment.failed.json",
+      "bytes": 5336,
+      "sha256": "b7fa15ed5a2c697b39dcf42ff985baec584d353b10646486a8c3df3f8ddb9bca",
+      "source_sha256": "b7fa15ed5a2c697b39dcf42ff985baec584d353b10646486a8c3df3f8ddb9bca",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/test/payment.succeeded.json",
+      "bytes": 5303,
+      "sha256": "56ef7f3ac69275afcfab3a1444f82e14ce48bb4260adbc31d6fbcfaf593b6475",
+      "source_sha256": "56ef7f3ac69275afcfab3a1444f82e14ce48bb4260adbc31d6fbcfaf593b6475",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/test/payout.created.json",
+      "bytes": 1654,
+      "sha256": "aac1dbbe023487677924ae913dcf595f3d65bf0aa4a76280baef34ff6906ea30",
+      "source_sha256": "aac1dbbe023487677924ae913dcf595f3d65bf0aa4a76280baef34ff6906ea30",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/test/payout.updated.json",
+      "bytes": 1431,
+      "sha256": "6a679051b6e770aaef0ea6715dfc9e12d3a5f44be7e5838112e47a64fa399f31",
+      "source_sha256": "6a679051b6e770aaef0ea6715dfc9e12d3a5f44be7e5838112e47a64fa399f31",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/test/refund.created.json",
+      "bytes": 2057,
+      "sha256": "659da09da96a693023a8ca81e0e3cb99fa3fa9053f1050a5433f7b8847a5ef0b",
+      "source_sha256": "659da09da96a693023a8ca81e0e3cb99fa3fa9053f1050a5433f7b8847a5ef0b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/test/transfer.completed.json",
+      "bytes": 1724,
+      "sha256": "c8898d4c50e7ee46040ded00988366983d8c00ff2b0800ecda5fb08f9f875959",
+      "source_sha256": "c8898d4c50e7ee46040ded00988366983d8c00ff2b0800ecda5fb08f9f875959",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/payloads/transfer.completed.json",
+      "bytes": 1724,
+      "sha256": "c8898d4c50e7ee46040ded00988366983d8c00ff2b0800ecda5fb08f9f875959",
+      "source_sha256": "c8898d4c50e7ee46040ded00988366983d8c00ff2b0800ecda5fb08f9f875959",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/test-events/account.updated.json",
+      "bytes": 734,
+      "sha256": "1860a40df82adbe52972a05654a4918905c8af982dfdf12ad749ca2467355c55",
+      "source_sha256": "1860a40df82adbe52972a05654a4918905c8af982dfdf12ad749ca2467355c55",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/test-events/dispute.created.json",
+      "bytes": 734,
+      "sha256": "73e1c7de7efafc4004fad6b9284c3978b37d4cbe23342699606aec7a2b86a260",
+      "source_sha256": "73e1c7de7efafc4004fad6b9284c3978b37d4cbe23342699606aec7a2b86a260",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/test-events/payment.failed.json",
+      "bytes": 732,
+      "sha256": "53265a12736c45cddb5faf8a4389eee75e1a086fca803dd5b12970238237bc86",
+      "source_sha256": "53265a12736c45cddb5faf8a4389eee75e1a086fca803dd5b12970238237bc86",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/test-events/payment.succeeded.json",
+      "bytes": 738,
+      "sha256": "11cab61b1890aec10cebbbf95ac52070c894dc6defcfbb66e6eac7bebbb67d54",
+      "source_sha256": "11cab61b1890aec10cebbbf95ac52070c894dc6defcfbb66e6eac7bebbb67d54",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/test-events/payout.created.json",
+      "bytes": 732,
+      "sha256": "4f525f729b99bd5666b85f9fc26e48a28efb60041f97f3405052111c3bc1df7d",
+      "source_sha256": "4f525f729b99bd5666b85f9fc26e48a28efb60041f97f3405052111c3bc1df7d",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/test-events/payout.updated.json",
+      "bytes": 732,
+      "sha256": "d16f85d0b38da2265c92ed2a108d4c2dbe50864d5f5b001c3810d0604496943f",
+      "source_sha256": "d16f85d0b38da2265c92ed2a108d4c2dbe50864d5f5b001c3810d0604496943f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/test-events/refund.created.json",
+      "bytes": 732,
+      "sha256": "40edd923fc0bd4e8984108d5aa120466722b7cff5fa8e0c07f3e67c88518a2e4",
+      "source_sha256": "40edd923fc0bd4e8984108d5aa120466722b7cff5fa8e0c07f3e67c88518a2e4",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/lanes/final-closeout/webhooks/test-events/transfer.completed.json",
+      "bytes": 740,
+      "sha256": "acaad280a1d56ebf63017cdd8d9f1bd8658ca76bfce079952422ac862f749338",
+      "source_sha256": "acaad280a1d56ebf63017cdd8d9f1bd8658ca76bfce079952422ac862f749338",
+      "disposition": "unchanged"
+    },
+    {
       "path": "docs/presentation/final/index.html",
       "bytes": 303,
       "sha256": "b0d5b0bb84bdbdccfac8afe0ea827f104aabab9021df8af669963af7cdde62e8",
-      "source_sha256": "7871d3f7614822771cfb172df3265cb22fd2666f53dd8b76c1e61ff350642c5c",
+      "source_sha256": "bf978750bcbec429c51ba952bdcae2c5932e4519e82a4c0a0fcd53e5caac0149",
       "disposition": "adapted"
+    },
+    {
+      "path": "docs/readme/admin-issues.png",
+      "bytes": 468911,
+      "sha256": "3d1507968dc6ee8bd8db9fb1cae8e6a21333ed84b17e54c3b1b2202f4d2f105f",
+      "source_sha256": "3d1507968dc6ee8bd8db9fb1cae8e6a21333ed84b17e54c3b1b2202f4d2f105f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/admin-ledger.png",
+      "bytes": 323189,
+      "sha256": "2a831c5f351a590583369c8217160e0d47810fb9cb788d8bca1460323ecc1548",
+      "source_sha256": "2a831c5f351a590583369c8217160e0d47810fb9cb788d8bca1460323ecc1548",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/admin.png",
+      "bytes": 161329,
+      "sha256": "e961f03777d36fd33591d188dca0068ca05e347aadf7df524d558d31a9527f8c",
+      "source_sha256": "e961f03777d36fd33591d188dca0068ca05e347aadf7df524d558d31a9527f8c",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/browse.png",
+      "bytes": 413710,
+      "sha256": "824b5fd48fc2d93d49aa264fb9cb3766c91aac2cdda791d7fdc94f4db1673a6d",
+      "source_sha256": "824b5fd48fc2d93d49aa264fb9cb3766c91aac2cdda791d7fdc94f4db1673a6d",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/buyer-library.png",
+      "bytes": 209808,
+      "sha256": "2af9861a95c0b1e54441e36fd337a135ac27d2f29b71143e0ba4d58fdf3b63ed",
+      "source_sha256": "2af9861a95c0b1e54441e36fd337a135ac27d2f29b71143e0ba4d58fdf3b63ed",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/checkout.png",
+      "bytes": 309924,
+      "sha256": "952df267d328e4aa1843fcbb8ae5a0fca29c731dbc2b1937ebfc54074a778fba",
+      "source_sha256": "952df267d328e4aa1843fcbb8ae5a0fca29c731dbc2b1937ebfc54074a778fba",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/demo.png",
+      "bytes": 220347,
+      "sha256": "3e55fa1545157db8a2850f0ea4a0c6eecc70d684b0f1504469738cda8287a46a",
+      "source_sha256": "3e55fa1545157db8a2850f0ea4a0c6eecc70d684b0f1504469738cda8287a46a",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/handoff-engineering.png",
+      "bytes": 254083,
+      "sha256": "3ec6212b2db39b11d6e952f681c7593b416640094bab3a19e7be16e82b2040de",
+      "source_sha256": "3ec6212b2db39b11d6e952f681c7593b416640094bab3a19e7be16e82b2040de",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/handoff-evidence.png",
+      "bytes": 282050,
+      "sha256": "f7a86d96a0f9e56aba3c7d397fb22e70c96f48b266ff87bf10ad80115bc2518f",
+      "source_sha256": "f7a86d96a0f9e56aba3c7d397fb22e70c96f48b266ff87bf10ad80115bc2518f",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/handoff-lab.png",
+      "bytes": 335886,
+      "sha256": "837c37f6468ad570cd2cdbb7386d232ed8beba28f5cd2c249518d78e7b8110f0",
+      "source_sha256": "837c37f6468ad570cd2cdbb7386d232ed8beba28f5cd2c249518d78e7b8110f0",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/handoff-scenarios.png",
+      "bytes": 159768,
+      "sha256": "09fc1842a2217de15c33c2447307e338b45aa5aa10570e8905e6e6a7e3c9ae85",
+      "source_sha256": "09fc1842a2217de15c33c2447307e338b45aa5aa10570e8905e6e6a7e3c9ae85",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/handoff.png",
+      "bytes": 245426,
+      "sha256": "a8d657d7564a7afa5596824abb042486c1a5811e5cf11aac7b4f75d5729aa6df",
+      "source_sha256": "a8d657d7564a7afa5596824abb042486c1a5811e5cf11aac7b4f75d5729aa6df",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/home.png",
+      "bytes": 360954,
+      "sha256": "12e28bdaa5fcc048bcca47e8e8e2960b0df81bc7929bbb0584cfa57c36992bcd",
+      "source_sha256": "12e28bdaa5fcc048bcca47e8e8e2960b0df81bc7929bbb0584cfa57c36992bcd",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/index.json",
+      "bytes": 4080,
+      "sha256": "ff48582c2e06c61ec00a48019db5b71c9c039dd68970be033fc64b2c6311b17b",
+      "source_sha256": "ff48582c2e06c61ec00a48019db5b71c9c039dd68970be033fc64b2c6311b17b",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/present-final.png",
+      "bytes": 83475,
+      "sha256": "af6a96c0273021da462a91932db9f08609b8d31faa3fd0ff66db3ef7ec7b7b53",
+      "source_sha256": "af6a96c0273021da462a91932db9f08609b8d31faa3fd0ff66db3ef7ec7b7b53",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/product.png",
+      "bytes": 156261,
+      "sha256": "b9ac22d651bd9f66481614a7f7e2b82b23bd69d94631b5c7fea52a7a666ef0b3",
+      "source_sha256": "b9ac22d651bd9f66481614a7f7e2b82b23bd69d94631b5c7fea52a7a666ef0b3",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/seller-earnings.png",
+      "bytes": 371359,
+      "sha256": "21733c071c53c54bb551e48230b11d09c69dff2bf6e7ac84aa51eca4db82d029",
+      "source_sha256": "21733c071c53c54bb551e48230b11d09c69dff2bf6e7ac84aa51eca4db82d029",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/seller-payouts.png",
+      "bytes": 266444,
+      "sha256": "1ddcf6e30a2678373a65c55bf7bd74e2f56a01ae3c045cfbddd6ef6a0ada1fc7",
+      "source_sha256": "1ddcf6e30a2678373a65c55bf7bd74e2f56a01ae3c045cfbddd6ef6a0ada1fc7",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/whop-checkout.png",
+      "bytes": 109489,
+      "sha256": "9f57ec30c0c5237746e59852fbf8ba8620c26e3f8e8793e3e6281231ddc7e530",
+      "source_sha256": "9f57ec30c0c5237746e59852fbf8ba8620c26e3f8e8793e3e6281231ddc7e530",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/whop-payments.png",
+      "bytes": 321107,
+      "sha256": "da4085e9f5bade0eeb846a70b10ff71d448b671ff1e229027164e866ea5edfc2",
+      "source_sha256": "da4085e9f5bade0eeb846a70b10ff71d448b671ff1e229027164e866ea5edfc2",
+      "disposition": "unchanged"
+    },
+    {
+      "path": "docs/readme/whop-store.png",
+      "bytes": 160116,
+      "sha256": "af1eca9ec829c09c88befd63bbf12e14b099bad93041b3e9eaf6ce592fe145ba",
+      "source_sha256": "af1eca9ec829c09c88befd63bbf12e14b099bad93041b3e9eaf6ce592fe145ba",
+      "disposition": "unchanged"
     },
     {
       "path": "docs/wiki/requirements.json",
@@ -2889,9 +4989,9 @@
     },
     {
       "path": "package.json",
-      "bytes": 670,
-      "sha256": "a73237f2e3710561af912d1184f49c003d1943bb0a8f577631b281d2351f9b08",
-      "source_sha256": "2f04cbcc64cf91edea8e19d9d6f1e4b910c621f00b8acb0f74dc40dbd11ac69f",
+      "bytes": 731,
+      "sha256": "f600cb949312b41b4b7ca5087f31e871b6ac77a53245dcff666da2ef0e86fb68",
+      "source_sha256": "bc711e89ff81adf5421ae4b38d0d5b656a03bc59021299f5546c2bfc4b108a3a",
       "disposition": "adapted"
     },
     {
@@ -4688,5 +6788,5 @@
     }
   ],
   "content_hash_algorithm": "sha256 of UTF-8 path + NUL + file SHA256 + LF, sorted by path",
-  "content_sha256": "e4925d65f3e471580c40a113f7b625f992a8417b68cb339c332ebe26d30b300e"
+  "content_sha256": "7eb20521423bceaba2b501bcd3cdfa770bdf6a826f12e9d2f2f8603ae9938d21"
 }

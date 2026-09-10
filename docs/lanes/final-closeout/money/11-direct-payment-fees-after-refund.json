@@ -1,0 +1,144 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/payments/pay_ELe6ONlgjrYv5Z/fees",
+    "query": null,
+    "api_version_date": "2026-09-06",
+    "idempotency_key": null,
+    "body": null
+  },
+  "status": 200,
+  "started_at": "2026-09-09T23:28:09.301Z",
+  "finished_at": "2026-09-09T23:28:09.601Z",
+  "response_headers": {
+    "date": "Wed, 09 Sep 2026 23:28:09 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "c67835ee-73b5-450f-8e89-3f10e8d63f72",
+    "cf-ray": "a389f7bb9de47864-EWR"
+  },
+  "response": {
+    "data": [
+      {
+        "type": "other_fee",
+        "origin": "application_fee",
+        "label": "Application fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "2.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "2.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:02:39.081Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "payment_processing_percentage_fee",
+        "label": "Payment processing percentage fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.68",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.68",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:02:39.081Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "cross_border_percentage_fee",
+        "label": "Cross-border transaction fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.38",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.38",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:02:39.081Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "payment_processing_fixed_fee",
+        "label": "Fixed card processing fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.30",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.30",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:02:39.081Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "orchestration_percentage_fee",
+        "label": "Orchestration fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.20",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.20",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:02:39.081Z"
+      },
+      {
+        "type": "processing_fee",
+        "origin": "stripe_radar_fee",
+        "label": "Radar fee",
+        "description": null,
+        "amount": {
+          "currency": "usd",
+          "amount": "0.07",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "settlement_amount": {
+          "currency": "usd",
+          "amount": "0.07",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "collected_at": "2026-09-09T23:02:39.081Z"
+      }
+    ],
+    "page_info": {
+      "end_cursor": null,
+      "start_cursor": null,
+      "has_next_page": false,
+      "has_previous_page": false
+    }
+  }
+}

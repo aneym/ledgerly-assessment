@@ -1,0 +1,35 @@
+{
+  "path": "/api/orders/e3dd80b7-f01a-4501-b318-04cbfab646e7",
+  "status": 200,
+  "read_at": "2026-09-09T23:04:28.482Z",
+  "body": {
+    "id": "e3dd80b7-f01a-4501-b318-04cbfab646e7",
+    "product": {
+      "id": "prd_grain",
+      "slug": "grain-and-gradient",
+      "title": "Grain & Gradient"
+    },
+    "seller": {
+      "id": "sel_mara",
+      "name": "mara",
+      "sale_policy": "direct"
+    },
+    "gross": {
+      "amountMinor": 2500,
+      "currency": "USD"
+    },
+    "fee": {
+      "amountMinor": 200,
+      "currency": "USD"
+    },
+    "seller_share": {
+      "amountMinor": 2300,
+      "currency": "USD"
+    },
+    "status": "paid",
+    "created_at": "2026-09-09T23:02:06.202Z",
+    "provenance": "sandbox",
+    "purchase_url": "https://sandbox.whop.com/checkout/ch_pD0KKu5fXqlnS6X/",
+    "payment_id": "pay_ELe6ONlgjrYv5Z"
+  }
+}

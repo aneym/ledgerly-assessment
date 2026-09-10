@@ -1,0 +1,15 @@
+{
+  "name": "list-disputes",
+  "method": "GET",
+  "path": "/disputes?company_id=biz_RlL9WP9TIBVXmr",
+  "request_body": null,
+  "status": 403,
+  "response": {
+    "error": {
+      "type": "forbidden",
+      "message": "Company API key is not authorized for the payment:dispute:read scope."
+    }
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:06.869Z"
+}

@@ -1,0 +1,161 @@
+{
+  "mode": "mock",
+  "sellerId": "reconcile-mock-seller",
+  "whopAccountId": "biz_mock_1",
+  "generatedAt": "2026-09-09T23:07:31.067Z",
+  "report": {
+    "comparisons": [
+      {
+        "resourceType": "payment",
+        "resourceId": "pay_mock_demo_f53bca5b9cc20df499df68b589a6bdcbf6d0d24500b5dd3abfa8437811ec8a0b",
+        "local": null,
+        "provider": {
+          "amountMinor": 1000,
+          "currency": "USD"
+        },
+        "providerStatus": "succeeded",
+        "matches": false
+      },
+      {
+        "resourceType": "payment",
+        "resourceId": "pay_mock_demo_31fc0722dbc2df35f9c63d2bad609dcbe65e85cdad22e4c92e7934521931a337",
+        "local": {
+          "amountMinor": 2500,
+          "currency": "USD"
+        },
+        "provider": {
+          "amountMinor": 2500,
+          "currency": "USD"
+        },
+        "providerStatus": "succeeded",
+        "matches": true
+      },
+      {
+        "resourceType": "transfer",
+        "resourceId": "trf_mock_local_only",
+        "local": {
+          "amountMinor": 500,
+          "currency": "USD"
+        },
+        "provider": null,
+        "providerStatus": null,
+        "matches": false
+      }
+    ],
+    "financialActivity": {
+      "provider": {
+        "available": [
+          {
+            "currency": "USD",
+            "total": {
+              "amountMinor": 3500,
+              "currency": "USD"
+            }
+          }
+        ],
+        "pending": [
+          {
+            "currency": "USD",
+            "total": {
+              "amountMinor": 0,
+              "currency": "USD"
+            }
+          }
+        ],
+        "reserve": [
+          {
+            "currency": "USD",
+            "total": {
+              "amountMinor": 0,
+              "currency": "USD"
+            }
+          }
+        ],
+        "line_count": 2,
+        "has_more": false,
+        "basis": "first_page_activity",
+        "provenance": "mock"
+      },
+      "provider_error": null,
+      "lines": [
+        {
+          "id": "line_mock_2",
+          "lineType": "payment_gross",
+          "amount": {
+            "amountMinor": 1000,
+            "currency": "USD"
+          },
+          "usdAmount": "10.00",
+          "postedAt": "2026-09-09T23:07:31.064Z",
+          "availableAt": null,
+          "paymentId": "pay_mock_demo_f53bca5b9cc20df499df68b589a6bdcbf6d0d24500b5dd3abfa8437811ec8a0b",
+          "source": {
+            "type": "payment",
+            "id": "pay_mock_demo_f53bca5b9cc20df499df68b589a6bdcbf6d0d24500b5dd3abfa8437811ec8a0b"
+          }
+        },
+        {
+          "id": "line_mock_1",
+          "lineType": "payment_gross",
+          "amount": {
+            "amountMinor": 2500,
+            "currency": "USD"
+          },
+          "usdAmount": "25.00",
+          "postedAt": "2026-09-09T23:07:31.063Z",
+          "availableAt": null,
+          "paymentId": "pay_mock_demo_31fc0722dbc2df35f9c63d2bad609dcbe65e85cdad22e4c92e7934521931a337",
+          "source": {
+            "type": "payment",
+            "id": "pay_mock_demo_31fc0722dbc2df35f9c63d2bad609dcbe65e85cdad22e4c92e7934521931a337"
+          }
+        }
+      ],
+      "comparisons": [
+        {
+          "resourceId": "pay_mock_demo_f53bca5b9cc20df499df68b589a6bdcbf6d0d24500b5dd3abfa8437811ec8a0b",
+          "provider": {
+            "amountMinor": 1000,
+            "currency": "USD"
+          },
+          "local": null,
+          "matches": false
+        },
+        {
+          "resourceId": "pay_mock_demo_31fc0722dbc2df35f9c63d2bad609dcbe65e85cdad22e4c92e7934521931a337",
+          "provider": {
+            "amountMinor": 2500,
+            "currency": "USD"
+          },
+          "local": {
+            "amountMinor": 2300,
+            "currency": "USD"
+          },
+          "matches": false
+        }
+      ]
+    },
+    "missingLocally": [
+      {
+        "resourceType": "payment",
+        "resourceId": "pay_mock_demo_f53bca5b9cc20df499df68b589a6bdcbf6d0d24500b5dd3abfa8437811ec8a0b",
+        "amount": {
+          "amountMinor": 1000,
+          "currency": "USD"
+        }
+      }
+    ],
+    "missingAtProvider": [
+      {
+        "resourceType": "transfer",
+        "resourceId": "trf_mock_local_only",
+        "amount": {
+          "amountMinor": 500,
+          "currency": "USD"
+        }
+      }
+    ],
+    "amountMismatch": [],
+    "pendingOrReserve": []
+  }
+}

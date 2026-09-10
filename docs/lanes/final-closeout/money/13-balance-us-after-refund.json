@@ -1,0 +1,44 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/ledger_accounts/biz_pt7b2NAryKwRGh",
+    "query": null,
+    "api_version_date": "2026-09-06",
+    "idempotency_key": null,
+    "body": null
+  },
+  "status": 200,
+  "started_at": "2026-09-09T23:31:18.460Z",
+  "finished_at": "2026-09-09T23:31:18.742Z",
+  "response_headers": {
+    "date": "Wed, 09 Sep 2026 23:31:18 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "8e658802-8d63-4b67-939e-ec353e584e95",
+    "cf-ray": "a389fc5938dc5cb9-EWR"
+  },
+  "response": {
+    "id": "ldgr_Y2iPi6lx5xIqL",
+    "settlement_time_at": "2026-09-09T00:00:00.000Z",
+    "balances": [
+      {
+        "balance": -25.0,
+        "currency": "usd",
+        "pending_balance": 128.22,
+        "reserve_balance": 0.0
+      }
+    ],
+    "treasury_balance": null,
+    "transfer_fee": 3.0,
+    "payout_account_details": null,
+    "payments_approval_status": null,
+    "ledger_type": "primary",
+    "payout_quote_required": false,
+    "owner": {
+      "typename": "Company",
+      "id": "biz_pt7b2NAryKwRGh",
+      "route": "ledgerly-seller-us-74a2",
+      "title": "Ledgerly Seller US"
+    }
+  }
+}

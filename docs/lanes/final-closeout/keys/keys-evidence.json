@@ -1,0 +1,123 @@
+{
+  "item": "keys",
+  "run_started": "2026-09-09T22:54:05Z",
+  "passes": [
+    {
+      "pass": 1,
+      "captured_between": ["2026-09-09T22:57:00Z", "2026-09-09T23:05:30Z"],
+      "ego_browser_space": 3,
+      "screens": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+    },
+    {
+      "pass": 2,
+      "captured_between": ["2026-09-09T23:09:00Z", "2026-09-09T23:14:50Z"],
+      "ego_browser_space": 5,
+      "screens": ["13", "14", "15-01 to 15-09"],
+      "dom_dumps": ["13-de-key-all-categories.json", "15-ledgerly-key-all-categories.json"],
+      "purpose": "Fix reviewer findings: prove the category count, show all four DE statements, redact the verified name"
+    }
+  ],
+  "method": "Alex's logged-in sandbox.whop.com session through ego-browser, read-only. Every edit dialog was closed with Close; Save was never clicked (it stayed disabled). No key was created, rotated, revealed or deleted. No icon button in any key dialog was clicked. Category lists were read from the dialog DOM after clicking 'Show 42 more categories'.",
+  "platform_account": "biz_RlL9WP9TIBVXmr",
+  "platform_api_keys": [
+    {
+      "name": "ledgerly",
+      "masked": "apik_f6to....de0b",
+      "in_use_by_ledgerly": true,
+      "match_method": "WHOP_API_KEY in apps/web/.env.local compared by prefix apik_f6to and suffix de0b inside a script; value not printed. The dashboard key id is a prefix of the secret and is not recorded here.",
+      "created": "1 day ago (dashboard label)",
+      "expiration": "Never",
+      "ip_allowlist": "Any IP address",
+      "permissions_mode": "Inherit permissions from role: Owner",
+      "categories_total": 53,
+      "categories_fully_granted": 53,
+      "statements_total": 231,
+      "statements_granted": 231,
+      "count_source": "15-ledgerly-key-all-categories.json (DOM dump of every category button with its granted/total counts) and screens 15-01 to 15-09 (the same list scrolled top to bottom)",
+      "dialog_icon_buttons": 4,
+      "dialog_icon_buttons_note": "Four icon buttons next to the masked key: a rotate icon, a crossed-eye icon, a copy icon, a trash icon (read from screens 02 and 15-01). None was clicked, so what the eye reveals and what the copy button copies were not tested.",
+      "screens": ["01-developer-page-keys-list.png", "02-ledgerly-key-details-masked.png", "03-ledgerly-key-edit-permissions-top.png", "04-ledgerly-key-edit-permissions-expanded.png", "15-ledgerly-key-categories-01.png", "15-ledgerly-key-categories-02.png", "15-ledgerly-key-categories-03.png", "15-ledgerly-key-categories-04.png", "15-ledgerly-key-categories-05.png", "15-ledgerly-key-categories-06.png", "15-ledgerly-key-categories-07.png", "15-ledgerly-key-categories-08.png", "15-ledgerly-key-categories-09.png"]
+    },
+    {
+      "name": "full",
+      "masked": "apik_uUar....409d",
+      "in_use_by_ledgerly": false,
+      "expiration": "Never",
+      "ip_allowlist": "No",
+      "permissions_mode": "Inherit permissions from role: Owner",
+      "categories_note": "Only the top of its category list was captured (screen 12). The full list was not dumped for this key.",
+      "screens": ["12-full-key-edit-permissions-top.png"]
+    }
+  ],
+  "per_seller_api_key": {
+    "account": "biz_fuyI21F4iaNTDu",
+    "account_name": "Ledgerly Seller DE",
+    "dashboard_url": "https://sandbox.whop.com/dashboard/biz_fuyI21F4iaNTDu/developer/",
+    "banner": "You are viewing a connected account of ledgerly",
+    "name": "ledgerly seller DE (scoped, run-2026-09-08d)",
+    "masked": "apik_HawA....0c8b",
+    "created": "1 day ago (dashboard label)",
+    "expiration": "Never",
+    "ip_allowlist": "Any IP address",
+    "permissions_mode": "Custom",
+    "granted_statements": [
+      "payment:basic:read",
+      "company:basic:read",
+      "company:balance:read",
+      "company:create_child"
+    ],
+    "granted_statements_source": "13-de-key-all-categories.json checked_statements (DOM aria-checked=true after expanding Payment and Company). Screens: 08 shows payment:basic:read checked; 13 shows company:balance:read and company:basic:read checked; 14 shows company:basic:read and company:create_child checked.",
+    "category_counts_nonzero": ["Payment 1/14", "Company 3/15"],
+    "categories_total": 53,
+    "statements_total": 231,
+    "statements_granted": 4,
+    "dialog_icon_buttons": 3,
+    "dialog_icon_buttons_note": "Three icon buttons next to the masked key: rotate, copy, trash (screens 06, 13). No crossed-eye icon on this key. None was clicked.",
+    "secret_reveal_available_in_dialog": false,
+    "screens": ["05-de-seller-developer-page-key-list.png", "06-de-key-details-masked.png", "07-de-key-edit-permissions.png", "08-de-key-permissions-payment-expanded.png", "09-de-key-permissions-company-expanded.png", "13-de-key-company-expanded-top.png", "14-de-key-company-create-child.png"]
+  },
+  "isolation_curls": {
+    "ran_in_this_run": false,
+    "reason": "The per-seller key already existed, so the brief did not call for creating one. Its dialog has no reveal control, so the secret could not be obtained without rotating the key, which is a mutation. No request was made with a seller key on 2026-09-09.",
+    "committed_evidence": {
+      "worktree": "/Volumes/StudioExt/repos/ledgerly-worktrees/app-ui-fixes",
+      "branch": "main",
+      "head": "3c569de",
+      "fixture_commit": "0cdf4eb",
+      "directory": "packages/whop/fixtures/run-2026-09-08d/",
+      "files": [
+        {"file": "seller-key-scoped-accounts-de.json", "request": "GET /accounts/biz_fuyI21F4iaNTDu", "status": 200},
+        {"file": "seller-key-scoped-accounts-br.json", "request": "GET /accounts/biz_8dB7THK4woBs43", "status": 404, "message": "Account not found"},
+        {"file": "seller-key-scoped-accounts-platform.json", "request": "GET /accounts/biz_RlL9WP9TIBVXmr", "status": 404, "message": "Account not found"},
+        {"file": "seller-key-scoped-accounts-nested-post.json", "request": "POST /accounts (parent_company_id biz_fuyI21F4iaNTDu)", "status": 400, "message": "A connected account cannot create its own connected accounts"},
+        {"file": "seller-key-accounts-de.json", "request": "GET /accounts/biz_fuyI21F4iaNTDu with only payment:basic:read and company:basic:read", "status": 403, "message": "Business account API key is not authorized for the company:balance:read scope."},
+        {"file": "seller-key-accounts-a.json", "request": "GET /accounts/biz_8dB7THK4woBs43 with the two-statement key", "status": 403},
+        {"file": "seller-key-accounts-b.json", "request": "GET /accounts/biz_RlL9WP9TIBVXmr with the two-statement key", "status": 403},
+        {"file": "seller-key-accounts-nested-post.json", "request": "POST /accounts with the two-statement key", "status": 403, "message": "Business account API key is not authorized for the company:create_child scope."},
+        {"file": "seller-key-dashboard-permission-error.json", "note": "Platform-owner session could not create the seller key; it was minted from the seller user's own session (docs/answers/dx-findings.md items 7 and 22)."}
+      ],
+      "authorization_header_in_fixtures": "Bearer <redacted>"
+    },
+    "prose_references": ["docs/answers/dx-findings.md items 7, 8, 22", "docs/lanes/architecture/sandbox-matrix.md BUILD-06 and BUILD-21"]
+  },
+  "verifications_and_access": {
+    "url": "https://sandbox.whop.com/dashboard/biz_RlL9WP9TIBVXmr/settings/verifications/?view=verifications",
+    "captured_at": "2026-09-09T23:02:56Z",
+    "personal_or_business_account": "Verified, United States",
+    "unlocked": ["Individual Whop Card", "Virtual bank account", "Payouts (Individual): Active"],
+    "company_verification": "Not started (I have one / Form one offered)",
+    "screen": "10-platform-verifications-and-access.png",
+    "redaction": "The verified individual's legal name line was blacked out in the PNG on 2026-09-09T23:16Z. The unredacted capture was overwritten. Do not copy any earlier copy into the repo or the public export."
+  },
+  "payments_settings": {
+    "url": "https://sandbox.whop.com/dashboard/biz_RlL9WP9TIBVXmr/settings/payments/",
+    "captured_at": "2026-09-09T23:03:05Z",
+    "sections": ["Checkout limits (Apply)", "Financing (Apply)", "3D Secure: Require 3DS challenge disabled", "Additional payment methods: PayPal not set up", "Migrations: Stripe", "Auto respond to resolution center cases", "Early dispute alerts"],
+    "settings_index_label": "Payments: 1 payment protection enabled",
+    "screen": "11-platform-payments-settings.png"
+  },
+  "identity_checks": {
+    "note": "Opening a key's View prompted 'Verify your identity' with an emailed six-digit code. Pass 1 entered one code (email from no-reply@whop.com at 2026-09-09T22:59:25Z). Pass 2 entered one more (email at 2026-09-09T23:11:01Z, requested at 23:10:55Z). The codes are not stored here. Timestamps come from the Gmail message metadata in Alex's inbox and were not screenshotted. Within a pass, later key views did not re-prompt."
+  },
+  "redactions": "Key secrets were never displayed or copied. Masked ids are as the dashboard renders them (4+4). The dashboard key id of the ledgerly key is omitted because it is a prefix of the secret. Webhook secret appears masked in 01 exactly as the dashboard renders it. Alex's legal name is blacked out in 10."
+}

@@ -1,0 +1,37 @@
+{
+  "queried_at": "2026-09-09T23:03:33.135Z",
+  "replay_deliveries": [
+    {
+      "id": "whdel_MTc4ODk5NTAwNDAwOXwwMWEwODg2OS02NzQ1LTdhNzItYmJkYS1lNTZmNzRkMjhlNGQ",
+      "event": "payment.succeeded",
+      "resource_id": "pay_OM3X8c0ycF5ytM",
+      "sent_at": "2026-09-09T23:03:24.009Z",
+      "response_code": 200,
+      "response_body": {
+        "duplicate": false,
+        "received": true
+      },
+      "success": true,
+      "total_time": 0.218384,
+      "replayed_from": "whdel_MTc4ODkxNjc0MTAwMHwwMWEwODNiZi0zNzdjLTcyMGQtODk0Yy03ZDE2ODExYTFiYjM",
+      "envelope_id": "msg_4aSWcAouYIxCsoKDTgEic9uo",
+      "envelope_account_id": "biz_RlL9WP9TIBVXmr"
+    },
+    {
+      "id": "whdel_MTc4ODk5NTAwMDQ3NXwwMWEwODg2OS01OTM1LTc1MzktOTcxYi02YjQ4ZWU4YmQ2OGI",
+      "event": "payment.succeeded",
+      "resource_id": "pay_OM3X8c0ycF5ytM",
+      "sent_at": "2026-09-09T23:03:20.474Z",
+      "response_code": 200,
+      "response_body": {
+        "duplicate": true,
+        "received": true
+      },
+      "success": true,
+      "total_time": 0.149892,
+      "replayed_from": "whdel_MTc4ODkxNjc0MTAwMHwwMWEwODNiZi0zNzdjLTcyMGQtODk0Yy03ZDE2ODExYTFiYjM",
+      "envelope_id": "msg_I4sXXdsA4Pgqohb57xWuRdBH",
+      "envelope_account_id": "biz_RlL9WP9TIBVXmr"
+    }
+  ]
+}

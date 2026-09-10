@@ -1,0 +1,64 @@
+{
+  "item": "code-reconcile",
+  "run_started": "2026-09-09T22:54:05Z",
+  "branch": "work/final-code-reconcile",
+  "worktree": "/Volumes/StudioExt/repos/ledgerly-worktrees/final-code-reconcile",
+  "commit": "91fb7e75e92746a1deb683ea7f85634588e11d74",
+  "base": "main@3c569de",
+  "cherry_pick_873e4b1": "not needed: git merge-base --is-ancestor 873e4b1 main exited 0",
+  "cli": {
+    "root_script": "pnpm reconcile --seller <sellerId|biz_...> [--json] [--max-pages N] [--env-file PATH]",
+    "mock": "pnpm reconcile --mock [--json]",
+    "script": "apps/web/scripts/reconcile.ts",
+    "formatting": "apps/web/scripts/reconcile-format.ts",
+    "test": "apps/web/test/scripts/reconcile-format.test.ts (11 tests)"
+  },
+  "checks": {
+    "pnpm typecheck": "exit 0, all six packages Done (typecheck.log)",
+    "packages/core vitest": "14 files, 194 passed (vitest-core.log)",
+    "packages/whop vitest": "17 files, 295 passed, 10 skipped (vitest-whop.log)",
+    "packages/db vitest": "15 files, 237 passed (vitest-db.log)",
+    "apps/web vitest test/scripts/reconcile-format.test.ts": "11 passed (vitest-web-reconcile-format.log)",
+    "biome check": "no diagnostics on apps/web/scripts/reconcile.ts, apps/web/scripts/reconcile-format.ts, apps/web/test/scripts/reconcile-format.test.ts and apps/web/package.json; root package.json is outside biome.json files.includes (apps/**, packages/**) so biome exits 1 with 'No files were processed' for it; repo-wide `biome check .` exit 0 with 17 pre-existing CSS warnings, 10 in apps/web/src/app/globals.css and 7 in apps/web/src/app/(storefront)/handoff/handoff.css (biome-repo.log)"
+  },
+  "mock_run": {
+    "command": "pnpm --silent reconcile --mock (and --json)",
+    "exit": 0,
+    "seller": "reconcile-mock-seller",
+    "account": "biz_mock_1",
+    "result": "3 compared, 1 matched, 1 missing locally, 1 missing at provider, 0 amount mismatches, 0 pending or reserve",
+    "files": [
+      "mock-run.txt",
+      "mock-run.json"
+    ]
+  },
+  "sandbox_run": {
+    "command": "pnpm --silent reconcile --seller biz_pt7b2NAryKwRGh --env-file <app-ui-fixes apps/web/.env.local> (and --json)",
+    "credentials": "WHOP_API_KEY, WHOP_API_VERSION_DATE, WHOP_PLATFORM_ACCOUNT_ID, DATABASE_URL read from the env file by the script; never printed",
+    "env_note": "This worktree has no apps/web/.env.local. Both sandbox runs used --env-file pointing at the app-ui-fixes apps/web/.env.local. No run was made from process.env alone.",
+    "exit": 0,
+    "generated_at": "2026-09-09T23:07:47.293Z",
+    "requests_note": "Inferred, not captured. The CLI recorded no HTTP trace. Paths come from the route table in packages/whop/src/sandbox-adapter.ts (listPayments, listTransfers, listFinancialActivity) and the report shape (6 payments, 0 transfers, 42 activity lines). Status codes and query strings were not observed.",
+    "requests_inferred": [
+      "GET https://sandbox-api.whop.com/api/v1/payments (account biz_pt7b2NAryKwRGh; report holds 6 payments)",
+      "GET https://sandbox-api.whop.com/api/v1/transfers (destination biz_pt7b2NAryKwRGh; report holds 0 transfers)",
+      "GET https://sandbox-api.whop.com/api/v1/financial-activity (account biz_pt7b2NAryKwRGh; report holds 42 lines)"
+    ],
+    "database": "Neon, read-only: sellers.byAccount, sellers.get, ledger.forSeller",
+    "local_seller": "sel_mara",
+    "account": "biz_pt7b2NAryKwRGh",
+    "result": "6 payments compared, 1 matched (pay_LhomHFUGcxqYZ1, 25.00 USD), 5 missing locally (each 25.00 USD), 0 transfers, activity 42 lines with 0 matched",
+    "missing_locally_posted_at": {
+      "pay_ELe6ONlgjrYv5Z": "2026-09-09T23:02:41Z",
+      "pay_tJABaxIlZo6FJ9": "2026-09-09T00:08:43Z",
+      "pay_8f4MKyKfuGvUNy": "2026-09-09T00:08:43Z",
+      "pay_1EBdxGtWCu54K0": "2026-09-08T23:37:18Z",
+      "pay_p2qLHIfZbpL57Z": "2026-09-08T23:29:46Z"
+    },
+    "missing_locally_note": "postedAt taken from each payment's activity lines in sandbox-run.json. Only pay_ELe6ONlgjrYv5Z posted minutes before the run; the other four predate it by about a day. Origin of these payments is not shown by this evidence.",
+    "files": [
+      "sandbox-run.txt",
+      "sandbox-run.json"
+    ]
+  }
+}

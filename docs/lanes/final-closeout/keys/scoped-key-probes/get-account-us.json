@@ -1,0 +1,184 @@
+{
+  "name": "get-account-us",
+  "method": "GET",
+  "path": "/accounts/biz_pt7b2NAryKwRGh",
+  "request_body": null,
+  "status": 200,
+  "response": {
+    "id": "biz_pt7b2NAryKwRGh",
+    "email": "[email redacted]",
+    "title": "Ledgerly Seller US",
+    "description": null,
+    "route": "biz_pt7b2NAryKwRGh",
+    "logo_url": null,
+    "banner_image_url": null,
+    "terms_of_service": null,
+    "privacy_policy": null,
+    "return_policy": null,
+    "eula": null,
+    "business_type": null,
+    "country": "us",
+    "home_preferences": [],
+    "industry_group": null,
+    "industry_type": null,
+    "invoice_prefix": null,
+    "onboarding_type": null,
+    "opengraph_image_url": null,
+    "opengraph_image_variant": null,
+    "other_business_description": null,
+    "other_industry_description": null,
+    "require_2fa": false,
+    "three_ds_level": null,
+    "collect_vat_id": false,
+    "target_audience": null,
+    "send_customer_emails": false,
+    "show_joined_whops": true,
+    "show_reviews_dtc": true,
+    "show_user_directory": true,
+    "store_page_config": {
+      "accent_color": null,
+      "layout": null,
+      "profile_variant": null,
+      "whop_affiliate_link": false
+    },
+    "metadata": {
+      "run_id": "run-2026-09-08c",
+      "external_id": "ledgerly-us-run-2026-09-08c"
+    },
+    "created_at": "2026-09-08T18:39:50+02:00",
+    "use_logo_as_opengraph_image_fallback": false,
+    "total_earned_usd": null,
+    "status": "active",
+    "status_reason": null,
+    "volume_usd": null,
+    "capabilities": {
+      "accept_card_payments": "active",
+      "accept_bank_payments": "active",
+      "accept_bnpl_payments": "inactive",
+      "standard_payout": "inactive",
+      "instant_payout": "inactive",
+      "crypto_payout": "inactive",
+      "transfer": "inactive",
+      "bank_deposit": "inactive",
+      "crypto_deposit": "active",
+      "card_deposit": "active",
+      "card_issuing": "inactive",
+      "run_ads": "active"
+    },
+    "payment_controls": {
+      "dispute_alert_auto_refund": {
+        "threshold_usd": 500,
+        "locked": false
+      },
+      "resolution_center_auto_refund": {
+        "card_threshold_usd": null,
+        "financing_threshold_usd": null,
+        "paypal_threshold_usd": null,
+        "locked": false
+      },
+      "dispute_alert_fee_usd": 29,
+      "high_risk_processing_fee_percentage": 0,
+      "pending_auto_topup_fee_percentage": 2,
+      "pending_balance_delay_days": 0,
+      "financing_disabled": false,
+      "reserve": {
+        "percentage": null,
+        "hold_period_days": 90
+      },
+      "withdrawal_schedule": {
+        "frequency": "manual",
+        "day": null,
+        "next_payout_date": null
+      },
+      "undated_pending_reason": "kyc_incomplete",
+      "enforce_3ds": false,
+      "restricted_payment_methods": []
+    },
+    "cards": null,
+    "required_actions": [
+      {
+        "action": "verify_identity",
+        "status": "required",
+        "title": "Complete your identity verification",
+        "description": "Complete verification to withdraw your earnings.",
+        "cta_label": "Verify now",
+        "cta": "https://whop.com/dashboard/biz_pt7b2NAryKwRGh/balance/?verify=true",
+        "icon_url": null,
+        "blocked_capabilities": [
+          "standard_payout",
+          "instant_payout",
+          "crypto_payout",
+          "transfer",
+          "bank_deposit",
+          "card_issuing"
+        ]
+      }
+    ],
+    "recommended_actions": [],
+    "tax_remitted_by": null,
+    "tax_type": "exclusive",
+    "product_tax_code": null,
+    "business_address": null,
+    "business_name": null,
+    "tax_identifiers": [],
+    "tax_collection_enabled_states": [],
+    "total_usd": "103.22",
+    "balances": [
+      {
+        "symbol": "USD",
+        "name": "US Dollar",
+        "balance": "103.22",
+        "value_usd": "103.22",
+        "price_usd": 1,
+        "icon_url": null,
+        "breakdown": {
+          "pending_settlements": [
+            {
+              "date": "2026-09-10",
+              "amount": "106.85"
+            },
+            {
+              "date": "2026-09-11",
+              "amount": "21.37"
+            }
+          ],
+          "in_transit": "0.0",
+          "available": "-25.0",
+          "pending": "128.22",
+          "reserve": "0.0"
+        }
+      }
+    ],
+    "stablecoin_rails": false,
+    "can_transfer_pending_balance_to_children": false,
+    "verification": {
+      "individual": null,
+      "business": null
+    },
+    "company_formation": {
+      "status": "draft"
+    },
+    "owner": {
+      "id": "user_jPSRx6DKCsG6z",
+      "username": "aneymanledgerly-us-run---c",
+      "name": null,
+      "profile_picture": {
+        "url": "https://ui-avatars.com/api/?name=aneymanledgerly-us-run---c&background=535961&color=fff&format=png"
+      }
+    },
+    "parent_account": {
+      "id": "biz_RlL9WP9TIBVXmr",
+      "title": "ledgerly",
+      "route": "ledgerly",
+      "logo_url": null
+    },
+    "wallet": {
+      "id": "cwal_kFBjMPCNpPW9M",
+      "address": "0x89C3cEAfB25F2b3E433c6047175af094C4852306",
+      "network": "ethereum"
+    },
+    "social_links": []
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:03.213Z"
+}

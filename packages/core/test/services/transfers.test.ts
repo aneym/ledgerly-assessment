@@ -175,26 +175,32 @@ describe("createTransferReleaseService", () => {
     ]);
   });
 
-  it("passes an idempotency key derived from the order id", async () => {
+  it("reuses the v2 order idempotency key after a rejected transfer", async () => {
     const provider = fakeProvider("succeed");
-    let seenKey: string | undefined;
+    const seenKeys: string[] = [];
+    const orders = fakeOrders([candidate()]);
     const spyProvider: Pick<WhopPort, "createTransfer"> = {
       async createTransfer(input, idempotencyKey) {
-        seenKey = idempotencyKey;
+        seenKeys.push(idempotencyKey);
+        if (seenKeys.length === 1) return err({ kind: "invalid_request" });
         return provider.provider.createTransfer(input, idempotencyKey);
       },
     };
     const releaseTransfers = createTransferReleaseService({
       uow: fakeUow(),
       provider: spyProvider,
-      orders: fakeOrders([candidate()]).repo,
+      orders: orders.repo,
       sellers: fakeSellers(seller()),
       ledger: fakeLedger().ledger,
       clock,
       platformAccountId,
     });
-    await releaseTransfers();
-    expect(seenKey).toBe("transfer:order_1");
+    expect(await releaseTransfers()).toEqual({ released: 0, retried: 0, failed: 1 });
+    expect(orders.recordCalls).toBe(0);
+    expect(await releaseTransfers()).toEqual({ released: 1, retried: 0, failed: 0 });
+    expect(orders.transferIdFor(value(orderId("order_1")))).toBe("sim_tr_1");
+    expect(await releaseTransfers()).toEqual({ released: 0, retried: 0, failed: 0 });
+    expect(seenKeys).toEqual(["transfer:order_1:v2", "transfer:order_1:v2"]);
   });
 
   it("leaves an order not yet past its hold untouched: the provider is never called", async () => {

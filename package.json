@@ -14,6 +14,7 @@
     "format": "biome format --write .",
     "db:generate": "pnpm --filter @ledgerly/db generate",
     "db:migrate": "pnpm --filter @ledgerly/db migrate",
+    "reconcile": "pnpm --filter @ledgerly/web reconcile --",
     "dev:mock": "node scripts/local-runtime/start.mjs"
   },
   "devDependencies": {

@@ -1,0 +1,907 @@
+{
+  "name": "list-payments",
+  "method": "GET",
+  "path": "/payments?account_id=biz_pt7b2NAryKwRGh",
+  "request_body": null,
+  "status": 200,
+  "response": {
+    "data": [
+      {
+        "id": "pay_ELe6ONlgjrYv5Z",
+        "status": "paid",
+        "substatus": "refunded",
+        "billing_reason": "one_time",
+        "refundable": false,
+        "retryable": false,
+        "voidable": false,
+        "account_id": "biz_pt7b2NAryKwRGh",
+        "user": {
+          "id": "user_Q0IiqCqFWa8vo",
+          "username": "aneyman",
+          "name": "Alex Neyman",
+          "profile_picture": {
+            "url": "https://ui-avatars.com/api/?name=Alex%20Neyman&background=535961&color=fff&format=png"
+          }
+        },
+        "member_id": null,
+        "membership_id": null,
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "product_id": "prod_W1xlml34ygYMR",
+        "promo_code_id": null,
+        "checkout_configuration_id": "ch_pD0KKu5fXqlnS6X",
+        "shipment_id": null,
+        "currency": "usd",
+        "total": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "subtotal": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_behavior": null,
+        "refunded_amount": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_refunded_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "auto_refunded": false,
+        "amount_after_fees": {
+          "currency": "usd",
+          "amount": "21.37",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "usd_total": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "payment_method_type": "card",
+        "payment_method_id": "payt_FZ17WahujTHTR",
+        "payment_instrument": {
+          "payment_method_type": "card",
+          "display_name": "Visa •••• 4242",
+          "icons": {
+            "square": {
+              "light": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/square_light.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_light_32.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_light_64.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_light_128.png"
+              },
+              "dark": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/square_dark.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_dark_32.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_dark_64.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_dark_128.png"
+              }
+            },
+            "card": {
+              "light": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/card_light.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_light_30.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_light_60.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_light_120.png"
+              },
+              "dark": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/card_dark.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_dark_30.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_dark_60.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_dark_120.png"
+              }
+            }
+          },
+          "card": {
+            "brand": "visa",
+            "last4": "4242",
+            "issuer_identification_number": "42424242"
+          },
+          "installment_count": null
+        },
+        "customer_phone": null,
+        "billing_address": {
+          "name": "Alex Neyman",
+          "line1": "496 11th St",
+          "line2": null,
+          "city": "Brooklyn",
+          "state": "NY",
+          "postal_code": "11215",
+          "country": "US"
+        },
+        "shipping_address": null,
+        "needs_tracking": null,
+        "payments_failed": 0,
+        "failure_message": null,
+        "decline_code": null,
+        "recovery_url": null,
+        "three_ds_verified": false,
+        "verification_checks": {
+          "address_line1": "PASS",
+          "zip_code": "PASS",
+          "card_holder_name": "UNCHECKED",
+          "card_security_code": "UNCHECKED"
+        },
+        "risk_score": null,
+        "risk_signals": null,
+        "financing_installments_count": null,
+        "metadata": {},
+        "created_at": "2026-09-09T23:02:38.242Z",
+        "updated_at": "2026-09-09T23:27:50.005Z",
+        "paid_at": "2026-09-09T23:02:39.081Z",
+        "last_payment_attempt_at": "2026-09-09T23:02:39.081Z",
+        "next_payment_attempt_at": null,
+        "refunded_at": "2026-09-09T23:27:48.013Z",
+        "dispute_alerted_at": null,
+        "settlement_time_at": null,
+        "client_secret": null
+      },
+      {
+        "id": "pay_8f4MKyKfuGvUNy",
+        "status": "paid",
+        "substatus": "succeeded",
+        "billing_reason": "one_time",
+        "refundable": true,
+        "retryable": false,
+        "voidable": false,
+        "account_id": "biz_pt7b2NAryKwRGh",
+        "user": {
+          "id": "user_B1XFlO796KnZc",
+          "username": "aneymanembed-mobile-",
+          "name": null,
+          "profile_picture": {
+            "url": "https://ui-avatars.com/api/?name=aneymanembed-mobile-&background=535961&color=fff&format=png"
+          }
+        },
+        "member_id": null,
+        "membership_id": null,
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "product_id": "prod_W1xlml34ygYMR",
+        "promo_code_id": null,
+        "checkout_configuration_id": "ch_D7TM8ivSQnKSN5J",
+        "shipment_id": null,
+        "currency": "usd",
+        "total": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "subtotal": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_behavior": null,
+        "refunded_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_refunded_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "auto_refunded": false,
+        "amount_after_fees": {
+          "currency": "usd",
+          "amount": "21.37",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "usd_total": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "payment_method_type": "card",
+        "payment_method_id": "payt_5aHu5xgY2RVih",
+        "payment_instrument": {
+          "payment_method_type": "card",
+          "display_name": "Visa •••• 4242",
+          "icons": {
+            "square": {
+              "light": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/square_light.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_light_32.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_light_64.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_light_128.png"
+              },
+              "dark": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/square_dark.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_dark_32.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_dark_64.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_dark_128.png"
+              }
+            },
+            "card": {
+              "light": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/card_light.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_light_30.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_light_60.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_light_120.png"
+              },
+              "dark": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/card_dark.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_dark_30.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_dark_60.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_dark_120.png"
+              }
+            }
+          },
+          "card": {
+            "brand": "visa",
+            "last4": "4242",
+            "issuer_identification_number": "42424242"
+          },
+          "installment_count": null
+        },
+        "customer_phone": null,
+        "billing_address": {
+          "name": "Embed Buyer",
+          "line1": "123 Main St",
+          "line2": null,
+          "city": "San Francisco",
+          "state": "CA",
+          "postal_code": "94105",
+          "country": "US"
+        },
+        "shipping_address": null,
+        "needs_tracking": null,
+        "payments_failed": 0,
+        "failure_message": null,
+        "decline_code": null,
+        "recovery_url": null,
+        "three_ds_verified": false,
+        "verification_checks": {
+          "address_line1": "PASS",
+          "zip_code": "PASS",
+          "card_holder_name": "UNCHECKED",
+          "card_security_code": "PASS"
+        },
+        "risk_score": null,
+        "risk_signals": null,
+        "financing_installments_count": null,
+        "metadata": {},
+        "created_at": "2026-09-09T00:08:39.758Z",
+        "updated_at": "2026-09-09T00:08:44.706Z",
+        "paid_at": "2026-09-09T00:08:40.955Z",
+        "last_payment_attempt_at": "2026-09-09T00:08:40.955Z",
+        "next_payment_attempt_at": null,
+        "refunded_at": null,
+        "dispute_alerted_at": null,
+        "settlement_time_at": null,
+        "client_secret": null
+      },
+      {
+        "id": "pay_tJABaxIlZo6FJ9",
+        "status": "paid",
+        "substatus": "succeeded",
+        "billing_reason": "one_time",
+        "refundable": true,
+        "retryable": false,
+        "voidable": false,
+        "account_id": "biz_pt7b2NAryKwRGh",
+        "user": {
+          "id": "user_z28ApRobHrDn6",
+          "username": "aneymanembed-desktop-",
+          "name": null,
+          "profile_picture": {
+            "url": "https://ui-avatars.com/api/?name=aneymanembed-desktop-&background=535961&color=fff&format=png"
+          }
+        },
+        "member_id": null,
+        "membership_id": null,
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "product_id": "prod_W1xlml34ygYMR",
+        "promo_code_id": null,
+        "checkout_configuration_id": "ch_ZgN1ZpPHr8L1qmk",
+        "shipment_id": null,
+        "currency": "usd",
+        "total": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "subtotal": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_behavior": null,
+        "refunded_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_refunded_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "auto_refunded": false,
+        "amount_after_fees": {
+          "currency": "usd",
+          "amount": "21.37",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "usd_total": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "payment_method_type": "card",
+        "payment_method_id": "payt_tspNbeNiB27wq",
+        "payment_instrument": {
+          "payment_method_type": "card",
+          "display_name": "Visa •••• 4242",
+          "icons": {
+            "square": {
+              "light": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/square_light.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_light_32.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_light_64.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_light_128.png"
+              },
+              "dark": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/square_dark.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_dark_32.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_dark_64.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_dark_128.png"
+              }
+            },
+            "card": {
+              "light": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/card_light.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_light_30.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_light_60.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_light_120.png"
+              },
+              "dark": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/card_dark.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_dark_30.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_dark_60.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_dark_120.png"
+              }
+            }
+          },
+          "card": {
+            "brand": "visa",
+            "last4": "4242",
+            "issuer_identification_number": "42424242"
+          },
+          "installment_count": null
+        },
+        "customer_phone": null,
+        "billing_address": {
+          "name": "Embed Buyer",
+          "line1": "123 Main St",
+          "line2": null,
+          "city": "San Francisco",
+          "state": "CA",
+          "postal_code": "94105",
+          "country": "US"
+        },
+        "shipping_address": null,
+        "needs_tracking": null,
+        "payments_failed": 0,
+        "failure_message": null,
+        "decline_code": null,
+        "recovery_url": null,
+        "three_ds_verified": false,
+        "verification_checks": {
+          "address_line1": "PASS",
+          "zip_code": "PASS",
+          "card_holder_name": "UNCHECKED",
+          "card_security_code": "PASS"
+        },
+        "risk_score": null,
+        "risk_signals": null,
+        "financing_installments_count": null,
+        "metadata": {},
+        "created_at": "2026-09-09T00:08:39.556Z",
+        "updated_at": "2026-09-09T00:08:44.517Z",
+        "paid_at": "2026-09-09T00:08:40.898Z",
+        "last_payment_attempt_at": "2026-09-09T00:08:40.898Z",
+        "next_payment_attempt_at": null,
+        "refunded_at": null,
+        "dispute_alerted_at": null,
+        "settlement_time_at": null,
+        "client_secret": null
+      },
+      {
+        "id": "pay_1EBdxGtWCu54K0",
+        "status": "paid",
+        "substatus": "succeeded",
+        "billing_reason": "one_time",
+        "refundable": true,
+        "retryable": false,
+        "voidable": false,
+        "account_id": "biz_pt7b2NAryKwRGh",
+        "user": {
+          "id": "user_Q0IiqCqFWa8vo",
+          "username": "aneyman",
+          "name": "Alex Neyman",
+          "profile_picture": {
+            "url": "https://ui-avatars.com/api/?name=Alex%20Neyman&background=535961&color=fff&format=png"
+          }
+        },
+        "member_id": null,
+        "membership_id": null,
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "product_id": "prod_W1xlml34ygYMR",
+        "promo_code_id": null,
+        "checkout_configuration_id": "ch_N1zXvhR8vNHYpmY",
+        "shipment_id": null,
+        "currency": "usd",
+        "total": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "subtotal": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_behavior": null,
+        "refunded_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_refunded_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "auto_refunded": false,
+        "amount_after_fees": {
+          "currency": "usd",
+          "amount": "21.37",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "usd_total": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "payment_method_type": "card",
+        "payment_method_id": "payt_FZ17WahujTHTR",
+        "payment_instrument": {
+          "payment_method_type": "card",
+          "display_name": "Visa •••• 4242",
+          "icons": {
+            "square": {
+              "light": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/square_light.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_light_32.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_light_64.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_light_128.png"
+              },
+              "dark": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/square_dark.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_dark_32.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_dark_64.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_dark_128.png"
+              }
+            },
+            "card": {
+              "light": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/card_light.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_light_30.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_light_60.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_light_120.png"
+              },
+              "dark": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/card_dark.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_dark_30.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_dark_60.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_dark_120.png"
+              }
+            }
+          },
+          "card": {
+            "brand": "visa",
+            "last4": "4242",
+            "issuer_identification_number": "42424242"
+          },
+          "installment_count": null
+        },
+        "customer_phone": null,
+        "billing_address": {
+          "name": "Alex Neyman",
+          "line1": "496 11th St",
+          "line2": null,
+          "city": "Brooklyn",
+          "state": "NY",
+          "postal_code": "11215",
+          "country": "US"
+        },
+        "shipping_address": null,
+        "needs_tracking": null,
+        "payments_failed": 0,
+        "failure_message": null,
+        "decline_code": null,
+        "recovery_url": null,
+        "three_ds_verified": false,
+        "verification_checks": {
+          "address_line1": "PASS",
+          "zip_code": "PASS",
+          "card_holder_name": "UNCHECKED",
+          "card_security_code": "PASS"
+        },
+        "risk_score": null,
+        "risk_signals": null,
+        "financing_installments_count": null,
+        "metadata": {},
+        "created_at": "2026-09-08T23:37:15.434Z",
+        "updated_at": "2026-09-08T23:37:20.440Z",
+        "paid_at": "2026-09-08T23:37:16.525Z",
+        "last_payment_attempt_at": "2026-09-08T23:37:16.525Z",
+        "next_payment_attempt_at": null,
+        "refunded_at": null,
+        "dispute_alerted_at": null,
+        "settlement_time_at": null,
+        "client_secret": null
+      },
+      {
+        "id": "pay_p2qLHIfZbpL57Z",
+        "status": "paid",
+        "substatus": "succeeded",
+        "billing_reason": "one_time",
+        "refundable": true,
+        "retryable": false,
+        "voidable": false,
+        "account_id": "biz_pt7b2NAryKwRGh",
+        "user": {
+          "id": "user_F9nsaRbxoMM3f",
+          "username": "aneymanledgerly-buyer",
+          "name": null,
+          "profile_picture": {
+            "url": "https://ui-avatars.com/api/?name=aneymanledgerly-buyer&background=535961&color=fff&format=png"
+          }
+        },
+        "member_id": null,
+        "membership_id": null,
+        "plan_id": "plan_mIdPunMHNV6TL",
+        "product_id": "prod_W1xlml34ygYMR",
+        "promo_code_id": null,
+        "checkout_configuration_id": "ch_EMLHO2ateyNlGXB",
+        "shipment_id": null,
+        "currency": "usd",
+        "total": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "subtotal": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_behavior": null,
+        "refunded_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_refunded_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "auto_refunded": false,
+        "amount_after_fees": {
+          "currency": "usd",
+          "amount": "21.37",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "usd_total": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "payment_method_type": "card",
+        "payment_method_id": "payt_xpPcVqig7w54Q",
+        "payment_instrument": {
+          "payment_method_type": "card",
+          "display_name": "Visa •••• 4242",
+          "icons": {
+            "square": {
+              "light": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/square_light.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_light_32.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_light_64.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_light_128.png"
+              },
+              "dark": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/square_dark.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_dark_32.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_dark_64.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_dark_128.png"
+              }
+            },
+            "card": {
+              "light": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/card_light.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_light_30.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_light_60.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_light_120.png"
+              },
+              "dark": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/card_dark.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_dark_30.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_dark_60.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_dark_120.png"
+              }
+            }
+          },
+          "card": {
+            "brand": "visa",
+            "last4": "4242",
+            "issuer_identification_number": "42424242"
+          },
+          "installment_count": null
+        },
+        "customer_phone": null,
+        "billing_address": {
+          "name": "Ada Buyer",
+          "line1": "123 Market Street",
+          "line2": null,
+          "city": "Austin",
+          "state": "TX",
+          "postal_code": "78701",
+          "country": "US"
+        },
+        "shipping_address": null,
+        "needs_tracking": null,
+        "payments_failed": 0,
+        "failure_message": null,
+        "decline_code": null,
+        "recovery_url": null,
+        "three_ds_verified": false,
+        "verification_checks": {
+          "address_line1": "PASS",
+          "zip_code": "PASS",
+          "card_holder_name": "UNCHECKED",
+          "card_security_code": "PASS"
+        },
+        "risk_score": null,
+        "risk_signals": null,
+        "financing_installments_count": null,
+        "metadata": {},
+        "created_at": "2026-09-08T23:29:43.022Z",
+        "updated_at": "2026-09-08T23:29:47.746Z",
+        "paid_at": "2026-09-08T23:29:43.835Z",
+        "last_payment_attempt_at": "2026-09-08T23:29:43.835Z",
+        "next_payment_attempt_at": null,
+        "refunded_at": null,
+        "dispute_alerted_at": null,
+        "settlement_time_at": null,
+        "client_secret": null
+      },
+      {
+        "id": "pay_LhomHFUGcxqYZ1",
+        "status": "paid",
+        "substatus": "succeeded",
+        "billing_reason": "one_time",
+        "refundable": true,
+        "retryable": false,
+        "voidable": false,
+        "account_id": "biz_pt7b2NAryKwRGh",
+        "user": {
+          "id": "user_F9nsaRbxoMM3f",
+          "username": "aneymanledgerly-buyer",
+          "name": null,
+          "profile_picture": {
+            "url": "https://ui-avatars.com/api/?name=aneymanledgerly-buyer&background=535961&color=fff&format=png"
+          }
+        },
+        "member_id": null,
+        "membership_id": null,
+        "plan_id": "plan_d4ZMY9k2rCqEf",
+        "product_id": "prod_jIvItx9Gc07qX",
+        "promo_code_id": null,
+        "checkout_configuration_id": "ch_SkfCKBiBxVlz685",
+        "shipment_id": null,
+        "currency": "usd",
+        "total": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "subtotal": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_behavior": null,
+        "refunded_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "tax_refunded_amount": {
+          "currency": "usd",
+          "amount": "0.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "auto_refunded": false,
+        "amount_after_fees": {
+          "currency": "usd",
+          "amount": "21.37",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "usd_total": {
+          "currency": "usd",
+          "amount": "25.00",
+          "decimals": 2,
+          "display_decimals": 2
+        },
+        "payment_method_type": "card",
+        "payment_method_id": "payt_xpPcVqig7w54Q",
+        "payment_instrument": {
+          "payment_method_type": "card",
+          "display_name": "Visa •••• 4242",
+          "icons": {
+            "square": {
+              "light": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/square_light.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_light_32.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_light_64.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_light_128.png"
+              },
+              "dark": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/square_dark.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/square_dark_32.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/square_dark_64.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/square_dark_128.png"
+              }
+            },
+            "card": {
+              "light": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/card_light.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_light_30.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_light_60.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_light_120.png"
+              },
+              "dark": {
+                "svg": "https://content.whop.com/payment_methods/visa/icons/card_dark.svg",
+                "png_1x": "https://content.whop.com/payment_methods/visa/icons/card_dark_30.png",
+                "png_2x": "https://content.whop.com/payment_methods/visa/icons/card_dark_60.png",
+                "png_4x": "https://content.whop.com/payment_methods/visa/icons/card_dark_120.png"
+              }
+            }
+          },
+          "card": {
+            "brand": "visa",
+            "last4": "4242",
+            "issuer_identification_number": "42424242"
+          },
+          "installment_count": null
+        },
+        "customer_phone": null,
+        "billing_address": {
+          "name": "Ledgerly Buyer",
+          "line1": "4180 Burnet Rd",
+          "line2": null,
+          "city": "Austin",
+          "state": "TX",
+          "postal_code": "78756",
+          "country": "US"
+        },
+        "shipping_address": null,
+        "needs_tracking": null,
+        "payments_failed": 0,
+        "failure_message": null,
+        "decline_code": null,
+        "recovery_url": null,
+        "three_ds_verified": false,
+        "verification_checks": {
+          "address_line1": "PASS",
+          "zip_code": "PASS",
+          "card_holder_name": "UNCHECKED",
+          "card_security_code": "PASS"
+        },
+        "risk_score": null,
+        "risk_signals": null,
+        "financing_installments_count": null,
+        "metadata": {},
+        "created_at": "2026-09-08T16:45:21.960Z",
+        "updated_at": "2026-09-08T16:45:27.010Z",
+        "paid_at": "2026-09-08T16:45:23.037Z",
+        "last_payment_attempt_at": "2026-09-08T16:45:23.037Z",
+        "next_payment_attempt_at": null,
+        "refunded_at": null,
+        "dispute_alerted_at": null,
+        "settlement_time_at": null,
+        "client_secret": null
+      }
+    ],
+    "page_info": {
+      "start_cursor": "WyIxOGZiNzRmYzVkMzgiLFsxMzk4NzJdXQ",
+      "end_cursor": null,
+      "has_next_page": false,
+      "has_previous_page": false
+    }
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:05.500Z"
+}

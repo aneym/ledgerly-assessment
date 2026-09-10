@@ -1,0 +1,7 @@
+2026-09-09 23:03:32.689849+00
+inbox	msg_I4sXXdsA4Pgqohb57xWuRdBH	processed	2026-09-09 01:19:01.923+00	2026-09-09 01:19:02.261+00		1788916741
+inbox	msg_4aSWcAouYIxCsoKDTgEic9uo	processed	2026-09-09 23:03:24.069+00	2026-09-09 23:03:24.809+00		1788995004
+effect	payment:pay_OM3X8c0ycF5ytM:succeeded	msg_I4sXXdsA4Pgqohb57xWuRdBH	2026-09-09 01:19:02.253+00
+ledger	19	payment	seller	2668	USD	payment:pay_OM3X8c0ycF5ytM:succeeded	
+ledger	20	fee	platform	232	USD	payment:pay_OM3X8c0ycF5ytM:succeeded	
+ledger_count	2

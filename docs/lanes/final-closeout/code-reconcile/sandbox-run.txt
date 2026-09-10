@@ -1,0 +1,893 @@
+reconcile sandbox seller sel_mara (biz_pt7b2NAryKwRGh): 6 compared, 1 matched, 5 missing locally, 0 missing at provider, 0 amount mismatches, 0 pending or reserve; transfers listed; activity 42 lines, 0 matched
+  missing locally: payment pay_ELe6ONlgjrYv5Z 25.00 USD
+  missing locally: payment pay_8f4MKyKfuGvUNy 25.00 USD
+  missing locally: payment pay_tJABaxIlZo6FJ9 25.00 USD
+  missing locally: payment pay_1EBdxGtWCu54K0 25.00 USD
+  missing locally: payment pay_p2qLHIfZbpL57Z 25.00 USD
+{
+  "comparisons": [
+    {
+      "resourceType": "payment",
+      "resourceId": "pay_ELe6ONlgjrYv5Z",
+      "local": null,
+      "provider": {
+        "amountMinor": 2500,
+        "currency": "USD"
+      },
+      "providerStatus": "succeeded",
+      "matches": false
+    },
+    {
+      "resourceType": "payment",
+      "resourceId": "pay_8f4MKyKfuGvUNy",
+      "local": null,
+      "provider": {
+        "amountMinor": 2500,
+        "currency": "USD"
+      },
+      "providerStatus": "succeeded",
+      "matches": false
+    },
+    {
+      "resourceType": "payment",
+      "resourceId": "pay_tJABaxIlZo6FJ9",
+      "local": null,
+      "provider": {
+        "amountMinor": 2500,
+        "currency": "USD"
+      },
+      "providerStatus": "succeeded",
+      "matches": false
+    },
+    {
+      "resourceType": "payment",
+      "resourceId": "pay_1EBdxGtWCu54K0",
+      "local": null,
+      "provider": {
+        "amountMinor": 2500,
+        "currency": "USD"
+      },
+      "providerStatus": "succeeded",
+      "matches": false
+    },
+    {
+      "resourceType": "payment",
+      "resourceId": "pay_p2qLHIfZbpL57Z",
+      "local": null,
+      "provider": {
+        "amountMinor": 2500,
+        "currency": "USD"
+      },
+      "providerStatus": "succeeded",
+      "matches": false
+    },
+    {
+      "resourceType": "payment",
+      "resourceId": "pay_LhomHFUGcxqYZ1",
+      "local": {
+        "amountMinor": 2500,
+        "currency": "USD"
+      },
+      "provider": {
+        "amountMinor": 2500,
+        "currency": "USD"
+      },
+      "providerStatus": "succeeded",
+      "matches": true
+    }
+  ],
+  "financialActivity": {
+    "provider": {
+      "available": [
+        {
+          "currency": "USD",
+          "total": {
+            "amountMinor": -2178,
+            "currency": "USD"
+          }
+        }
+      ],
+      "pending": [
+        {
+          "currency": "USD",
+          "total": {
+            "amountMinor": 15000,
+            "currency": "USD"
+          }
+        }
+      ],
+      "reserve": [
+        {
+          "currency": "USD",
+          "total": {
+            "amountMinor": 0,
+            "currency": "USD"
+          }
+        }
+      ],
+      "line_count": 42,
+      "has_more": false,
+      "basis": "first_page_activity",
+      "provenance": "sandbox"
+    },
+    "provider_error": null,
+    "lines": [
+      {
+        "id": "line_aEdLTFdUcmJLYlJtVnFCVzVBdkJ1OmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "lineType": "fraud_prevention_fee",
+        "amount": {
+          "amountMinor": -7,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.07",
+        "postedAt": "2026-09-09T23:02:41Z",
+        "availableAt": null,
+        "paymentId": "pay_ELe6ONlgjrYv5Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z"
+        }
+      },
+      {
+        "id": "line_WXJWVzNzVmxUeXNqOE1Oa1VqNGVEOmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "lineType": "orchestration_percentage_fee",
+        "amount": {
+          "amountMinor": -20,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.2",
+        "postedAt": "2026-09-09T23:02:41Z",
+        "availableAt": null,
+        "paymentId": "pay_ELe6ONlgjrYv5Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z"
+        }
+      },
+      {
+        "id": "line_WWg5Vnh6RGtFd0ZybFpUdjlZdW5UOmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "lineType": "application_fee",
+        "amount": {
+          "amountMinor": -200,
+          "currency": "USD"
+        },
+        "usdAmount": "-2.0",
+        "postedAt": "2026-09-09T23:02:41Z",
+        "availableAt": null,
+        "paymentId": "pay_ELe6ONlgjrYv5Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z"
+        }
+      },
+      {
+        "id": "line_SEQ1anhUWU5pYldENTdFb1BPUnBEOmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "lineType": "payment_processing_fixed_fee",
+        "amount": {
+          "amountMinor": -30,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.3",
+        "postedAt": "2026-09-09T23:02:41Z",
+        "availableAt": null,
+        "paymentId": "pay_ELe6ONlgjrYv5Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z"
+        }
+      },
+      {
+        "id": "line_Rjh5b1BaOWQ0ZTRjMVZibWh1emt4OmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "lineType": "payment_processing_percentage_fee",
+        "amount": {
+          "amountMinor": -68,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.68",
+        "postedAt": "2026-09-09T23:02:41Z",
+        "availableAt": null,
+        "paymentId": "pay_ELe6ONlgjrYv5Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z"
+        }
+      },
+      {
+        "id": "line_NU9ZbDRnbmI3bWZhS2JIcUcwUVJQOmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "lineType": "cross_border_percentage_fee",
+        "amount": {
+          "amountMinor": -38,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.38",
+        "postedAt": "2026-09-09T23:02:41Z",
+        "availableAt": null,
+        "paymentId": "pay_ELe6ONlgjrYv5Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z"
+        }
+      },
+      {
+        "id": "line_NDZlVERCU3VhMld6MWs4VEswZmd2OmxpOkhjV2dWNUthMWtGNkxVeVpkZUVZdTphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM5ODcy",
+        "lineType": "payment_gross",
+        "amount": {
+          "amountMinor": 2500,
+          "currency": "USD"
+        },
+        "usdAmount": "25.0",
+        "postedAt": "2026-09-09T23:02:41Z",
+        "availableAt": "2026-09-11T00:00:00Z",
+        "paymentId": "pay_ELe6ONlgjrYv5Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_ELe6ONlgjrYv5Z"
+        }
+      },
+      {
+        "id": "line_eHNTRmRRczdyaW82YU1PSkxSVUttOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODkx",
+        "lineType": "payment_processing_fixed_fee",
+        "amount": {
+          "amountMinor": -30,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.3",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": null,
+        "paymentId": "pay_tJABaxIlZo6FJ9",
+        "source": {
+          "type": "payment",
+          "id": "pay_tJABaxIlZo6FJ9"
+        }
+      },
+      {
+        "id": "line_dk96YkJZRm9NUUU5SUZOellTa0J0OmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODkx",
+        "lineType": "fraud_prevention_fee",
+        "amount": {
+          "amountMinor": -7,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.07",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": null,
+        "paymentId": "pay_tJABaxIlZo6FJ9",
+        "source": {
+          "type": "payment",
+          "id": "pay_tJABaxIlZo6FJ9"
+        }
+      },
+      {
+        "id": "line_cjFzcFJGT3JqY09DNlkwdDdKbUs0OmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODkx",
+        "lineType": "orchestration_percentage_fee",
+        "amount": {
+          "amountMinor": -20,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.2",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": null,
+        "paymentId": "pay_tJABaxIlZo6FJ9",
+        "source": {
+          "type": "payment",
+          "id": "pay_tJABaxIlZo6FJ9"
+        }
+      },
+      {
+        "id": "line_cTRkeTZDcXRhbENwcENsOW9vb3AwOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODky",
+        "lineType": "orchestration_percentage_fee",
+        "amount": {
+          "amountMinor": -20,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.2",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": null,
+        "paymentId": "pay_8f4MKyKfuGvUNy",
+        "source": {
+          "type": "payment",
+          "id": "pay_8f4MKyKfuGvUNy"
+        }
+      },
+      {
+        "id": "line_Z0s2TFl4VFlTT1dXWnpJZldlcjBoOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODky",
+        "lineType": "payment_processing_fixed_fee",
+        "amount": {
+          "amountMinor": -30,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.3",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": null,
+        "paymentId": "pay_8f4MKyKfuGvUNy",
+        "source": {
+          "type": "payment",
+          "id": "pay_8f4MKyKfuGvUNy"
+        }
+      },
+      {
+        "id": "line_WGRXTWJ1em1kZDhLSndJSzEwa1FROmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODkx",
+        "lineType": "payment_processing_percentage_fee",
+        "amount": {
+          "amountMinor": -68,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.68",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": null,
+        "paymentId": "pay_tJABaxIlZo6FJ9",
+        "source": {
+          "type": "payment",
+          "id": "pay_tJABaxIlZo6FJ9"
+        }
+      },
+      {
+        "id": "line_UWV6cFpTQzBSTUdGS21IdFdlVFl6OmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODky",
+        "lineType": "cross_border_percentage_fee",
+        "amount": {
+          "amountMinor": -38,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.38",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": null,
+        "paymentId": "pay_8f4MKyKfuGvUNy",
+        "source": {
+          "type": "payment",
+          "id": "pay_8f4MKyKfuGvUNy"
+        }
+      },
+      {
+        "id": "line_U25Ga0Y5OHRTWW1Lc3hQd1BYbTdpOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODky",
+        "lineType": "payment_gross",
+        "amount": {
+          "amountMinor": 2500,
+          "currency": "USD"
+        },
+        "usdAmount": "25.0",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": "2026-09-10T00:00:00Z",
+        "paymentId": "pay_8f4MKyKfuGvUNy",
+        "source": {
+          "type": "payment",
+          "id": "pay_8f4MKyKfuGvUNy"
+        }
+      },
+      {
+        "id": "line_TElQb29hdWFuZ1FHdTRUQ1VTUlZkOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODkx",
+        "lineType": "cross_border_percentage_fee",
+        "amount": {
+          "amountMinor": -38,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.38",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": null,
+        "paymentId": "pay_tJABaxIlZo6FJ9",
+        "source": {
+          "type": "payment",
+          "id": "pay_tJABaxIlZo6FJ9"
+        }
+      },
+      {
+        "id": "line_SWd1WDNKZ2NSNGZ3c0JTTG9MN2ZqOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODky",
+        "lineType": "fraud_prevention_fee",
+        "amount": {
+          "amountMinor": -7,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.07",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": null,
+        "paymentId": "pay_8f4MKyKfuGvUNy",
+        "source": {
+          "type": "payment",
+          "id": "pay_8f4MKyKfuGvUNy"
+        }
+      },
+      {
+        "id": "line_NUl4OE5aNmdYNjhIc0JBaVZENll3OmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODky",
+        "lineType": "payment_processing_percentage_fee",
+        "amount": {
+          "amountMinor": -68,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.68",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": null,
+        "paymentId": "pay_8f4MKyKfuGvUNy",
+        "source": {
+          "type": "payment",
+          "id": "pay_8f4MKyKfuGvUNy"
+        }
+      },
+      {
+        "id": "line_NTFodHZzUlVyWWg5YURQbG9xWElKOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODkx",
+        "lineType": "payment_gross",
+        "amount": {
+          "amountMinor": 2500,
+          "currency": "USD"
+        },
+        "usdAmount": "25.0",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": "2026-09-10T00:00:00Z",
+        "paymentId": "pay_tJABaxIlZo6FJ9",
+        "source": {
+          "type": "payment",
+          "id": "pay_tJABaxIlZo6FJ9"
+        }
+      },
+      {
+        "id": "line_MW83UWZJTmZMbUJOanRnQ1NGWmRyOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODky",
+        "lineType": "application_fee",
+        "amount": {
+          "amountMinor": -200,
+          "currency": "USD"
+        },
+        "usdAmount": "-2.0",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": null,
+        "paymentId": "pay_8f4MKyKfuGvUNy",
+        "source": {
+          "type": "payment",
+          "id": "pay_8f4MKyKfuGvUNy"
+        }
+      },
+      {
+        "id": "line_MFdLR09PSFM5ME1ET1BWR2RvRmNSOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODkx",
+        "lineType": "application_fee",
+        "amount": {
+          "amountMinor": -200,
+          "currency": "USD"
+        },
+        "usdAmount": "-2.0",
+        "postedAt": "2026-09-09T00:08:43Z",
+        "availableAt": null,
+        "paymentId": "pay_tJABaxIlZo6FJ9",
+        "source": {
+          "type": "payment",
+          "id": "pay_tJABaxIlZo6FJ9"
+        }
+      },
+      {
+        "id": "line_dWF6SkZWUVNSN01IcHR4QkU5RzRSOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODU2",
+        "lineType": "orchestration_percentage_fee",
+        "amount": {
+          "amountMinor": -20,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.2",
+        "postedAt": "2026-09-08T23:37:18Z",
+        "availableAt": null,
+        "paymentId": "pay_1EBdxGtWCu54K0",
+        "source": {
+          "type": "payment",
+          "id": "pay_1EBdxGtWCu54K0"
+        }
+      },
+      {
+        "id": "line_cVlqaGRMMnlqUUlmUUVmenpKek1NOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODU2",
+        "lineType": "payment_gross",
+        "amount": {
+          "amountMinor": 2500,
+          "currency": "USD"
+        },
+        "usdAmount": "25.0",
+        "postedAt": "2026-09-08T23:37:18Z",
+        "availableAt": "2026-09-10T00:00:00Z",
+        "paymentId": "pay_1EBdxGtWCu54K0",
+        "source": {
+          "type": "payment",
+          "id": "pay_1EBdxGtWCu54K0"
+        }
+      },
+      {
+        "id": "line_b3ZkMFIzcXUyeWxXSWI2OHNzWm9COmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODU2",
+        "lineType": "payment_processing_fixed_fee",
+        "amount": {
+          "amountMinor": -30,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.3",
+        "postedAt": "2026-09-08T23:37:18Z",
+        "availableAt": null,
+        "paymentId": "pay_1EBdxGtWCu54K0",
+        "source": {
+          "type": "payment",
+          "id": "pay_1EBdxGtWCu54K0"
+        }
+      },
+      {
+        "id": "line_am1CUFhFaHlnYVd6TFkyaDRvaG03OmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODU2",
+        "lineType": "application_fee",
+        "amount": {
+          "amountMinor": -200,
+          "currency": "USD"
+        },
+        "usdAmount": "-2.0",
+        "postedAt": "2026-09-08T23:37:18Z",
+        "availableAt": null,
+        "paymentId": "pay_1EBdxGtWCu54K0",
+        "source": {
+          "type": "payment",
+          "id": "pay_1EBdxGtWCu54K0"
+        }
+      },
+      {
+        "id": "line_V1E3Tm1nZVFBQ045NWFoSmprZlZoOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODU2",
+        "lineType": "payment_processing_percentage_fee",
+        "amount": {
+          "amountMinor": -68,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.68",
+        "postedAt": "2026-09-08T23:37:18Z",
+        "availableAt": null,
+        "paymentId": "pay_1EBdxGtWCu54K0",
+        "source": {
+          "type": "payment",
+          "id": "pay_1EBdxGtWCu54K0"
+        }
+      },
+      {
+        "id": "line_STNVZEFkUlNiZ2Z0TGkzM0J1T09QOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODU2",
+        "lineType": "fraud_prevention_fee",
+        "amount": {
+          "amountMinor": -7,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.07",
+        "postedAt": "2026-09-08T23:37:18Z",
+        "availableAt": null,
+        "paymentId": "pay_1EBdxGtWCu54K0",
+        "source": {
+          "type": "payment",
+          "id": "pay_1EBdxGtWCu54K0"
+        }
+      },
+      {
+        "id": "line_S3NXQ3JETFRqNVpQN2I0RTY1dXNMOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODU2",
+        "lineType": "cross_border_percentage_fee",
+        "amount": {
+          "amountMinor": -38,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.38",
+        "postedAt": "2026-09-08T23:37:18Z",
+        "availableAt": null,
+        "paymentId": "pay_1EBdxGtWCu54K0",
+        "source": {
+          "type": "payment",
+          "id": "pay_1EBdxGtWCu54K0"
+        }
+      },
+      {
+        "id": "line_SzJXSlJ6NmRrR1lIeUtRZ2QwOG9YOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODQ5",
+        "lineType": "payment_gross",
+        "amount": {
+          "amountMinor": 2500,
+          "currency": "USD"
+        },
+        "usdAmount": "25.0",
+        "postedAt": "2026-09-08T23:29:46Z",
+        "availableAt": "2026-09-10T00:00:00Z",
+        "paymentId": "pay_p2qLHIfZbpL57Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_p2qLHIfZbpL57Z"
+        }
+      },
+      {
+        "id": "line_STdCbVBOTTZFdDVMcmJYZlBIMWNZOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODQ5",
+        "lineType": "payment_processing_percentage_fee",
+        "amount": {
+          "amountMinor": -68,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.68",
+        "postedAt": "2026-09-08T23:29:46Z",
+        "availableAt": null,
+        "paymentId": "pay_p2qLHIfZbpL57Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_p2qLHIfZbpL57Z"
+        }
+      },
+      {
+        "id": "line_Rk03NzdSTWtTa1FmcWp1SkxuaDBpOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODQ5",
+        "lineType": "fraud_prevention_fee",
+        "amount": {
+          "amountMinor": -7,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.07",
+        "postedAt": "2026-09-08T23:29:46Z",
+        "availableAt": null,
+        "paymentId": "pay_p2qLHIfZbpL57Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_p2qLHIfZbpL57Z"
+        }
+      },
+      {
+        "id": "line_R01qWjlxb2lGb0JEclhIMnNoYXlyOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODQ5",
+        "lineType": "payment_processing_fixed_fee",
+        "amount": {
+          "amountMinor": -30,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.3",
+        "postedAt": "2026-09-08T23:29:46Z",
+        "availableAt": null,
+        "paymentId": "pay_p2qLHIfZbpL57Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_p2qLHIfZbpL57Z"
+        }
+      },
+      {
+        "id": "line_OXF3ZzJIdXI3c2k5OHV0OHJyeVQ5OmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODQ5",
+        "lineType": "application_fee",
+        "amount": {
+          "amountMinor": -200,
+          "currency": "USD"
+        },
+        "usdAmount": "-2.0",
+        "postedAt": "2026-09-08T23:29:46Z",
+        "availableAt": null,
+        "paymentId": "pay_p2qLHIfZbpL57Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_p2qLHIfZbpL57Z"
+        }
+      },
+      {
+        "id": "line_NVVJMEFud1NqMUFyd0Y3U0ZNeWdNOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODQ5",
+        "lineType": "orchestration_percentage_fee",
+        "amount": {
+          "amountMinor": -20,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.2",
+        "postedAt": "2026-09-08T23:29:46Z",
+        "availableAt": null,
+        "paymentId": "pay_p2qLHIfZbpL57Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_p2qLHIfZbpL57Z"
+        }
+      },
+      {
+        "id": "line_MGNCMUh1NTN0UDBhWmVmQ2ZiRk16OmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4ODQ5",
+        "lineType": "cross_border_percentage_fee",
+        "amount": {
+          "amountMinor": -38,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.38",
+        "postedAt": "2026-09-08T23:29:46Z",
+        "availableAt": null,
+        "paymentId": "pay_p2qLHIfZbpL57Z",
+        "source": {
+          "type": "payment",
+          "id": "pay_p2qLHIfZbpL57Z"
+        }
+      },
+      {
+        "id": "line_c3E3YjI2RzRZdWh6YnBydkV6MlB2OmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4Mzcy",
+        "lineType": "payment_processing_fixed_fee",
+        "amount": {
+          "amountMinor": -30,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.3",
+        "postedAt": "2026-09-08T16:45:25Z",
+        "availableAt": null,
+        "paymentId": "pay_LhomHFUGcxqYZ1",
+        "source": {
+          "type": "payment",
+          "id": "pay_LhomHFUGcxqYZ1"
+        }
+      },
+      {
+        "id": "line_bWM4cTRvSkpiUkpUQm5vVFRvd05OOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4Mzcy",
+        "lineType": "fraud_prevention_fee",
+        "amount": {
+          "amountMinor": -7,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.07",
+        "postedAt": "2026-09-08T16:45:25Z",
+        "availableAt": null,
+        "paymentId": "pay_LhomHFUGcxqYZ1",
+        "source": {
+          "type": "payment",
+          "id": "pay_LhomHFUGcxqYZ1"
+        }
+      },
+      {
+        "id": "line_ZmJKTTU2bVhkUXhPOHFSOUVjRHZWOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4Mzcy",
+        "lineType": "cross_border_percentage_fee",
+        "amount": {
+          "amountMinor": -38,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.38",
+        "postedAt": "2026-09-08T16:45:25Z",
+        "availableAt": null,
+        "paymentId": "pay_LhomHFUGcxqYZ1",
+        "source": {
+          "type": "payment",
+          "id": "pay_LhomHFUGcxqYZ1"
+        }
+      },
+      {
+        "id": "line_WE5uRUVHZ2FydzNCbG55TUVMTm5TOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4Mzcy",
+        "lineType": "application_fee",
+        "amount": {
+          "amountMinor": -200,
+          "currency": "USD"
+        },
+        "usdAmount": "-2.0",
+        "postedAt": "2026-09-08T16:45:25Z",
+        "availableAt": null,
+        "paymentId": "pay_LhomHFUGcxqYZ1",
+        "source": {
+          "type": "payment",
+          "id": "pay_LhomHFUGcxqYZ1"
+        }
+      },
+      {
+        "id": "line_VEJtVGpwUVd6bGdJVVpseU9PVHYwOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4Mzcy",
+        "lineType": "payment_processing_percentage_fee",
+        "amount": {
+          "amountMinor": -68,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.68",
+        "postedAt": "2026-09-08T16:45:25Z",
+        "availableAt": null,
+        "paymentId": "pay_LhomHFUGcxqYZ1",
+        "source": {
+          "type": "payment",
+          "id": "pay_LhomHFUGcxqYZ1"
+        }
+      },
+      {
+        "id": "line_SGlTSVpwVlpDZG8xN3k4NUpnZGdTOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4Mzcy",
+        "lineType": "orchestration_percentage_fee",
+        "amount": {
+          "amountMinor": -20,
+          "currency": "USD"
+        },
+        "usdAmount": "-0.2",
+        "postedAt": "2026-09-08T16:45:25Z",
+        "availableAt": null,
+        "paymentId": "pay_LhomHFUGcxqYZ1",
+        "source": {
+          "type": "payment",
+          "id": "pay_LhomHFUGcxqYZ1"
+        }
+      },
+      {
+        "id": "line_NkQ3UlBFb0FySFkxa3VSbEFQd0RLOmxpOlQ5OHlHOHlkVzR4b0IyR3VwNmhRMDphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOnJlY2VpcHRfMTM4Mzcy",
+        "lineType": "payment_gross",
+        "amount": {
+          "amountMinor": 2500,
+          "currency": "USD"
+        },
+        "usdAmount": "25.0",
+        "postedAt": "2026-09-08T16:45:25Z",
+        "availableAt": "2026-09-10T00:00:00Z",
+        "paymentId": "pay_LhomHFUGcxqYZ1",
+        "source": {
+          "type": "payment",
+          "id": "pay_LhomHFUGcxqYZ1"
+        }
+      }
+    ],
+    "comparisons": [
+      {
+        "resourceId": "pay_ELe6ONlgjrYv5Z",
+        "provider": {
+          "amountMinor": 2137,
+          "currency": "USD"
+        },
+        "local": null,
+        "matches": false
+      },
+      {
+        "resourceId": "pay_tJABaxIlZo6FJ9",
+        "provider": {
+          "amountMinor": 2137,
+          "currency": "USD"
+        },
+        "local": null,
+        "matches": false
+      },
+      {
+        "resourceId": "pay_8f4MKyKfuGvUNy",
+        "provider": {
+          "amountMinor": 2137,
+          "currency": "USD"
+        },
+        "local": null,
+        "matches": false
+      },
+      {
+        "resourceId": "pay_1EBdxGtWCu54K0",
+        "provider": {
+          "amountMinor": 2137,
+          "currency": "USD"
+        },
+        "local": null,
+        "matches": false
+      },
+      {
+        "resourceId": "pay_p2qLHIfZbpL57Z",
+        "provider": {
+          "amountMinor": 2137,
+          "currency": "USD"
+        },
+        "local": null,
+        "matches": false
+      },
+      {
+        "resourceId": "pay_LhomHFUGcxqYZ1",
+        "provider": {
+          "amountMinor": 2137,
+          "currency": "USD"
+        },
+        "local": {
+          "amountMinor": 2300,
+          "currency": "USD"
+        },
+        "matches": false
+      }
+    ]
+  },
+  "missingLocally": [
+    {
+      "resourceType": "payment",
+      "resourceId": "pay_ELe6ONlgjrYv5Z",
+      "amount": {
+        "amountMinor": 2500,
+        "currency": "USD"
+      }
+    },
+    {
+      "resourceType": "payment",
+      "resourceId": "pay_8f4MKyKfuGvUNy",
+      "amount": {
+        "amountMinor": 2500,
+        "currency": "USD"
+      }
+    },
+    {
+      "resourceType": "payment",
+      "resourceId": "pay_tJABaxIlZo6FJ9",
+      "amount": {
+        "amountMinor": 2500,
+        "currency": "USD"
+      }
+    },
+    {
+      "resourceType": "payment",
+      "resourceId": "pay_1EBdxGtWCu54K0",
+      "amount": {
+        "amountMinor": 2500,
+        "currency": "USD"
+      }
+    },
+    {
+      "resourceType": "payment",
+      "resourceId": "pay_p2qLHIfZbpL57Z",
+      "amount": {
+        "amountMinor": 2500,
+        "currency": "USD"
+      }
+    }
+  ],
+  "missingAtProvider": [],
+  "amountMismatch": [],
+  "pendingOrReserve": []
+}

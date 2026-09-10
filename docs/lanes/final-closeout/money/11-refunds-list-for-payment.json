@@ -1,0 +1,29 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/refunds",
+    "query": "payment_id=pay_ELe6ONlgjrYv5Z",
+    "api_version_date": "2026-09-06",
+    "idempotency_key": null,
+    "body": null
+  },
+  "status": 200,
+  "started_at": "2026-09-09T23:28:08.326Z",
+  "finished_at": "2026-09-09T23:28:08.706Z",
+  "response_headers": {
+    "date": "Wed, 09 Sep 2026 23:28:08 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "fdd7228d-6d15-45ea-8812-509243520238",
+    "cf-ray": "a389f7b56863847d-EWR"
+  },
+  "response": {
+    "data": [],
+    "page_info": {
+      "start_cursor": null,
+      "end_cursor": null,
+      "has_next_page": false,
+      "has_previous_page": false
+    }
+  }
+}

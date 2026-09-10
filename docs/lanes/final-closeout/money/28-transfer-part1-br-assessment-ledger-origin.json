@@ -1,0 +1,68 @@
+{
+  "request": {
+    "method": "POST",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/transfers",
+    "query": null,
+    "api_version_date": "2026-09-06",
+    "idempotency_key": "money-part1-platform-to-br-assessment-2026-09-10",
+    "body": {
+      "amount": 55.2,
+      "currency": "usd",
+      "type": "ledger",
+      "origin_id": "ldgr_AZlILZx7NXGpQ",
+      "destination_id": "biz_8dB7THK4woBs43",
+      "idempotence_key": "money-part1-platform-to-br-assessment-2026-09-10",
+      "notes": "Ledgerly assessment part 1: platform to BR seller share of pay_cxvGcm7NvjoCkV",
+      "metadata": {
+        "purpose": "assessment_part1_platform_to_br",
+        "source_payment_id": "pay_cxvGcm7NvjoCkV"
+      }
+    }
+  },
+  "status": 201,
+  "started_at": "2026-09-10T00:09:39.579Z",
+  "finished_at": "2026-09-10T00:09:40.589Z",
+  "response_headers": {
+    "date": "Thu, 10 Sep 2026 00:09:40 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "0a5300e5-320e-4cf0-98dc-9a61e99926f0",
+    "cf-ray": "a38a3486fda0c07d-EWR"
+  },
+  "response": {
+    "object": "transfer",
+    "id": "ctt_XOWIF7fafgGBHX",
+    "status": "succeeded",
+    "failure_code": null,
+    "failure_reason": null,
+    "failed_at": null,
+    "amount": 55.2,
+    "currency": "usd",
+    "created_at": "2026-09-10T00:09:40.061Z",
+    "fee_amount": 0.0,
+    "notes": "Ledgerly assessment part 1: platform to BR seller ",
+    "metadata": {
+      "purpose": "assessment_part1_platform_to_br",
+      "source_payment_id": "pay_cxvGcm7NvjoCkV"
+    },
+    "origin_ledger_account_id": "ldgr_AZlILZx7NXGpQ",
+    "destination_ledger_account_id": "ldgr_LS8igbZK1GRg5",
+    "created_by_user": {
+      "id": "user_Q0IiqCqFWa8vo",
+      "name": "[name redacted]",
+      "username": "aneyman"
+    },
+    "origin": {
+      "typename": "Company",
+      "id": "biz_RlL9WP9TIBVXmr",
+      "route": "biz_RlL9WP9TIBVXmr",
+      "title": "ledgerly"
+    },
+    "destination": {
+      "typename": "Company",
+      "id": "biz_8dB7THK4woBs43",
+      "route": "biz_8dB7THK4woBs43",
+      "title": "Ledgerly Seller BR"
+    }
+  }
+}

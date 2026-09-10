@@ -1,0 +1,651 @@
+# CI gates for Ledgerly. Owned by the integration-qa lane (docs/lanes/integration-qa).
+#
+# Shape: one cheap `changes` job decides what a commit touched, then independent jobs run
+# in parallel. Docs-only commits run the docs verifier and nothing else. Code commits run
+# lint, typecheck, build, unit/contract tests, the QA headless suite, security-negative
+# checks and the fixture browser E2E. `gate` is the single job a required check would
+# reference; it fails when any needed job failed or was cancelled. `promote-release`
+# fast-forwards the `release` branch only after `gate` passed on a push to main; Vercel
+# production follows `release` once architecture flips the production branch.
+#
+# Pull requests use no provider secrets. The push-only hybrid job uses the isolated CI
+# database and creates Whop sandbox accounts/checkouts. It is not a provider-free run.
+# Missing prerequisites and skipped required journeys withhold the gate and release.
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, "work/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  CI: "1"
+
+jobs:
+  changes:
+    name: what changed
+    runs-on: ubuntu-latest
+    outputs:
+      code: ${{ steps.classify.outputs.code }}
+      docs_only: ${{ steps.classify.outputs.docs_only }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: classify
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            base="${{ github.event.pull_request.base.sha }}"
+          elif [ "${{ github.event_name }}" = "push" ] && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ] && git cat-file -e "${{ github.event.before }}" 2>/dev/null; then
+            base="${{ github.event.before }}"
+          else
+            base=""
+          fi
+          if [ -z "$base" ]; then
+            echo "no base commit; treating as a code change"
+            echo "code=true" >> "$GITHUB_OUTPUT"; echo "docs_only=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          git diff --name-only "$base" "${{ github.sha }}" > changed.txt
+          echo "changed files:"; cat changed.txt
+          # Docs the tests read are code for gating purposes.
+          code_pattern='^(apps/|packages/|tests/|scripts/|\.github/|package\.json$|pnpm-lock\.yaml$|pnpm-workspace\.yaml$|tsconfig|biome\.json$|\.node-version$|docs/presentation/|docs/wiki/requirements\.json$|docs/lanes/evidence/schemas/)'
+          if grep -Eq "$code_pattern" changed.txt; then code=true; else code=false; fi
+          if [ "$code" = "false" ] && [ -s changed.txt ]; then docs_only=true; else docs_only=false; fi
+          echo "code=$code" >> "$GITHUB_OUTPUT"; echo "docs_only=$docs_only" >> "$GITHUB_OUTPUT"
+          echo "code=$code docs_only=$docs_only"
+
+  docs:
+    name: docs verifier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: verify wiki links, requirement manifest and source hashes
+        shell: bash
+        run: |
+          set -o pipefail
+          # Write outside the repo: the verifier scans every JSON file under the checkout.
+          python3 scripts/verify_docs.py | tee "$RUNNER_TEMP/docs-verify.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: docs-verify
+          path: ${{ runner.temp }}/docs-verify.json
+          retention-days: 14
+
+  lint:
+    name: lint (biome)
+    needs: changes
+    if: needs.changes.outputs.code == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .node-version, cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+
+  typecheck:
+    name: typecheck
+    needs: changes
+    if: needs.changes.outputs.code == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .node-version, cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+
+  build:
+    name: build apps/web
+    needs: changes
+    if: needs.changes.outputs.code == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .node-version, cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - name: next build (no database, no provider; placeholders only)
+        env:
+          DEMO_MODE: "1"
+          WHOP_MODE: mock
+        run: pnpm build
+      - uses: actions/upload-artifact@v4
+        with: { name: next-build, path: apps/web/.next, include-hidden-files: true, retention-days: 3 }
+
+  unit-contract:
+    name: unit and contract tests (vitest, node:test)
+    needs: changes
+    if: needs.changes.outputs.code == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .node-version, cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - name: package tests with junit output
+        run: |
+          set -euo pipefail
+          mkdir -p .runtime/junit
+          for dir in packages/*/ apps/web/; do
+            name=$(basename "$dir")
+            if [ -f "$dir/vitest.config.ts" ] || grep -q '"vitest' "$dir/package.json"; then
+              (cd "$dir" && pnpm exec vitest run --reporter=default --reporter=junit --outputFile="../../.runtime/junit/$name.xml")
+            elif grep -q '"test":' "$dir/package.json"; then
+              (cd "$dir" && pnpm test 2>&1 | tee "../../.runtime/junit/$name.txt")
+            else
+              echo "$name: no test script" | tee ".runtime/junit/$name.txt"
+            fi
+          done
+      - name: review hub and Lab runner tests
+        run: |
+          node --test apps/review-hub/test/*.test.mjs
+          pnpm --filter ledgerly-qa-e2e console:test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: unit-contract-results, path: .runtime/junit, retention-days: 14 }
+
+  qa-headless:
+    name: QA headless suite (fixture)
+    needs: changes
+    if: needs.changes.outputs.code == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .node-version }
+      - name: run tests/qa
+        run: |
+          set -euo pipefail
+          mkdir -p .runtime/qa
+          if [ -d packages/demo-runtime ]; then export LEDGERLY_DEMO_RUNTIME_DIR="$PWD/packages/demo-runtime"; fi
+          python3 -m unittest discover -s tests/qa -p 'test_*.py' -v 2>&1 | tee .runtime/qa/unittest.log
+          python3 -m unittest discover -s scripts/ci/test -p 'test_*.py' -v 2>&1 | tee .runtime/qa/browser-install-fixtures.log
+      - name: honest status summary
+        if: always()
+        run: |
+          {
+            echo "## QA headless"
+            tail -3 .runtime/qa/unittest.log
+            echo
+            echo "Skipped tests are dependencies that are not in this checkout or conformance targets that are not wired. They are not passes."
+            grep -c "skipped" .runtime/qa/unittest.log | sed 's/^/skipped lines: /' || true
+            for f in .runtime/qa/*.json; do echo "- $(basename "$f"): $(python3 -c "import json,sys;d=json.load(open(sys.argv[1]));print(d.get('status'), d.get('reason',''))" "$f")"; done
+          } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: qa-headless-results, path: .runtime/qa, retention-days: 14 }
+
+  security-negative:
+    name: security negative checks
+    needs: changes
+    if: needs.changes.outputs.code == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .node-version, cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - name: secret scan, webhook forgery vectors, authorization matrix
+        run: |
+          set -euo pipefail
+          mkdir -p .runtime/qa
+          (cd tests/qa && python3 -m unittest test_secret_scan test_webhook_vectors test_authz_matrix -v 2>&1) | tee .runtime/qa/security-negative.log
+      - name: no env files or private assets in the tree
+        run: |
+          set -euo pipefail
+          bad=$(git ls-files | grep -E '(^|/)\.env($|\.)' | grep -v '\.env\.example$' || true)
+          if [ -n "$bad" ]; then echo "env files tracked: $bad"; exit 1; fi
+          # docs/review/decisions.jsonl is the review hub's append-only decision log (owner: review-hub); every other .jsonl is runtime output.
+          git ls-files | grep -Ei '\.(pem|key|p12|jsonl)$' | grep -v '^docs/review/decisions\.jsonl$' && { echo "private or runtime files tracked"; exit 1; } || echo "no private files tracked"
+      - name: dependency audit (informational, uploaded, does not gate yet)
+        continue-on-error: true
+        run: pnpm audit --prod --audit-level=high --json > .runtime/qa/pnpm-audit.json || echo "audit reported findings; see artifact"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: security-negative-results, path: .runtime/qa, retention-days: 14 }
+
+  e2e-fixture:
+    name: docs browser smoke (fixture, no product acceptance)
+    needs: changes
+    if: needs.changes.outputs.code == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .node-version, cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - name: cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('tests/qa/e2e/package.json') }}
+      - run: bash scripts/ci/install-playwright.sh
+      - name: start docs preview (fixture target)
+        run: |
+          nohup python3 scripts/qa/preview_server.py --host 127.0.0.1 --port 4420 > preview.log 2>&1 &
+          for i in $(seq 1 20); do curl -fs -o /dev/null http://127.0.0.1:4420/ledgerly/docs/wiki/index.md && break; sleep 0.5; done
+      - name: docs browser smoke (no database or provider)
+        env:
+          QA_PREVIEW_URL: http://127.0.0.1:4420
+          QA_MODE: fixture
+        run: pnpm --filter ledgerly-qa-e2e exec playwright test preview-smoke
+      - name: require every docs smoke test to execute
+        run: python3 tests/qa/e2e/check_required.py tests/qa/e2e/artifacts/results.json tests/qa/e2e/required-journeys.json --group fixture
+      - name: honest status summary
+        if: always()
+        run: |
+          python3 - <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          p = pathlib.Path("tests/qa/e2e/artifacts/results.json")
+          if not p.exists():
+              print("## Browser E2E\nno results.json; the run did not reach the reporter"); raise SystemExit
+          d = json.loads(p.read_text())
+          counts = {}
+          def walk(suites):
+              for s in suites:
+                  for sp in s.get("specs", []):
+                      for t in sp.get("tests", []):
+                          st = t.get("status", "unknown"); counts[st] = counts.get(st, 0) + 1
+                  walk(s.get("suites", []))
+          walk(d.get("suites", []))
+          print("## Browser E2E (fixture mode)")
+          for k, v in sorted(counts.items()): print(f"- {k}: {v}")
+          print("\nThis job tests docs only. The product-fixture job exercises real pages against isolated PGlite and a mock provider. Hybrid acceptance remains separate.")
+          EOF
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: e2e-fixture-artifacts
+          path: |
+            tests/qa/e2e/artifacts
+            preview.log
+            web.log
+          retention-days: 14
+
+  product-fixture:
+    name: product browser E2E (isolated PGlite, mock provider)
+    needs: changes
+    if: needs.changes.outputs.code == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      QA_APP_URL: http://127.0.0.1:4474
+      QA_MODE: fixture
+      QA_SKIP_ACTIONS: ""
+      QA_WEBHOOK_SECRET_KNOWN: "1"
+      QA_LOCAL_EVENTS_PATH: /api/local-runtime/events
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .node-version, cache: pnpm }
+      - run: pnpm install --frozen-lockfile
+      - run: bash scripts/ci/install-playwright.sh
+      - name: select every implemented local required spec
+        shell: bash
+        run: |
+          set -euo pipefail
+          export PRODUCT_CI_DIR="$RUNNER_TEMP/ledgerly-product-ci"
+          echo "PRODUCT_CI_DIR=$PRODUCT_CI_DIR" >> "$GITHUB_ENV"
+          mkdir -p "$PRODUCT_CI_DIR"
+          export QA_TARGET_SHA="$(git rev-parse HEAD)"
+          echo "QA_TARGET_SHA=$QA_TARGET_SHA" >> "$GITHUB_ENV"
+          python3 scripts/ci/product_gate.py select tests/qa/e2e/required-journeys.json > "$PRODUCT_CI_DIR/local-selectors.txt"
+          mapfile -t required_specs < "$PRODUCT_CI_DIR/local-selectors.txt"
+          test "${#required_specs[@]}" -gt 0
+          pnpm --filter ledgerly-qa-e2e exec playwright test "${required_specs[@]}" --list --reporter=json > "$PRODUCT_CI_DIR/local-collected.json"
+          python3 scripts/ci/product_gate.py collection "$PRODUCT_CI_DIR/local-collected.json" tests/qa/e2e/required-journeys.json
+      - name: build compiled fixture and prove production guards on the same artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$QA_TARGET_SHA" = "$(git rev-parse HEAD)"
+          node --version > "$PRODUCT_CI_DIR/node-version.txt"
+          node scripts/local-runtime/build-compiled.mjs --port 4474 --expected-sha "$QA_TARGET_SHA" --artifact "$PRODUCT_CI_DIR/compiled-artifact.json" --webhook-fixture 1 > "$PRODUCT_CI_DIR/compiled-build.log" 2>&1
+          NODE_ENV=production node scripts/local-runtime/compiled-production-check.mjs "$PRODUCT_CI_DIR/compiled-artifact.json" "$QA_TARGET_SHA" "$PRODUCT_CI_DIR/production-denial.json" --port 4474 --webhook-fixture 1 > "$PRODUCT_CI_DIR/production-denial.log" 2>&1
+      - name: start isolated local test app (no secrets or external database)
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f scripts/local-runtime/start.mjs || { echo "Required local runtime launcher is missing"; exit 1; }
+          test "$QA_TARGET_SHA" = "$(git rev-parse HEAD)"
+          test_data_dir=$(mktemp -d "$RUNNER_TEMP/ledgerly-browser.XXXXXX")
+          nohup node scripts/local-runtime/start.mjs --mode compiled-test --port 4474 --data-dir "$test_data_dir" --webhook-fixture 1 --expected-sha "$QA_TARGET_SHA" --artifact "$PRODUCT_CI_DIR/compiled-artifact.json" > "$PRODUCT_CI_DIR/local-web.log" 2>&1 &
+          launcher_pid=$!
+          echo "$launcher_pid" > "$PRODUCT_CI_DIR/local-web.pid"
+          ready=false
+          for i in $(seq 1 120); do
+            kill -0 "$launcher_pid" || { echo "Local runtime launcher exited before readiness"; exit 1; }
+            if curl --max-time 5 -fsS http://127.0.0.1:4474/api/local-runtime/health > "$PRODUCT_CI_DIR/local-health.json"; then
+              ready=true
+              break
+            fi
+            sleep 1
+          done
+          test "$ready" = true || { echo "Local runtime health never became ready"; exit 1; }
+          kill -0 "$launcher_pid"
+          python3 scripts/ci/product_gate.py health "$PRODUCT_CI_DIR/local-health.json" --target-sha "$QA_TARGET_SHA"
+      - name: execute all local required spec files
+        shell: bash
+        run: |
+          set -euo pipefail
+          kill -0 "$(cat "$PRODUCT_CI_DIR/local-web.pid")"
+          mapfile -t required_specs < "$PRODUCT_CI_DIR/local-selectors.txt"
+          test "${#required_specs[@]}" -gt 0
+          pnpm --filter ledgerly-qa-e2e exec playwright test "${required_specs[@]}"
+      - name: required local product journeys executed and passed on the target revision
+        shell: bash
+        run: |
+          set -euo pipefail
+          kill -0 "$(cat "$PRODUCT_CI_DIR/local-web.pid")"
+          curl --max-time 5 -fsS http://127.0.0.1:4474/api/local-runtime/health > "$PRODUCT_CI_DIR/local-health-after.json"
+          python3 scripts/ci/product_gate.py health "$PRODUCT_CI_DIR/local-health-after.json" --target-sha "$QA_TARGET_SHA"
+          node --input-type=module - <<'JS' > "$PRODUCT_CI_DIR/compiled-artifact-after.json"
+          import { compiledConfiguration, verifyArtifact } from './scripts/local-runtime/compiled-artifact.mjs';
+          const manifest = verifyArtifact(process.cwd(), `${process.env.PRODUCT_CI_DIR}/compiled-artifact.json`, process.env.QA_TARGET_SHA, compiledConfiguration(process.cwd(), 4474, '1'));
+          console.log(JSON.stringify({ revision: manifest.revision, digest: manifest.digest, fileCount: Object.keys(manifest.files).length, unchanged: true, node: process.version }));
+          JS
+          python3 tests/qa/e2e/check_required.py tests/qa/e2e/artifacts/results.json tests/qa/e2e/required-journeys.json --group local
+      - name: stop this job's launcher
+        if: always()
+        run: |
+          if [ -n "${PRODUCT_CI_DIR:-}" ] && [ -f "$PRODUCT_CI_DIR/local-web.pid" ]; then kill "$(cat "$PRODUCT_CI_DIR/local-web.pid")" || true; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: local-product-e2e-artifacts
+          path: |
+            tests/qa/e2e/artifacts
+            ${{ runner.temp }}/ledgerly-product-ci
+          retention-days: 14
+
+  hybrid-e2e:
+    # Real database (isolated Neon branch `ci`), real webhook and cron routes, mocked
+    # platform operations (WHOP_MODE=hybrid). Never on pull_request, so a fork can never
+    # see DATABASE_URL_CI. Without the secret the job reports BLOCKED and `ran=false`,
+    # and promote-release refuses to move `release`.
+    name: hybrid E2E (CI DB, sandbox accounts and checkouts)
+    needs: changes
+    if: github.event_name != 'pull_request' && needs.changes.outputs.code == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    # One hybrid job at a time across every ref. The workflow-level group is per ref, so two
+    # branches could run this job together against the single ci database with the same
+    # seeded operator and the same singleton resolution case; runs 34290662212 (main) and
+    # 34290649604 (a QA branch) did exactly that on 2026-09-08 and each saw the other's
+    # history entry (refetch at 23:30:15.745 next to recheck at 23:30:16.471, same actor).
+    # Queue instead of cancel: a queued run still needs its own verdict.
+    concurrency:
+      group: hybrid-e2e-shared-ci-database
+      cancel-in-progress: false
+    outputs:
+      ran: ${{ steps.guard.outputs.ran }}
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL_CI }}
+      WHOP_API_KEY: ${{ secrets.WHOP_API_KEY }}
+      WHOP_API_BASE: ${{ secrets.WHOP_API_BASE }}
+      WHOP_PLATFORM_ACCOUNT_ID: ${{ secrets.WHOP_PLATFORM_ACCOUNT_ID }}
+    steps:
+      - id: guard
+        run: |
+          python3 - <<'PY'
+          import os
+          required = ("DATABASE_URL", "WHOP_API_KEY", "WHOP_API_BASE", "WHOP_PLATFORM_ACCOUNT_ID")
+          missing = [name for name in required if not os.environ.get(name)]
+          # Match the API base used by packages/whop, not the sandbox frontend.
+          # Exact strings reject credentials, alternate ports, queries and paths.
+          sandbox_bases = ("https://sandbox-api.whop.com/api/v1", "https://sandbox-api.whop.com/api/v1/")
+          valid = not missing and os.environ["WHOP_API_BASE"] in sandbox_bases
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"ran={str(valid).lower()}\n")
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as out:
+              if not valid:
+                  out.write("## Hybrid E2E: BLOCKED\nMissing required configuration or a non-sandbox API base. No tests ran. The gate and release remain withheld.\n")
+              else:
+                  out.write("## Hybrid prerequisites available\nThe following job can create sandbox accounts and checkouts. A successful test report is still required.\n")
+          PY
+      - uses: actions/checkout@v4
+        if: steps.guard.outputs.ran == 'true'
+      - uses: pnpm/action-setup@v4
+        if: steps.guard.outputs.ran == 'true'
+      - uses: actions/setup-node@v4
+        if: steps.guard.outputs.ran == 'true'
+        with: { node-version-file: .node-version, cache: pnpm }
+      - if: steps.guard.outputs.ran == 'true'
+        run: pnpm install --frozen-lockfile
+      - name: cache Playwright browsers
+        if: steps.guard.outputs.ran == 'true'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('tests/qa/e2e/package.json') }}
+      - if: steps.guard.outputs.ran == 'true'
+        run: bash scripts/ci/install-playwright.sh
+      - name: migrate the CI database branch (idempotent, packages/db migrate script)
+        if: steps.guard.outputs.ran == 'true'
+        run: pnpm --filter @ledgerly/db migrate
+      - name: prepare isolated HTTPS transport
+        if: steps.guard.outputs.ran == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --test scripts/ci/test/*.test.mjs
+          tls_parent=$(mktemp -d "$RUNNER_TEMP/ledgerly-hybrid-tls.XXXXXX")
+          export CI_TLS_CERT_DIR="$tls_parent/certificate"
+          export HYBRID_CI_DIR="$RUNNER_TEMP/ledgerly-hybrid-ci"
+          mkdir -p "$HYBRID_CI_DIR"
+          node scripts/ci/hybrid-tls.mjs create --cert-dir "$CI_TLS_CERT_DIR"
+          echo "CI_TLS_CERT_DIR=$CI_TLS_CERT_DIR" >> "$GITHUB_ENV"
+          echo "HYBRID_CI_DIR=$HYBRID_CI_DIR" >> "$GITHUB_ENV"
+          echo "QA_SDK_TLS_SPKI=$(cat "$CI_TLS_CERT_DIR/spki.txt")" >> "$GITHUB_ENV"
+          echo "QA_TARGET_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+      - name: build and start apps/web in hybrid mode
+        id: hybrid_start
+        if: steps.guard.outputs.ran == 'true'
+        env:
+          DEMO_MODE: "1"
+          # Enable guarded profile/snapshot acceptance only in this hybrid test runtime.
+          DEMO_PROFILES_ENABLED: "1"
+          WHOP_MODE: hybrid
+          WHOP_API_VERSION_DATE: "2026-09-06"
+          # Whop account links reject plain-http return URLs (local repro: http URLs -> 502, https -> 201),
+          # so CI points them at the production host; nothing follows them during the run.
+          ONBOARDING_RETURN_URL: https://ledgerly-afneymans-projects.vercel.app/onboarding/complete
+          ONBOARDING_REFRESH_URL: https://ledgerly-afneymans-projects.vercel.app/onboarding/refresh
+          # Throwaway signing secret for this run only; it is the fixture value the QA
+          # webhook vectors were signed with. Never a real Whop secret.
+          WHOP_WEBHOOK_SECRET: ws_qafixture0000000000000000000000000000000000000000000000000000
+          # Better Auth needs a signing secret and its public URL; both are throwaway for this job.
+          BETTER_AUTH_URL: https://127.0.0.1:3443
+          APP_BASE_URL: https://127.0.0.1:3443
+          PAYOUT_RETURN_URL: https://ledgerly-afneymans-projects.vercel.app/sell/payouts
+          NODE_EXTRA_CA_CERTS: ${{ env.CI_TLS_CERT_DIR }}/cert.pem
+          # The seed script (pnpm --filter @ledgerly/db seed:demo, run by architecture against the
+          # ci branch with RUN_ID=ci) scopes its sellers under this run id; the job must match it
+          # so seller identity lookups and the demo-fault pair below resolve.
+          RUN_ID: ci
+          # Deterministic fault fixtures: demo-fault with fresh:true and a per-test run id seeds a
+          # run-scoped mock-confirmed payment, so the resolution specs never share the one seeded
+          # sandbox payment across runs (the singleton case went resolved on 2026-09-09 and every
+          # later hybrid job failed at concurrency.spec.ts:83). Labelled mock, never sandbox.
+          WHOP_DEMO_FALLBACK: "1"
+          WHOP_PLATFORM_ACCOUNT_ID: ${{ secrets.WHOP_PLATFORM_ACCOUNT_ID }}
+          # Real sandbox access for the operations the sandbox supports (accounts.create,
+          # checkout configurations); everything else stays on the simulator. Never on PRs.
+          WHOP_API_KEY: ${{ secrets.WHOP_API_KEY }}
+          WHOP_API_BASE: ${{ secrets.WHOP_API_BASE }}
+          PORT: "3000"
+        run: |
+          set -euo pipefail
+          export BETTER_AUTH_SECRET="$(openssl rand -hex 32)"
+          export CRON_SECRET="$(openssl rand -hex 24)"
+          node scripts/ci/hybrid-identity.mjs clean
+          pnpm build
+          node scripts/ci/hybrid-identity.mjs record
+          nohup node scripts/ci/hybrid-identity.mjs serve > "$HYBRID_CI_DIR/web.log" 2>&1 &
+          echo "$!" > "$HYBRID_CI_DIR/web-launcher.pid"
+          nohup env -i PATH="$PATH" node scripts/ci/hybrid-tls.mjs serve --cert-dir "$CI_TLS_CERT_DIR" > "$HYBRID_CI_DIR/tls.log" 2>&1 &
+          echo "$!" > "$HYBRID_CI_DIR/tls.pid"
+          for i in $(seq 1 40); do
+            kill -0 "$(cat "$HYBRID_CI_DIR/web-launcher.pid")"
+            kill -0 "$(cat "$HYBRID_CI_DIR/tls.pid")"
+            curl --cacert "$CI_TLS_CERT_DIR/cert.pem" --max-time 5 -fs -o /dev/null https://127.0.0.1:3443/ && break
+            sleep 0.5
+          done
+          curl --cacert "$CI_TLS_CERT_DIR/cert.pem" --max-time 5 -fsS -o /dev/null -w 'web %{http_code}\n' https://127.0.0.1:3443/
+          node scripts/ci/hybrid-identity.mjs check "$HYBRID_CI_DIR/identity-before.json"
+      - name: playwright journeys and security against the real routes
+        if: steps.guard.outputs.ran == 'true'
+        env:
+          QA_APP_URL: https://127.0.0.1:3443
+          NODE_EXTRA_CA_CERTS: ${{ env.CI_TLS_CERT_DIR }}/cert.pem
+          QA_MODE: hybrid
+          # main 3c068ac mounts auth, sellers, checkouts, orders and earnings; nothing skipped here.
+          QA_SKIP_ACTIONS: ""
+          # Seeded on the ci branch: seller sel_mara (biz_pt7b2NAryKwRGh) and the one paid sandbox
+          # payment listed under that account (read back 2026-09-08; the pair first named,
+          # pay_twYKgzRSgssTG5, belongs to biz_DdrnVEudDfJCCj and answers payment_not_confirmed).
+          # Identifiers only, not secrets.
+          QA_DEMO_FAULT_SELLER_ID: sel_mara
+          QA_DEMO_FAULT_PAYMENT_ID: pay_LhomHFUGcxqYZ1
+          # The seeded demo operator (fixtures/demo/test-users.json, created on ci by seed:demo)
+          # drives the resolution concurrency spec; no role is created or changed by QA.
+          QA_SEED_OPERATOR: "1"
+        run: pnpm --filter ledgerly-qa-e2e exec playwright test journeys security assistant resolution
+      - name: owner-bound sandbox balance SDK acceptance
+        if: always() && steps.guard.outputs.ran == 'true' && steps.hybrid_start.outcome == 'success'
+        env:
+          QA_MODE: hybrid
+          QA_APP_URL: https://127.0.0.1:3443
+          QA_SDK_APP_URL: https://127.0.0.1:3443
+          NODE_EXTRA_CA_CERTS: ${{ env.CI_TLS_CERT_DIR }}/cert.pem
+        shell: bash
+        run: |
+          set -euo pipefail
+          kill -0 "$(cat "$HYBRID_CI_DIR/web.pid")"
+          kill -0 "$(cat "$HYBRID_CI_DIR/tls.pid")"
+          node scripts/ci/hybrid-identity.mjs check "$HYBRID_CI_DIR/identity-before-sdk.json" "$HYBRID_CI_DIR/identity-before.json"
+          export QA_SDK_SELLER_EMAIL="qa+sdk${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}@example.com"
+          pnpm --filter ledgerly-qa-e2e exec playwright test --config tests/payout-sdk/owner-balance.config.ts
+      - name: required journeys executed and passed (release withheld otherwise)
+        if: steps.guard.outputs.ran == 'true'
+        shell: bash
+        run: python3 tests/qa/e2e/check_required.py tests/qa/e2e/artifacts/results.json tests/qa/e2e/required-journeys.json | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: honest status summary
+        if: always() && steps.guard.outputs.ran == 'true'
+        run: |
+          python3 - <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          p = pathlib.Path("tests/qa/e2e/artifacts/results.json")
+          if not p.exists():
+              print("## Hybrid E2E\nno results.json; the run did not reach the reporter"); raise SystemExit
+          d = json.loads(p.read_text()); counts = {}
+          def walk(suites):
+              for s in suites:
+                  for sp in s.get("specs", []):
+                      for t in sp.get("tests", []):
+                          counts[t.get("status", "unknown")] = counts.get(t.get("status", "unknown"), 0) + 1
+                  walk(s.get("suites", []))
+          walk(d.get("suites", []))
+          print("## Hybrid E2E (CI database, sandbox account and checkout operations)")
+          for k, v in sorted(counts.items()): print(f"- {k}: {v}")
+          print("\nMocked operations are not sandbox coverage. Any skipped required test fails the required-journey check.")
+          EOF
+      - name: verify served build after hybrid and SDK tests
+        if: always() && steps.guard.outputs.ran == 'true' && steps.hybrid_start.outcome == 'success'
+        run: node scripts/ci/hybrid-identity.mjs check "$HYBRID_CI_DIR/identity-after.json" "$HYBRID_CI_DIR/identity-before.json"
+      - name: stop this job's HTTPS proxy and app
+        if: always() && steps.guard.outputs.ran == 'true'
+        run: |
+          if [ -n "${HYBRID_CI_DIR:-}" ]; then
+            for name in tls web web-launcher; do
+              if [ -f "$HYBRID_CI_DIR/$name.pid" ]; then kill "$(cat "$HYBRID_CI_DIR/$name.pid")" || true; fi
+            done
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.guard.outputs.ran == 'true'
+        with:
+          name: hybrid-e2e-artifacts
+          path: |
+            tests/qa/e2e/artifacts
+            ${{ runner.temp }}/ledgerly-hybrid-ci
+          retention-days: 14
+
+  gate:
+    name: gate
+    needs: [changes, docs, lint, typecheck, build, unit-contract, qa-headless, security-negative, e2e-fixture, product-fixture, hybrid-e2e]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: fail closed unless every needed job passed or was legitimately skipped
+        env:
+          RESULTS: ${{ toJSON(needs) }}
+          CODE: ${{ needs.changes.outputs.code }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          python3 - <<'EOF'
+          import json, os
+          needs = json.loads(os.environ["RESULTS"]); code = os.environ["CODE"] == "true"
+          is_pr = os.environ["EVENT"] == "pull_request"
+          bad = []
+          for name, n in needs.items():
+              r = n["result"]
+              if r == "success": continue
+              if r == "skipped" and not code and name not in ("changes", "docs"): continue
+              if r == "skipped" and is_pr and name == "hybrid-e2e": continue  # secrets never reach PR runs
+              bad.append(f"{name}={r}")
+          print("code change:", code)
+          for name, n in needs.items(): print(f"  {name}: {n['result']}")
+          if code and not is_pr and needs.get("hybrid-e2e", {}).get("outputs", {}).get("ran") != "true":
+              bad.append("hybrid-e2e prerequisites unavailable: no product acceptance ran")
+          if bad:
+              print("GATE FAILED:", ", ".join(bad)); raise SystemExit(1)
+          print("GATE PASSED")
+          EOF
+
+  promote-release:
+    name: promote main to release
+    needs: [gate, hybrid-e2e]
+    # Fail closed: main is promoted only when the gate passed AND the hybrid job actually
+    # ran (a BLOCKED hybrid job, missing DATABASE_URL_CI, withholds promotion).
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.gate.result == 'success' && needs.hybrid-e2e.outputs.ran == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: promote-release
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: fast-forward release to this commit (never force)
+        run: |
+          set -euo pipefail
+          git fetch origin release || true
+          if git rev-parse --verify origin/release >/dev/null 2>&1 && ! git merge-base --is-ancestor origin/release "$GITHUB_SHA"; then
+            echo "release is not an ancestor of main; refusing to move it"; exit 1
+          fi
+          git push origin "$GITHUB_SHA:refs/heads/release"
+          echo "release -> $GITHUB_SHA" >> "$GITHUB_STEP_SUMMARY"

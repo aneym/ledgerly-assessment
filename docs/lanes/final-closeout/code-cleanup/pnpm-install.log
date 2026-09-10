@@ -1,0 +1,16 @@
+Scope: all 8 workspace projects
+✓ Lockfile passes supply-chain policies (verified 5h ago)
+Lockfile is up to date, resolution step is skipped
+Packages are cloned from the content-addressable store to the virtual store.
+  Content-addressable store is at: /Volumes/StudioExt/.pnpm-store/v11
+  Virtual store is at:             node_modules/.pnpm
+Packages: +314
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 314, reused 314, downloaded 0, added 314, done
+
+devDependencies:
++ @biomejs/biome 2.5.12
++ typescript 5.9.3
++ vitest 4.1.11
+
+Done in 3.2s using pnpm v12.3.4

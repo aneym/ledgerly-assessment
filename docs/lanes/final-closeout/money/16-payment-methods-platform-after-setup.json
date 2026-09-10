@@ -1,0 +1,29 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/payment_methods",
+    "query": "company_id=biz_RlL9WP9TIBVXmr",
+    "api_version_date": "2026-09-06",
+    "idempotency_key": null,
+    "body": null
+  },
+  "status": 200,
+  "started_at": "2026-09-09T23:38:19.830Z",
+  "finished_at": "2026-09-09T23:38:20.111Z",
+  "response_headers": {
+    "date": "Wed, 09 Sep 2026 23:38:20 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "6949fc91-d850-429d-b9a7-995a3ba8564b",
+    "cf-ray": "a38a06a2fdecc701-EWR"
+  },
+  "response": {
+    "data": [],
+    "page_info": {
+      "end_cursor": null,
+      "start_cursor": null,
+      "has_next_page": false,
+      "has_previous_page": false
+    }
+  }
+}

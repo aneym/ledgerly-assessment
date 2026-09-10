@@ -1,0 +1,55 @@
+{
+  "note": "GET /webhooks/hook_gO3nsBQBCSyzF/deliveries?first=100 polled after the 8 test sends at 22:58:19Z to 22:58:22Z. The count stayed at 44 and no test-generated delivery appeared. Full bodies kept only for the before (02) and after-replay (08) snapshots.",
+  "polls": [
+    {
+      "file": "02-deliveries-before.json",
+      "queried_at": "2026-09-09T22:58:00.478Z",
+      "status": 200,
+      "count": 44,
+      "has_next_page": false,
+      "newest_sent_at": "2026-09-09T01:19:01.000Z",
+      "newest_event": "payment.succeeded",
+      "test_generated_deliveries_present": false
+    },
+    {
+      "raw_body_kept": false,
+      "queried_at": "2026-09-09T22:58:31.437Z",
+      "status": 200,
+      "count": 44,
+      "has_next_page": false,
+      "newest_sent_at": "2026-09-09T01:19:01.000Z",
+      "newest_event": "payment.succeeded",
+      "test_generated_deliveries_present": false
+    },
+    {
+      "raw_body_kept": false,
+      "queried_at": "2026-09-09T22:59:27.510Z",
+      "status": 200,
+      "count": 44,
+      "has_next_page": false,
+      "newest_sent_at": "2026-09-09T01:19:01.000Z",
+      "newest_event": "payment.succeeded",
+      "test_generated_deliveries_present": false
+    },
+    {
+      "raw_body_kept": false,
+      "queried_at": "2026-09-09T23:00:39.650Z",
+      "status": 200,
+      "count": 44,
+      "has_next_page": false,
+      "newest_sent_at": "2026-09-09T01:19:01.000Z",
+      "newest_event": "payment.succeeded",
+      "test_generated_deliveries_present": false
+    },
+    {
+      "file": "08-deliveries-after-replay.json",
+      "queried_at": "2026-09-09T23:03:33.135Z",
+      "status": 200,
+      "count": 47,
+      "has_next_page": false,
+      "newest_sent_at": "2026-09-09T23:03:24.009Z",
+      "newest_event": "payment.succeeded",
+      "test_generated_deliveries_present": false
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "request": {
+    "method": "POST",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/transfers",
+    "query": null,
+    "api_version_date": "2026-09-06",
+    "idempotency_key": "transfer:dd2ab3b3-1332-471e-9b31-82936f2db774",
+    "body": {
+      "amount": 55.2,
+      "currency": "usd",
+      "type": "ledger",
+      "origin_id": "biz_RlL9WP9TIBVXmr",
+      "destination_id": "biz_6FQIBpQldcgR33",
+      "idempotence_key": "transfer:dd2ab3b3-1332-471e-9b31-82936f2db774",
+      "metadata": {
+        "order_id": "dd2ab3b3-1332-471e-9b31-82936f2db774"
+      }
+    }
+  },
+  "status": 400,
+  "started_at": "2026-09-10T00:08:34.683Z",
+  "finished_at": "2026-09-10T00:08:34.979Z",
+  "response_headers": {
+    "date": "Thu, 10 Sep 2026 00:08:34 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "9f538988-dadc-400c-ad8f-fc9d8a9e4cd3",
+    "cf-ray": "a38a32f1f9ce983e-EWR"
+  },
+  "response": {
+    "error": {
+      "type": "bad_request",
+      "message": "This Idempotency-Key was already used with a different request"
+    }
+  }
+}

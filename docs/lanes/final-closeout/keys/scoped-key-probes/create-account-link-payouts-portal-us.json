@@ -1,0 +1,20 @@
+{
+  "name": "create-account-link-payouts-portal-us",
+  "method": "POST",
+  "path": "/account_links",
+  "request_body": {
+    "account_id": "biz_pt7b2NAryKwRGh",
+    "use_case": "payouts_portal",
+    "return_url": "https://ledgerly-afneymans-projects.vercel.app",
+    "refresh_url": "https://ledgerly-afneymans-projects.vercel.app"
+  },
+  "status": 400,
+  "response": {
+    "error": {
+      "type": "bad_request",
+      "message": "This API key is not authorized to scope to the following action: payout:transfer:export. Update your API key permissions to include this action."
+    }
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:07.697Z"
+}

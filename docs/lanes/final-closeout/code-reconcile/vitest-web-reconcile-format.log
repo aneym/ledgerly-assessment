@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/final-code-reconcile/apps/web
+
+
+ Test Files  1 passed (1)
+      Tests  11 passed (11)
+   Start at  19:07:54
+   Duration  79ms (transform 13ms, setup 0ms, import 18ms, tests 3ms, environment 0ms)
+

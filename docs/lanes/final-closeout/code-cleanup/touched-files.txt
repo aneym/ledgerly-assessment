@@ -1,0 +1,11 @@
+apps/web/src/app/(storefront)/handoff/SandboxBalance.tsx
+apps/web/src/app/(storefront)/handoff/SandboxPortal.tsx
+apps/web/src/app/(storefront)/handoff/engineering/page.tsx
+apps/web/src/app/(storefront)/handoff/evidence/page.tsx
+apps/web/src/app/(storefront)/handoff/lab/page.tsx
+apps/web/src/app/(storefront)/handoff/page.tsx
+apps/web/src/app/(storefront)/handoff/scenarios/page.tsx
+apps/web/test/handoff-lab.test.ts
+apps/web/test/handoff-sandbox-balance.test.ts
+docs/presentation/final/final.js
+docs/presentation/final/index.html

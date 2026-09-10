@@ -1,0 +1,109 @@
+{
+  "name": "create-account-probe",
+  "method": "POST",
+  "path": "/accounts",
+  "request_body": {
+    "parent_company_id": "biz_RlL9WP9TIBVXmr",
+    "email": "[email redacted]",
+    "title": "Scoped key probe 1788998161772",
+    "country": "US",
+    "metadata": {
+      "external_id": "scoped-probe-1788998161772",
+      "run_id": "scoped-probe-1788998161772"
+    }
+  },
+  "status": 201,
+  "response": {
+    "id": "biz_OA3UzgqDoK6bsz",
+    "email": "[email redacted]",
+    "title": "Scoped key probe 1788998161772",
+    "description": null,
+    "route": "biz_OA3UzgqDoK6bsz",
+    "logo_url": null,
+    "banner_image_url": null,
+    "terms_of_service": null,
+    "privacy_policy": null,
+    "return_policy": null,
+    "eula": null,
+    "business_type": null,
+    "country": "us",
+    "home_preferences": [],
+    "industry_group": null,
+    "industry_type": null,
+    "invoice_prefix": null,
+    "onboarding_type": null,
+    "opengraph_image_url": null,
+    "opengraph_image_variant": null,
+    "other_business_description": null,
+    "other_industry_description": null,
+    "require_2fa": false,
+    "three_ds_level": null,
+    "collect_vat_id": false,
+    "target_audience": null,
+    "send_customer_emails": false,
+    "show_joined_whops": true,
+    "show_reviews_dtc": true,
+    "show_user_directory": true,
+    "store_page_config": {
+      "accent_color": null,
+      "layout": null,
+      "profile_variant": null,
+      "whop_affiliate_link": false
+    },
+    "metadata": {
+      "run_id": "scoped-probe-1788998161772",
+      "external_id": "scoped-probe-1788998161772"
+    },
+    "created_at": "2026-09-10T01:56:08+02:00",
+    "use_logo_as_opengraph_image_fallback": false,
+    "total_earned_usd": null,
+    "status": null,
+    "status_reason": null,
+    "volume_usd": null,
+    "capabilities": null,
+    "payment_controls": null,
+    "cards": null,
+    "required_actions": null,
+    "recommended_actions": null,
+    "tax_remitted_by": null,
+    "tax_type": "exclusive",
+    "product_tax_code": null,
+    "business_address": null,
+    "business_name": null,
+    "tax_identifiers": [],
+    "tax_collection_enabled_states": [],
+    "total_usd": null,
+    "balances": [],
+    "stablecoin_rails": false,
+    "can_transfer_pending_balance_to_children": false,
+    "verification": {
+      "individual": null,
+      "business": null
+    },
+    "company_formation": {
+      "status": "draft"
+    },
+    "owner": {
+      "id": "user_hxkAZJSILYJb1",
+      "username": "aneymanscoped-probe-",
+      "name": null,
+      "profile_picture": {
+        "url": "https://ui-avatars.com/api/?name=aneymanscoped-probe-&background=535961&color=fff&format=png"
+      }
+    },
+    "parent_account": {
+      "id": "biz_RlL9WP9TIBVXmr",
+      "title": "ledgerly",
+      "route": "ledgerly",
+      "logo_url": null
+    },
+    "wallet": {
+      "id": "cwal_Fo4Puj2ZqDXW5",
+      "address": "0x812Ba72dCd87D3213c606d3A91ed34308936da52",
+      "network": "ethereum"
+    },
+    "social_links": []
+  },
+  "transport_error": null,
+  "observed_at": "2026-09-09T23:56:09.717Z"
+}

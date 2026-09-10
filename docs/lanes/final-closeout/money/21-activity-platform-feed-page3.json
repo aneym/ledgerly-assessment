@@ -1,0 +1,90 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/financial-activity",
+    "query": "account_id=biz_RlL9WP9TIBVXmr&currency=usd&cursor=eyJwb3N0ZWQiOiIyMDI2LTA5LTA4VDE3OjU4OjIxWiIsImlkIjoibGluZV9ZM1prWVdWc1VtNUVTekJyY1haa1RFNTRUbHBoT214cE9rZHdPVnBKYUVNM1dFdDZPVTFOVkRKemFuQnpSenBoWXpwc1RFcDVkazV5UkhrMFZXZ3habHBMTTI1TGRERTZiR1U2TVRwMk9tbHJPbUZ3Y0d4cFkyRjBhVzl1WDJabFpWOXdZWGx2ZFhSZk1UYzBNQSJ9",
+    "api_version_date": "2026-09-06",
+    "idempotency_key": null,
+    "body": null
+  },
+  "status": 200,
+  "started_at": "2026-09-09T23:50:40.832Z",
+  "finished_at": "2026-09-09T23:50:41.181Z",
+  "response_headers": {
+    "date": "Wed, 09 Sep 2026 23:50:41 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "3d1f18c7-f925-47a8-be51-f84d205ee16f",
+    "cf-ray": "a38a18b98b8460c8-EWR"
+  },
+  "response": {
+    "data": [
+      {
+        "object": "ledger_activity",
+        "id": "line_QWxGRExRSzlJNlRDZzRVdWtoYkdiOmxpOkdwOVpJaEM3WEt6OU1NVDJzanBzRzphYzpsTEp5dk5yRHk0VWgxZlpLM25LdDE6bGU6MTp2OmlrOmFwcGxpY2F0aW9uX2ZlZV9wYXlvdXRfMTczOA",
+        "line_type": "application_fee_payout",
+        "amount": "200000000",
+        "usd_amount": "2.0",
+        "currency": {
+          "code": "usd",
+          "precision": "100000000"
+        },
+        "posted_at": "2026-09-08T16:45:26Z",
+        "available_at": "2026-09-10T00:00:00Z",
+        "resource": {
+          "object": "account",
+          "id": "biz_pt7b2NAryKwRGh",
+          "title": "Ledgerly Seller US",
+          "route": "biz_pt7b2NAryKwRGh",
+          "logo_url": null
+        },
+        "source": {
+          "object": "application_fee",
+          "id": "apfee_8JygL79d021j"
+        },
+        "payment_id": "pay_LhomHFUGcxqYZ1",
+        "user_id": "user_F9nsaRbxoMM3f",
+        "user_name": "aneymanledgerly-buyer",
+        "user_email": "[email redacted]",
+        "product_id": "prod_jIvItx9Gc07qX",
+        "product_name": "Acme Preset Pack",
+        "plan_id": "plan_d4ZMY9k2rCqEf",
+        "plan_name": null,
+        "payment": {
+          "object": "payment",
+          "id": "pay_LhomHFUGcxqYZ1",
+          "amount": {
+            "currency": "usd",
+            "amount": "25.00",
+            "decimals": 2,
+            "display_decimals": 2
+          },
+          "payment_method_type": "card",
+          "payment_processor": "multi_psp",
+          "card_brand": "visa",
+          "card_last4": "4242",
+          "user": {
+            "id": "user_F9nsaRbxoMM3f",
+            "name": "[name redacted]",
+            "email": "[email redacted]"
+          },
+          "product": {
+            "id": "prod_jIvItx9Gc07qX",
+            "name": "Acme Preset Pack"
+          },
+          "plan": {
+            "id": "plan_d4ZMY9k2rCqEf",
+            "name": null
+          },
+          "created_at": "2026-09-08T16:45:21.960Z"
+        }
+      }
+    ],
+    "page_info": {
+      "has_next_page": false,
+      "end_cursor": null,
+      "has_previous_page": false,
+      "start_cursor": null
+    }
+  }
+}

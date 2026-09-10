@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "https://sandbox-api.whop.com/api/v1/webhooks/hook_gO3nsBQBCSyzF/deliveries/whdel_MTc4ODkxNjc0MTAwMHwwMWEwODNiZi0zNzdjLTcyMGQtODk0Yy03ZDE2ODExYTFiYjM/replay",
+    "headers": {
+      "Api-Version-Date": "2026-09-06",
+      "Idempotency-Key": "ledgerly-final-webhooks-replay-keep-id-20260909T2254Z"
+    },
+    "body": {
+      "regenerate_id": false
+    }
+  },
+  "started_at": "2026-09-09T23:03:20.187Z",
+  "finished_at": "2026-09-09T23:03:20.702Z",
+  "status": 200,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "0f58e079-52c6-4f35-a1e8-347c37453459",
+    "request-id": null
+  },
+  "body": {
+    "status": 200,
+    "body": "{\"received\":true,\"duplicate\":true}",
+    "success": true
+  }
+}

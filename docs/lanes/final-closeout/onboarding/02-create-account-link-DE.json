@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "POST",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/account_links",
+    "api_version_date": "2026-09-06",
+    "body": {
+      "account_id": "biz_fuyI21F4iaNTDu",
+      "use_case": "account_onboarding",
+      "return_url": "https://ledgerly-afneymans-projects.vercel.app/sell/onboarding?return=1",
+      "refresh_url": "https://ledgerly-afneymans-projects.vercel.app/sell/onboarding?refresh=1"
+    }
+  },
+  "status": 200,
+  "started_at": "2026-09-09T22:58:42.402Z",
+  "finished_at": "2026-09-09T22:58:42.608Z",
+  "response_headers": {
+    "date": "Wed, 09 Sep 2026 22:58:42 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "15ab1ea9-6d39-4b06-873a-8016eda29a8f",
+    "cf-ray": "a389cc97ec31fd86-EWR"
+  },
+  "response": {
+    "url": "[REDACTED signed url; host=https://sandbox.whop.com]",
+    "expires_at": "2026-09-09T23:58:42.000Z"
+  }
+}

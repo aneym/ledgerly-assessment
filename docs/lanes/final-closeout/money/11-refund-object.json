@@ -1,0 +1,49 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/refunds/rf_AtBJ9mtmOMtikt6",
+    "query": null,
+    "api_version_date": "2026-09-06",
+    "idempotency_key": null,
+    "body": null
+  },
+  "status": 200,
+  "started_at": "2026-09-09T23:28:24.653Z",
+  "finished_at": "2026-09-09T23:28:25.018Z",
+  "response_headers": {
+    "date": "Wed, 09 Sep 2026 23:28:24 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "6b53fdfb-0cc2-4daa-90be-0bf23426c792",
+    "cf-ray": "a389f81b5f46381d-EWR"
+  },
+  "response": {
+    "id": "rf_AtBJ9mtmOMtikt6",
+    "payment_id": "pay_ELe6ONlgjrYv5Z",
+    "account_id": "biz_pt7b2NAryKwRGh",
+    "status": "succeeded",
+    "amount": {
+      "currency": "usd",
+      "amount": "25.00",
+      "decimals": 2,
+      "display_decimals": 2
+    },
+    "original_amount": {
+      "currency": "usd",
+      "amount": "25.00",
+      "decimals": 2,
+      "display_decimals": 2
+    },
+    "provider": "multi_psp",
+    "reason": "requested_by_customer",
+    "failure_reason": null,
+    "failure_message": null,
+    "reference_status": null,
+    "reference_type": null,
+    "reference_value": null,
+    "visa_rdr": false,
+    "provider_created_at": "2026-09-09T23:27:48.013Z",
+    "created_at": "2026-09-09T23:27:49.601Z",
+    "updated_at": "2026-09-09T23:27:49.601Z"
+  }
+}

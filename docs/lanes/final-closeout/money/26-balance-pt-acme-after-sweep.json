@@ -1,0 +1,37 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/ledger_accounts/biz_4gsmseksjNEF9H",
+    "query": null,
+    "api_version_date": "2026-09-06",
+    "idempotency_key": null,
+    "body": null
+  },
+  "status": 200,
+  "started_at": "2026-09-10T00:06:27.577Z",
+  "finished_at": "2026-09-10T00:06:27.776Z",
+  "response_headers": {
+    "date": "Thu, 10 Sep 2026 00:06:27 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "47b346ff-1ee1-4cf2-9c8b-a1590463d3c1",
+    "cf-ray": "a38a2fd6fbef6399-EWR"
+  },
+  "response": {
+    "id": "ldgr_jzlaS0TwGl9WM",
+    "settlement_time_at": "2026-09-10T00:00:00.000Z",
+    "balances": [],
+    "treasury_balance": null,
+    "transfer_fee": 3.0,
+    "payout_account_details": null,
+    "payments_approval_status": null,
+    "ledger_type": "primary",
+    "payout_quote_required": false,
+    "owner": {
+      "typename": "Company",
+      "id": "biz_4gsmseksjNEF9H",
+      "route": "ledgerly-seller-acme-presets",
+      "title": "Ledgerly Seller Acme Presets"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+$ pnpm --filter @ledgerly/web build
+$ next build
+▲ Next.js 16.3.4 (Turbopack)
+- Environments: .env.local
+✓ Running next.config.ts took 78ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1484ms
+  Running TypeScript ...
+  Finished TypeScript in 2.4s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/23) ...
+  Generating static pages using 15 workers (5/23) 
+  Generating static pages using 15 workers (11/23) 
+  Generating static pages using 15 workers (17/23) 
+✓ Generating static pages using 15 workers (23/23) in 162ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ƒ /
+├ ƒ /_not-found
+├ ƒ /account
+├ ƒ /admin
+├ ƒ /admin/issues
+├ ƒ /admin/issues/[id]
+├ ƒ /admin/ledger
+├ ƒ /admin/ledger/[id]
+├ ƒ /admin/sellers
+├ ƒ /admin/sellers/[id]
+├ ƒ /admin/table-preview
+├ ƒ /api/[...missing]
+├ ƒ /api/account
+├ ƒ /api/admin/assistant
+├ ƒ /api/admin/assistant/health
+├ ƒ /api/admin/issues
+├ ƒ /api/admin/issues/[id]
+├ ƒ /api/admin/issues/[id]/actions/[action]
+├ ƒ /api/admin/issues/demo-fault
+├ ƒ /api/admin/issues/detect
+├ ƒ /api/admin/ledger
+├ ƒ /api/admin/ledger/[id]
+├ ƒ /api/auth/[...all]
+├ ƒ /api/auth/sign-in
+├ ƒ /api/auth/sign-up
+├ ƒ /api/checkouts
+├ ƒ /api/cron/sweep
+├ ƒ /api/demo/command
+├ ƒ /api/demo/events
+├ ƒ /api/demo/health
+├ ƒ /api/demo/journey/health
+├ ƒ /api/demo/scenarios
+├ ƒ /api/demo/snapshot
+├ ƒ /api/local-runtime/checkout
+├ ƒ /api/local-runtime/events
+├ ƒ /api/local-runtime/health
+├ ƒ /api/local-runtime/operator
+├ ƒ /api/orders
+├ ƒ /api/orders/[id]
+├ ƒ /api/orders/[id]/confirm-payment
+├ ƒ /api/orders/[id]/refund-request
+├ ƒ /api/products
+├ ƒ /api/reconcile/[sellerId]
+├ ƒ /api/refunds
+├ ƒ /api/sellers
+├ ƒ /api/sellers/[id]
+├ ƒ /api/sellers/[id]/earnings
+├ ƒ /api/sellers/[id]/onboarding-link
+├ ƒ /api/sellers/[id]/payouts
+├ ƒ /api/sellers/[id]/payouts/session
+├ ƒ /api/sellers/[id]/payouts/simulation
+├ ƒ /api/sellers/[id]/policy
+├ ƒ /api/sellers/[id]/suspend
+├ ƒ /api/sellers/me
+├ ƒ /api/whop/webhook
+├ ○ /apple-icon.png
+├ ƒ /browse
+├ ƒ /c/[handle]
+├ ƒ /checkout/[orderId]
+├ ƒ /checkout/new
+├ ƒ /demo
+├ ƒ /demo/finish
+├ ƒ /demo/profile/[role]
+├ ƒ /demo/return
+├ ƒ /demo/session
+├ ƒ /demo/start
+├ ƒ /handoff
+├ ƒ /handoff/engineering
+├ ƒ /handoff/evidence
+├ ƒ /handoff/lab
+├ ƒ /handoff/scenarios
+├ ○ /icon.png
+├ ○ /icon1.png
+├ ƒ /library
+├ ƒ /p/[slug]
+├ ƒ /present/[[...path]]
+├ ƒ /receipt/[orderId]
+├ ƒ /sell
+├ ƒ /sell/earnings
+├ ƒ /sell/onboarding
+├ ƒ /sell/payouts
+├ ƒ /sell/products
+├ ƒ /sell/products/new
+├ ƒ /sell/settings
+├ ƒ /signin
+└ ƒ /signup
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

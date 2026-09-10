@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "type": "processing_fee",
+      "origin": "payment_processing_percentage_fee",
+      "label": "Payment processing percentage fee",
+      "description": null,
+      "amount": {
+        "currency": "usd",
+        "amount": "1.62",
+        "decimals": 2,
+        "display_decimals": 2
+      },
+      "settlement_amount": {
+        "currency": "usd",
+        "amount": "1.62",
+        "decimals": 2,
+        "display_decimals": 2
+      },
+      "collected_at": "2026-09-09T23:04:54.449Z"
+    },
+    {
+      "type": "processing_fee",
+      "origin": "cross_border_percentage_fee",
+      "label": "Cross-border transaction fee",
+      "description": null,
+      "amount": {
+        "currency": "usd",
+        "amount": "0.90",
+        "decimals": 2,
+        "display_decimals": 2
+      },
+      "settlement_amount": {
+        "currency": "usd",
+        "amount": "0.90",
+        "decimals": 2,
+        "display_decimals": 2
+      },
+      "collected_at": "2026-09-09T23:04:54.449Z"
+    },
+    {
+      "type": "processing_fee",
+      "origin": "orchestration_percentage_fee",
+      "label": "Orchestration fee",
+      "description": null,
+      "amount": {
+        "currency": "usd",
+        "amount": "0.48",
+        "decimals": 2,
+        "display_decimals": 2
+      },
+      "settlement_amount": {
+        "currency": "usd",
+        "amount": "0.48",
+        "decimals": 2,
+        "display_decimals": 2
+      },
+      "collected_at": "2026-09-09T23:04:54.449Z"
+    },
+    {
+      "type": "processing_fee",
+      "origin": "payment_processing_fixed_fee",
+      "label": "Fixed card processing fee",
+      "description": null,
+      "amount": {
+        "currency": "usd",
+        "amount": "0.30",
+        "decimals": 2,
+        "display_decimals": 2
+      },
+      "settlement_amount": {
+        "currency": "usd",
+        "amount": "0.30",
+        "decimals": 2,
+        "display_decimals": 2
+      },
+      "collected_at": "2026-09-09T23:04:54.449Z"
+    },
+    {
+      "type": "processing_fee",
+      "origin": "stripe_radar_fee",
+      "label": "Radar fee",
+      "description": null,
+      "amount": {
+        "currency": "usd",
+        "amount": "0.07",
+        "decimals": 2,
+        "display_decimals": 2
+      },
+      "settlement_amount": {
+        "currency": "usd",
+        "amount": "0.07",
+        "decimals": 2,
+        "display_decimals": 2
+      },
+      "collected_at": "2026-09-09T23:04:54.449Z"
+    }
+  ],
+  "page_info": {
+    "end_cursor": null,
+    "start_cursor": null,
+    "has_next_page": false,
+    "has_previous_page": false
+  }
+}

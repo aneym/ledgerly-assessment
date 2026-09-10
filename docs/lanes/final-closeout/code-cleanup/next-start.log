@@ -1,0 +1,21 @@
+▲ Next.js 16.3.4
+- Local:         http://localhost:4471
+- Network:       http://192.168.0.86:4471
+✓ Ready in 55ms
+✓ Running next.config.ts took 15ms
+⨯ Error: Missing DATABASE_URL
+    at k (.next/server/chunks/ssr/_0ugsxku._.js:1:17550)
+    at l (.next/server/chunks/ssr/_0ugsxku._.js:1:17692)
+    at <unknown> (.next/server/chunks/ssr/_0ugsxku._.js:1:18422)
+    at i (.next/server/chunks/ssr/_0ugsxku._.js:1:791)
+    at async m (.next/server/chunks/ssr/_142d-_x._.js:1:11791) {
+  digest: '3870747982'
+}
+⨯ Error: Missing DATABASE_URL
+    at k (.next/server/chunks/ssr/_0ugsxku._.js:1:17550)
+    at l (.next/server/chunks/ssr/_0ugsxku._.js:1:17692)
+    at <unknown> (.next/server/chunks/ssr/_0ugsxku._.js:1:18422)
+    at i (.next/server/chunks/ssr/_0ugsxku._.js:1:791)
+    at async q (.next/server/chunks/ssr/apps_web_src_04fc175._.js:1:285) {
+  digest: '3656466073'
+}

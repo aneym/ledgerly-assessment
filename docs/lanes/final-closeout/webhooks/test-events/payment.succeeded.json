@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "https://sandbox-api.whop.com/api/v1/webhooks/hook_gO3nsBQBCSyzF/test",
+    "headers": {
+      "Api-Version-Date": "2026-09-06",
+      "Idempotency-Key": "ledgerly-final-webhooks-test-payment.succeeded-20260909T2254Z"
+    },
+    "body": {
+      "event": "payment.succeeded"
+    }
+  },
+  "started_at": "2026-09-09T22:58:19.359Z",
+  "finished_at": "2026-09-09T22:58:19.743Z",
+  "status": 200,
+  "response_headers": {
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "08dc5495-cf62-4de7-b6bb-67f87db5d20a",
+    "request-id": null
+  },
+  "body": {
+    "status": 200,
+    "body": "{\"received\":true,\"duplicate\":false,\"decoded\":false}",
+    "success": true
+  }
+}

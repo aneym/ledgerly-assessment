@@ -87,7 +87,6 @@ export function PayoutsSimulation({ sellerId }: { sellerId: string }) {
           type="button"
           disabled={pending}
           onClick={() => void act("start")}
-          data-tour="sell.payouts.sample.start"
         >
           Start with 100.00 in sample funds
         </button>
@@ -119,12 +118,7 @@ export function PayoutsSimulation({ sellerId }: { sellerId: string }) {
                 pattern="[0-9]+([.][0-9]{1,2})?"
               />
             </label>
-            <button
-              type="submit"
-              className="pill ink"
-              disabled={pending}
-              data-tour="sell.payouts.sample.withdraw"
-            >
+            <button type="submit" className="pill ink" disabled={pending}>
               Request sample withdrawal
             </button>
             <button

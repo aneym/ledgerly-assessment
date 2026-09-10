@@ -61,7 +61,8 @@ export function createTransferReleaseService(deps: {
             amount: share.value,
             metadata: { order_id: order.id },
           },
-          `transfer:${order.id}`,
+          // Whop bound the old key to the rejected business-origin request body.
+          `transfer:${order.id}:v2`,
         );
         if (!transfer.ok)
           return transfer.error.kind === "network" ? ("retried" as const) : ("failed" as const);

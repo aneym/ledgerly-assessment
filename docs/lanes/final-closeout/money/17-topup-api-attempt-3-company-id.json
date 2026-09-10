@@ -1,0 +1,31 @@
+{
+  "request": {
+    "method": "POST",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/topups",
+    "query": null,
+    "api_version_date": "2026-09-06",
+    "idempotency_key": "money-topup-20260909-3",
+    "body": {
+      "company_id": "biz_RlL9WP9TIBVXmr",
+      "amount": 300.0,
+      "currency": "usd",
+      "payment_method_id": "payt_FZ17WahujTHTR"
+    }
+  },
+  "status": 404,
+  "started_at": "2026-09-09T23:38:33.123Z",
+  "finished_at": "2026-09-09T23:38:33.461Z",
+  "response_headers": {
+    "date": "Wed, 09 Sep 2026 23:38:33 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "4849c81b-8a97-4253-af12-b7f2f7553b7a",
+    "cf-ray": "a38a06f598dc1600-EWR"
+  },
+  "response": {
+    "error": {
+      "type": "not_found",
+      "message": "This PaymentToken was not found"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "request": {
+    "method": "GET",
+    "base": "https://sandbox-api.whop.com/api/v1",
+    "path": "/verifications?account_id=biz_fuyI21F4iaNTDu",
+    "api_version_date": "2026-09-06",
+    "body": null
+  },
+  "status": 200,
+  "started_at": "2026-09-09T23:05:04.637Z",
+  "finished_at": "2026-09-09T23:05:04.919Z",
+  "response_headers": {
+    "date": "Wed, 09 Sep 2026 23:05:04 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "x-request-id": "bc4974de-a133-4391-8bb5-0f710ad59242",
+    "cf-ray": "a389d5ec9f8b9798-EWR"
+  },
+  "response": {
+    "data": [
+      {
+        "id": "idpf_FQ3ePvAVNSXzz",
+        "kind": "individual",
+        "status": "pending",
+        "first_name": "Testfirst",
+        "last_name": "Fictionalseller",
+        "date_of_birth": "1990-01-15",
+        "country": "DE",
+        "address": {
+          "line1": "Musterstrasse 1",
+          "city": "Berlin",
+          "postal_code": "10115",
+          "country": "DE"
+        },
+        "email": null,
+        "phone": "+49-15123456789",
+        "session_url": "[REDACTED hosted KYC session permalink; host=in.sumsub.com path=/websdk/p/sbx_...]",
+        "requested_information": [],
+        "created_at": "2026-09-10T01:00:46+02:00",
+        "updated_at": "2026-09-10T01:00:46+02:00"
+      }
+    ]
+  }
+}

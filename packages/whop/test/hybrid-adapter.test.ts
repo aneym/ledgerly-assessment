@@ -47,6 +47,8 @@ function setup(capabilities: Capabilities, now = () => new Date("2026-09-08T12:0
     }
     if (method === "GET" && url.pathname.startsWith("/api/v1/accounts/"))
       return new Response(JSON.stringify({ id: url.pathname.replace("/api/v1/accounts/", "") }));
+    if (method === "GET" && url.pathname.startsWith("/api/v1/ledger_accounts/"))
+      return new Response(JSON.stringify({ id: "ldgr_sandbox_test" }));
     if (method === "POST" && url.pathname === "/api/v1/transfers")
       return new Response(JSON.stringify({ id: "tsf_sandbox_test" }));
     if (method === "POST" && url.pathname === "/api/v1/access_tokens")

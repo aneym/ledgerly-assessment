@@ -1,0 +1,68 @@
+$ pnpm -r --parallel test
+Scope: 7 of 8 workspace projects
+apps/web test$ vitest run
+packages/whop test$ vitest run
+packages/demo-runtime test$ vitest run
+packages/db test$ vitest run
+packages/evidence test$ vitest run
+packages/core test$ vitest run
+packages/demo-runtime test: 
+packages/evidence test: 
+packages/demo-runtime test:  RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/app-ui-fixes/packages/demo-runtime
+packages/demo-runtime test: 
+packages/evidence test:  RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/app-ui-fixes/packages/evidence
+packages/evidence test: 
+packages/whop test: 
+packages/db test: 
+packages/whop test:  RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/app-ui-fixes/packages/whop
+packages/whop test: 
+packages/db test:  RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/app-ui-fixes/packages/db
+packages/db test: 
+packages/core test: 
+packages/core test:  RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/app-ui-fixes/packages/core
+packages/core test: 
+apps/web test: 
+apps/web test:  RUN  v4.1.11 /Volumes/StudioExt/repos/ledgerly-worktrees/app-ui-fixes/apps/web
+apps/web test: 
+packages/evidence test: 
+packages/evidence test:  Test Files  4 passed (4)
+packages/evidence test:       Tests  23 passed (23)
+packages/evidence test:    Start at  20:30:11
+packages/evidence test:    Duration  662ms (transform 447ms, setup 0ms, import 882ms, tests 34ms, environment 0ms)
+packages/evidence test: 
+packages/evidence test: Done
+packages/core test: 
+packages/core test:  Test Files  14 passed (14)
+packages/core test:       Tests  194 passed (194)
+packages/core test:    Start at  20:30:11
+packages/core test:    Duration  1.39s (transform 4.19s, setup 0ms, import 7.49s, tests 148ms, environment 2ms)
+packages/core test: 
+packages/core test: Done
+packages/demo-runtime test: 
+packages/demo-runtime test:  Test Files  16 passed (16)
+packages/demo-runtime test:       Tests  108 passed (108)
+packages/demo-runtime test:    Start at  20:30:11
+packages/demo-runtime test:    Duration  1.63s (transform 4.26s, setup 0ms, import 7.33s, tests 706ms, environment 1ms)
+packages/demo-runtime test: 
+packages/demo-runtime test: Done
+packages/whop test: 
+packages/whop test:  Test Files  17 passed (17)
+packages/whop test:       Tests  295 passed | 10 skipped (305)
+packages/whop test:    Start at  20:30:11
+packages/whop test:    Duration  10.68s (transform 12.95s, setup 0ms, import 22.86s, tests 16.36s, environment 1ms)
+packages/whop test: 
+packages/whop test: Done
+apps/web test: 
+apps/web test:  Test Files  99 passed (99)
+apps/web test:       Tests  1040 passed (1040)
+apps/web test:    Start at  20:30:11
+apps/web test:    Duration  16.87s (transform 20.24s, setup 0ms, import 104.88s, tests 121.85s, environment 2.20s)
+apps/web test: 
+apps/web test: Done
+packages/db test: 
+packages/db test:  Test Files  15 passed (15)
+packages/db test:       Tests  237 passed (237)
+packages/db test:    Start at  20:30:11
+packages/db test:    Duration  17.45s (transform 5.90s, setup 0ms, import 27.68s, tests 122.84s, environment 1ms)
+packages/db test: 
+packages/db test: Done

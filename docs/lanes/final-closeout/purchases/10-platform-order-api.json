@@ -1,0 +1,35 @@
+{
+  "path": "/api/orders/00b8451a-9f1c-402a-8ee0-e3824e81943f",
+  "status": 200,
+  "read_at": "2026-09-09T23:05:03.325Z",
+  "body": {
+    "id": "00b8451a-9f1c-402a-8ee0-e3824e81943f",
+    "product": {
+      "id": "prd_onda_drums",
+      "slug": "onda-drum-library",
+      "title": "Onda Drum Library"
+    },
+    "seller": {
+      "id": "sel_onda",
+      "name": "onda",
+      "sale_policy": "platform_only"
+    },
+    "gross": {
+      "amountMinor": 6000,
+      "currency": "USD"
+    },
+    "fee": {
+      "amountMinor": 480,
+      "currency": "USD"
+    },
+    "seller_share": {
+      "amountMinor": 5520,
+      "currency": "USD"
+    },
+    "status": "paid",
+    "created_at": "2026-09-09T23:04:28.869Z",
+    "provenance": "sandbox",
+    "purchase_url": "https://sandbox.whop.com/checkout/ch_kT3ZyYS6Jc8ehfz/",
+    "payment_id": "pay_cxvGcm7NvjoCkV"
+  }
+}

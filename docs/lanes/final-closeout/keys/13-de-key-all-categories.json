@@ -1,0 +1,286 @@
+{
+  "captured_at": "2026-09-09T23:13:28.292Z",
+  "account": "biz_fuyI21F4iaNTDu",
+  "key_name": "ledgerly seller DE (scoped, run-2026-09-08d)",
+  "key_masked": "apik_HawA....0c8b",
+  "permissions_mode": "Custom",
+  "source": "DOM of the API key details edit dialog after clicking 'Show 42 more categories', Company and Payment expanded; Close, never Save",
+  "category_count": 53,
+  "statements_total": 231,
+  "statements_granted": 4,
+  "categories": [
+    {
+      "category": "Chat",
+      "granted": 0,
+      "total": 4
+    },
+    {
+      "category": "Checkout Configuration",
+      "granted": 0,
+      "total": 3
+    },
+    {
+      "category": "Checkout Request",
+      "granted": 0,
+      "total": 2
+    },
+    {
+      "category": "Dms",
+      "granted": 0,
+      "total": 3
+    },
+    {
+      "category": "Invoice",
+      "granted": 0,
+      "total": 4
+    },
+    {
+      "category": "Member",
+      "granted": 0,
+      "total": 12
+    },
+    {
+      "category": "Membership",
+      "granted": 0,
+      "total": 5
+    },
+    {
+      "category": "Payment",
+      "granted": 1,
+      "total": 14
+    },
+    {
+      "category": "Payout",
+      "granted": 0,
+      "total": 12
+    },
+    {
+      "category": "Plan",
+      "granted": 0,
+      "total": 10
+    },
+    {
+      "category": "Webhook Receive",
+      "granted": 0,
+      "total": 32
+    },
+    {
+      "category": "Access Pass",
+      "granted": 0,
+      "total": 8
+    },
+    {
+      "category": "Ad Campaign",
+      "granted": 0,
+      "total": 9
+    },
+    {
+      "category": "Ad Publisher",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Affiliate",
+      "granted": 0,
+      "total": 3
+    },
+    {
+      "category": "Ai Chat",
+      "granted": 0,
+      "total": 4
+    },
+    {
+      "category": "Ai Prompt",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Airdrop Link",
+      "granted": 0,
+      "total": 2
+    },
+    {
+      "category": "App Authorization",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Audience",
+      "granted": 0,
+      "total": 2
+    },
+    {
+      "category": "Authorized Role",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Authorized User",
+      "granted": 0,
+      "total": 2
+    },
+    {
+      "category": "Bounty",
+      "granted": 0,
+      "total": 3
+    },
+    {
+      "category": "Child Company",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Company",
+      "granted": 3,
+      "total": 15
+    },
+    {
+      "category": "Company Token Transaction",
+      "granted": 0,
+      "total": 2
+    },
+    {
+      "category": "Content Rewards",
+      "granted": 0,
+      "total": 6
+    },
+    {
+      "category": "Course Analytics",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Course Lesson Interaction",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Courses",
+      "granted": 0,
+      "total": 2
+    },
+    {
+      "category": "Crypto Wallet",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Custom Emoji",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Developer",
+      "granted": 0,
+      "total": 7
+    },
+    {
+      "category": "Event",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Experience",
+      "granted": 0,
+      "total": 6
+    },
+    {
+      "category": "Forum",
+      "granted": 0,
+      "total": 3
+    },
+    {
+      "category": "Iap",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Identity",
+      "granted": 0,
+      "total": 2
+    },
+    {
+      "category": "Incorporation",
+      "granted": 0,
+      "total": 2
+    },
+    {
+      "category": "Lead",
+      "granted": 0,
+      "total": 3
+    },
+    {
+      "category": "Livestream",
+      "granted": 0,
+      "total": 6
+    },
+    {
+      "category": "Media",
+      "granted": 0,
+      "total": 2
+    },
+    {
+      "category": "Notification",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Oauth",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Partner",
+      "granted": 0,
+      "total": 4
+    },
+    {
+      "category": "Promo Code",
+      "granted": 0,
+      "total": 5
+    },
+    {
+      "category": "Referral",
+      "granted": 0,
+      "total": 2
+    },
+    {
+      "category": "Shipment",
+      "granted": 0,
+      "total": 2
+    },
+    {
+      "category": "Social Account",
+      "granted": 0,
+      "total": 3
+    },
+    {
+      "category": "Social Link",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Stats",
+      "granted": 0,
+      "total": 1
+    },
+    {
+      "category": "Support Chat",
+      "granted": 0,
+      "total": 3
+    },
+    {
+      "category": "Tracking Link",
+      "granted": 0,
+      "total": 7
+    }
+  ],
+  "rendered_checkboxes": 58,
+  "checked_statements": [
+    "payment:basic:read",
+    "company:balance:read",
+    "company:basic:read",
+    "company:create_child"
+  ],
+  "note": "rendered_checkboxes counts both the role=checkbox control and its hidden input per statement; checked_statements is deduplicated"
+}
